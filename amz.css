@@ -1,0 +1,37 @@
+#d1{
+    background-color: black;
+    padding: 5px;
+    display: flex;
+    color: white;
+    word-spacing:5px;
+}
+li{
+    display: inline;
+    
+}
+li:hover{
+    background-color: aquamarine;
+}
+#ab{
+    margin-left: 60%;
+}
+#main{
+    display: flex;
+    background-color: black;
+    padding: 15pX;
+    color: white;
+    margin: 20px;
+    text-align: center;
+}
+img{
+    width: 400;
+    height: 300;
+
+}
+#b2{
+    background-color: black;
+    border-color: aquamarine;
+}
+button:hover{
+    color: salmon;
+}

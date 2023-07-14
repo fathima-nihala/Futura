@@ -1,0 +1,209 @@
+*{
+    margin: 0px;
+    padding: 5px;   
+}
+.header0{
+    background-color: black;
+    color: white;
+    padding: 1px;
+    margin: 0px;
+    width: 100%;
+    text-align: right;
+}
+li{
+    display: inline;
+}
+/* --------------------------------header1-------------------------------------------------- */
+.header1{
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+.m0{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    background-color: white;
+     margin-left: 20px;
+    padding: 35px;
+    align-items: center;
+    border: 2px solid whitesmoke; 
+    margin: 0px;
+    padding: 3px;
+    width: 100%;
+}
+.m1{
+    display: inline;
+}
+.m1:hover{
+    text-decoration: underline;
+    border-bottom: 4px solid red;
+    color: red;
+}
+.m2{
+    margin-left: 170px;
+    border: 1px solid gray;
+}
+.m2 input{
+    border: none;
+}
+input[type=text]
+{
+    border-radius: 35px;
+    background-image: url();  
+}
+/* ---------------------------------------------------------------- */
+.subhead{
+    display: flex;
+    background-color: white;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 5px;
+}
+.sub{
+   margin-left: 50px;
+}
+.sub:hover{
+    transform: scale(2,2);
+}
+/* ------------------------------------------------------------------------------------------ */
+.offers{
+    display: flex;
+    background-color: white;
+}
+.off{
+    margin-left: 10px;
+}
+/* ------------------------------------------------------------------------------ */
+.fashion{
+    background-color: rgb(228, 186, 200);
+}
+.fashioncontents1{
+    color: black;
+    text-align: center;
+    font-size: 14px;
+}
+.fashioncontents2{
+    color: black;
+    text-align: center;
+    font-size: 24px;
+}
+.contents{
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2px;
+    margin-left: 20px;
+}
+.text1{
+    font-size: 17px;
+    text-align: center;
+    display: block;
+}
+/* ---------------------------------------------------------------------------- */
+.discounts{
+    background-color: white;
+}
+.dis1{
+    color: black;
+    text-align: center;
+    font-size: 16px;
+}
+.dis2{
+    color: black;
+    text-align: center;
+    font-size: 24px;
+}
+.ny{
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2px;
+    margin-left: 20px;
+    background-color: white;
+    flex-direction: row;
+}
+/* ----------------------------------------------------- */
+.body1{
+    background-color: white;
+}
+.bodycontents1{
+    text-align: center;
+    color: black;
+}
+.bodycontents2{
+    text-align: center;
+    color: black;
+    font-size: 24;
+}
+.bc{
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2px;
+    margin-left: 20px;
+}
+.text3 h4,p{
+    text-align: center;
+}
+/* -------------------------------------------------------------------- */
+.body3{
+    background-color: white;
+}
+.body3c2{
+    text-align: center;
+    color: black;
+    font-size: 24px;
+}
+.bc3{
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2px;
+    margin-left: 20px;
+}
+/* ------------------------------------------------------------------------- */
+.body4{
+    background-color: whitesmoke;
+}
+.body4c1{
+    text-align: center;
+    color: black;
+    font-size: 16px;
+}
+.body4c2{
+    text-align: center;
+    color: black;
+    font-size: 24px;
+}
+.bc4{
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+    margin-left: 20px;
+}
+/* ----------------------------------------------------------------------------------------------- */
+.body5{
+    background-color: rgb(245, 210, 214);
+}
+.body5c1{
+    text-align: center;
+    color: black;
+    font-size: 16px;
+}
+.body5c2{
+    text-align: center;
+    color: black;
+    font-size: 24px;
+}
+.b5c{
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2px;
+    margin-left: 20px;
+}

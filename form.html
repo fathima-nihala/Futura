@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            background-color: gray; 
+            border: 1px solid black;
+            width: 350px;
+            height: 650px;
+            margin-left: 500px;
+            padding: 30px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border-radius: 20px;
+            flex-wrap: wrap;
+
+        }
+        .inp{
+            border-radius: 40px;
+        }
+        label{
+            font-size: 18px;
+        }
+        input{
+            padding:3px;
+        }
+    </style>
+</head>
+<body>
+    <form action="flipkart.html">
+        <h2 style="text-align: center;">ENTERENCE FORM</h2>
+
+        <label for="name">Name:</label>
+        &nbsp  &nbsp  &nbsp  &nbsp 
+        <input type="text" id="name" placeholder="enter your name" class="inp"><br><br>
+
+        <label for="name">Age:</label>
+        &nbsp  &nbsp  &nbsp  &nbsp &nbsp 
+        <input type="number" id="Age" placeholder="enter your age" class="inp"><br><br>
+
+        <label for="gender">Gender:</label>
+        <input type="radio" id="m" name="gen">
+        <label for="gen">male</label>
+        <input type="radio" id="f" name="gen">
+        <label for="gen">female</label><br><br>
+
+        <label for="number">Number:</label>
+        &nbsp  &nbsp 
+        <input type="tel" id="number" name="phone" pattern="[0-9]{10}" required class="inp"><br><br>
+
+        <label for="name">Email:</label>
+        &nbsp  &nbsp &nbsp &nbsp 
+        <input type="email" id="email" placeholder="enter your email" pattern="[a-z0-9._+-%]+@[a-z0-9.-]" class="inp"><br><br>
+
+        <label for="password">Password:</label>&nbsp  
+        <input type="password" id="psw" placeholder="password" class="inp"><br><br>
+
+        <label for="name">Dob:</label>
+        &nbsp  &nbsp  &nbsp  &nbsp &nbsp  
+        <input type="date" id="date" class="inp"><br><br>
+
+        <label for="subject">Subject:</label>
+        <input type="checkbox" id="html">
+        <label for="html">Html</label>
+        <input type="checkbox" id="react">
+        <label for="react">React</label>
+        <input type="checkbox" id="python">
+        <label for="python">Python</label><br><br>
+
+        <label for="address">Address</label>
+        &nbsp  &nbsp 
+        <textarea name="address" id="ad" cols="20" rows="5" class="inp"></textarea><br><br>
+
+        <label for="course">Course:</label>
+        <select class="inp">
+            &nbsp  &nbsp  &nbsp  &nbsp 
+            <option value="1">php</option>
+            <option value="2">dbms</option>
+            <option value="3">ds</option>
+        </select><br><br>
+
+        <label for="name">File:</label>
+        &nbsp  &nbsp 
+        <input type="file" id="file" class="inp"><br><br>
+
+        <button style="margin-left: 70px;">Register</button>&nbsp
+        <button>Reset</button>
+
+    </form>
+</div>
+</body>
+</html>

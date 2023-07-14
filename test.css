@@ -1,0 +1,30 @@
+body {
+    background-image: url("images/img3.jpg");
+    background-size: cover;
+   }
+#main{
+    padding: 5px;
+    color: whitesmoke;
+    height: 500px;
+}
+li{
+    display: inline;
+}
+.uu{
+    margin-left: 60%;
+    word-spacing: 5px;
+}
+#d1{
+    padding: 10px;
+    display: flex;
+}
+#ab{
+    text-align: center;
+}
+.bb{
+    border-radius: 30px;
+}
+li:hover{
+    text-decoration: underline;
+    border-bottom: 4px solid aquamarine;
+}

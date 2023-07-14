@@ -1,0 +1,19 @@
+.main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.child{
+   /* padding: 30px; */
+    margin: 50px;
+    box-shadow: 40px 50px 70px black;
+}
+.child:hover{
+    background-color: darkgrey;
+}
+img{
+    width: 100%;
+}
+    
