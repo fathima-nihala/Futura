@@ -1,0 +1,482 @@
+header{
+    background-image: url("https://b.zmtcdn.com/web_assets/81f3ff974d82520780078ba1cfbd453a1583259680.png");
+    width: 100%;
+    height: 550px;
+    background-size: cover;
+}
+.navbar-expand-lg{
+    width: 100%;
+    max-width: 80rem;
+    margin: 0px auto;
+}
+.nav-item{
+    padding-top: 30px;
+    padding-left: 20px;
+}
+.im1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.im1 img{
+    margin-top: 100px;
+}
+.im1 h3{
+    font-size: 2.6rem;
+    color: white;
+    margin-top: 3rem;
+}
+.search{
+    display: flex;
+    margin-top: 20px;
+    background-color: white;
+    padding: 5px;
+    width: 90px;
+    margin-right: 50px;
+}
+.search{
+    display: flex;
+    margin-top: 20px;
+    background-color: white;
+    padding: 5px;
+    height: 60px;
+    width: 770px;
+    margin-left: 450px;
+    border-radius: 15px;
+}
+.fa{
+    margin-top: 14px;
+}
+.search input{
+    border: none;
+}
+.search input:focus{
+    border: 1px solid white;
+    outline: none;
+}
+.btn{
+    margin-right: 20px;
+}
+.btn-secondary{
+    background-color: white !important;
+    color: black !important;
+     border: none !important;
+
+}
+/* -------------------header-------------------- */
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-height: 260px !important;
+    margin-top: 40px;
+    
+}
+.card {  
+    margin-right: 20px;
+    border-radius: 10px !important;
+  }
+  
+.card img{
+    object-fit: cover;
+    max-height: 200px;
+    width: 640px;
+    border-radius: 10px 10px 0px 0px;
+}
+/* --------------------cards------------------------ */
+.collections{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+.cntnt{
+    margin-top: 110px;
+    margin-left: 160px;
+}
+.cntnt1{
+    display: flex;
+}
+.cntnt1 b{
+    margin-left: 400px;
+    color: red;
+}
+.cntnt p{
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    font-weight: 300px;
+    color: black;
+}
+.im2{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+}
+.im21{
+    background-image: url("https://b.zmtcdn.com/data/collections/5a235455020ab591941f86eadecd111c_1676613868.jpg?output-format=webp");
+    height: 360px;
+    width: 310px;
+    background-size: cover;
+    border-radius: 10px;
+    margin-right: 40px;
+}
+.im21 h6,p{
+    margin-top: 300px;
+    font-size: 20px;
+    color: white;
+}
+.im22{
+    margin-right: 40px;
+    border-radius: 10px;
+    height: 360px;
+    width: 310px;
+    background-size: cover;
+    background-image: url("https://b.zmtcdn.com/data/collections/152db51b5df3bdeef85648532db4236e_1681538674.png?output-format=webp");
+}
+.im22 h6,p{
+    margin-top: 300px;
+    font-size: 20px;
+    color: white;
+}
+.im23{
+    background-image: url("https://b.zmtcdn.com/data/collections/bfa5063b43c9b8f6c9c3b1a37c815d3b_1676552471.jpg?output-format=webp");
+    height: 360px;
+    width: 310px;
+    background-size: cover;
+    border-radius: 10px;
+    margin-right: 40px;
+}
+.im23 h6,p{
+    margin-top: 300px;
+    font-size: 20px;
+    color: white;
+}
+.im24{
+    padding: 3px;
+    background-image: url("https://b.zmtcdn.com/data/collections/34aa4d41b764989b6b832e633b1bb67c_1676575122.jpg?output-format=webp");
+    height: 360px;
+    width: 310px;
+    background-size: cover;
+    border-radius: 10px;
+}
+.im24 h6,p{
+    margin-top: 300px;
+    font-size: 20px;
+    color: white;
+}
+/* ----------------------------------collections-------------------------------------------------------- */
+.lctn{
+    margin-top: 100px;
+}
+.lctn h2{
+    margin-left: 100px;
+}
+.lctnbtn{
+    margin-top: 70px;
+    display: flex;
+    margin-left: 100px;
+}
+.lctnbtn1{
+    width: 450px;
+    height: 80px;
+    border: 1px solid rgb(214, 208, 208);
+    border-radius: 10px;
+    padding: 2px;
+    margin-top: 20px;
+}
+.lctnbtn1:hover{
+    box-shadow: 0px 2px 20px gray;
+}
+.lctnbtn1 h2{
+    font-weight: 400px;
+    font-size: 20px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.lctnbtn1 p{
+    margin-left: 10px;
+    color: black;
+    font-size: 16px;
+}
+.lctnbtn11{
+    display: flex;
+}
+.lctnbtn11 i{
+    margin-left: 300px;
+    margin-top: 30px;
+}
+.lctnbtn12{
+    width: 450px;
+    height: 80px;
+    border: 1px solid rgb(214, 208, 208);
+    border-radius: 10px;
+    padding: 2px;
+    margin-top: 20px;
+    margin-left:20px ;
+}
+.lctnbtn12:hover{
+    box-shadow: 0px 2px 20px gray;
+}
+.lctnbtn12 h2{
+    font-weight: 400px;
+    font-size: 20px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.lctnbtn12 p{
+    margin-left: 10px;
+    color: black;
+    font-size: 16px;
+}
+.lctnbtn112{
+    display: flex;
+}
+.lctnbtn112 i{
+    margin-left: 300px;
+    margin-top: 30px;
+}
+.lctnbtn13{
+    width: 450px;
+    height: 80px;
+    border: 1px solid rgb(214, 208, 208);
+    border-radius: 10px;
+    padding: 2px;
+    margin-top: 20px;
+    margin-left:20px ;
+}
+.lctnbtn13:hover{
+    box-shadow: 0px 2px 20px gray;
+}
+.lctnbtn13 h2{
+    font-weight: 400px;
+    font-size: 20px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.lctnbtn13 p{
+    margin-left: 10px;
+    color: black;
+    font-size: 16px;
+}
+.lctnbtn113{
+    display: flex;
+}
+.lctnbtn113 i{
+    margin-left: 300px;
+    margin-top: 30px;
+}
+.lctnbtn01{
+    display: flex;
+    margin-top: 10px;
+    margin-left: 100px;
+}
+.lctnbtn11-1 {
+    display: flex
+}
+.lctnbtn11-1 i{
+    margin-top: 35px;
+    margin-left:230px;
+}
+.lctnbtn02{
+      display: flex;
+    margin-top: 10px;
+    margin-left: 100px;
+}
+.lctnbtn021{
+    width: 450px;
+    height: 80px;
+    border: 1px solid rgb(214, 208, 208);
+    border-radius: 10px;
+    padding: 2px;
+    margin-top: 20px;
+    margin-left:20px ;
+}
+.lctnbtn021:hover{
+    box-shadow: 0px 2px 20px gray;
+}
+.lctnbtn021 h2{
+    font-weight: 400px;
+    font-size: 20px;
+    margin-left: 70px;
+    margin-top: 30px;
+}
+/* ----------------------------------Zomato App-------------------------------------------- */
+.app1{
+    margin-top: 100px;
+    background-color: rgb(255, 251, 247);
+}
+.app10{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 100px;
+    font-size: 1.6rem;
+
+}
+.app12 p{
+    color: black;
+}
+.app12{
+    display: block;
+}
+.app12 button{
+    color: white;
+}
+.app13{
+    display: flex;
+    flex-direction: row;
+}
+/* --------- */
+.container {
+    display: flex;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default radio button */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Create a custom radio button */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+  border:1px solid red;
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: white;
+    border: 1px solid gray;
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .container input:checked ~ .checkmark:after {
+    display: flex;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .container .checkmark:after {
+       top: 5px;
+      left: 5px;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background: red;
+  }
+  /* ---------------------------------------------options-------------------------------------------- */
+  .options{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.options h2{
+    margin-right: 940px;
+}
+.accordion{
+    margin-top: 30px;
+    max-width: 1300px;
+}
+.accordion-button{
+    width: 1298px !important;
+}
+.accordion-item{
+    border: 1px solid black !important;
+}
+.accordion{
+  max-width: 1300px;
+}
+.accordion-button{
+  width: 1298px !important;
+  height: 70px;
+
+}
+.accordion-item{
+  border: 1px solid gray !important;
+}
+  /* --------------------------------------footer---------------------------------------------------- */
+  footer{
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+    background-color: rgb(248, 248, 248);
+    justify-content: center;
+}
+.ft_1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.ft_1 img{
+    height: 28px;
+    width: 132px;
+}
+.ft_1_btn{
+    display: flex;
+    margin: 20px;
+}
+.btn-danger {
+    background-color: white !important;
+    color: black !important;
+    border: 1px solid rgba(0, 0, 0, 0.377) !important;
+    height: 45px;
+}
+.btn-danger img{
+    width: 40px ;
+}
+.btn-success{
+    background-color: white !important;
+    color: black !important;
+    border: 1px solid rgba(0, 0, 0, 0.377) !important;
+    height: 45px;
+
+}
+
+.ft_2{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+.ft_2_child{
+    display: flex;
+    flex-direction: column;
+    margin: 40px;
+}
+.ft_2_child p{
+    color: rgb(105, 105, 105);
+}
