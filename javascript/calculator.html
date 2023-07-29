@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="a1">
+    <input type="text" id="a2"> <br><br>
+    <input type="button" id="Click" onclick="fun1()" value="ADD">
+    <script>
+        function fun1(){
+            var a=Number(document.getElementById("a1").value);
+            var b=Number(document.getElementById("a2").value);
+            document.write(a+b);
+        }
+    </script>
+    <input type="button" id="Click" onclick="fun2()" value="SUBTRACT">
+    <script>
+        function fun2(){
+            var a=Number(document.getElementById("a1").value);
+            var b=Number(document.getElementById("a2").value);
+            document.write(a-b);
+        }
+    </script> <br><br>
+    <input type="button" id="Click" onclick="fun3()" value="MULTIPLY">
+    <script>
+        function fun3(){
+            var a=Number(document.getElementById("a1").value);
+            var b=Number(document.getElementById("a2").value);
+            document.write(a*b);
+        }
+    </script>
+    <input type="button" id="Click" onclick="fun4()" value="DIVIDE">
+    <script>
+        function fun4(){
+            var a=Number(document.getElementById("a1").value);
+            var b=Number(document.getElementById("a2").value);
+            document.write(a/b);
+        }
+    </script>
+
+</body>
+</html>
