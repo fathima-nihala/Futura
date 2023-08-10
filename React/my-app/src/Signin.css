@@ -1,0 +1,45 @@
+
+.container{
+       text-align: center;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       
+
+}
+.body{
+    background-image:url("assets/im2.png") ;
+    background-repeat: no-repeat;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+}
+input{
+  width: 30%;
+  padding: 12px 20px;
+  /* margin: 8px 0; */
+  display: inline-block;
+  border: 1px solid grey;
+  background-color: whitesmoke;
+  border-radius: 27px;
+}
+a{
+    text-decoration: none;
+    font-size: 13px;
+}
+button{
+    margin-top: 15px;
+    background-color:black ;
+    width: 23%;
+    border: 1px solid black;
+     height: 30px;
+     color: white;
+     border-radius: 35px;
+}
+p{
+        font-size: 13px;
+}
