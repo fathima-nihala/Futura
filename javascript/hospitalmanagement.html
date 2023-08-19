@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+    <title>Document</title>
+    <style>
+        .one li{
+            display: inline;
+        }
+        a{
+            color: gray;
+        }
+        .header0{
+            display: inline;
+            display: flex;
+            width: 100%;
+            padding: 1px;
+            background-color: skyblue;
+            /* margin-bottom: 90px; */
+            height: 40px;
+        }
+        .one{
+            display: inline;
+        }
+        .two{
+            margin-left: 1200px;
+            padding-top: 17px;
+        }
+        /* ----------------------------------header0-------------------------------------------------- */
+        .header1{
+            background-color: white;
+            display: inline;
+            display: flex;
+        }
+        .header1 h2{
+            color: #F97425;
+        }
+        .header1 p{
+            margin-left: 200px;
+            margin-top: 30px;
+        }
+        .header1 p:hover{
+            color: #F97425;
+        }
+        /* ------------------------------header1------------------------------------------- */
+        .main{
+            background-image: url("https://static.wixstatic.com/media/7d7c19_fad9bbe9959a416dbf1742408dc9c4c3~mv2.jpg/v1/fill/w_917,h_700,al_l,q_85,enc_auto/7d7c19_fad9bbe9959a416dbf1742408dc9c4c3~mv2.jpg");
+            width: 100%;
+            height: 800px;
+            background-size: cover;
+            object-fit: cover;
+            object-position: 0% 50%;
+            /* --fill-layer-background-opacity: 0.58; */
+            text-align: center;
+            padding-top: 360px;
+            /* opacity:blur; */
+        }
+
+    </style>
+</head>
+<body>
+    <header class="header0">
+        <div class="one">
+            <ul>
+                <li>medical.com</li> &nbsp  &nbsp 
+                <svg xmlns="http://www.w3.org/2000/svg" fill="#FF7E8B" width="20" height="20" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 iRDDBk"><title>location-fill</title><path d="M10.2 0.42c-4.5 0-8.2 3.7-8.2 8.3 0 6.2 7.5 11.3 7.8 11.6 0.2 0.1 0.3 0.1 0.4 0.1s0.3 0 0.4-0.1c0.3-0.2 7.8-5.3 7.8-11.6 0.1-4.6-3.6-8.3-8.2-8.3zM10.2 11.42c-1.7 0-3-1.3-3-3s1.3-3 3-3c1.7 0 3 1.3 3 3s-1.3 3-3 3z"></path></svg>
+                <li>find our location</li>
+            </ul>
+        </div>
+        <div class="two">
+            <a href="#"><i class="fa fa-facebook-official"></i></a>&nbsp  &nbsp 
+            <a href="#"><i class="fa fa-twitter"></i></a>&nbsp  &nbsp 
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+        </div>
+    </header>
+    <!-- -------------------------------header0------------------------------------------------ -->
+    <div class="header1">
+        <img src="data:image/png;base64,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" alt="" height="60px">
+        &nbsp  &nbsp
+        <h2>MEDCARE</h2>
+        <p>Home</p>
+        <p>About</p>
+        <p>Department</p>
+        <p>Doctors</p>
+        <p>Contact</p> &nbsp  &nbsp
+        <svg data-bbox="0 0 50 50" data-type="shape" xmlns="http://www.w3.org/2000/svg" width="50" height="40" viewBox="0 0 50 50" style="margin-top: 20px;"><g><path d="M25 48.077c-5.924 0-11.31-2.252-15.396-5.921 2.254-5.362 7.492-8.267 15.373-8.267 7.889 0 13.139 3.044 15.408 8.418-4.084 3.659-9.471 5.77-15.385 5.77m.278-35.3c4.927 0 8.611 3.812 8.611 8.878 0 5.21-3.875 9.456-8.611 9.456s-8.611-4.246-8.611-9.456c0-5.066 3.684-8.878 8.611-8.878M25 0C11.193 0 0 11.193 0 25c0 .915.056 1.816.152 2.705.032.295.091.581.133.873.085.589.173 1.176.298 1.751.073.338.169.665.256.997.135.515.273 1.027.439 1.529.114.342.243.675.37 1.01.18.476.369.945.577 1.406.149.331.308.657.472.98.225.446.463.883.714 1.313.182.312.365.619.56.922.272.423.56.832.856 1.237.207.284.41.568.629.841.325.408.671.796 1.02 1.182.22.244.432.494.662.728.405.415.833.801 1.265 1.186.173.154.329.325.507.475l.004-.011A24.886 24.886 0 0 0 25 50a24.881 24.881 0 0 0 16.069-5.861.126.126 0 0 1 .003.01c.172-.144.324-.309.49-.458.442-.392.88-.787 1.293-1.209.228-.232.437-.479.655-.72.352-.389.701-.78 1.028-1.191.218-.272.421-.556.627-.838.297-.405.587-.816.859-1.24a26.104 26.104 0 0 0 1.748-3.216c.208-.461.398-.93.579-1.406.127-.336.256-.669.369-1.012.167-.502.305-1.014.44-1.53.087-.332.183-.659.256-.996.126-.576.214-1.164.299-1.754.042-.292.101-.577.133-.872.095-.89.152-1.791.152-2.707C50 11.193 38.807 0 25 0"></path></g></svg><span class="YT_9QV" style="margin-top: 25px;">Log In</span>
+    </div>
+    <!-- ------------------------------header1------------------------------------------- -->
+    <div class="main">
+        <h1 style="font-size: 58px; font-weight: 30px; font-family: sans-serif;color: antiquewhite;">WELCOME TO MEDCARE</h1>
+        <p style="font-size: 30px; font-weight: 20px; font-family: sans-serif; color: antiquewhite;">Helping to Build a Healthy Community</p>
+        <button>Book an Appoinment</button>
+    </div>
+    
+</body>
+</html> 
+

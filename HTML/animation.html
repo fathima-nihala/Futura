@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes   abc{  /*userdefined name*/
+           /* 0% { 
+                background-color: brown;
+                transform:rotate(-20deg) scale(2,2) translate(100px,100px);
+            }
+            50%{
+                background-color: green;
+                transform: rotate(40deg);
+            }
+            75%{
+                background-color: coral;
+                transform: rotate(-30deg) translate(200px,200px);
+            }
+            100%{
+                transform: rotate(-20deg) scale(2,2) translate(100px);
+            } */
+
+            0% {
+                background-color: aliceblue;
+                transform: rotate(0deg) scale(1, 1) translate(0, 0);
+            }
+            50% {
+                background-color: purple;
+                transform: rotate(180deg) scale(5, 5) translate(0, 0);
+            }
+            100% {
+                background-color: lightseagreen;
+                transform: rotate(360deg) scale(1, 1) translate(0, 0);
+            }
+        }
+        
+        body
+        {
+            background-color: burlywood;
+            display: flex;
+            justify-content: center;
+            /* align-items: center; */
+            margin-top: 400px;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            animation-name: abc;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box">Hello</div>
+</body>
+</html>
