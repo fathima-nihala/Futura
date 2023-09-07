@@ -19,4 +19,5 @@ function display(){
   )
 }
 
+
 export default Style
