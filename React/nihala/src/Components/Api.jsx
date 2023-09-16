@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import axios from 'axios'
+import { Sub } from './Sub'
 
 function Api() {
     const[state,setstate]=useState([])
@@ -21,6 +22,7 @@ function Api() {
         <li>{user.address.city}</li>
         </>
         ))}
+       <Sub value={state}/>
     </div>
   )
 }
