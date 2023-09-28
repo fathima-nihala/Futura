@@ -11,3 +11,5 @@ const Sample1 = () => {
 }
 
 export default Sample1
+
+//child is its child file

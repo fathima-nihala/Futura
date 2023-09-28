@@ -6,7 +6,7 @@ function Api() {
     const[state,setstate]=useState([])
     useEffect(()=>{
         async function display(){
-            const res=await axios.get('https://jsonplaceholder.typicode.com/users')
+            const res=await axios.get('https://jsonplaceholder.typicode.com/users') //axios is a package used to fix API.
             console.log(res.data);
             setstate(res.data)
         }

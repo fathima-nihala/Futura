@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //MAP   = to display elements
+            const a=[2,3,4,5,20]
+                a.map ((abc)=>{  
+                console.log(abc);
+               })
+
+        //ARRAY-MAP
+            function hello(k){
+                k()
+                k()
+                k()
+            }
+            function hai(){
+                console.log('wELCOME');
+            }
+
+        // FOREACH  
+            const b=[7,8,9,10]
+            b.forEach((abc)=>{
+            console.log(abc)
+            })   
+        
+        //FILL = used to add a new element to a perticular position / replace an element in an array
+            const fruits=["banana","mango","kiwi","apple"]
+            fruits.fill("kiwi",1,2);
+            console.log(fruits);
+        
+        //FILTER = used to display elements followed by a condition
+            const c=[10,20,30,40,50,60]
+            const d=c.filter((li)=>{
+                return li>20
+            })
+            console.log(d)
+
+        //SLICE = 
+            const e=[1,2,3,4,5,6]
+            const f=e.slice(2,4)
+            console.log(f);
+
+        //SPLICE
+            const g=[1,2,3,4,5,6]
+             const h=g.splice(2,5)
+            console.log(h);
+        
+        //SORT = arranging elements in ascending / descending order
+            const i=[1,5,2,4,8,6]
+            const j=i.sort((i,j)=>{  //a-b =ascending order ; b-a =descending order
+                return i-j
+            })
+            console.log(j)
+
+        //PUSH = to add elements to end of an array
+            const k=[2,3,4,5,7]
+            k.push(9)
+            console.log(k);
+
+        //POP = delete elements from end of an array
+             const l=[2,3,4,5,7]
+             l.pop()
+            console.log(l);
+
+        //SHIFT = to delete first element from the array
+             const m=[2,3,4,5,7]
+             m.shift()   
+             console.log(m);
+
+        //UNSHIFT = to add first element to the array
+            const n=[2,3,4,5,7]
+            n.unshift(9)  
+            console.log(n)
+
+        //SOME = if one condition is true the result is true
+           const abcd=[2,3,4,5,6,7]
+            const o=abcd.some(cde)
+            function cde(abcd){
+                return abcd >5
+            }
+            console.log(o);
+
+        //EVERY = all the condition is true then result is true
+            const aa=[10,45,34,24]
+            const q=aa.every(li)
+            function li(){
+                return aa > 20
+            }
+            console.log(q);
+
+
+        //INCLUDE = is in or not
+            const num=[32,43,54,13,35]
+            const num2=num.includes(54)
+            console.log(num2);
+
+        //JOIN = used to connect one element to another
+            const num3=[3,4,5,7]
+            const add=num3.join('*')
+            console.log(add);
+
+        //REVERSE = used to reverse the nmbrs
+            const num4=[3,4,5,6,7]
+            const rev=num4.reverse()
+            console.log(rev);
+
+        //FLAT = used to combine multiple arrays to form a single one
+            const flat1=[1, 2, [3, [4, 5, 6], 7], 8]
+            const flat2=flat1.flat(2)
+            console.log(flat2);
+
+            const fl1=[1,6,[3],[4],[8],10]
+            const fl2=fl1.flat(3)
+            console.log(fl2);
+
+            const bb=["A","B",["C","D",["E","F"],"G","H"],"I","K",["L","M"],"N","O"]
+            const cc=bb.flat(2)
+            console.log(cc);
+                                                            
+
+
+    </script>
+</body>
+</html>

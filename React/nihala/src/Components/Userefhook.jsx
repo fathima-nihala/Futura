@@ -1,7 +1,7 @@
 
 import React, {useEffect, useRef} from "react"
 
-function Userefhook() {
+function Userefhook() {   // accessing and managing DOM elements directly in React components.
     const Sampleref=useRef()
     const Sampleref1=useRef()
     const input1=useRef()
@@ -18,7 +18,7 @@ function Userefhook() {
     }
   return (  
     <div ref={Sampleref}>
-        <h1 ref={Sampleref1}>helloo..</h1>
+        <h1 ref={Sampleref1}>helloo cutie ..</h1>
         <button onClick={show}>Click</button>
 
         <div>
@@ -36,3 +36,4 @@ function Userefhook() {
 }
 
 export default Userefhook
+
