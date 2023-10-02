@@ -1,0 +1,115 @@
+.nav{
+    overflow:hidden ;
+    /* width: 100%; */
+}
+.one li {
+    display: inline;
+}
+
+.header {
+    width: 100%;
+    background-color:  rgba(128, 128, 128, 0.497);
+    /* height: 60px; */
+display: flex;
+flex-direction: column;
+padding: 20px;
+align-items: center;
+/* display: inline; */
+}
+
+.one {
+    padding: 1px;
+    /* margin-right: 40px; */
+    background-color: white;
+    display: flex;
+    align-items: center;
+    /* width: 100%; */
+
+}
+
+
+/* ----------------------------------------------------------------- */
+/* 
+.body-main {
+    display: flex;
+    display: inline;
+    height: 100vh;
+    flex-direction: row;
+    
+    background-color: black;
+}
+
+.card {
+    padding: 50px;
+    border: none;
+    display: inline;
+
+}
+
+.card-body {
+    float: left;
+    width: 18%;
+   
+    margin-top: 40px;
+    margin: 0px 15px;
+    margin-left: 60px;
+    display: inline;
+    
+
+    
+
+}
+
+.card-body p {
+    font-weight: 600;
+    font-family: "Poppins";
+    font-size: 10px;
+    line-height: 25px;
+}
+
+.card-body img {
+    width: 110px;
+    margin-left: 12px;
+    margin-top: 15px;
+}
+
+.card-body h2 {
+    font-size: 15px;
+}
+h4{
+    margin-right: 200px;
+}
+ */
+
+
+.card-body-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.card-main{
+    display: flex;
+}
+.cards{
+    background-color: rgba(128, 128, 128, 0.497);
+    margin: 20px;
+    max-width: 300px;
+    border-radius: 20px 0px 20px 0px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.card-image{
+    height: 200px;
+    width: 200px;
+}
+.card-button{
+    border: none;
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    font-weight: bold;
+}

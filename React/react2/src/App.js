@@ -10,8 +10,8 @@ import Main from "./CMPNTNS/Main";
 import ReduxApiFetch from "./CMPNTNS/ReduxApiFetch";
 import Btsrtpbutton from "./CMPNTNS/Btsrtpbutton";
 import Rdxchild from "./CMPNTNS/Rdxchild";
-import Wrk1 from "./WRK/Wrk1";
-import Wrk1main from "./WRK/Wrk1main";
+// import Wrk1 from "./WRK/Wrk1";
+// import Wrk1main from "./WRK/Wrk1main";
 
 // import Form from "./CMPNTNS/Form";
 
@@ -34,25 +34,25 @@ function App() {
       path:'bootbtn',
       element:<Btsrtpbutton/>  
     },
-    {
-      path:'wrk1',
-      element:<Wrk1/> 
-    },
-    {
-      path:'wrk1main',
-      element:<Wrk1main/>
-    }
+    // {
+    //   path:'wrk1',
+    //   element:<Wrk1/> 
+    // },
+    // {
+    //   path:'wrk1main',
+    //   element:<Wrk1main/>
+    // }
     
   ])
 
   return (
-    // <RouterProvider router={Router}></RouterProvider>
-    <div>
-      {/* <ReduxApiFetch/>
-      <Rdxchild/> */}
-      <Wrk1/>
-      {/* <Wrk1main/> */}
-    </div>
+    <RouterProvider router={Router}></RouterProvider>
+    // <div>
+    //   {/* <ReduxApiFetch/>
+    //   <Rdxchild/> */}
+    //   <Wrk1/>
+    //   {/* <Wrk1main/> */}
+    // </div>
   
   );
 }
