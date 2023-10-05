@@ -14,7 +14,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
+            min-height: 100vh; /* vh= viewport height */
             background: url("/images/img1.jpg");
             background-size: cover;
         }
@@ -22,27 +22,27 @@
             position: relative;
             width: 200px;
             height: 300px;
-            transform-style: preserve-3d;
-            animation: animate 20s linear infinite;
+            transform-style: preserve-3d; /*  Specifies that 3D transformations should be preserved. */
+            animation: animate 20s linear infinite; /*  Applies a CSS animation named "animate" with a 20-second duration, linear timing function, and an infinite loop. */
         }
         @keyframes animate{
             0%{
                 transform: perspective(1000px) rotateY(0deg);
             }
             100%{
-                transform: perspective(1000px) rotateY(360deg);
+                transform: perspective(1000px) rotateY(360deg); /*  Rotates the box 360 degrees around the Y-axis, creating a continuous rotation effect. */       
             }
         }
         .box span{
             position: absolute;
             top: 0;
-            left: 0;
+            left: 0;  /*  top & left =0 ensuring that the spans cover the entire box. */
             width: 100%;
             height: 100%;
             transform-origin: center;
             transform-style: preserve-3d;
             transform: rotateY(calc(var(--i)* 45deg))translateZ(400px);
-            -webkit-box-reflect: below 0px linear-gradient(transparent,transparent,#0004);
+            -webkit-box-reflect: below 0px linear-gradient(transparent,transparent,#0004);/*  Adds a reflection effect below each image using a CSS gradient.  */
         }
         .box span img{
             position: absolute;

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { Appcontext } from '../Context'
+import { Appcontext } from './Context'
 
 const Sample1 = () => {
 
