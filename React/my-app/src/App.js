@@ -25,10 +25,10 @@ function App() {
      path:'/',
      element:<Task1/>
     },
-    // {
-    //   path:'niha',
-    //   element:<Task2/>
-    // },
+    {
+      path:'niha',
+      element:<Userefhook/>
+    },
     {
       path:'if',
       element:<Usereducer/>
@@ -45,10 +45,10 @@ function App() {
     //   path:'sample',
     //   element:<Sample1/>
     // },
-    {
-      path:'ref',
-      element:<Userefhook/>
-    },
+    // {
+    //   path:'ref',
+    //   element:<Userefhook/>
+    // },
     {
       path:'api',
       element:<Api/>

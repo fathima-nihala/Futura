@@ -46,13 +46,13 @@ function App() {
   ])
 
   return (
-    <RouterProvider router={Router}></RouterProvider>
-    // <div>
-    //   {/* <ReduxApiFetch/>
-    //   <Rdxchild/> */}
-    //   <Wrk1/>
-    //   {/* <Wrk1main/> */}
-    // </div>
+   
+   
+    <div className="App">
+      
+       <RouterProvider router={Router}></RouterProvider>
+
+    </div> 
   
   );
 }

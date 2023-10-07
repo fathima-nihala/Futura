@@ -31,12 +31,12 @@ const Wrk1main = ({ CartCount }) => {
 
             <div className='card-body-main'>
                 <div className='card-main'>
-                    {a.map((user) => (
-                        <div className='cards' key={user.id}>
-                            <h4 className='card-id'>{user.id}</h4>
-                            <img className='card-image' src={user.thumbnailUrl} alt="" />
-                            <h2>{user.title}</h2>
-                            <button className='card-button' onClick={() => { CartCount(user.id) }}>Add to cart</button>
+                    {a.map((product) => (
+                        <div className='cards' key={product.id}>
+                            <h4 className='card-id'>{product.id}</h4>
+                            <img className='card-image' src={product.thumbnailUrl} alt="" />
+                            <h2>{product.title}</h2>
+                            <button className='card-button' onClick={() => { CartCount(product) }}>Add to cart</button>
 
                         </div>
                     ))}

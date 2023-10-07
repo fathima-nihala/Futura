@@ -1,6 +1,6 @@
 
 import React, {useEffect, useRef} from "react"
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom"   //Useparams kodkan
 
 function Userefhook() {   // accessing and managing DOM elements directly in React components.
     const Sampleref=useRef()
@@ -30,7 +30,8 @@ function Userefhook() {   // accessing and managing DOM elements directly in Rea
           <input type="text" placeholder="state"/>
 
         </div>
-        <Link to={'nav-timeout/:8675645434'}>HELLO CUTIE</Link>
+        {/* useParams kodkan */}
+        <Link to={'/nav-timeout/8675645434'}>HELLO CUTIE</Link>   
     </div>
 
   
