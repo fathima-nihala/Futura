@@ -2,7 +2,9 @@ import { createBrowserRouter,RouterProvider  } from 'react-router-dom';
 import './App.css';
 import Wrk1 from './Components/Wrk1';
 import Wrk1main from './Components/Wrk1main';
-import Cart from './Components/Cart';
+import Cart from './redux/cart';
+// import Cart from './Components/Cart';
+import Cartmain from './Components/Cartmain';
 
 function App() {
   const router=createBrowserRouter([
@@ -12,7 +14,7 @@ function App() {
     },
     {
       path:'cart',
-      element:<Cart/>
+      element:<Cartmain/>
     },
     
   

@@ -19,7 +19,7 @@ function Usememo() {
     console.log('iseven value',isEven);
         const display1=()=>{
             setState1(state1+1)
-        }
+        }   
    
   return (
     <div>

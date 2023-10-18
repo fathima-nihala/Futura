@@ -1,11 +1,12 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Wrk1.css'
 import { BiCart } from "react-icons/bi";
 import Wrk1main from './Wrk1main';
 import { useDispatch } from 'react-redux';
 import { cartProduct } from '../redux/cart';
-import Cart from './Cart';
 import { Link } from 'react-router-dom';
+// import cart from './cart';
+import Cartmain from './Cartmain';
 
 
 
@@ -13,11 +14,19 @@ const Wrk1 = () => {
     const dispatch=useDispatch()
     const [state,setstate]=useState(0);
 
+  useEffect(()=>{
+    const savedCount=parseInt(localStorage.getItem('cartCount')) || 0;
+    setstate(savedCount)
+  },[])
+
     const CartCount=(product)=>{
         setstate(state+1);
         console.log(`user id ${product.id}`);
         dispatch(cartProduct((product)))
+        localStorage.setItem('cartCount',state+1)
     }
+
+
     return (
         <div className='main-page-div'>
         <div className='nav'>

@@ -11,6 +11,10 @@ import UseEffectHook from "./Hooks/UseEffectHook";
 import { Appcontext } from "./Hooks/context";
 import UseContextHook from "./Hooks/UseContextHook";
 import Useref from "./Hooks/Useref";
+import UsereducerHook from "./Hooks/UsereducerHook";
+import UseMemo from "./Hooks/UseMemo";
+import ReactMemo from "./Hooks/ReactMemo";
+import Callback from "./Hooks/Callback";
 
 
 
@@ -41,6 +45,22 @@ function App() {
       path:'useref',
       element:<Useref/>
     },
+    {
+      path:'use-red',
+      element:<UsereducerHook/>
+    },
+    {
+      path:'use-memo',
+      element:<UseMemo/>
+    },
+    {
+      path:'react-memo',
+      element:<ReactMemo/>
+    },
+    {
+      path:'call-back',
+      element:<Callback/>
+    }
    
     
   ])

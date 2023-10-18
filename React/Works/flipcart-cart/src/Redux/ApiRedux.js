@@ -5,7 +5,7 @@ const Api=createSlice({
     initialState:{
         productInfo:[]
     },
-    reducers:{
+    reducers:{ 
         cartProduct:(state,action)=>{
             state.productInfo.push(action.payload);
             console.log(action.payload);

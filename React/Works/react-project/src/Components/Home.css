@@ -1,0 +1,209 @@
+.nav-main{
+    padding: 5px;
+    background-color: white;
+
+}
+.nav-content{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;  /* Distribute items with space between them */
+
+}
+.content{
+    color: black;
+}
+.content:hover{
+    cursor: pointer;
+    background-color: grey;
+    border-radius: 10px;
+}
+.content-p{
+    font-family: Covered By Your Grace;
+    font-size: 27px;
+}
+.search-button{
+    border: 1px solid black;
+    width: 20%;
+    height: 30px;
+    border-radius: 50px;
+}
+.search-button input{
+    width: 240px;
+    border: none;
+    outline: none;
+}
+.search-button input:hover{
+    border: 1px solid white;
+}
+.logo h1{
+    margin-right: 20px;
+}
+.s{
+    color: #53917e;
+    animation: animateLetter 2s ease-in-out infinite;
+}
+@keyframes animateLetter {
+    0%, 50% {
+      opacity: 0;
+      transform: translateY(-10px);
+      color: #53917e;
+    }
+    100%{
+      opacity: 1;
+      transform: translateY(0);
+      color: #eb9c5c;
+    }
+  }
+  
+.s:hover{
+    color: #eb9c5c;
+}
+.drop-down{
+    position: relative;
+    display: inline-block;
+}
+.drop-button {
+    background-color:#DFCCFB ;
+    padding: 7px;
+    background-color: white;
+    border:1px solid black;
+    border-radius: 50px;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 5px 10px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .drop-button {border: 1px solid  #eb9c5c;}
+
+
+.cart{
+    border-radius: 50px;
+    padding: 7px;
+    background-color: white;
+    border:1px solid black;
+}
+.cart:hover{
+    border:1px solid #eb9c5c;
+}
+.btn :hover{
+    color: #eb9c5c;
+    border: #eb9c5c;
+}
+/* ---------nav-main----------- */
+.catagories{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 25px;
+}
+.catagies-contents-p a{
+    text-decoration: none;
+    color: #53917e;
+}
+.catagies-contents-p a:hover{
+    color: #eb9c5c;
+}
+.catagies-contents-p{
+    font-family:Covered By Your Grace;
+    font-size: 23px;
+}
+/* ----------main------------ */
+.saylore-main{
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+    background-color:#53917e ;
+    height: 400px;
+}
+.saylore-main img{
+    width: 100%;
+    height: 800px;
+    object-fit: cover;
+}
+.saylore-main-sub{
+    display: flex;
+}
+.saylore-main-sub img{
+    object-fit: cover;
+    width: 299px;
+    height: 300px;
+}
+
+.scroll-container {
+    background-color:#53917e;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 2px;
+    overflow: hidden;
+    
+  }
+.saylore-collections{
+    padding-top: 800px;
+}
+/* --------------sayloreBody.css----------------------------- */
+.b-card-container{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 cards per row */
+    gap: 20px; /* Adjust gap as needed */
+    border: solid 1px #e0e0e0;
+    justify-content: space-evenly;
+  }
+  .card-items{
+    max-width: 300px;
+  }
+  .card-items:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  .card-image{
+    width: 300px;
+    height: 400px;
+    object-fit: contain;
+  }
+  .card-item-details{
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .card-item-title{
+    color: #eb9c5c;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: Courgette;
+
+  }
+  .card-item-description{
+    font-size: 14px;
+    font-weight: 400;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+
+  }

@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useState,useEffect } from 'react'
 import { useContext } from 'react'
 import { userContext } from './context'
+import axios from 'axios'
 
 const Dispatch = () => {
+  const [state,setstate]=useState([])
     const {dispatch}=useContext(userContext)
     useEffect(()=>{
         async function display(){
@@ -10,7 +12,7 @@ const Dispatch = () => {
             console.log(res.data);
             setstate(res.data)
 
-            dispatch({type:'LoginSuccess',payload:(res.data)}) //useRedux.js ile function lek data access cheyyunnu.
+            dispatch({type:'LoginSuccess',payload:res.data}) //useRedux.js ile function lek data access cheyyunnu.
         }
         display()
         console.log('state data',state);

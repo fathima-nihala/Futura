@@ -18,6 +18,8 @@ import Usememo from "./Components/Usememo";
 import Usecallback from "./Components/Usecallback";
 import Usenavigate1 from "./Components/Usenavigate1";
 import UsenavSettimeout from "./Components/UsenavSettimeout";
+import GetData from "./ContextReducer/GetData";
+import Dispatch from "./ContextReducer/Dispatch";
 // import Task from "./TASKS/Task";
 function App() {
     const myRouter=createBrowserRouter([
@@ -69,6 +71,14 @@ function App() {
       path:'nav-timeout/:id',
       element:<UsenavSettimeout/>
     },
+    {
+      path:'data',
+      element:<GetData/>
+    },
+    {
+      path:'dispatch',
+      element:<Dispatch/>
+    }
 
   ])
   return (
