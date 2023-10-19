@@ -56,60 +56,60 @@ const Main = () => {
                 </div>
 
                 <div className='saylore-main-sub'>
-                    <div className="saylore-sub">
+                    <div className="saylore-sub" onClick={() => handleClick('All')}>
                         <div className="saylor-sub-image">
                         <img src={mainimg1} alt="" />
                         </div>
                         <div className="catagories">
-                        <button className='catagies-contents'><a onClick={() => handleClick('All')} className={`colle ction-button ${activeFilter === 'All' ? 'active' : ''}`}>All</a></button>
+                        <button className='catagies-contents'><a  className={`colle ction-button ${activeFilter === 'All' ? 'active' : ''}`}>All</a></button>
                         </div>
                     </div>
-                    <div className="saylore-sub">
+                    <div className="saylore-sub"  onClick={() => handleClick('Men')}>
                         <div className="saylor-sub-image">
                         <img src={mainimg2} alt="" />
                         </div>
                         <div className="catagories">
-                        <button className='catagies-contents'><a onClick={() => handleClick('Men')} className={`colle ction-button ${activeFilter === 'men' ? 'active' : ''}`}>Men</a></button>
+                        <button className='catagies-contents'><a  className={`colle ction-button ${activeFilter === 'men' ? 'active' : ''}`}>Men</a></button>
                         </div>
                     </div>
-                    <div className="saylore-sub">
+                    <div className="saylore-sub" onClick={() => handleClick('Women')}>
                         <div className="saylor-sub-image">
                         <img src={mainimg3} alt="" />
                         </div>
                         <div className="catagories">
-                        <button className='catagies-contents'><a onClick={() => handleClick('Women')} className={`colle ction-button ${activeFilter === 'Women' ? 'active' : ''}`}>Women</a></button>
+                        <button className='catagies-contents'><a  className={`colle ction-button ${activeFilter === 'Women' ? 'active' : ''}`}>Women</a></button>
                         </div>
                     </div>
-                    <div className="saylore-sub">
+                    <div className="saylore-sub" onClick={() => handleClick('Kids')}>
                         <div className="saylor-sub-image">
                         <img src={mainimg4} alt="" />
                         </div>
                         <div className="catagories">
-                        <button className='catagies-contents'><a onClick={() => handleClick('Kids')} className={`colle ction-button ${activeFilter === 'Kids' ? 'active' : ''}`}>Kids</a></button>
+                        <button className='catagies-contents'><a  className={`colle ction-button ${activeFilter === 'Kids' ? 'active' : ''}`}>Kids</a></button>
                         </div>
                     </div>
-                    <div className="saylore-sub">
+                    <div className="saylore-sub" onClick={() => handleClick('Jewelleri')}>
                         <div className="saylor-sub-image">
                         <img src={mainimg5} alt="" />
                         </div>
                         <div className="catagories">
-                        <button className='catagies-contents'><a onClick={() => handleClick('Jewelleri')} className={`colle ction-button ${activeFilter === 'Jewelleri' ? 'active' : ''}`}>Jewelleri</a></button>
+                        <button className='catagies-contents'><a  className={`colle ction-button ${activeFilter === 'Jewelleri' ? 'active' : ''}`}>Jewelleri</a></button>
                         </div>
                     </div>
-                    <div className="saylore-sub">
+                    <div className="saylore-sub" onClick={() => handleClick('Beauty')}>
                         <div className="saylor-sub-image">
                         <img src={mainimg6} alt="" />
                         </div>
                         <div className="catagories">
-                        <button className='catagies-contents'><a onClick={() => handleClick('Beauty')} className={`colle ction-button ${activeFilter === 'Beauty' ? 'active' : ''}`}>Beauty</a></button>
+                        <button className='catagies-contents'><a  className={`colle ction-button ${activeFilter === 'Beauty' ? 'active' : ''}`}>Beauty</a></button>
                         </div>
                     </div>
-                    <div className="saylore-sub">
+                    <div className="saylore-sub" onClick={() => handleClick('Electronics')}>
                         <div className="saylor-sub-image">
                         <img src={mainimg7} alt="" />
                         </div>
                         <div className="catagories">
-                        <button className='catagies-contents'><a onClick={() => handleClick('Electronics')} className={`colle ction-button ${activeFilter === 'Electronics' ? 'active' : ''}`}>Electronics</a></button>
+                        <button className='catagies-contents'><a  className={`colle ction-button ${activeFilter === 'Electronics' ? 'active' : ''}`}>Electronics</a></button>
                         </div>
                     </div>
                        

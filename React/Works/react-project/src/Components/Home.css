@@ -171,10 +171,14 @@
 
 .saylor-sub-image img{
   border-radius: 50px;
-  overflow: hidden;
+  overflow: hidden; 
    height: 150px;
   width: 150px; 
   object-fit: cover;
+}
+.saylor-sub-image img:hover{
+  box-shadow: 0 0 10px rgba(125, 125, 123, 0.5);
+
 }
 
 /*  */
@@ -250,4 +254,8 @@
     overflow: hidden;
     text-overflow: ellipsis;
     
+  }
+  /* ------------------------------- */
+  .mrp{
+    text-decoration: line-through;
   }

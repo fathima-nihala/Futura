@@ -1,8 +1,8 @@
 import { configureStore,combineReducers } from '@reduxjs/toolkit'
-// import ApiRedux from './ApiRedux'
 import { persistStore,persistReducer} from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
 import userReducer from './Localstorage'
+import ecomReducer from './ecom'
 
 const persistConfig = {
         key: 'local',
@@ -11,7 +11,7 @@ const persistConfig = {
       }
      
  
-  const rootreducer = combineReducers({Local:userReducer})
+  const rootreducer = combineReducers({Local:userReducer,Ecom:ecomReducer})
   const persistedReducer = persistReducer(persistConfig, rootreducer)
 
   export const store = configureStore({

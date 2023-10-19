@@ -13,7 +13,7 @@ const SayloreBody = ({values}) => {
                             <div className="card-item-details">
                                 <span className='card-item-title'>{item.title}</span>
                                 <span className='card-item-description'>{item.description}</span>
-                                <span>₹{item.price}</span>
+                                <span>₹{item.price}&nbsp;&nbsp;<span className='mrp'>₹{item.mrp}</span></span>
                             </div>
                         </div>
                     ))}
