@@ -1,28 +1,13 @@
-import React, { useEffect, useState } from 'react'
-import { apiData } from './Api/SoyloreApi';
+import React from 'react'
 
-const SayloreBody = () => {
-    const [state,setstate]=useState([]);
-    const [filterState,setFilterState]=useState([]);
-    const [activeFilter,setActiveFilter]=useState([]);
-
-   useEffect(()=>{
-    async function api(){
-        try{
-            setstate(apiData);
-        }
-        catch(error){
-            console.log('Error fetching data:',error);
-        }
-    }
-    api()
-   },[])
+const SayloreBody = ({values}) => {
+    
 
   return (
     <div>
          <div>
          <div className='b-card-container'>
-                    {state.map(item => (
+                    {values.map(item => (
                         <div key={item.id} className="card-items">
                             <img src={item.thumbnail} alt={item.name} className='card-image' />
                             <div className="card-item-details">

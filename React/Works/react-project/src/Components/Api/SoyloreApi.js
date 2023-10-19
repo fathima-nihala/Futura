@@ -2,40 +2,40 @@ export const apiData = [
     // men t-shirt
     {
       id: 1,
-      category: 'dress',
-      type: 'men',
+      category: 'men',
+      type: 'dress',
       title: 'EYEBOGLER',
       description: 'Polo Neck Half Sleeve Striped Print Casual Men Tshirt',
       price: 664,
       thumbnail: 'https://m.media-amazon.com/images/I/51byp5tQ86L._UX569_.jpg'
     }, {
       id: 2,
-      category: 'dress',
-      type: 'men',
+      category: 'men',
+      type: 'dress',
       title: 'Allen Solly',
       description: 'Men Solid Polo',
       price: 664,
       thumbnail: 'https://m.media-amazon.com/images/I/81eVonPUBgL._UX569_.jpg'
     }, {
       id: 3,
-      category: 'dress',
-      type: 'men',
+      category: 'men',
+      type: 'dress',
       title: 'Van Heusen',
       description: "Men's Regular Fit Polo Shirt",
       price: 688,
       thumbnail: 'https://m.media-amazon.com/images/I/71WBVg0YE8L._UX569_.jpg'
     }, {
       id: 4,
-      category: 'dress',
-      type: 'men',
+      category: 'men',
+      type: 'dress',
       title: 'Urbano Fashion',
       description: "Men's Printed Full Sleeve Slim Fit Cotton T-Shirt",
       price: 1196,
       thumbnail: 'https://m.media-amazon.com/images/I/61bDoqhvEPL._UX679_.jpg'
     }, {
       id: 5,
-      category: 'dress',
-      type: 'men',
+      category: 'men',
+      type: 'dress',
       title: 'PARK AVENUE',
       description: 'Men Solid Polo Neck Cotton Blend Light Blue T-Shirt',
       price: 824,
@@ -46,87 +46,87 @@ export const apiData = [
   
     {
       id: 6,
-      category: 'dress',
-      type: 'men',
+      category: 'men',
+      type: 'dress',
       title: "Levi's",
       description: 'Men 511 Mid Rise Slim Fit Jeans',
       price: 1768,
       thumbnail: 'https://m.media-amazon.com/images/I/51JoT-tWmzL._UX569_.jpg'
     }, {
       id: 7,
-      category: 'dress',
-      type: 'men',
+      category: 'men',
+      type: 'dress',
       title: 'Billford',
       description: "Men's Comfortable Stretchable Casual Denim Jeans",
       price: 599,
       thumbnail: 'https://m.media-amazon.com/images/I/71a3OycnGYL._UY606_.jpg'
     }, {
       id: 8,
-      category: 'dress',
-      type: 'men',
+      category: 'men',
+      type: 'dress',
       title: "Levi's",
       description: 'Men 512 Mid Rise Slim Tapered Jeans',
       price: 1079,
       thumbnail: 'https://m.media-amazon.com/images/I/81LRcpcOopL._UX466_.jpg'
     }, {
       id: 9,
-      category: 'dress',
-      type: 'men',
+      category: 'men',
+      type: 'dress',
       title: 'Ben Martin',
       description: "Men's Relaxed Fit Jeans",
       price: 499,
       thumbnail: 'https://m.media-amazon.com/images/I/616xchp1ECL._UY741_.jpg'
     }, {
       id: 10,
-      category: 'dress',
-      type: 'men',
+      category: 'men',
+      type: 'dress',
       title: "Levi's",
       description: 'Men Regular Fit Jeans',
       price: 1305,
       thumbnail: 'https://m.media-amazon.com/images/I/51BmO8qmN+L._UX569_.jpg'
     }, {
       id: 11,
-      category: 'dress',
-      type: 'men',
+      category: 'men',
+      type: 'dress',
       title: "Woodland",
       description: 'Men Gd 2053116 Leather Sandals',
       price: 1390,
       thumbnail: 'https://m.media-amazon.com/images/I/71DIUCV0M9L._UX575_.jpg'
     }, {
       id: 12,
-      category: 'dress',
-      type: 'men',
+      category: 'men',
+      type: 'dress',
       title: "Adidas",
       description: 'Mens Runmagica M Running Shoe',
       price: 2150,
       thumbnail: 'https://m.media-amazon.com/images/I/81DnsUczjTL._UY695_.jpg'
     }, {
       id: 13,
-      category: 'dress',
-      type: 'men',
+      category: 'men',
+      type: 'dress',
       title: "Puma",
       description: 'Unisex-Adult Duke Running Shoe',
       price: 1299,
       thumbnail: 'https://m.media-amazon.com/images/I/71E018D-UiL._UX695_.jpg'
     }, {
       id: 14,
-      category: 'dress',
-      type: 'men',
+      category: 'men',
+      type: 'dress',
       title: "Adidas",
       description: "Men's Clinch-X M Running Shoe",
       price: 1279,
       thumbnail: 'https://m.media-amazon.com/images/I/71sfbi31lhL._UX695_.jpg'
     }, {
       id: 15,
-      category: 'dress',
-      type: 'men',
+      category: 'men',
+      type: 'dress',
       title: "Woodland",
       description: 'Mens OGC 0110105 Sneaker',
       price: 2022,
       thumbnail: 'https://m.media-amazon.com/images/I/81x-Vn58hhL._UX695_.jpg'
     }, {
       id: 16,
-      category: 'dress',
+      category: 'kids',
       type: 'kids',
       title: 'Red, Sleeveless',
       description: 'Baby Girls Maxi/Full Length Festive/Wedding Dress  (Red, Sleeveless)',
@@ -134,7 +134,7 @@ export const apiData = [
       thumbnail: 'https://rukminim2.flixcart.com/image/612/612/kz8qsnk0/kids-dress/x/v/w/4-5-years-jkm1432sain5556-therajstore-original-imagbamffxb7g5wr.jpeg?q=70'
     }, {
       id: 17,
-      category: 'dress',
+      category: 'kids',
       type: 'kids',
       title: 'FLORA',
       description: 'Girls Midi/Knee Length Party Dress  (Pink, Full Sleeve)',
@@ -143,7 +143,7 @@ export const apiData = [
   
     }, {
       id: 18,
-      category: 'dress',
+      category: 'kids',
       type: 'kids',
       title: 'MUSKAN BEAUTY COLLECTION ',
       description: 'Baby Girls Midi/Knee Length Party Dress  (White, Sleeveless)',
@@ -151,7 +151,7 @@ export const apiData = [
       thumbnail: 'https://rukminim2.flixcart.com/image/612/612/kxp0mfk0/kids-dress/z/n/q/1-2-years-princess-yellow-green-party-frocks-dresses-muskan-original-imaga2pyar8txzh4.jpeg?q=70'
     }, {
       id: 19,
-      category: 'dress',
+      category: 'kids',
       type: 'kids',
       title: 'FLORA ',
       description: 'Baby Girls Midi/Knee Length Festive/Wedding Dress  (Dark Green, Full Sleeve)',
@@ -159,7 +159,7 @@ export const apiData = [
       thumbnail: 'https://rukminim2.flixcart.com/image/612/612/xif0q/kids-dress/8/y/2/2-3-years-d-w-59-flora-original-imagm5vghy4ddnhb.jpeg?q=70'
     }, {
       id: 20,
-      category: 'dress',
+      category: 'kids',
       type: 'kids',
       title: 'MUSKAN BEAUTY COLLECTION  ',
       description: 'Baby Girls Midi/Knee Length Party Dress  (Red, Fashion Sleeve)',
@@ -167,7 +167,7 @@ export const apiData = [
       thumbnail: 'https://rukminim2.flixcart.com/image/612/612/kvy58y80/kids-dress/s/8/f/18-24-months-princess-classy-girls-frocks-dresses-muskan-beauty-original-imag8puhns8qgtnr.jpeg?q=70'
     }, {
       id: 21,
-      category: 'dress',
+      category: 'kids',
       type: 'kids',
       title: 'OOKSGAL ',
       description: 'Baby Boys Party(Festive) Jacket Pant  (Red) ',
@@ -176,7 +176,7 @@ export const apiData = [
   
     }, {
       id: 22,
-      category: 'dress',
+      category: 'kids',
       type: 'kids',
       title: 'OOKSGAL ',
       description: 'Baby Boys Party(Festive) Jacket Pant  (Grey)',
@@ -185,7 +185,7 @@ export const apiData = [
   
     }, {
       id: 23,
-      category: 'dress',
+      category: 'kids',
       type: 'kids',
       title: 'KIKANI ENTERPRISE ',
       description: 'Baby Boys & Baby Girls Party(Festive) Shirt Shorts  (Multicolor)',
@@ -194,7 +194,7 @@ export const apiData = [
   
     }, {
       id: 24,
-      category: 'dress',
+      category: 'kids',
       type: 'kids',
       title: 'RUKMINI',
       description: 'Baby Boys & Baby Girls Party(Festive) T-shirt Dungaree  (Pink) ',
@@ -203,7 +203,7 @@ export const apiData = [
   
     }, {
       id: 25,
-      category: 'dress',
+      category: 'kids',
       type: 'kids',
       title: 'CuteHug',
       description: 'Baby Boys & Baby Girls Party(Festive) Dress T-shirt, Pyjama  (Black)        ',
@@ -482,8 +482,8 @@ export const apiData = [
       thumbnail: 'https://m.media-amazon.com/images/I/61-gjW2jQCL._SY679_.jpg',
     }, {
       id: 56,
-      category: 'dress',
-      type: 'women',
+      category: 'women',
+      type: 'dress',
       title: 'GRECIILOOKS',
       description: 'Western Dress for Women || Stretchable Lycra Solid Mini Dress...',
       price: 299,
@@ -491,8 +491,8 @@ export const apiData = [
     },
     {
       id: 57,
-      category: 'dress',
-      type: 'western',
+      category: 'women',
+      type: 'dress',
       title: 'J B Fashion',
       description: 'Dresses for Women || Western Dresses for Women || Dress for...',
       price: 599,
@@ -500,8 +500,8 @@ export const apiData = [
     },
     {
       id: 58,
-      category: 'dress',
-      type: 'women',
+      category: 'women',
+      type: 'dress',
       title: 'Lymio',
       description: 'Dresses for Women || Western Dresses for Women || Dress for...',
       price: 599,
@@ -509,8 +509,8 @@ export const apiData = [
     },
     {
       id: 59,
-      category: 'dress',
-      type: 'women',
+      category: 'women',
+      type: 'dress',
       title: 'AASK',
       description: 'Women A-line..',
       price: 591,
@@ -518,8 +518,8 @@ export const apiData = [
     },
     {
       id: 60,
-      category: 'dress',
-      type: 'women',
+      category: 'women',
+      type: 'dress',
       title: 'GRECIILOOKS',
       description: 'Women Co Ord Set| Printed Shirt & Bottom Set for Women|...',
       price: 399,
@@ -527,8 +527,8 @@ export const apiData = [
     },
     {
       id: 61,
-      category: 'dress',
-      type: 'women',
+      category: 'women',
+      type: 'dress',
       title: 'Miss Ethnik',
       description: 'womens Faux Georgette Semi Stitched Top With Stitched Faux..',
       price: 1599,
@@ -536,8 +536,8 @@ export const apiData = [
     },
     {
       id: 62,
-      category: 'dress',
-      type: 'women',
+      category: 'women',
+      type: 'dress',
       title: 'Amayra',
       description: 'Womens Rayon Nayra Cut Embroidered Kurta with Pant and',
       price: 799,
@@ -545,8 +545,8 @@ export const apiData = [
     },
     {
       id: 63,
-      category: 'dress',
-      type: 'women',
+      category: 'women',
+      type: 'dress',
       title: 'Khushal K',
       description: 'Womens Rayon Flared Kurta And Palazzo With Dupatta Set',
       price: 1325,
@@ -554,8 +554,8 @@ export const apiData = [
     },
     {
       id: 64,
-      category: 'dress',
-      type: 'women',
+      category: 'women',
+      type: 'dress',
       title: 'RAJMANDIRFABRICS',
       description: 'Women Cotton Kurta Pant With Dupatta Set',
       price: 1545,
@@ -563,8 +563,8 @@ export const apiData = [
     },
     {
       id: 65,
-      category: 'dress',
-      type: 'women',
+      category: 'women',
+      type: 'dress',
       title: 'ANNI DESIGNER',
       description: 'Womens Georgette Chikankari Embroidered Anarkali Kurti',
       price: 539,
