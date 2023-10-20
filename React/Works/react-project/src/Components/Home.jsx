@@ -15,12 +15,14 @@ import './Home.css'
 import React, {  useState } from 'react'
 import Main from "./Main";
 import Cart from "./Cart";
+import Display from "./Display";
 // import { apiData } from './Api/SoyloreApi';
 
 
 const Home = () => {
     const [state, setstate] = useState([]);
     const[activeNav,setActiveNav]=useState(0);
+    const [productDetails,setProductDetails]=useState(null);
 
     // const [filterState, setFilterState] = useState([]);
     // const [activeFilter, setActiveFilter] = useState('All');
@@ -72,7 +74,8 @@ const Home = () => {
                             <button className="drop-button"><BsPerson style={{ fontSize: 26, color: ' black' }} /></button>
                             <div className="dropdown-content">
                                 <a href="#"><Link to={'/Signup'}>SignUp</Link></a>
-                                <a href="#">Signin</a>
+                                <a href="#">My Profile</a>
+                                <a href="">Logout</a>
                             </div>
                             </div>
                         <button className='cart'onClick={()=>handleNavigationClick(1)}><Link><BiCart style={{ fontSize: 26, color: ' black' }} /></Link></button>
@@ -159,7 +162,8 @@ const Home = () => {
             </div>
                 <div>
                     {activeNav===1 && <div><Cart/></div>}
-                    {activeNav===0 && <div><Main/></div>}
+                    {activeNav===0 && <div><Main setActivnav={setActiveNav} setProductDeatails={setProductDetails}/></div>}
+                    {activeNav===2 &&  <div><Display productDetails={productDetails}/></div>} 
                    
                 </div>
         </div>

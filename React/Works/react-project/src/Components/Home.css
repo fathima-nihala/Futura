@@ -1,261 +1,306 @@
 /* *{
   overflow: hidden;
 } */
-.brdr{
+.brdr {
   margin: 0px 20px;
 }
-.nav-main{
-    padding: 5px;
-    background-color: white;
+
+.nav-main {
+  padding: 5px;
+  background-color: white;
 
 }
-.nav-content{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;  /* Distribute items with space between them */
+
+.nav-content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  /* Distribute items with space between them */
 }
-.content{
-    color: black;
+
+.content {
+  color: black;
 }
-.btn{
-  font-family:'Amarante' ;
-    font-size: 20px;
+
+.btn {
+  font-family: 'Amarante';
+  font-size: 20px;
 }
-.btn:hover{
+
+.btn:hover {
   color: #eb9c5c;
 }
-.content:hover{
-    cursor: pointer;
-    background-color: grey;
-    border-radius: 10px;
+
+.content:hover {
+  cursor: pointer;
+  background-color: grey;
+  border-radius: 10px;
 }
-.search-button{
-    border: none;
-    width: 20%;
-    height: 30px;
-    border-radius: 50px;
-    display: flex;
-    align-items: center;
-    padding: 5px;
-    background-color: rgb(236, 236, 236);
+
+.search-button {
+  border: none;
+  /* width: 20%; */
+  height: 30px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  background-color: rgb(236, 236, 236);
 }
-.search-button input{
-    width: 240px;
-    border: none;
-    outline: none;
-    background-color: rgb(236, 236, 236) ;
+
+.search-button input {
+  width: 240px;
+  border: none;
+  outline: none;
+  background-color: rgb(236, 236, 236);
 }
-.logo h1{
-    margin-right: 20px;
+
+.logo h1 {
+  margin-right: 20px;
 }
-.logo h1{
-    font-family: 'Covered By Your Grace';
-    font-size: 40px;
+
+.logo h1 {
+  font-family: 'Covered By Your Grace';
+  font-size: 40px;
 }
-.s{
-    color: #53917e;
-    animation: animateLetter 2s ease-in-out infinite;
+
+.s {
+  color: #53917e;
+  animation: animateLetter 2s ease-in-out infinite;
 }
+
 @keyframes animateLetter {
-    0%, 50% {
-      opacity: 0;
-      transform: translateY(-10px);
-      color: #53917e;
-    }
-    100%{
-      opacity: 4;
-      transform: translateY(0);
-      color: #eb9c5c;
-    }
+
+  0%,
+  50% {
+    opacity: 0;
+    transform: translateY(-10px);
+    color: #53917e;
   }
 
-  .dropdown {
-    position: relative;
-    display: inline-block;
-    background-color: rgb(236, 236, 236) ;
-    border-radius: 50px;
+  100% {
+    opacity: 4;
+    transform: translateY(0);
+    color: #eb9c5c;
   }
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  background-color: rgb(236, 236, 236);
+  border-radius: 50px;
+}
 
 .drop-button {
-    padding: 7px;
-    background-color: rgb(236, 236, 236);
-    border-radius: 50px;
-    border: none;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  .dropdown-content a {
-    color: black;
-    padding: 5px 10px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  .dropdown-content a:hover {background-color: #ddd;}
-  
-  .dropdown:hover .dropdown-content {display: block;}
-  
-  .dropdown:hover .drop-button {border: 1px solid  #eb9c5c;}
+  padding: 7px;
+  background-color: rgb(236, 236, 236);
+  border-radius: 50px;
+  border: none;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 5px 10px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .drop-button {
+  border: 1px solid #eb9c5c;
+}
 
 
-.cart{
-    border-radius: 50px;
-    padding: 7px;
-    background-color:rgb(236, 236, 236);
-    border: none;
-    margin-left: 20px;
+.cart {
+  border-radius: 50px;
+  padding: 7px;
+  background-color: rgb(236, 236, 236);
+  border: none;
+  margin-left: 20px;
 }
-.cart:hover{
-    border:1px solid #eb9c5c;
+
+.cart:hover {
+  border: 1px solid #eb9c5c;
 }
-.btn{
-    background-color: white;
-    border: none;
+
+.btn {
+  background-color: white;
+  border: none;
 }
+
 /* ---------nav-main----------- */
 
-.saylore-main{
-    justify-content: center;
-    align-items: center;
-    width: 98%;
-    margin-top: 20px;
-    background-image: linear-gradient(#f8b783,#53917e);
-    height: 500px;
-    margin-left: 10px;
-    border-radius: 30px;
-    display: flex;
+.saylore-main {
+  justify-content: center;
+  align-items: center;
+  width: 98%;
+  margin-top: 20px;
+  background-image: linear-gradient(#f8b783, #53917e);
+  height: 500px;
+  margin-left: 10px;
+  border-radius: 30px;
+  display: flex;
 }
-.text{
+
+.text {
   display: block;
   color: black;
 }
-.saylor-text{
-  font-family: 'Amarante' ;
+
+.saylor-text {
+  font-family: 'Amarante';
   font-size: 40px;
   margin-left: 7px;
 }
-.saylor-text-sub{
-  font-family: 'Amarante' ;
+
+.saylor-text-sub {
+  font-family: 'Amarante';
   font-size: 40px;
   margin-left: 190px;
 }
-.saylore-main img{
+
+.saylore-main img {
   margin-left: 350px;
 }
+
 /* ----------------saylor-main------ */
-.saylore-main-sub{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* flex-direction: row; */
-    padding-top: 30px;
-    justify-content: space-around;
+.saylore-main-sub {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-direction: row; */
+  padding-top: 30px;
+  justify-content: space-around;
 
 }
-.saylore-sub{
+
+.saylore-sub {
   display: block;
   flex-direction: column;
   border-radius: 50px;
-  
+
 }
 
-.saylor-sub-image img{
+.saylor-sub-image img {
   border-radius: 50px;
-  overflow: hidden; 
-   height: 150px;
-  width: 150px; 
+  overflow: hidden;
+  height: 150px;
+  width: 150px;
   object-fit: cover;
 }
-.saylor-sub-image img:hover{
+
+.saylor-sub-image img:hover {
   box-shadow: 0 0 10px rgba(125, 125, 123, 0.5);
 
 }
 
 /*  */
-  .catagories{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    padding-top: 25px;
+.catagories {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 25px;
 }
-.catagies-contents{
-    background-color: white;
-    border: none;
+
+.catagies-contents {
+  background-color: white;
+  border: none;
 }
-.catagies-contents a{
+
+.catagies-contents a {
   text-decoration: none;
   color: #53917e;
   font-style: normal;
-  font-family:'inter_regular,fallback-inter_regular,Arial,sans-serif';
-    font-size: 20px;
+  font-family: 'inter_regular,fallback-inter_regular,Arial,sans-serif';
+  font-size: 20px;
 }
-.catagies-contents a:hover{
-    color: #eb9c5c;
+
+.catagies-contents a:hover {
+  color: #eb9c5c;
 }
 
 /* ----------main------------ */
-  /* --------------------------saylor-collecions------------ */
-.saylore-collections{
-    /* padding-top: px; */
-    overflow: hidden;
-    padding-top: 40px;
-    /* width: 100%; */
+/* --------------------------saylor-collecions------------ */
+.saylore-collections {
+  /* padding-top: px; */
+  overflow: hidden;
+  padding-top: 40px;
+  /* width: 100%; */
 }
-/* --------------sayloreBody.css----------------------------- */
-.b-card-container{
-    display: grid;
-    /* grid-template-columns: repeat(5, 1fr); 5 cards per row */
-    grid-template-columns: auto auto auto auto auto;
-    gap: 7px; /* Adjust gap as needed */
-    /* border: solid 1px #e0e0e0; */
-    justify-content: space-evenly;
-    object-fit: cover;
-  }
-  .card-items{
-    max-width: 200px;
-    /* margin-left: 22px; */
-  }
-  .card-items:hover{
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  }
-  .card-image{
-    width: 200px;
-    height: 300px;
-    object-fit: contain;
-  }
-  .card-item-details{
-    display: flex;
-    flex-direction: column;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  .card-item-title{
-    color: #eb9c5c;
-    font-size: 18px;
-    font-weight: 500;
-    font-family: Courgette;
 
-  }
-  .card-item-description{
-    font-size: 14px;
-    font-weight: 400;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    
-  }
-  /* ------------------------------- */
-  .mrp{
-    text-decoration: line-through;
-  }
+/* --------------sayloreBody.css----------------------------- */
+.b-card-container {
+  display: grid;
+  /* grid-template-columns: repeat(5, 1fr); 5 cards per row */
+  grid-template-columns: auto auto auto auto auto;
+  gap: 7px;
+  /* Adjust gap as needed */
+  /* border: solid 1px #e0e0e0; */
+  justify-content: space-evenly;
+  object-fit: cover;
+
+}
+
+.card-items {
+  max-width: 200px;
+  /* margin-left: 22px; */
+  text-align: left;
+}
+
+.card-items:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.card-image {
+  width: 200px;
+  height: 300px;
+  object-fit: contain;
+}
+
+.card-item-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-item-title {
+  color: #eb9c5c;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: Courgette;
+
+}
+
+.card-item-description {
+  font-size: 14px;
+  font-weight: 400;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+}
+
+/* ------------------------------- */
+.mrp {
+  text-decoration: line-through;
+}

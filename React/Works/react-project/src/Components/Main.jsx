@@ -13,7 +13,7 @@ import './Home.css'
 
 
 
-const Main = () => {
+const Main = ({setActivnav,setProductDeatails }) => {
     const [state, setstate] = useState([]);
     const [filterState, setFilterState] = useState([]);
     const [activeFilter, setActiveFilter] = useState('All');
@@ -116,7 +116,7 @@ const Main = () => {
                     </div>
                 {/* </div> */}
                 <div className='saylore-collections'>
-                    <SayloreBody values={filterState} />
+                    <SayloreBody values={filterState} setProductDeatails={setProductDeatails} setActivnav={setActivnav} />
                 </div>
                
         </div>

@@ -1,4 +1,4 @@
-* {
+ *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -11,9 +11,9 @@
     height: 100vh;
 }
 .title{
-    display: flex;
-    justify-content: center;
-}
+    display: flex; 
+     justify-content: center;
+} 
 .title h1{
     font-weight: bold;
     font-size: 38px;
@@ -29,13 +29,6 @@
 .data{
     margin-bottom: 25px;
 }
-/* .data label{
-    /* padding-right: 400px; */
-    /* font-weight:bold;
-    font-size: 20px;
-    color: #f1f1f1;
-    font-family: sans-serif;
-}  */
 
 .data input{
     width: 100%;
@@ -51,12 +44,7 @@
 input{
     width: 400px;
 }
-/* .data1 label{
-    font-weight:bold;
-    font-size: 20px;
-    color: #f1f1f1;
-    font-family: sans-serif;
-} */
+
  .password-input-container {
     display: flex;
     align-items: center;

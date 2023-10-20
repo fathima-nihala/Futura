@@ -1,16 +1,24 @@
-import { createSlice } from "@reduxjs/toolkit";
 
-const Ecom=createSlice({
-    name:'product',
-    initialState:{
-        ecominfo:[]
+import { createSlice } from '@reduxjs/toolkit';
+
+const Ecom = createSlice({
+  name: 'product',
+  initialState: {
+    ecomInfo: [],
+  },
+  reducers: {
+    cartItems: (state, action) => {
+      const { id } = action.payload;
+      const existingItem = state.ecomInfo.find(item => item.id === id);
+
+      if (existingItem) {
+        existingItem.quantity += 1;
+      } else {
+        state.ecomInfo.push({ ...action.payload, quantity: 1 });
+      }
     },
-    reducers:{
-        ecomData:(state,action)=>{
-            state.ecominfo.push(action.payload)
-            console.log(action.payload);
-        }
-    }
-})
-export const{ecomData}=Ecom.actions
+  },
+});
+
+export const { cartItems } = Ecom.actions;
 export default Ecom.reducer

@@ -3,6 +3,9 @@ import './App.css';
 import Home from './Components/Home';
 import Signup from './Components/Signup';
 import Loading from './Components/Loading';
+import Display from './Components/Display';
+import Cart from './Components/Cart';
+// import { Store } from './Redux';
 function App() {
   const router=createBrowserRouter([
     {
@@ -16,6 +19,14 @@ function App() {
     {
       path:'/',
       element:<Loading/>
+    },
+    {
+      path:'display',
+      element:<Display/>
+    },
+    {
+      path:'cart',
+      element:<Cart/>
     }
    
   
