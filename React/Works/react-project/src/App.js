@@ -5,6 +5,7 @@ import Signup from './Components/Signup';
 import Loading from './Components/Loading';
 import Display from './Components/Display';
 import Cart from './Components/Cart';
+import Profile from './Components/Profile';
 // import { Store } from './Redux';
 function App() {
   const router=createBrowserRouter([
@@ -27,6 +28,10 @@ function App() {
     {
       path:'cart',
       element:<Cart/>
+    },
+    {
+      path:'prof',
+      element:<Profile/>
     }
    
   
