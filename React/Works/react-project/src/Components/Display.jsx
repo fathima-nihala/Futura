@@ -3,9 +3,9 @@ import './mydisplay.css'
 import { useDispatch } from 'react-redux'
 import { cartItems } from '../Redux/ecom'
 
-const Display = ({productDetails}) => {
-    const dispatch=useDispatch()
-    const handleAddToCart=() =>{
+const Display = ({ productDetails }) => {
+    const dispatch = useDispatch()
+    const handleAddToCart = () => {
         dispatch(cartItems(productDetails))
     }
     return (
@@ -13,7 +13,7 @@ const Display = ({productDetails}) => {
             <div className='display-all'>
                 <div className='display-items'>
                     <div className='display-item-image'>
-                        <img src={productDetails. thumbnail} alt="display-item-image" />
+                        <img src={productDetails.thumbnail} alt="display-item-image" />
                     </div>
                     <div className='display-item-details'>
                         <div className="details-items"><h2>{productDetails.title}</h2></div>

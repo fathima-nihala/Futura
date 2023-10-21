@@ -4,7 +4,6 @@ import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import userReducer from './Localstorage';
 import ecomReducer from './ecom';
-// import profReducer from './profa'
 
 const persistConfig = {
   key: 'abc',
@@ -12,10 +11,10 @@ const persistConfig = {
   storage,
 };
 
-const rootreducer = combineReducers({ Local: userReducer, Ecom: ecomReducer });
+const rootreducer = combineReducers({ Local: userReducer, Ecom: ecomReducer ,});
 const persistedReducer = persistReducer(persistConfig, rootreducer);
 
 export const store = configureStore({
   reducer: persistedReducer,
 });
-export let persistor = persistStore(store);
+export let persistor = persistStore(store); 
