@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hover-underline-animation {
+            display: inline-block;
+            position: relative;
+            color: #eb9c5c;
+        }
+
+        .hover-underline-animation::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            right: 0;
+            background-color: #eb9c5c;
+            transform-origin: top left;  /*right nn left lek povaan*/
+            transition: transform 0.25s ease-out;
+        }
+
+        .hover-underline-animation:hover::before {
+            transform: scaleX(1);
+            transform-origin: top right;
+        }
+
+        .hover-underline-animation::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #eb9c5c;
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+
+        .hover-underline-animation:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        .about-h {
+            position: relative;
+            display: inline-block;
+        }
+
+        .about-h::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            right: 0;
+            background-color: #eb9c5c;
+            transform-origin: top left;
+            transition: transform 1s ease-out;
+        }
+        .about-h:hover::before{
+            transform: scaleX(1);
+            transform-origin: top left;
+        }
+        .about-h::after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0;
+            left: 0;  /* t*/
+            background-color: #eb9c5c;
+            transform-origin: bottom right;
+            transition: transform 1s ease-out;   
+        }
+        .about-h:hover::after{
+            transform: scaleX(1);
+            transform-origin: top right;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="hover-underline-animation">Hover this text to see the effect!</p>
+    <h2 class='about-h'>World's Favorite Online Shopping Platform</h2>
+
+</body>
+
+</html>

@@ -6,6 +6,9 @@ import Loading from './Components/Loading';
 import Display from './Components/Display';
 import Cart from './Components/Cart';
 import Profile from './Components/Profile';
+import Aboutus from './Components/Aboutus';
+import Offer from './Components/Offer';
+import Gift from './Components/Gift';
 // import { Store } from './Redux';
 function App() {
   const router=createBrowserRouter([
@@ -32,6 +35,18 @@ function App() {
     {
       path:'prof',
       element:<Profile/>
+    },
+    {
+      path:'about',
+      element:<Aboutus/>
+    },
+    {
+      path:'offer',
+      element:<Offer/>
+    },
+    {
+      path:'gifts',
+      element:<Gift/>
     }
    
   

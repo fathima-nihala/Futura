@@ -23,11 +23,7 @@ const Profile = () => {
                     <a href=""><BiLogoFacebook/></a>
                 </div>
                 <button className='prof-button'>Contact</button>
-
-            </div>
-            <div className='back'><a href="http://localhost:3001/home">Back</a></div>
-
-            
+            </div>   
         </div>
         
   )
