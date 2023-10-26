@@ -14,6 +14,7 @@ import Searchresult from "./Searchresult";
 import Aboutus from "./Aboutus";
 import Offer from "./Offer";
 import Gift from "./Gift";
+// import SayloreBody from "./SayloreBody";
 
 
 const Home = () => {
@@ -62,7 +63,7 @@ const Home = () => {
                             <BsSearch onClick={handleSearch}/>
                         </div>
                         <div className="content"><button className='btn' onClick={()=>handleNavigationClick(0)}>Home</button></div>
-                        <div className="content"><button className='btn' onClick={()=>handleNavigationClick(7)}>Shop</button></div>
+                        <div className="content"><button className='btn' onClick={()=>handleNavigationClick(7)}>Gifts</button></div>
                         <div className="content"> <button className='btn' onClick={()=>handleNavigationClick(6)}>Offers</button></div>
                         <div className="content"><button className='btn' onClick={()=>handleNavigationClick(5)}>AboutUs</button></div>
                         <div className="person-cart-icon">
@@ -85,7 +86,7 @@ const Home = () => {
                     {activeNav===0 && <div><Main setActivnav={setActiveNav} setProductDeatails={setProductDetails}/></div>}
                     {activeNav===2 &&  <div><Display productDetails={productDetails}/></div>} 
                     {activeNav===3 && <Profile/>}
-                    {activeNav===4 && <Searchresult searchQuery={searchQuery} searchResult={searchResult}/>}
+                    {activeNav===4 && <Searchresult searchQuery={searchQuery} searchResult={searchResult} setActivnav={setActiveNav} setProductDeatails={setProductDetails}/>}
                     {activeNav===5 && <Aboutus/>}
                     {activeNav===6 && <Offer/>}
                     {activeNav===7 && <Gift/>}

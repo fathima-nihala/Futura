@@ -72,12 +72,12 @@ const Main = ({setActivnav,setProductDeatails }) => {
                         <button className='catagies-contents'><a  className={`colle ction-button ${activeFilter === 'men' ? 'active' : ''}`}>Men</a></button>
                         </div>
                     </div>
-                    <div className="saylore-sub" onClick={() => handleClick('Women')}>
+                    <div className="saylore-sub" onClick={() => handleClick('Ladies')}>
                         <div className="saylor-sub-image">
                         <img src={mainimg3} alt="" />
                         </div>
                         <div className="catagories">
-                        <button className='catagies-contents'><a  className={`colle ction-button ${activeFilter === 'Women' ? 'active' : ''}`}>Women</a></button>
+                        <button className='catagies-contents'><a  className={`colle ction-button ${activeFilter === 'ladies' ? 'active' : ''}`}>Ladies</a></button>
                         </div>
                     </div>
                     <div className="saylore-sub" onClick={() => handleClick('Kids')}>

@@ -403,14 +403,15 @@
   display: flex;
   justify-content: left;
 }
-.offers-text::before{
-  content: 'Saylore Offers'  ;
+.offers-text::before {
+  content: 'Saylore Offers';
   max-width: 0;
   white-space: nowrap;
   overflow: hidden;
   font-size: 60px;
-  animation: typing 3s steps(var(--characters)) infinite;
+  animation: typing 3s steps(var(--characters)) forwards;
 }
+
 .offers-text::after{
   content: " ";
   animation: blink 1s infinite;
@@ -421,7 +422,7 @@
 }
 
 @keyframes typing {
-  75%, 100% {
+ 100% {
       max-width: calc(var(--characters) * 1ch);
   }
 }
