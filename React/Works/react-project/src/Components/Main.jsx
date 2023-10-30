@@ -8,7 +8,7 @@ import mainimg from './images/bgimg.png'
 import mainimg3 from './images/sayloreimg.jpg'
 import mainimg2 from './images/sayloreimg8.jpg'
 import mainimg7 from './images/sayloreimg10.jpg'
-import { apiData } from './Api/SoyloreApi';
+import { apiData } from '../Api/SoyloreApi';
 import './Home.css'
 
 

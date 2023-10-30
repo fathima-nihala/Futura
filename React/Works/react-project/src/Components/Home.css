@@ -230,7 +230,9 @@
   text-decoration: none;
   color: #53917e;
   font-style: normal;
-  font-family: 'inter_regular,fallback-inter_regular,Arial,sans-serif';
+  font-weight: bold;
+  font-size: 1.17em;
+  /* font-family: 'inter_regular,fallback-inter_regular,Arial,sans-serif'; */
   font-size: 20px;
 }
 

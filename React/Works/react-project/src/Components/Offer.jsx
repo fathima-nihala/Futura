@@ -1,8 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import off1 from './images/bgimg.png'
 import off2 from './images/sayloreimg2.jpg'
+import OrdrerMessage from './OrdrerMessage';
+
 
 const Offer = () => {
+    const [order, setOrder] = useState(false);
+    // const [orderSuccess, setOrderSuccess] = useState(false);
+
+    // const dispatch = useDispatch();
+   const handleOrderItem = () => {
+      setOrder(true);
+
+    };
     return (
         <div className='offersss'>
             <div className='offers-head'>
@@ -25,7 +35,7 @@ const Offer = () => {
                     </div>
                     <div className='product-price-btn'>
                         <div className='product-price-btn p'><p><span className='offer-span'>₹</span>104</p></div>
-                        <div className='product-price-btn button'><button type="button">buy now</button></div>
+                        <div className='product-price-btn button'><button type="button" onClick={handleOrderItem}>buy now</button></div>
                     </div>
                 </div>
             </div>
@@ -41,11 +51,11 @@ const Offer = () => {
                     </div>
                     <div className='product-price-btn'>
                         <div className='product-price-btn p'><p><span className='offer-span'>₹</span>199</p></div>
-                        <div className='product-price-btn button'><button type="button">buy now</button></div>
+                        <div className='product-price-btn button'><button type="button" onClick={handleOrderItem}>buy now</button></div>
                     </div>
                 </div>
             </div>
-
+            {order && <OrdrerMessage />} 
         </div>
     )
 }
