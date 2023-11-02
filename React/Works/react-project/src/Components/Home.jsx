@@ -111,7 +111,7 @@ const Home = () => {
                   <a href="#" onClick={() => handleNavigationClick(3)}>
                     My Profile
                   </a>
-                  <a href="">Logout</a>
+                  <a href="#">Logout</a>
                 </div>
               </div>
               <button className="cart" onClick={() => handleNavigationClick(1)}>
