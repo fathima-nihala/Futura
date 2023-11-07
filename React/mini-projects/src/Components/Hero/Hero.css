@@ -4,6 +4,57 @@
     display: flex;
 }
 .hero-left{
-    flex: 1;
+    flex: 0;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding-left: 180px;
+    line-height: 1.1;
+    margin-bottom: 89px;
+}
+.hero-left h2{
+    color: #090909;
+    font-size: 24px;
+    font-weight: 600;
+}
+.hero-left p{
+    color: #171717;
+    font-size: 79px;
+    font-weight: 690;
+}
+.hero-hand-icon{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.hero-hand-icon img{
+    width: 100px;
+}
+.hero-latest-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 310px;
+    height: 70px;
+    border-radius: 75px;
+    margin-top: 30px;
+    background: #ff4141;
+    color: white;
+    font-size: 20px;
+    font-weight: 499px;
+}
+.hero-latest-btn img{
+    width: 50px;
+}
+.hero-right img{
+    /* width: 700px;
+    height: 400px;
+    object-fit: cover; */
+    /* overflow: hidden; */
+    /* clear: both; */
+     width: 600px;
+     object-fit: cover; 
+    
 }

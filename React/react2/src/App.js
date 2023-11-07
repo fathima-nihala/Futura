@@ -10,6 +10,8 @@ import Main from "./CMPNTNS/Main";
 import ReduxApiFetch from "./CMPNTNS/ReduxApiFetch";
 import Btsrtpbutton from "./CMPNTNS/Btsrtpbutton";
 import Rdxchild from "./CMPNTNS/Rdxchild";
+import LoginSignUp from "./LOGIN-SIGNUP/LoginSignUp";
+import SignUp from "./REACT-SIGNUP/SignUp";
 // import Wrk1 from "./WRK/Wrk1";
 // import Wrk1main from "./WRK/Wrk1main";
 
@@ -42,6 +44,14 @@ function App() {
     //   path:'wrk1main',
     //   element:<Wrk1main/>
     // }
+    {
+      path:'log-sign',
+      element:<LoginSignUp/>
+    },
+    {
+      path:'reactSignUp',
+      element:<SignUp/>
+    }
     
   ])
 
