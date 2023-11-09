@@ -15,6 +15,7 @@ import Aboutus from "./Aboutus";
 import Offer from "./Offer";
 import Gift from "./Gift";
 import OrdrerMessage from "./OrdrerMessage";
+import Footer from "./Footer/Footer";
 // import SayloreBody from "./SayloreBody";
 
 const Home = () => {
@@ -156,6 +157,7 @@ const Home = () => {
         {activeNav === 7 && <Gift />}
       </div>
       {/* <OrdrerMessage/>     */}
+      <Footer/>
     </div>
   );
 };

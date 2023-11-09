@@ -1,5 +1,5 @@
 import React from 'react'
-import prof from './images/sayloreimg8.jpg'
+import prof from '../images/sayloreimg8.jpg'
 import { AiOutlineDribbble} from 'react-icons/ai'
 import { AiOutlineTwitter} from 'react-icons/ai'
 import {BiLogoLinkedin} from 'react-icons/bi'

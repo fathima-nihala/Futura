@@ -19,5 +19,15 @@ res.status(200).json(saveduser) //success code
 res.status(500).json(err)  //error code
 }
 })
+
+router.get('/getmethod/:id',async (req,res)=>{
+    try{
+        const datas=await AAbatch.findById(req.params.id)
+        console.log('datas');
+        res.status(200).json(datas)
+    }catch(err){
+        res.status(500).json(err)
+    }
+})
 module.exports=router
 //router page is used access database

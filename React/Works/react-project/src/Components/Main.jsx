@@ -1,13 +1,13 @@
 import React, { useState,useEffect } from 'react'
 import SayloreBody from './SayloreBody';
-import mainimg1 from './images/sayloreimg1.jpg'
-import mainimg6 from './images/sayloreimg4.jpg'
-import mainimg5 from './images/sayloreimg3.jpg'
-import mainimg4 from './images/sayloreimg9.jpg'
-import mainimg from './images/bgimg.png'
-import mainimg3 from './images/sayloreimg.jpg'
-import mainimg2 from './images/sayloreimg8.jpg'
-import mainimg7 from './images/sayloreimg10.jpg'
+import mainimg1 from '../images/sayloreimg1.jpg'
+import mainimg6 from '../images/sayloreimg4.jpg'
+import mainimg5 from '../images/sayloreimg3.jpg'
+import mainimg4 from '../images/sayloreimg9.jpg'
+import mainimg from '../images/bgimg.png'
+import mainimg3 from '../images/sayloreimg.jpg'
+import mainimg2 from '../images/sayloreimg8.jpg'
+import mainimg7 from '../images/sayloreimg10.jpg'
 import { apiData } from '../Api/SoyloreApi';
 import './Home.css'
 

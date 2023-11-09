@@ -15,12 +15,13 @@
 }
 .hero-left h2{
     color: #090909;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 600;
+    margin-bottom: 30px;
 }
 .hero-left p{
     color: #171717;
-    font-size: 79px;
+    font-size: 75px;
     font-weight: 690;
 }
 .hero-hand-icon{
@@ -29,24 +30,24 @@
     gap: 20px;
 }
 .hero-hand-icon img{
-    width: 100px;
+    width: 70px;
 }
 .hero-latest-btn{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 15px;
-    width: 310px;
-    height: 70px;
+    width: 240px;
+    height: 50px;
     border-radius: 75px;
     margin-top: 30px;
     background: #ff4141;
     color: white;
-    font-size: 20px;
-    font-weight: 499px;
+    font-size: 18px;
+    font-weight: 500px;
 }
 .hero-latest-btn img{
-    width: 50px;
+    width: 40px;
 }
 .hero-right img{
     /* width: 700px;

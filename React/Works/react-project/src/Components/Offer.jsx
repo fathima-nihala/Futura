@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import off1 from './images/bgimg.png'
-import off2 from './images/sayloreimg2.jpg'
+import off1 from '../images/bgimg.png'
+import off2 from '../images/sayloreimg2.jpg'
 import OrdrerMessage from './OrdrerMessage';
 
 

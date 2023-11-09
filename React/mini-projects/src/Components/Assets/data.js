@@ -22,7 +22,7 @@ let data_product=[
     },
     {
         id:4,
-        name:"Women Zip-Front Hooded Jacket with Insert Pockets",
+        name:"Zip-Front Hooded Jacket  with Insert Pockets",
         Image:"https://assets.ajio.com/medias/sys_master/root/20231018/kAAZ/652fc765afa4cf41f54c3f95/-473Wx593H-441145656-ltgrey-MODEL.jpg",
         new_price:899,
         old_price:999,

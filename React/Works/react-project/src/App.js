@@ -9,6 +9,7 @@ import Profile from './Components/Profile';
 import Aboutus from './Components/Aboutus';
 import Offer from './Components/Offer';
 import Gift from './Components/Gift';
+import Footer from './Components/Footer/Footer';
 // import { Store } from './Redux';
 function App() {
   const router=createBrowserRouter([
@@ -47,6 +48,10 @@ function App() {
     {
       path:'gifts',
       element:<Gift/>
+    },
+    {
+      path:'footer',
+      element:<Footer/>
     }
    
   
