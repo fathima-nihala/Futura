@@ -13,13 +13,6 @@ let new_collections=[
         new_price:240,
         old_price:799,
     },
-    // {
-    //     id:7,
-    //     name:"Reversible Belt with Metal Logo Accent",
-    //     Image:"https://assets.ajio.com/medias/sys_master/root/20230127/z0jq/63d3caecaeb269c651fd7a48/-473Wx593H-410368378-71820-MODEL.jpg",
-    //     new_price:7999,
-    //     old_price:9999,
-    // },
     {
         id:7,
         name:"Colourblock Jacket with Insert Pockets",

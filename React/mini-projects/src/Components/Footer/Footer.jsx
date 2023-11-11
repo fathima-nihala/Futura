@@ -27,7 +27,7 @@ const Footer = () => {
           <SlSocialPintarest />
         </div>
         <div className="footer-icons-container">
-          <FaWhatsapp />
+          <FaWhatsapp/>
         </div>
       </div>
       <div className="copyright">

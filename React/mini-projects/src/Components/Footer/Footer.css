@@ -40,6 +40,9 @@
     background: #fbfbfb;
     border: 1px solid #ebebeb;
 }
+.footer-icons-container:hover{
+    background: #c9c8c8;
+}
 .footer-copyright{
     display: flex;
     flex-direction: column;
@@ -50,11 +53,14 @@
     color: #1a1a1a;
     font-size: 20px;
 }
-.footer-copyright hr{
-    width: 80px;
+.copyright hr{
+    width: 700px;
     border: none;
-    border-radius: 10px;
-    height: 3px;
+    border-radius: 5px;
+    height: 1px;
     background: #7c7c7c;
-
+}
+.copyright p{
+    display: flex;
+    justify-content: center;
 }
