@@ -130,7 +130,7 @@ let all_product=[
     {
         id:17,
         name:"Embellished A-Line Skirt",
-        catagory:"kidz",
+        catagory:"kids",
         Image:"https://assets.ajio.com/medias/sys_master/root/20230615/ZvM1/648af9fd42f9e729d744411f/-473Wx593H-442063285-lilac-MODEL.jpg",
         new_price:135,
         old_price:449,
@@ -138,7 +138,7 @@ let all_product=[
     {
         id:18,
         name:"Embroidered Round-Neck Top",
-        catagory:"kidz",
+        catagory:"kids",
         Image:"https://assets.ajio.com/medias/sys_master/root/20230603/BpcG/647a439d42f9e729d7207048/-473Wx593H-466231245-black-MODEL.jpg",
         new_price:629,
         old_price:1659,
@@ -146,7 +146,7 @@ let all_product=[
     {
         id:19,
         name:"Colourblock Jacket with Insert Pockets",
-        catagory:"kidz",
+        catagory:"kids",
         Image:"https://assets.ajio.com/medias/sys_master/root/20230901/60Zt/64f0f2a7afa4cf41f59c0a9b/-473Wx593H-466517172-multi-MODEL.jpg",
         new_price:1150,
         old_price:2299,
@@ -154,7 +154,7 @@ let all_product=[
     {
         id:20,
         name:"Peacock Feather Print Fit & Flare Dress",
-        catagory:"kidz",
+        catagory:"kids",
         Image:"https://assets.ajio.com/medias/sys_master/root/20231020/CS0o/6531b066afa4cf41f552e2f1/-473Wx593H-466728503-blue-MODEL.jpg",
         new_price:786,
         old_price:3745,
@@ -162,7 +162,7 @@ let all_product=[
     {
         id:21,
         name:"Girls Minnie Mouse Print Dungaree with T-Shirt",
-        catagory:"kidz",
+        catagory:"kids",
         Image:"https://assets.ajio.com/medias/sys_master/root/20231101/7VaP/6541a8c9afa4cf41f56ccf78/-473Wx593H-466762516-black-MODEL.jpg",
         new_price:675,
         old_price:1475,
@@ -170,7 +170,7 @@ let all_product=[
     {
         id:22,
         name:"Zip-Front Puffer Vest Jacket",
-        catagory:"kidz",
+        catagory:"kids",
         Image:"https://assets.ajio.com/medias/sys_master/root/20230103/lGOv/63b45722aeb269659c21eecb/-473Wx593H-441537923-yellow-MODEL.jpg",
         new_price:999,
         old_price:1999,
@@ -178,7 +178,7 @@ let all_product=[
     {
         id:23,
         name:"Zip-Front Puffer Vest Jacket",
-        catagory:"kidz",
+        catagory:"kids",
         Image:"https://assets.ajio.com/medias/sys_master/root/20230103/MJE6/63b44658f997ddfdbd0e332e/-473Wx593H-441538040-yellow-MODEL.jpg",
         new_price:1000,
         old_price:1999,
@@ -186,7 +186,7 @@ let all_product=[
     {
         id:24,
         name:"Geometric Round Neck T-shirt",
-        catagory:"kidz",
+        catagory:"kids",
         Image:"https://assets.ajio.com/medias/sys_master/root/20230621/9O3E/6492857442f9e729d767f614/-473Wx593H-464131350-multi-MODEL.jpg",
         new_price:380,
         old_price:1999,

@@ -1,0 +1,28 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    signup-box-sizing:border-signup-box;
+    font-family: 'Montserrat', sans-serif;
+} */
+.main{
+    background: black;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: block;
+    align-items: center;
+    justify-content: center
+}
+.ani div{
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    background-color: transparent;
+    border-radius: 1px solid  rgb(76, 240, 103);
+}
+/* .inp{ */
+    /* display: block; */
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+/* } */

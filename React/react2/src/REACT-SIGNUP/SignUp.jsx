@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import {  SignUpData } from './ApiCall'
+import './SignUp.css'
 
 const SignUp = () => {
     const[firstname,setfirstname]=useState('')
@@ -14,14 +15,43 @@ const SignUp = () => {
     }
 
   return (
-    <div>
+    <div className='main'>
+      <div className='ani'>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div className='inp'>
+        <div className='inp-one'>
         <input type="text" placeholder='Firstname' value={firstname} onChange={(e)=>setfirstname(e.target.value)}/>
+        </div>
+        <div className="inp-one">
         <input type="text" placeholder='Secondname' value={secondname} onChange={(e)=>setsecondname(e.target.value)}/>
-        <input type="text" placeholder='Age' value={age} onChange={(e)=>setage(e.target.value)}/>
-        <input type="email" placeholder='Email' value={email} onChange={(e)=>setemail(e.target.value)}/>
+        </div>
+        <div className='inp-one'>
+        <input type="text" placeholder='age' value={age} onChange={(e)=>setage(e.target.value)}/>
+        </div>
+        <div className="inp-one">
+         <input type="email" placeholder='Email' value={email} onChange={(e)=>setemail(e.target.value)}/>
+        </div>
+        <div className="inp-one">
         <input type="address" placeholder='Address' value={address} onChange={(e)=>setaddress(e.target.value)}/>
+        </div>
+        <div className="inp-one">
         <input type="password" placeholder='Password' value={password} onChange={(e)=>setpassword(e.target.value)}/>
+        </div>
+        <div className="inp-two">
         <button onClick={display}>Submit</button>
+        </div>
+      </div>
+       
 
     </div>
   )

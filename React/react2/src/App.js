@@ -12,6 +12,7 @@ import Btsrtpbutton from "./CMPNTNS/Btsrtpbutton";
 import Rdxchild from "./CMPNTNS/Rdxchild";
 import LoginSignUp from "./LOGIN-SIGNUP/LoginSignUp";
 import SignUp from "./REACT-SIGNUP/SignUp";
+import Display from "./REACT-SIGNUP/Display";
 // import Wrk1 from "./WRK/Wrk1";
 // import Wrk1main from "./WRK/Wrk1main";
 
@@ -51,6 +52,10 @@ function App() {
     {
       path:'reactSignUp',
       element:<SignUp/>
+    },
+    {
+      path:'display',
+      element:<Display/>
     }
     
   ])

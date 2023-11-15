@@ -5,14 +5,20 @@ const mongoose=require('mongoose') //imports the Mongoose library,is an ODB(obje
 const cors=require('cors')
 app.use(cors())
 dotenv.config()   //This line loads the environment variables from a .env file 
-const userRoute=require('./Router/Userrouter')
 
+
+const userRoute=require('./Router/Userrouter')
+const creudRouter=require('./Router/CrudRouter')
+
+
+//create database
 mongoose.connect(process.env.secret_key).then(()=>{ // to connect to a MongoDB database using the URL specified in the secret_key env . ".then" This part of the code is using a Promise-based approach to handle the asynchronous nature of the mongoose.connect() method
     console.log('Database Connected');
 });
 
 app.use(express.json())
 app.use('/api/data',userRoute) //and specifying a base path
+app.use('/api/data',creudRouter)
 
 app.listen(3000,()=> {   //This line starts the Express server on port 3000. 
     console.log('server is connected');
