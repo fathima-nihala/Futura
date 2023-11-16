@@ -31,9 +31,21 @@ router.get('/getmethod',async (req,res)=>{
     }
 })
 
+router.get('/getidmethod/:id',async (req,res)=>{
+    try{
+        const datas=await AAbatch.findById(req.params.id)
+        console.log(datas);
+        res.status(200).json(datas)
+    }catch(err){
+        res.status(500).json(err)
+    }
+})
+
+
+
 
 router.put('/updatedata/:id',async (req,res)=>{
-    try{
+    try{ 
         const resData=await AAbatch.findByIdAndUpdate(req.params.id,{
             $set:req.body
         },{new:true})

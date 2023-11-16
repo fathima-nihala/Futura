@@ -7,7 +7,7 @@ const Display = () => {
   useEffect(() => {
     async function display() {
         try {
-            const res = await axios.get("http://localhost:3000/api/data/getmethod");
+            const res = await axios.get("http://localhost:7000/api/data/getmethod");
             console.log(res.data);
             setstate(res.data);
           } catch (error) {
@@ -22,9 +22,11 @@ const Display = () => {
     <ul>
         {state.map((user) => (
           <li key={user.id}>
-            <span>{user.firstname}</span>
-            <span>{user.secondname}</span>
-            <span>{user.address}</span>
+            <span>{user._id}</span><br />
+            <span>{user.firstname}</span> <br />
+            <span>{user.secondname}</span><br />
+            <span>{user.age}</span><br />
+            <span>{user.address}</span><br /> 
           </li>
         ))}
       </ul>

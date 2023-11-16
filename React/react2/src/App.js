@@ -13,6 +13,7 @@ import Rdxchild from "./CMPNTNS/Rdxchild";
 import LoginSignUp from "./LOGIN-SIGNUP/LoginSignUp";
 import SignUp from "./REACT-SIGNUP/SignUp";
 import Display from "./REACT-SIGNUP/Display";
+import Profile from "./REACT-SIGNUP/Profile";
 // import Wrk1 from "./WRK/Wrk1";
 // import Wrk1main from "./WRK/Wrk1main";
 
@@ -56,6 +57,10 @@ function App() {
     {
       path:'display',
       element:<Display/>
+    },
+    {
+      path:'getid',
+      element:<Profile/>
     }
     
   ])

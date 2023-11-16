@@ -20,7 +20,7 @@ app.use(express.json())
 app.use('/api/data',userRoute) //and specifying a base path
 app.use('/api/data',creudRouter)
 
-app.listen(3000,()=> {   //This line starts the Express server on port 3000. 
+app.listen(7000,()=> {   //This line starts the Express server on port 3000. 
     console.log('server is connected');
 })
 
