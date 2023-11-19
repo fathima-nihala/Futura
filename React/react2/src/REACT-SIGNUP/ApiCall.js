@@ -41,3 +41,13 @@ export const UpdateIdData=async(id,datas)=>{
         console.log(err);
     }
 }
+
+export const loginData=async(logindata)=>{
+    console.log('login data is',logindata);
+    try{
+        const res=await axios.post('http://localhost:7000/api/data/login',logindata);
+        console.log('response',res.status);
+    }catch(err){
+        console.log(err);
+    }
+}

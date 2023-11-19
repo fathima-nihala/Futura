@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .calculator{
+            display: flex;
+            justify-content: center;
+            padding: 50px;
+        }
+        .calculator-display{
+            display: block;
+        }
+        .calculator-display input{
+            height: 100px;
+            width:400px;
+        }
+        .calculator-buttons button{
+            margin-top: 10px;
+            border-radius: 10px;
+            border: none;
+            height: 60px;
+            width: 98px;
+            background-color: #eee;
+            cursor: pointer;
+            font-size: 26px;
+        }
+        .operator{
+            color: deepskyblue;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <div class="calculator-display">
+            <input type="text" id="display" disabled>
+            <div class="calculator-buttons">
+                <button data-value="AC" class="operator">AC</button>
+                <button data-value="DEL" class="operator">DEL</button>
+                <button data-value="%" class="operator">%</button>
+                <button data-value="/" class="operator">/</button>
+            </div>
+            <div class="calculator-buttons">
+                <button data-value="7">7</button>
+                <button data-value="8">8</button>
+                <button data-value="9">9</button>
+                <button data-value="*" class="operator">*</button>
+            </div>
+            <div class="calculator-buttons">
+                <button data-value="6">6</button>
+                <button data-value="5">5</button>
+                <button data-value="4">4</button>
+                <button data-value="-" class="operator">-</button>
+            </div>
+            <div class="calculator-buttons">
+                <button data-value="3">3</button>
+                <button data-value="2">2</button>
+                <button data-value="1">1</button>
+                <button data-value="+" class="operator">+</button>
+            </div>
+            <div class="calculator-buttons">
+                <button data-value="0">0</button>
+                <button data-value="00">00</button>
+                <button data-value="." class="operator">.</button>
+                <button data-value="=" class="operator">=</button>
+            </div>
+        </div>
+        <script src="index.js"></script>
+    </div>
+</body>
+</html>

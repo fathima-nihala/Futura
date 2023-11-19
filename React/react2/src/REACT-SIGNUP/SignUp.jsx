@@ -13,7 +13,7 @@ const SignUp = () => {
 
 
   const display = () => {
-    SignUpData({ firstname, secondname, age, email, address, password}); //object aayitaann koduthadh.ennale e.vechit access  cheyyan pattu.
+    SignUpData({ firstname, secondname, age, email, address, password }); //object aayitaann koduthadh.ennale e.vechit access  cheyyan pattu.
   };
 
   return (

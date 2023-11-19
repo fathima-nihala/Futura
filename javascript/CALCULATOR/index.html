@@ -28,6 +28,9 @@
             width: 60px;
             margin-top: 5px;
         }
+        .operator{
+            color: darkcyan;
+        }
     </style>
 </head>
 <body>
@@ -35,10 +38,16 @@
         <div class="calc-btn">
             <input type="text" id="display" disabled>
         <div class="buttons">
-        <button data-value="AC">AC</button>
-        <button data-value="DEL">DEL</button>
+        <button data-value="AC" class="operator">AC</button>
+        <button data-value="DEL" class="operator">DEL</button>
         <button class="operator" data-value="%">%</button>
         <button class="operator" data-value="/">/</button>
+        </div>
+        <div class="buttons">
+            <button data-value="7">7</button>
+            <button data-value="8">8</button>
+            <button data-value="9">9</button>
+            <button data-value="*" class="operator">*</button>
         </div>
         <div class="buttons">
         <button data-value="4">4</button>
@@ -55,7 +64,7 @@
          <div class="buttons">
             <button data-value="0">0</button>
             <button data-value="00">00</button>
-            <button  class="operator" data-value="*">*</button>
+            <button  class="operator" data-value=".">.</button>
             <button class="operator" data-value="=">=</button>
          </div>
         </div>

@@ -2,11 +2,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const display = document.getElementById('display');
     const buttons = document.querySelectorAll('.buttons button');
   
-    buttons.forEach(button => {
+    buttons.forEach(button => { 
       button.addEventListener('click', function() {
         const value = this.dataset.value;
   
-        if (value === 'AC') {
+        if (value === 'AC') {           
           display.value = ''; // Clear the display
         } else if (value === 'DEL') {
           display.value = display.value.slice(0,-1) ;// Delete the last character
