@@ -1,6 +1,6 @@
 let all_product=[
     {
-        id:1,
+        id:5,
         name:"Brand Print Hoodie with Kangaroo Pocket",
         catagory:"men",
         Image:"https://assets.ajio.com/medias/sys_master/root/20211123/Zpw0/619ce40baeb2690110d2de09/-473Wx593H-469060058-blue-MODEL5.jpg",
@@ -8,7 +8,7 @@ let all_product=[
         old_price:3499,
     },
     {
-        id:2,
+        id:13,
         name:"Men Coarse Running Shoes",
         catagory:"men",
         Image:"https://assets.ajio.com/medias/sys_master/root/20231012/hnC4/6527aa0fafa4cf41f53d7533/-473Wx593H-465738209-grey-MODEL.jpg",
@@ -16,7 +16,7 @@ let all_product=[
         old_price:4999,
     }, 
     {
-        id:3,
+        id:12,
         name:"Suede Trucker Jacket",
         catagory:"men",
         Image:"https://assets.ajio.com/medias/sys_master/root/20230922/TGCd/650daaadddf7791519f5258d/-473Wx593H-469168432-black-MODEL.jpg",
@@ -24,7 +24,7 @@ let all_product=[
         old_price:3499,
     },
     {
-        id:4,
+        id:14,
         name:"Men Analogue Watch with Leather Strap-GW0570G1",
         catagory:"men",
         Image:"https://assets.ajio.com/medias/sys_master/root/20230912/vpE4/64ff7d2bddf7791519cdb6ab/-473Wx593H-466560704-black-MODEL.jpg",
@@ -40,7 +40,7 @@ let all_product=[
         old_price:3499,
     },
     {
-        id:6,
+        id:15,
         name:"Gel-Tactic 12 Lace-Up Shoes",
         catagory:"men",
         Image:"https://assets.ajio.com/medias/sys_master/root/20230920/349v/650b1f26ddf7791519eb6726/-473Wx593H-469516242-white-MODEL.jpg",
@@ -48,7 +48,7 @@ let all_product=[
         old_price:8999,
     },
     {
-        id:7,
+        id:16,
         name:"Reversible Belt with Metal Logo Accent",
         catagory:'men',
         Image:"https://assets.ajio.com/medias/sys_master/root/20230127/z0jq/63d3caecaeb269c651fd7a48/-473Wx593H-410368378-71820-MODEL.jpg",
@@ -56,7 +56,7 @@ let all_product=[
         old_price:9999,
     },
     {
-        id:8,
+        id:9,
         name:"Zip Front Kangaroo Pocket Sweatshirt",
         catagory:"men",
         Image:"https://assets.ajio.com/medias/sys_master/root/20221018/cQRV/634ed677f997ddfdbd30fc0c/-473Wx593H-469344279-blue-MODEL.jpg",
@@ -64,7 +64,7 @@ let all_product=[
         old_price:2299,
     },
     {
-        id:9,
+        id:17,
         name:"Wrist Watch BKPDSS304",
         catagory:"women",
         Image:"https://assets.ajio.com/medias/sys_master/root/20230629/9FhZ/649cd0e9a9b42d15c91be3ee/-473Wx593H-466010860-rosegold-MODEL.jpg",
@@ -72,7 +72,7 @@ let all_product=[
         old_price:15995,
     },
     {
-        id:10,
+        id:18,
         name:"10712B Set of 4 Crystal Cubic Zirconia Bangle Charm Bracelet",
         catagory:"women",
         Image:"https://assets.ajio.com/medias/sys_master/root/20210924/FJRD/614cfe4caeb269a268a44ff7/-473Wx593H-6005610500-multi-MODEL.jpg",
@@ -80,7 +80,35 @@ let all_product=[
         old_price:1499,
     },
     {
-        id:11,
+        id:1,
+        name:"Zip Front Bomber Jacket",
+        Image:"https://assets.ajio.com/medias/sys_master/root/20230519/3FgV/646798ef42f9e729d79d4a11/-473Wx593H-443014626-pink-MODEL.jpg",
+        new_price:499,
+        old_price:899,
+    },
+    {
+        id:2,
+        name:"Tie & Dye Crew-Neck T-Shirt",
+        Image:"https://assets.ajio.com/medias/sys_master/root/20220917/KGpq/6324c3f2aeb269dbb39122fb/-473Wx593H-441149345-pink-MODEL.jpg",
+        new_price:200,
+        old_price:499,
+    },
+    {
+        id:3,
+        name:"Cotton Underskirt Shorts",
+        Image:"https://assets.ajio.com/medias/sys_master/root/20230605/U62t/647df70d42f9e729d7239883/-473Wx593H-443020216-jetblack-MODEL.jpg",
+        new_price:170,
+        old_price:199,
+    },
+    {
+        id:4,
+        name:"Zip-Front Hooded Jacket  with Insert Pockets",
+        Image:"https://assets.ajio.com/medias/sys_master/root/20231018/kAAZ/652fc765afa4cf41f54c3f95/-473Wx593H-441145656-ltgrey-MODEL.jpg",
+        new_price:899,
+        old_price:999,
+    },
+    {
+        id:19,
         name:"Open-Toe Chunky Heels Sandals",
         catagory:"women",
         Image:"https://assets.ajio.com/medias/sys_master/root/20230628/Os06/649c3c65eebac147fc2c2b48/-473Wx593H-466317875-pink-MODEL.jpg",
@@ -88,7 +116,7 @@ let all_product=[
         old_price:1999,
     },
     {
-        id:12,
+        id:6,
         name:"Knitted Round-Neck Pullover",
         catagory:"women",
         Image:"https://assets.ajio.com/medias/sys_master/root/20220703/GzeE/62c1abaff997dd03e2b3ed0f/-473Wx593H-441139669-ltpink-MODEL.jpg",
@@ -96,7 +124,7 @@ let all_product=[
         old_price:799,
     }, 
     {
-        id:13,
+        id:20,
         name:"Chunky Heeled Sandals with Ankle Strap",
         catagory:"women",
         Image:"https://assets.ajio.com/medias/sys_master/root/20230614/bFlT/6488edb7d55b7d0c63692284/-473Wx593H-466272626-pink-MODEL.jpg",
@@ -104,7 +132,7 @@ let all_product=[
         old_price:1995,
     },
     {
-        id:14,
+        id:11,
         name:"Skinny Fit Ankle-Length Jeans",
         catagory:"women",
         Image:"https://assets.ajio.com/medias/sys_master/root/20230828/X6ed/64ecb96aafa4cf41f590db64/-473Wx593H-441696484-ltblue-MODEL.jpg",
@@ -112,7 +140,7 @@ let all_product=[
         old_price:1499,
     },
     {
-        id:15,
+        id:8,
         name:"Women Sophisticated Silhoutte Tote Bag",
         catagory:"women",
         Image:"https://assets.ajio.com/medias/sys_master/root/20230922/ARnr/650d7da6afa4cf41f5fdcbc7/-473Wx593H-469505471-brown-MODEL.jpg",
@@ -120,7 +148,7 @@ let all_product=[
         old_price:4499,
     },
     {
-        id:16,
+        id:21,
         name:"8181S Gold-Plated Pearl & Stone-Studded Necklace & Earrings Set",
         catagory:"women",
         Image:"https://assets.ajio.com/medias/sys_master/root/20220721/HJdy/62d98808f997dd03e2e7f895/-473Wx593H-6005607700-multi-MODEL.jpg",
@@ -128,7 +156,7 @@ let all_product=[
         old_price:2999,
     },
     {
-        id:17,
+        id:22,
         name:"Embellished A-Line Skirt",
         catagory:"kids",
         Image:"https://assets.ajio.com/medias/sys_master/root/20230615/ZvM1/648af9fd42f9e729d744411f/-473Wx593H-442063285-lilac-MODEL.jpg",
@@ -136,7 +164,7 @@ let all_product=[
         old_price:449,
     },
     {
-        id:18,
+        id:23,
         name:"Embroidered Round-Neck Top",
         catagory:"kids",
         Image:"https://assets.ajio.com/medias/sys_master/root/20230603/BpcG/647a439d42f9e729d7207048/-473Wx593H-466231245-black-MODEL.jpg",
@@ -144,7 +172,7 @@ let all_product=[
         old_price:1659,
     },
     {
-        id:19,
+        id:7,
         name:"Colourblock Jacket with Insert Pockets",
         catagory:"kids",
         Image:"https://assets.ajio.com/medias/sys_master/root/20230901/60Zt/64f0f2a7afa4cf41f59c0a9b/-473Wx593H-466517172-multi-MODEL.jpg",
@@ -152,7 +180,7 @@ let all_product=[
         old_price:2299,
     },
     {
-        id:20,
+        id:24,
         name:"Peacock Feather Print Fit & Flare Dress",
         catagory:"kids",
         Image:"https://assets.ajio.com/medias/sys_master/root/20231020/CS0o/6531b066afa4cf41f552e2f1/-473Wx593H-466728503-blue-MODEL.jpg",
@@ -160,7 +188,7 @@ let all_product=[
         old_price:3745,
     },
     {
-        id:21,
+        id:10,
         name:"Girls Minnie Mouse Print Dungaree with T-Shirt",
         catagory:"kids",
         Image:"https://assets.ajio.com/medias/sys_master/root/20231101/7VaP/6541a8c9afa4cf41f56ccf78/-473Wx593H-466762516-black-MODEL.jpg",
@@ -168,7 +196,7 @@ let all_product=[
         old_price:1475,
     },
     {
-        id:22,
+        id:25,
         name:"Zip-Front Puffer Vest Jacket",
         catagory:"kids",
         Image:"https://assets.ajio.com/medias/sys_master/root/20230103/lGOv/63b45722aeb269659c21eecb/-473Wx593H-441537923-yellow-MODEL.jpg",
@@ -176,7 +204,7 @@ let all_product=[
         old_price:1999,
     },
     {
-        id:23,
+        id:26,
         name:"Zip-Front Puffer Vest Jacket",
         catagory:"kids",
         Image:"https://assets.ajio.com/medias/sys_master/root/20230103/MJE6/63b44658f997ddfdbd0e332e/-473Wx593H-441538040-yellow-MODEL.jpg",
@@ -184,7 +212,7 @@ let all_product=[
         old_price:1999,
     },
     {
-        id:24,
+        id:27,
         name:"Geometric Round Neck T-shirt",
         catagory:"kids",
         Image:"https://assets.ajio.com/medias/sys_master/root/20230621/9O3E/6492857442f9e729d767f614/-473Wx593H-464131350-multi-MODEL.jpg",
