@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+:root{
+    --background-color: rgb(229, 230, 239);
+    --anim-block-color: rgb(58, 136, 71);
+    --primary-color: rgb(9, 143, 31);
+    --text-color: #000000;
+}
+.animation-wrapper{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color:var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.animation-box div{
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    background-color: transparent;
+    border: 5px solid var(--anim-block-color);
+}
+.animation-box div:nth-child(1){
+    top: 12%;
+    left: 42%;
+    animation: animate 7s linear infinite;
+}
+.animation-box div:nth-child(2){
+        top: 70%;
+        left: 50%;
+        animation: animate 8s linear infinite;
+}
+.animation-box div:nth-child(3) {
+    top: 17%;
+    left: 6%;
+    animation: animate 9s linear infinite;
+}
+
+.animation-box div:nth-child(4) {
+    top: 20%;
+    left: 60%;
+    animation: animate 10s linear infinite;
+}
+
+.animation-box div:nth-child(5) {
+    top: 67%;
+    left: 10%;
+    animation: animate 6s linear infinite;
+}
+.animation-box div:nth-child(6){
+    top:80%;
+    left: 30%;
+    animation: animate 12s linear infinite;
+}
+.animation-box div:nth-child(7){
+    top:60%;
+    left: 80%;
+    animation: animate 15s linear infinite;
+}
+.animation-box div:nth-child(8){
+    top:32%;
+    left: 25%;
+    animation: animate 16s linear infinite;
+}
+.animation-box div:nth-child(9){
+    top:80%;
+    left: 70%;
+    animation: animate 9s linear infinite;
+}
+.animation-box div:nth-child(10 ){
+    top:20%;
+    left: 80%;
+    animation: animate 5s linear infinite;
+}
+@keyframes animate{
+    0%{
+        transform: scale(0) translateY(0) rotate(0);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1.3) translateY(-90px) rotate(360deg);
+    }
+}
+.container {
+    background-color: #fff;     /* change hereee */
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    position: relative;
+    overflow: hidden;
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px;
+}
+.container a {
+    color: #333;
+    font-size: 13px;
+    text-decoration: none;
+    margin: 15px 0 10px;
+}
+.container button {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.container button.hidden {
+    background-color: transparent;
+    border-color: var(--text-color);
+}
