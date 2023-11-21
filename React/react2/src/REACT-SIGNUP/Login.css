@@ -14,7 +14,7 @@
     --text-color: #000000;
   }
   
-  .signup-wraper {
+  .signup-wrapper{
     height: 100%;
     width: 100%;
     position: absolute;
@@ -114,32 +114,35 @@
       opacity: 0;
     }
   }
-  .inp{
-    background-color: #d4d0d0;
+  .login-cntnts{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .login{
     display: block;
-    height: 290px;
+    justify-content: center;
+  }
+  .login-heading h1{
+    padding: 10px 0px;
+    color: white;
+    margin-left: 40px;
+  }
+  .login-input input{
+    border-radius: 10px;
+    border: none;
+    height: 40px;
+    margin-top: 20px;
     width: 300px;
-    border-radius: 30px;
-  }
-  .inp-one{
-    padding-top: 7px;
-  }
-  .inp-one input{
-    margin-top: 10px;
-    width: 250px;
-    margin-left: 20px;
-    border-radius: 10px;
-    border: none;
-    padding: 0px 10px;
-  }
 
-  .inp-two button{
+  }
+  .login-button button{
+    height: 40px;
+    width: 100px;
+    margin-top: 20px;
+    margin-left: 90px;
     border-radius: 10px;
     border: none;
-    background: #fff;
-    margin-top: 10px;
-    margin-left: 70px;
-    height: 25px;
-    background: linear-gradient(to right, rgb(9, 143, 31) , yellow);
-    width: 150px;
+    background-image: linear-gradient(to right, rgb(9, 143, 31) , yellow);
   }
+ 

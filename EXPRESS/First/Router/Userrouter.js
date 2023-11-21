@@ -1,6 +1,7 @@
 const router=require('express').Router()  //router page aakaan vendeett .create a variable and import express
 const Crypto=require('crypto-js')
 const AAbatch=require('../Models/Userschema')  //imported AAbatch from Userschema
+const Jwt=require('jsonwebtoken')
 
 router.post('/postmethod',async(req,res)=>{//front-end n data backend lek veran vendi. postmethod is like api name & its user-defined
 console.log("postman data ?",req.body); //The req.body contains the data sent in the POST request by a client
@@ -63,13 +64,24 @@ router.post('/login',async(req,res)=>{
     try{
         const DBdata=await AAbatch.findOne({email:req.body.email})
         !DBdata && res.status(401).json({response:'please check your Email'})
+
         console.log('Backend Data',DBdata);
+
         const hashedPassword=Crypto.AES.decrypt(DBdata.password,process.env.Crypto_js)
         console.log('hashed password is',hashedPassword);
         const originalPassword=hashedPassword.toString(Crypto.enc.Utf8)
+
         console.log('Original password is',originalPassword);
+
         originalPassword !=req.body.password && res.status(401).json({response:"passwor and email doesnt match"})
-        res.status(200).json('Success')
+        const accessToken=Jwt.sign({
+            id:DBdata._id 
+        },process.env.Jwt_sec,
+        {expiresIn:'5d'})
+
+        const {password,...others}=DBdata._doc 
+
+        res.status(200).json({...others,accessToken})
     }catch(err){
         res.status(400)
     }
