@@ -1,15 +1,26 @@
 import React, { useState } from 'react'
-import { loginData } from './ApiCall';
 import './Login.css'
+import { useDispatch } from 'react-redux';
+import { loginDetails } from '../Redux/persistconf';
 
 const Login = () => {
+
+    const dispatch=useDispatch;
+
     const [email, setemail] = useState("");
     const [password, setpassword] = useState("");
 
     const display=()=>{
         console.log({email,password});
-        loginData({email,password})
+        loginDetails({email,password},)
     }
+
+    const formData={
+        email,
+        password
+    }
+    dispatch(loginDetails(formData));
+    console.log('login data submitted',formData);
     return (
         <div className='signup-wrapper'>
             <div className="signup-box">
