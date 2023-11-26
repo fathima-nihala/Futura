@@ -1,4 +1,6 @@
 import axios from "axios"
+import { loginDetails } from "../Redux/persistconf";
+
 
 export const SignUpData=async(datas)=>{
     try{
@@ -42,11 +44,12 @@ export const UpdateIdData=async(id,datas)=>{
     }
 }
 
-export const loginData=async(logindata)=>{
+export const loginData=async(logindata,dispatch)=>{
     console.log('login data is',logindata);
     try{
         const res=await axios.post('http://localhost:7000/api/data/login',logindata);
         console.log('response',res.status);
+        dispatch(loginDetails(res.data))
     }catch(err){
         console.log(err);
     }

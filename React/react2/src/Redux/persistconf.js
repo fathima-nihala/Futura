@@ -7,12 +7,15 @@ const Login=createSlice({
     },
     reducers:{
         loginDetails:(state,action)=>{
-            console.log(action.payload);
             state.loginInfo.push(action.payload);
+            console.log(action.payload);
+        },
+        removeData:(state)=>{
+            state.loginInfo=[]
         }
     }
 })
-export const {loginDetails}=Login.actions
+export const {loginDetails,removeData}=Login.actions
 export default Login.reducer
 
 //to get login data in local storage

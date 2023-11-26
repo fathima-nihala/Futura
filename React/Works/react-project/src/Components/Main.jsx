@@ -41,7 +41,6 @@ const Main = ({setActivnav,setProductDeatails }) => {
         }
     }
 
-   
   return (
     <div>
         <div className='nav'>

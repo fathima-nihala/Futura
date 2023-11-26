@@ -15,6 +15,8 @@ import SignUp from "./REACT-SIGNUP/SignUp";
 import Display from "./REACT-SIGNUP/Display";
 import Profile from "./REACT-SIGNUP/Profile";
 import Login from "./REACT-SIGNUP/Login";
+import { useSelector } from "react-redux";
+import Home from "./REACT-SIGNUP/Home";
 // import Wrk1 from "./WRK/Wrk1";
 // import Wrk1main from "./WRK/Wrk1main";
 
@@ -22,9 +24,20 @@ import Login from "./REACT-SIGNUP/Login";
 
 // import ReactOne from "./CMPNTNS/ReactOne";
 function App() {
+
+  const data=useSelector((state)=>state.Login.loginInfo[0])
+  console.log('***',data);
+  if(data){
+    var Token=data && data.accessToken
+    console.log("token ?",Token);
+  }
   const Router=createBrowserRouter([
     {
       path:'/',
+      element:Token ? <Home/> : <Login/>
+    },
+    {
+      path:'formuseref',
       element: <Formuseref/>  
     },
     {
@@ -63,10 +76,10 @@ function App() {
       path:'getid',
       element:<Profile/>
     },
-    {
-      path:'login',
-      element:<Login/>
-    }
+    // {
+    //   path:'login',
+    //   element:<Login/>
+    // }
     
   ])
 
