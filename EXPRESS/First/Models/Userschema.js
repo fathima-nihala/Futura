@@ -6,7 +6,8 @@ const Userschema=new mongoose.Schema({  //This code defines a Mongoose schema na
     age:{type:String},
     address:{type:String},
     email:{type:String},
-    password:{type:String}
+    password:{type:String},
+    phone:{type:String},
 },{timestamps:true})  // to add date and time the value is added to DB / edited
 
 module.exports=mongoose.model("AAbatch",Userschema)   //AAbatch is the name of collection we are creating

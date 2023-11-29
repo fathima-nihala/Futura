@@ -1,0 +1,128 @@
+.navbar{
+    display: flex;
+    padding: 10px 17px;
+    justify-content: space-between;
+    background-color: white;
+    position: sticky;
+    z-index: 100;
+    box-shadow: 0px 5px 8px -9px rgba(0, 0, 0, 0.75);
+    height: 60px;
+}
+.logo{
+    display: flex;
+}
+.logo img{
+    height: 80px;
+    width: 110px;
+    object-fit: cover;
+}
+.nav_inp{
+    margin-top: 15px;
+    height: 10px;
+    display: flex;
+    align-items: center;
+    background-color: #eff2f5;
+    padding: 16px 5px;
+    margin-left: 10px;
+    border-radius: 999px;
+    width: 300px;
+}
+.nav_inp > input{
+    border: none;
+    background-color: transparent;
+    outline-width: 0;
+}
+.nav_elements{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    margin-left: 300px;
+}
+.nav_options{
+    display: flex;
+    align-items: center;
+    padding: 9px 30px;
+    cursor: pointer;
+}
+.nav_option p{
+    margin-top: 23px;
+    font-size: 18px;
+}
+.nav-prof{
+    display: flex;
+   
+}
+.nav-prof-one{
+     margin-top: 20px;
+    margin-left: 40px;
+
+}
+
+.nav-prof p{
+    margin-top: 22px;
+    font-size: 18px;
+}
+
+.nav_btn{
+    margin-top: 22px;
+    font-size: 18px;
+}
+.nav_option:hover{
+    color:red;
+}
+.link-ttext:hover{
+    color: red;
+}
+/* ---body--- */
+.home_body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 250px;
+    height: 330px;
+    margin-top: 40px
+  }
+  .gallery:hover {
+    border: 1px solid #777;
+  }
+  .gallery img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    opacity: 0.8;
+
+  }
+  .gallery img:hover{
+    opacity:1.0;
+  }
+  .desc {
+    padding: 15px;
+    text-align: center;
+  }
+.ga-btn{
+    background-color: red;
+    color: white;
+    border: none;
+    width: 60px;
+}
+/* ------hjkoi---- */
+
+.home_container h2{
+    font-size: 29px;
+    font-weight: 800;
+    color: red;
+}
+.nav-prof--active p{
+    margin-top: 22px;
+    font-size: 18px;
+}
+.nav-prof--active{
+    display: flex;
+    border-bottom: 3px solid red;
+
+}

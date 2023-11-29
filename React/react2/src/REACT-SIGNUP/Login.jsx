@@ -45,7 +45,7 @@ const Login = () => {
                     </div>
                     <div className='login-input'>
                         <input type="email" placeholder="Enter your email" value={email} onChange={(e) => setemail(e.target.value)} /> <br />
-                        <input type="password" placeholder="Enter password" value={password} onChange={(e) => setpassword(e.target.value)} />
+                        <input type="password " placeholder="Enter password" value={password} onChange={(e) => setpassword(e.target.value)} />
                     </div>
                     <div className='login-button'>
                         <button onClick={display}>Login</button>
