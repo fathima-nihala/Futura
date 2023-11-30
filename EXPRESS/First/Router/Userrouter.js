@@ -2,6 +2,7 @@ const router=require('express').Router()  //router page aakaan vendeett .create 
 const Crypto=require('crypto-js')
 const AAbatch=require('../Models/Userschema')  //imported AAbatch from Userschema
 const Jwt=require('jsonwebtoken')
+const { verifyToken, verifyTokenAndauthorization } = require('../verifyToken')
 
 router.post('/postmethod', async(req,res)=>{//front-end n data backend lek veran vendi. postmethod is like api name & its user-defined
 console.log("postman data ?",req.body); //The req.body contains the data sent in the POST request by a client
@@ -86,6 +87,16 @@ router.post('/login',async(req,res)=>{
         res.status(200).json({...others,accessToken})
     }catch(err){
         res.status(400)
+    }
+})
+
+
+router.get("/getdataok/:id",verifyToken,verifyTokenAndauthorization,async(req,res)=>{
+    try {
+        const res1=await user.findById(req.params.id)
+        res.status(200).json(res1)
+    } catch (error) {
+        res.status(500).json(err)
     }
 })
 module.exports=router

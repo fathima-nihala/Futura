@@ -110,6 +110,10 @@
     border: none;
     width: 60px;
 }
+.ga-btn:hover{
+    background-color: white;
+    color: red;
+}
 /* ------hjkoi---- */
 
 .home_container h2{
