@@ -11,6 +11,8 @@ export const SignUpDetails=async(data)=>{
     }
 }
 
+
+
 export const LoginDetails=async(datas,dispatch)=>{
     console.log('datas data is',datas);
     try {

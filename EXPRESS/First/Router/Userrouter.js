@@ -92,11 +92,13 @@ router.post('/login',async(req,res)=>{
 
 
 router.get("/getdataok/:id",verifyToken,verifyTokenAndauthorization,async(req,res)=>{
+    console.log("okokoko");
     try {
-        const res1=await user.findById(req.params.id)
+        const res1=await AAbatch.findById(req.params.id)
+        console.log("okok",res1);
         res.status(200).json(res1)
     } catch (error) {
-        res.status(500).json(err)
+        res.status(500).json(error)
     }
 })
 module.exports=router

@@ -29,7 +29,7 @@ const verifyTokenAndauthorization=(req,res,next)=>{
         console.log('req.user.id',req.user.id);
         console.log("req.params.id",req.params.id);
         if (req.user.id===req.params.id) {
-            next()
+            next();
         }
         else{
             res.status(403).json("you are not allowed")
