@@ -1,6 +1,6 @@
 import axios from "axios"
 import { loginDetails } from "../Redux/persistconf";
-import { publicRequest } from "./RequestMethod";
+import { publicRequest, userRequest } from "./RequestMethod";
 
 
 export const SignUpData=async(datas)=>{
@@ -53,5 +53,14 @@ export const loginData=async(logindata,dispatch)=>{
         dispatch(loginDetails(res.data))
     }catch(err){
         console.log(err);
+    }
+}
+
+export const getProfile=async(id)=>{
+    try {
+        const res1=await userRequest.get(`/api/data/getdataok/${id}`)
+        console.log(res1);
+    } catch (error) {
+        console.log(error);
     }
 }

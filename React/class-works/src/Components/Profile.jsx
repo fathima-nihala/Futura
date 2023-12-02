@@ -15,6 +15,8 @@ const data=useSelector((state)=>state.Login.loginInfo)
    const dispatch=useDispatch()
    function Logout(){
     dispatch(removeData())
+
+
    }
   return (
     <div className='prof_container'>  
