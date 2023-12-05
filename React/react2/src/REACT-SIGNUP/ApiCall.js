@@ -58,8 +58,12 @@ export const loginData=async(logindata,dispatch)=>{
 
 export const getProfile=async(id)=>{
     try {
-        const res1=await userRequest.get(`/api/data/getdataok/${id}`)
-        console.log(res1);
+        const res1=await userRequest.get(`/getdataok/${id}`)
+        console.log("final answer",res1);
+    const data = res1.data
+    return data
+        
+    
     } catch (error) {
         console.log(error);
     }

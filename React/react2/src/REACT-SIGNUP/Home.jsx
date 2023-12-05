@@ -4,8 +4,8 @@ import { removeData } from '../Redux/persistconf'
 
 const Home = () => {
 
-  const data=useSelector((state)=>state.Login.loginInfo)
-  console.log("im mad",data);
+  const datavalue=useSelector((state)=>state.Login.loginInfo)
+  console.log("im mad",datavalue);
 
     const dispatch=useDispatch()
 
@@ -18,7 +18,7 @@ const Home = () => {
         <h2>Do you wanna login?</h2>
 
         <br />
-        {data.map((datass)=>{
+        {datavalue.map((datass)=>{
           return(
             <div>
              <h3>{datass._id} </h3> 

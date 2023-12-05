@@ -17,7 +17,8 @@ import Profile from "./REACT-SIGNUP/Profile";
 import Login from "./REACT-SIGNUP/Login";
 import { useSelector } from "react-redux";
 import Home from "./REACT-SIGNUP/Home";
-import { Navbar } from "react-bootstrap";
+// import { Navbar } from "react-bootstrap";
+import Navbar from  "./REACT-SIGNUP/Navbar.jsx"
 // import Wrk1 from "./WRK/Wrk1";
 // import Wrk1main from "./WRK/Wrk1main";
 

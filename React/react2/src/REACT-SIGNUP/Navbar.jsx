@@ -1,28 +1,40 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { removeData } from '../Redux/persistconf'
+import { getProfile } from './ApiCall'
+
 const Navbar = () => {
+  const [data1, setData1] = useState(false)
+  const fullData = useSelector((state) => state.Login.loginInfo)
 
-    const data=useSelector((state)=>state.Login.loginInfo)
-    const id=data[0]&& data[0]._id
-    console.log(id);
+  console.log('hset data =', fullData);
 
 
-    const dispatch=useDispatch()
+  const dispatch = useDispatch()
 
-    const display=()=>{
-        dispatch(removeData())
-    }
+  const display = () => {
+    dispatch(removeData())
+  }
 
-    function profile(){
-
-    }
+  const profile = async () => {
+    setData1(true)
+  }
   return (
     <div>
-        {/* <button onClick={profile}>Proofile</button>
-        <button onClick={display}>Logout</button> */}
+      <div>
+        <button onClick={profile}>Profile</button>
+        <button onClick={display}>Logout</button>
+      </div>
 
-        haaaiiii
+      <div>
+          <div>
+            {data1 && fullData.map((value, index) => (
+              <div key={index}>
+                <h1>{value.firstname}</h1>
+              </div>
+            ))}
+          </div>
+      </div>
     </div>
   )
 }
