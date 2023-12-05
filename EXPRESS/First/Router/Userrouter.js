@@ -83,7 +83,7 @@ router.post('/login',async(req,res)=>{
         {expiresIn:'5d'})
 
         const {password,...others}=DBdata._doc 
-
+        // var Id=DBdata._id 
         res.status(200).json({...others,accessToken})
     }catch(err){
         res.status(400)
@@ -101,6 +101,17 @@ router.get("/getdataok/:id",verifyToken,verifyTokenAndauthorization,async(req,re
         res.status(500).json(error)
     }
 })
+
+// router.put('/updatework/:id',verifyToken,verifyTokenAndauthorization,async (req,res)=>{
+//     try{ 
+//         const resData=await AAbatch.findByIdAndUpdate(req.params.id,{
+//             $set:req.body
+//         },{new:true})
+//         res.status(200).json(resData)
+//     }catch(err){
+//         res.status(500).json(err)
+//     }
+// })
 module.exports=router
 //router page is used access database
 

@@ -57,14 +57,22 @@ export const loginData=async(logindata,dispatch)=>{
 }
 
 export const getProfile=async(id)=>{
+    console.log('dataa',id);
     try {
         const res1=await userRequest.get(`/getdataok/${id}`)
         console.log("final answer",res1);
-    const data = res1.data
-    return data
-        
-    
+    return res1   
     } catch (error) {
         console.log(error);
     }
 }
+
+// export const UpdateProf=async(id)=>{
+//     try {
+//         const res=await userRequest.get(`/updatework/${id}`)
+//         console.log('Chek...',res);
+//         return res
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }

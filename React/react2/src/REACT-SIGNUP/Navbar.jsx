@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { removeData } from '../Redux/persistconf'
-import { getProfile } from './ApiCall'
 
 const Navbar = () => {
   const [data1, setData1] = useState(false)
