@@ -26,6 +26,7 @@ res.status(500).json(err)  //error code
 }
 })
 
+
 router.get('/getmethod',async (req,res)=>{
     try{
         const datas=await AAbatch.find()
@@ -35,6 +36,7 @@ router.get('/getmethod',async (req,res)=>{
         res.status(500).json(err)
     }
 })
+
 
 router.get('/getidmethod/:id',async (req,res)=>{
     try{
@@ -101,17 +103,37 @@ router.get("/getdataok/:id",verifyToken,verifyTokenAndauthorization,async(req,re
         res.status(500).json(error)
     }
 })
+ 
+// method to use backend verification //test
+router.put(`/updatework/:id`,async(req,res)=>{
+    console.log('req',req);
+    console.log('8888',req.params.id);
+    console.log('***',req.body);
+    try {
+        const updatework=await AAbatch.findByIdAndUpdate(req.params.id,{
+            $set:req.body
+        },{new:true})
+        res.status(200).json(updatework)
+        console.log('update work',updatework);
+    } catch (err) {
+        res.status(500).json(err)
+    }
+})
 
-// router.put('/updatework/:id',verifyToken,verifyTokenAndauthorization,async (req,res)=>{
-//     try{ 
-//         const resData=await AAbatch.findByIdAndUpdate(req.params.id,{
-//             $set:req.body
-//         },{new:true})
-//         res.status(200).json(resData)
-//     }catch(err){
-//         res.status(500).json(err)
-//     }
-// })
+
+router.post('/signup',verifyToken,verifyTokenAndauthorization,async(req,res,next)=>{
+    console.log("cliendside inf",req.body);
+    const newData=new futura(req.body)
+    try {
+        const savedData=await newData.save()
+        res.status(200).json(savedData)
+    } catch (error) {
+        console.log(error);
+    }
+    next()
+},(req,res)=>{
+    console.log("last check",req.body);
+})
 module.exports=router
 //router page is used access database
 

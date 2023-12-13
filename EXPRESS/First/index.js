@@ -6,6 +6,12 @@ const cors=require('cors')
 app.use(cors())
 dotenv.config()   //This line loads the environment variables from a .env file 
 
+//Application level middle ware
+app.use(function(req,res,next){
+    console.log("all time first check");
+    next()
+})
+
 
 const userRoute=require('./Router/Userrouter')
 const creudRouter=require('./Router/CrudRouter')

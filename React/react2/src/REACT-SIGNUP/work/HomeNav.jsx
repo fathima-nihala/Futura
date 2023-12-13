@@ -1,11 +1,14 @@
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
-import { getProfile } from '../ApiCall'
+import {  getProfile } from '../ApiCall'
+import { Link } from 'react-router-dom'
 import './HomeNav.css'
 
 const HomeNav = () => {
 
-  const [data2, setData2] = useState()
+  const [data2, setData2] = useState();
+    // const [profile,setProfile]=useState('')
+
 
   const allData = useSelector((state) => state.Login.loginInfo)
   console.log(allData, 'alll data in homenav');
@@ -17,10 +20,13 @@ const HomeNav = () => {
 
   const display = async () => {
     var data = await getProfile(Id)
-    console.log("data?",data);
-    setData2(data)
+    console.log("data?",data.data);
+    setData2(data.data)
   }
   console.log('%%%%', data2);
+
+
+
   return (
     <div className=''>
       <div className='nav-main'>
@@ -31,7 +37,7 @@ const HomeNav = () => {
         <div className='nav-list'>
           <ul>
             <li>Home</li>
-            <li>Update</li>
+            <li><Link to='/update' style={{textDecoration:'none',color:'black'}}>Update</Link></li>
             <li onClick={display}>Profile</li>
           </ul>
 
@@ -47,6 +53,9 @@ const HomeNav = () => {
 
         </div>
       </div>
+     
+
+
     </div>
   )
 }

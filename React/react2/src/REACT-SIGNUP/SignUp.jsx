@@ -49,7 +49,7 @@ const SignUp = () => {
         </div>
         <div className="inp-one">
           <input
-            type="date"
+            type="text"
             placeholder="age"
             value={age}
             onChange={(e) => setage(e.target.value)}

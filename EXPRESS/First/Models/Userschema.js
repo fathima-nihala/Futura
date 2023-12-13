@@ -3,6 +3,7 @@ const mongoose=require('mongoose') //import mongoose
 const Userschema=new mongoose.Schema({  //This code defines a Mongoose schema named "Userschema".schema describes the structure of documents . "Userschema" is userdefined.
     firstname:{type:String},
     secondname:{type:String},
+    dob:{type:String},
     age:{type:String},
     address:{type:String},
     email:{type:String},

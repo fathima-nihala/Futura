@@ -1,6 +1,7 @@
 import axios from "axios"
 import { loginDetails } from "../Redux/persistconf";
 import { publicRequest, userRequest } from "./RequestMethod";
+import { json } from "react-router-dom";
 
 
 export const SignUpData=async(datas)=>{
@@ -67,12 +68,20 @@ export const getProfile=async(id)=>{
     }
 }
 
-// export const UpdateProf=async(id)=>{
-//     try {
-//         const res=await userRequest.get(`/updatework/${id}`)
-//         console.log('Chek...',res);
-//         return res
-//     } catch (error) {
-//         console.log(error);
-//     }
-// }
+export const UpdateProf=async(value)=>{
+    console.log('id?',value);
+    try {
+        // var userId=JSON.parse(JSON.parse(localStorage.getItem('persist:loginusers')).Login).loginInfo[0]&&
+        // JSON.parse(JSON.parse(localStorage.getItem('persist:loginusers')).Login).loginInfo[0].accessToken
+        // console.log("finally userId",userId);
+        const res=await axios.put(`http://localhost:7000/api/data/updatework/${value._id}`,
+        {
+            firstname:value.firstname,
+            secondname:value.secondname,
+        })
+        console.log('Chek...',res.data);
+        return res.data
+    } catch (error) {
+        console.log(error);
+    }
+}
