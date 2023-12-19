@@ -71,13 +71,14 @@ export const getProfile=async(id)=>{
 export const UpdateProf=async(value)=>{
     console.log('id?',value);
     try {
-        // var userId=JSON.parse(JSON.parse(localStorage.getItem('persist:loginusers')).Login).loginInfo[0]&&
-        // JSON.parse(JSON.parse(localStorage.getItem('persist:loginusers')).Login).loginInfo[0].accessToken
-        // console.log("finally userId",userId);
         const res=await axios.put(`http://localhost:7000/api/data/updatework/${value._id}`,
         {
             firstname:value.firstname,
             secondname:value.secondname,
+            email:value.email,
+            age:value.age,
+            address:value.address,
+            password:value.password,
         })
         console.log('Chek...',res.data);
         return res.data

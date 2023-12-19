@@ -7,20 +7,20 @@ import SubscriptionsIcon from '@mui/icons-material/Subscriptions';
 import EventNoteIcon from '@mui/icons-material/EventNote';
 import CalendarViewDayIcon from '@mui/icons-material/CalendarViewDay';
 import Post from './Post';
-import { db } from './firebase';
+// import { db } from './firebase';
 
 function Feed() {
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
-        db.collection("post").onSnapshot((snapshot) =>
-            setPosts(
-                snapshot.docs.map((doc) => ({
-                    id: doc.id,
-                    data: doc.data(),
-                }))
-            )
-        );
+        // db.collection("post").onSnapshot((snapshot) =>
+        //     setPosts(
+        //         snapshot.docs.map((doc) => ({
+        //             id: doc.id,
+        //             data: doc.data(),
+        //         }))
+        //     )
+        // );
 }, []);
 
 const sendPost = (e) => {

@@ -2,6 +2,7 @@ import axios from "axios";
 import { loginData } from "../Redux/userRedux";
 
 export const SignUpDetails=async(data)=>{
+    console.log("#$#$",data);
     try {
         console.log("check",data);
         const res=await axios.post('http://localhost:7000/api/data/postmethod',data)
@@ -23,3 +24,17 @@ export const LoginDetails=async(datas,dispatch)=>{
         console.log(error);
     }
 }
+
+
+///nodemailer
+
+export const accountrecovery=async(data)=>{
+    console.log(data);
+    try {
+        const res=await axios.post('http://localhost:5001/api/nodemailer',data)
+        console.log(res.status);
+    } catch (error) {
+        console.log(error);
+    }
+}
+

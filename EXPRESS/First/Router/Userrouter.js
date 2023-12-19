@@ -3,9 +3,26 @@ const Crypto=require('crypto-js')
 const AAbatch=require('../Models/Userschema')  //imported AAbatch from Userschema
 const Jwt=require('jsonwebtoken')
 const { verifyToken, verifyTokenAndauthorization } = require('../verifyToken')
+const multer=require('multer')
 
-router.post('/postmethod', async(req,res)=>{//front-end n data backend lek veran vendi. postmethod is like api name & its user-defined
+
+
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+      cb(null, '../../React/class-works/public/Images')
+    },
+    filename: function (req, file, cb) {
+      cb(null,file.originalname)
+    }
+  })
+  
+  const upload = multer({ storage: storage })
+
+
+
+router.post('/postmethod',upload.single('image'),(req,res)=>{//front-end n data backend lek veran vendi. postmethod is like api name & its user-defined
 console.log("postman data ?",req.body); //The req.body contains the data sent in the POST request by a client
+console.log('check-check',req.file);
 // const newUser = new AAbatch(req.body)
 //req.body.password=Crypto.AES.encrypt(req.body.password,process.env.Crypto_js).toString()
 const newUser=new AAbatch({
@@ -16,10 +33,11 @@ const newUser=new AAbatch({
     address:req.body.address,
     email:req.body.email,
     phone:req.body.phone,
+    image:req.file.originalname,
     password:Crypto.AES.encrypt(req.body.password,process.env.Crypto_js).toString()
 }) // a new instance of the "AAbatch" Mongoose model is created, and it's initialized with the data from the request body.
 try{
-const saveduser= await newUser.save() //saveduser must be used;This line saves the new user document to the database. 
+const saveduser=newUser.save() //saveduser must be used;This line saves the new user document to the database. 
 res.status(200).json(saveduser) //success code
 }catch(err){
 res.status(500).json(err)  //error code
@@ -134,6 +152,12 @@ router.post('/signup',verifyToken,verifyTokenAndauthorization,async(req,res,next
 },(req,res)=>{
     console.log("last check",req.body);
 })
+
+
+
+
+
+
 module.exports=router
 //router page is used access database
 

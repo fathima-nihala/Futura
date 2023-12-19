@@ -5,6 +5,7 @@ import SignUp from './Components/SignUp';
 import { useSelector } from 'react-redux';
 import Home from './Components/Home';
 import Profile from './Components/Profile';
+import Recovery from './Components/ACCOUNT_RECOVERY/Recovery';
 
 function App() {
 
@@ -33,6 +34,10 @@ function App() {
       path:'prof',
       element:<Profile/>
     },
+    {
+      path:'recovery',
+      element:<Recovery/>
+    }
   ])
   return (
     <div className="App">
