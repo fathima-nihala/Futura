@@ -1,4 +1,3 @@
-// import logo from './logo.svg';
 import './App.css';
 import Feed from './Feed';
 import Header from './Header';
@@ -6,14 +5,19 @@ import Sidebar from './Sidebar';
 import Widgets from './Widgets';
 import Login from './Login';
 
+
+
 function App() {
+
+
+
   const user=null;
   return (
     //BEM naming convention
     <div className="app">
-     {/* {!user ? (
+     {!user ? (
      <Login/>
-     ):( */}
+     ):(
       <>
        <Header/>
       <div className='app_body'>

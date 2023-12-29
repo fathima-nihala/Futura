@@ -4,7 +4,6 @@ import { accountrecovery } from '../ApiCall';
 const Recovery = () => {
     const [email,setemail]=useState('');
     // const [password,setpassword]=useState('');
-
     const onSubmit=async()=>{
         try {
             accountrecovery({email})

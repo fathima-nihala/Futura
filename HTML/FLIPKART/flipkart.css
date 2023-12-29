@@ -46,6 +46,10 @@ button:hover{
           padding: 5px;
           border-bottom: 10px;
 }
+.child:hover{
+  transform: scale(1.07);
+  cursor: pointer;
+}
 /* ---------------------------slide show container----------------------------- */
 .slideshow-container {
     max-width: 1000px;
@@ -91,6 +95,10 @@ button:hover{
     text-align: center;
     font-family: arial;
   }
+  .offers:hover{
+    transform: scale(1.07);
+    cursor: pointer;
+  }
   /* ----------------------------------- */
   .beauty{
     display: flex;
@@ -105,4 +113,8 @@ button:hover{
     margin: auto;
     text-align: center;
     font-family: arial;
+  }
+  .dsam:hover{
+    transform: scale(1.07);
+    cursor: pointer;
   }
