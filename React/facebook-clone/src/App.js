@@ -15,9 +15,9 @@ function App() {
   return (
     //BEM naming convention
     <div className="app">
-     {!user ? (
+     {/* {!user ? (
      <Login/>
-     ):(
+     ):( */}
       <>
        <Header/>
       <div className='app_body'>
@@ -26,7 +26,7 @@ function App() {
         <Widgets/>
       </div>
       </>
-     )}
+     {/* )} */}
     </div>
   );
 }

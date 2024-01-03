@@ -1,0 +1,173 @@
+.signup-main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* height: 600px; */
+}
+
+.signup-container{
+    margin-top: 0px;
+    flex-direction: column;
+    box-shadow: 1px 2px 2px 3px rgba(0, 0, 0, 0.2);    
+}
+
+/* .signup-header{
+    padding: 3px;
+} */
+
+.signup-header p{
+    color: gray;
+    /* margin-left: 28px; */
+    display: flex;
+    justify-content: center;
+    font-family: inherit;
+}
+
+.header-main{
+    font-size: 28px;
+    font-weight: 700px;
+    color: rgb(44, 44, 44);
+    margin: 1px;
+    /* margin-left: 28px; */
+    font-family: inherit;
+    display: flex;
+    justify-content: center;
+}
+
+.signup-contents{
+    border-top: 1px solid rgb(180, 178, 178);
+    padding: 15px 15px;
+}
+
+.sign-name{
+    display: flex;
+    justify-content: center; 
+    align-items: center;  
+    gap: 8px;
+}
+
+.sign-name-one input{
+    outline-color: var(--primary-color);
+    height: 40px;
+    border: 1px solid rgb(231, 231, 231);
+    border-radius: 5px;
+    font-size: 12px;
+    padding: 0px 16px;
+    font-family:inherit;
+}
+
+.sign-email{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.sign-email input{
+    outline-color: var(--primary-color);
+    border: 1px solid rgb(231, 231, 231);
+    height: 40px;
+    width: 375px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-family: inherit;
+}
+
+.sign-password{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sign-password input{
+    outline-color: var(--primary-color);
+    border: 1px solid rgb(231, 231, 231);
+    height: 40px;
+    width: 375px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-family: inherit;
+}
+
+
+.sign-dob p{
+    margin-left: 14px;
+    color: gray;
+    font-size: 12px;
+    display: flex;
+    font-family: inherit;
+}
+
+.dob{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.dob-data select{
+    height: 40px;
+    width: 120px;
+    outline-color: var(--primary-color);
+    border: 1px solid rgb(231, 231, 231);
+    border-radius: 5px;
+    font-size: 12px;
+    color: gray;
+    font-family: inherit;
+}
+
+.sign-gender p{
+    margin-left: 11px;
+    color: gray;
+    font-size: 14px;
+    display: flex;
+    font-family: inherit;
+}
+
+.gender form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.gender-options{
+    height: 40px;
+    width: 120px;
+    border: 1px solid rgb(231, 231, 231);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gender-options:active{
+    border: 2px solid var(--primary-color);
+}
+
+.gender-options p{
+    font-size: 12px;
+    font-family: inherit;
+}
+
+.para-one{
+   font-size: 11px;
+    margin-left: 10px;
+    color: gray;
+    font-family: inherit;
+}
+
+.sign-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sign-button button{
+    height: 45px;
+    width: 250px;
+    border-radius: 5px;
+    border: 1px solid rgb(231, 231, 231);
+    color: white;
+    background-color: rgb(8, 168, 8);
+    cursor: pointer;
+}

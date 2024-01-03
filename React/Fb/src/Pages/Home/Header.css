@@ -1,0 +1,89 @@
+.header{
+    display: flex;
+    padding: 15px 20px;
+    justify-content: space-between;
+    background-color: white;
+    position: sticky;
+    z-index: 100;
+    box-shadow: 0px 5px 8px -9px rgba(0, 0, 0, 0.75);
+    height: 40px;
+}
+.header_left > img{
+    height: 40px;
+}
+.header_left{
+    display: flex;
+    justify-content: space-between;
+}
+.header_input{
+    display: flex;
+    align-items: center;
+    background-color: #eff2f5;
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 999px;
+    height: 20px;
+}
+.header_input>input{
+    border: none;
+    background-color: transparent;
+    outline-width: 0;
+}
+.header_center{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+.header_option>.react-icons{
+    color: gray;
+}
+.header_option:hover>.react-icons{
+    color: #2e81f4;
+}
+.header_option--active > .react-icons{
+    color: #2e81f4;
+}
+.header_option--active{
+    border-bottom: 4px solid #2e81f4;
+}
+.header_option{
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    cursor: pointer;
+}
+.header_option:hover{
+    background-color: #eff2f5;
+    border-radius: 10px;
+    align-items: center;
+    padding: 0 30px;
+    border-bottom: none;
+}
+.header_info{
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+}
+.header_info > h4{
+    margin-left: 2px;
+}
+.header_right{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-right-icons{
+    margin-right: 10px;
+}
+.react-icons{
+    font-size: 30px;
+} 
+.header-right-icons{
+    height: auto;
+    width: auto;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.header-right-icons:hover{
+    background-color:#eff2f5;
+}

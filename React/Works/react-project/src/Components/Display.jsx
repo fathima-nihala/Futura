@@ -9,7 +9,6 @@ const Display = ({ productDetails }) => {
   const dispatch = useDispatch();
   const handleOrderItem = () => {
     setOrder(true);
-
   };
   
   const handleAddToCart = () => {
