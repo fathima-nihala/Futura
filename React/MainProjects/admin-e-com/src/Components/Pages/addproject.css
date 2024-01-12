@@ -1,0 +1,47 @@
+.addproduct{
+    margin-right: 100px;
+    margin-top: 50px;
+}
+
+.addproduct-head{
+    font-size: 29px;
+    font-style: inherit;
+    
+}
+.addproduct-head-1{
+    color: rgb(230, 8, 156);
+}
+
+.addproduct-cntnt{
+    width: 900px;
+    height: 40px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid  rgb(209, 207, 207); ;
+}
+.addproduct-cntnt input{
+    width: 850px;
+    margin-left: 10px;
+    height: 37px;
+    border: none;
+    font-size: 20px;
+    outline: none;
+}
+
+.adprod-img{
+    font-size: 18px;
+    margin-top: 15px;
+    color: black;
+}
+
+.adprod-btn{
+    margin-top: 15px;
+    height: 39px;
+    width: 200px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(230, 8, 156);
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}

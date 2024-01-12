@@ -11,7 +11,10 @@ router.post('/fbpost',async(req,res)=>{
         day:req.body.day,
         month:req.body.month,
         year:req.body.year,
-        password:crypto.AES.encrypt(req.body.password,process.env.Crypto_js).toString()
+        mobileNumber:req.body.mobileNumber,
+        // password:crypto.AES.encrypt(req.body.password,process.env.Crypto_js).toString()
+        password:req.body.year,
+        email:req.body.email,
 
     })
     try {

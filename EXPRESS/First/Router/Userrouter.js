@@ -6,12 +6,11 @@ const { verifyToken, verifyTokenAndauthorization } = require('../verifyToken')
 const multer=require('multer')
 
 
-
 const storage = multer.diskStorage({
-    destination: function (req, file, cb) {
+    destination: function(req, file, cb){  //cb-call back
       cb(null, '../../React/class-works/public/Images')
     },
-    filename: function (req, file, cb) {
+    filename: function(req, file, cb){
       cb(null,file.originalname)
     }
   })
@@ -92,8 +91,8 @@ router.post('/login',async(req,res)=>{
 
         const hashedPassword=Crypto.AES.decrypt(DBdata.password,process.env.Crypto_js)
         console.log('hashed password is',hashedPassword);
+        
         const originalPassword=hashedPassword.toString(Crypto.enc.Utf8)
-
         console.log('Original password is',originalPassword);
 
         originalPassword !=req.body.password && res.status(401).json({response:"password and email doesnt match"})

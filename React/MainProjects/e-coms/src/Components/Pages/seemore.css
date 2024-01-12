@@ -1,0 +1,6 @@
+
+.c-more{
+    padding-top:130px;
+    display: grid;
+    grid-template-columns: auto auto auto auto
+}

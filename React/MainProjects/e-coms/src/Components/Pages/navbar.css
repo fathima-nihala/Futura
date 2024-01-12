@@ -1,0 +1,90 @@
+.navbar{
+    display: flex;
+    width: 100%;
+    background: white;
+    justify-content: space-between;
+    height: 49px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    background-color: /* Your specific color value for base-100 */; /* Add your specific color */
+    transition: all 300ms ease-in-out;
+}
+.nav-logo{
+    margin-top: 9px;
+    margin-left: 40px;
+}
+.nav-logo-one{
+    font-size: 29px;
+    color: white;
+    background-color: rgb(230, 8, 156);
+    border-radius: 5px;
+    font-weight: 600;
+}
+.nav-logo-two{
+    font-size: 26px;
+    color: rgb(230, 8, 156);
+    border-radius: 2px;   
+}
+
+.navbar-center{
+    display: flex;
+    margin-bottom: 10px;
+}
+.menu{
+    display: flex;   
+}
+.menu li{
+    display: inline;
+    margin: 0px 12px;
+}
+.menu a:hover{
+    background: rgb(228, 225, 225);
+    border-radius: 5px;
+}
+.p-2{
+    background-color:  whitesmoke;
+    border-radius: 5px;
+}
+.p-2 li{
+    display: block;
+    justify-content: space-between;
+    width: 60px;
+}
+
+.sum:hover{
+    background:  rgb(228, 225, 225);
+    border-radius: 5px;
+}
+.nav-search{
+    margin-top: 14px;
+    background-color:whitesmoke;
+    height: 26px;
+    width: 230px;
+    
+}
+.nav-search input{
+    width: 200px;
+    border: none;
+    outline: none;
+    background-color:  whitesmoke;
+}
+.navbar-end{
+    display: flex;
+    margin-top: 15px;
+    margin-right: 19px;
+    justify-content: space-between;
+}
+.nav-end-one{
+    margin-right: 20px;
+}
+.nav-ico:hover{
+    background-color: rgb(228, 225, 225);
+    border-radius: 5px;
+}
+
+.nav-ico{
+    height: 20px;
+    width: 40px;
+}

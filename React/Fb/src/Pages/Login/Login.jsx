@@ -31,6 +31,10 @@ const Login = () => {
     const handleOrderItem = () => {
         setOrder(true);
     };
+
+    const hideHandler=()=>{
+        setOrder(false)
+    }
     return (
         <div className="login-main">
             <div className="login-top">
@@ -87,7 +91,7 @@ const Login = () => {
                     </ul>
                 </div>
             </div>
-            {order && <SignUp />}
+            {order && <SignUp orderHideHandler={hideHandler}/>}
         </div>
     );
 };

@@ -1,0 +1,31 @@
+.banner{
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    background-color: rgb(255, 252, 252);
+    height: 290px;
+
+}
+.ban-h{
+    font-size: 30px;
+    font-weight: 500;
+}
+.ban-h-c{
+    color: rgb(230, 8, 156);
+}
+.ban-p{
+    font-size: 24px;
+}
+.ban-btn{
+    height: 40px;
+    width: 99px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(230, 8, 156) ;
+    color: white;
+    font-size: 24px;
+}
+
+.ban-right img{
+    margin-left: 90px;
+}

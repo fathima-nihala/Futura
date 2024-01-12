@@ -1,9 +1,8 @@
-const Jwt=require('jsonwebtoken')
+const Jwt=require("jsonwebtoken")
 
 const verifyToken=(req,res,next)=>{
-    console.log(">>>>",req);
-    console.log("req.header.token",req.headers.token);
-
+    console.log(">>>>>>>>",req);
+    console.log("req.headers.token",req.headers.token);
     let authHeader=req.headers.token;
 
     if(authHeader){
@@ -18,12 +17,12 @@ const verifyToken=(req,res,next)=>{
             req.user=user;
             console.log("user????????",user);
             next();
-        })
-        
+        });
     }else{
         return res.status(401).json({error:"Token not found"});
     }
-}
+};
+
 const verifyTokenAndauthorization=(req,res,next)=>{
     verifyToken(req,res,(data)=>{
         console.log(data);

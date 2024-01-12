@@ -4,7 +4,7 @@ import './Signup.css';
 import Model from '../Model/Model';
 import { FbSignUpData } from '../API/ApiCall';
 
-const SignUp = () => {
+const SignUp = (props) => {
   const [firstname, setFirstname] = useState('');
   const [secondname, setSecondname] = useState('');
   const [password, setPassword] = useState('');
@@ -70,10 +70,10 @@ const SignUp = () => {
   console.log("gender", { gender });
 
 //for popup
-  const [close, setClose] = useState(true)
-  const closingHandler = () => {
-    setClose(false)
-  }
+  // const [close, setClose] = useState(true)
+  // const closingHandler = () => {
+    // setClose(false)
+  // }
 
   const display=()=>{
     FbSignUpData({firstname, secondname,combinedinput,gender,day,month,year,password});
@@ -81,7 +81,7 @@ const SignUp = () => {
 
   return (
     <div>
-      {close && <Model hideHandler={closingHandler}>
+       <Model hideHandler={props.orderHideHandler}>
         <div className='signup-main'>
           <div className='signup-container'>
             <div className='signup-header'>
@@ -219,7 +219,7 @@ const SignUp = () => {
             </form>
           </div>
         </div>
-      </Model>}
+      </Model>
     </div>
   );
 };

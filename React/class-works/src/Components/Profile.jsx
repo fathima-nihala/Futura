@@ -27,7 +27,7 @@ const data=useSelector((state)=>state.Login.loginInfo)
             <div className='card'>
            {data.map((datas)=>{
             return(
-                <div>
+                <div>  
                     {/* <img src={imagepath} alt="" style={{width:'150px',height:'150px',objectFit:'cover',marginTop:'30px',borderRadius:'50%'}}/> */}
                    {datas && <img src={`./Images/${datas.image}`} height={100} width={100} />}
                     <h1>{datas.firstname}</h1>

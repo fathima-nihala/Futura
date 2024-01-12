@@ -11,6 +11,9 @@ const Display = ({ productDetails }) => {
     setOrder(true);
   };
   
+  const hideHandler=()=>{
+    setOrder(false)
+  }
   const handleAddToCart = () => {
     dispatch(cartItems(productDetails));
   };
@@ -46,7 +49,7 @@ const Display = ({ productDetails }) => {
           </div>
         </div>
       </div>
-      {order && <OrdrerMessage />}
+      {order && <OrdrerMessage orderhidehandler={hideHandler}/>}
     </div>
   );
 };
