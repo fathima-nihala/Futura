@@ -44,11 +44,11 @@ const Main = () => {
         });
     };
 
-    const handleInsertRow = () => {
+    const handleNewRow = () => {
         setRows((prevRows) => [...prevRows, { srNo: '', itemCode: '', itemName: '', qty: 0, rate: 0, total: 0 }]);
     };
 
-    const handleDeleteRow = (index) => {
+    const handleDelete = (index) => {
         setRows((prevRows) => {
             const newRows = [...prevRows];
             newRows.splice(index, 1);
@@ -125,7 +125,7 @@ const Main = () => {
                                             <td><input type="number" value={row.qty} onChange={(e) => handleRowChange(index, 'qty', e.target.value)} /></td>
                                             <td><input type="number" value={row.rate} onChange={(e) => handleRowChange(index, 'rate', e.target.value)} /></td>
                                             <td>{row.total}</td>
-                                            <td><button><FaRegTrashCan onClick={() => handleDeleteRow(index)} /></button></td>
+                                            <td><button><FaRegTrashCan onClick={() => handleDelete(index)} /></button></td>
                                         </tr>
                                     ))}
                                                             </tbody>
@@ -139,7 +139,7 @@ const Main = () => {
             </div>
             <div className='right-btns'>
                 <h3 onClick={newReload}>New</h3>
-                <h3 onClick={handleInsertRow}>Insert</h3>
+                <h3 onClick={handleNewRow}>Insert</h3>
                 <h3 onClick={handleSaveClick}>Save</h3>
                 <h3 onClick={handlePrint}>Print</h3>
             </div>
