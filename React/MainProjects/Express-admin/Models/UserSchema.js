@@ -4,5 +4,7 @@ const UserSchema=new mongoose.Schema({
     firstname:{type:String},
     email:{type:String},
     password:{type:String},
+    type:{type:String},
+    image:{type:String},
 },{timestamps:true})
-module.exports=mongoose.model("User",UserSchema)
+module.exports=new mongoose.model("User",UserSchema)

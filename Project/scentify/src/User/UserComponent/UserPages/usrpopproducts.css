@@ -1,0 +1,28 @@
+.popular{
+    margin-top: 40px;
+    background-color: rgb(255, 252, 252);
+
+}
+.popular-h3{
+    display: flex;
+    justify-content: center;
+    font-size: 26px;
+    margin-top: 30px;
+    font-family: cursive;
+}
+.pop-cntnts{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 20px;
+    gap: 20px;
+
+}
+.popular-p{
+    font-size: 20px;
+    font-family: cursive;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

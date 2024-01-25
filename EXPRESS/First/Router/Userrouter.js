@@ -100,7 +100,7 @@ router.post('/login',async(req,res)=>{
             id:DBdata._id 
         },process.env.Jwt_sec,
         {expiresIn:'5d'})
-
+console.log(accessToken);
         const {password,...others}=DBdata._doc 
         // var Id=DBdata._id 
         res.status(200).json({...others,accessToken})

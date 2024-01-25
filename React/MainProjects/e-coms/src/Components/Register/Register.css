@@ -7,8 +7,6 @@
 .reg-main{
     display: flex;
     justify-content: center;
-    /* padding: 3px; */
-   
 
 }
 .reg-main-one{
@@ -73,9 +71,12 @@
     color: white;
 }
 .reg-para{
-    margin-top: 70px;
+    margin-top: 40px;
     margin-left: 20px;
 }
 .reg-link{
     text-decoration: none;
+}
+.reg-body-img{
+    margin-top: 10px;
 }

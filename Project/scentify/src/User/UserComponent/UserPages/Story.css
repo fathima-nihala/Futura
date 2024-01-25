@@ -1,0 +1,31 @@
+.story{
+     padding: 20px 20px;
+     margin-top: 50px;
+}
+.story-start{
+    display: flex;
+}
+.story-start-img-img{
+    background:linear-gradient(to right,#d9d9d9 ,  #f1ddce);
+}
+.story-start-para-h{
+    display: flex;
+    justify-content: center;
+    font-size: 26px;
+    font-family: cursive;
+}
+.story-start-para-p{
+    font-family: cursive;
+    font-size: 19px;
+    margin-left: 10px;
+}
+/* .story-end{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+}
+.story-end-img-img{
+     width: 400px;
+}  */

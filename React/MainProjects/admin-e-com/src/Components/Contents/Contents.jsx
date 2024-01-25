@@ -1,31 +1,16 @@
-// import React from 'react'
-// import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-// import Home from '../Home/Home'
-
-// const Contents = () => {
-//     const router=createBrowserRouter([
-//         {
-//             path:'home',
-//             element:<Home/>
-//         }
-//     ])
-//   return (
-
-//     <div>
-//         <RouterProvider router={router}></RouterProvider>
-//     </div>
-//   )
-// }
-
-// export default Contents
 
 import React from 'react'
 import { Outlet } from 'react-router-dom'
+// import Navbar from '../Content-items/Navbar'
+import Footer from '../Content-items/Footer'
+import './Contents.css'
 
 export const Contents = () => {
   return (
-    <div>
-        <Outlet/>
+    <div className='contents'>
+      {/* <Navbar /> */}
+      <Outlet />
+      <Footer/>
     </div>
   )
 }

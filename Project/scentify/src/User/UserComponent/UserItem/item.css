@@ -1,0 +1,66 @@
+.item{
+    margin-top: 40px;
+    width: 270px;
+    padding-bottom: 30px;
+    box-shadow: 0 0 2rem #A817;
+    background-color:white; 
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 298px;
+}
+.item:hover{
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+
+.heartclass{
+
+    position: absolute;
+    margin-bottom: 280px;
+    margin-left: 200px;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 0px 12px 0px 35px;
+    background-color: rgb(171, 114, 39);
+}
+
+.heart{
+    height: 1.9rem;
+    width: 1.7rem;
+    cursor: pointer;    
+}
+
+
+.item-head{
+    font-weight: 300px;
+}
+.item-img{
+    width: 200px;
+    height: 170px;
+}
+.item-para{
+    font-size: 15px;
+}
+.rupees{
+    color: #FF3333;
+}
+.paisa{
+    margin-right: 80px;
+}
+.item-end{
+    display: flex;
+}
+.item-end-btn{
+   border-radius: 18px 0px 0px 0px;
+   margin-left: 49.7px;
+   border: none;
+   color: white;
+   background-color: #562400;
+   cursor: pointer;
+}
+.item-end-btn:hover{
+   background-color: rgb(167, 167, 167);
+}

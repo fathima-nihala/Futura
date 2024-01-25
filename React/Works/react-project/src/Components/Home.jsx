@@ -4,7 +4,7 @@ import { BsPerson } from "react-icons/bs";
 import { BiCart } from "react-icons/bi";
 import "./Home.css";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Main from "./Main";
 import Cart from "./Cart";
 import Display from "./Display";
@@ -55,6 +55,27 @@ const Home = () => {
     }
   };
 
+  //nav-sticky
+
+  const [isStcky, setSticky] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.scrollY;
+      if (offset > 0) {
+        setSticky(true)
+      } else {
+        setSticky(false)
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.addEventListener("scroll", handleScroll);
+    }
+  }, [])
+
+
   return (
     <div className="brdr">
       <link
@@ -62,7 +83,7 @@ const Home = () => {
         rel="stylesheet"
       ></link>
       <div className="nav">
-        <div className="nav-main">
+        <div className={`nav-main ${isStcky ? 'sick' : ''}`}>
           <div className="nav-content">
             <div className="logo">
               <h1>

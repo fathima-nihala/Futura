@@ -1,11 +1,25 @@
 
 .brdr {
-  margin: 0px 20px;
+  /* margin: 0px 20px; */
+  z-index: 50;
+  width: 100%;
+
+}
+
+.sick{
+  position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0px 10px 10px rgba(214, 103, 196, 0.1); /* Example shadow, adjust as needed */
+    background-color: #ffffff; /* Example background color, adjust as needed */
+    transition: all 0.3s ease-in-out;
 }
 
 .nav-main {
-  padding: 5px;
+  /* padding: 5px; */
+  z-index: 40;
   background-color: white;
+
 
 }
 
@@ -177,7 +191,8 @@
 }
 
 .saylore-main img {
-  margin-left: 350px;
+  margin-left: 250px;
+  margin-top: 49px;
 }
 
 /* ----------------saylor-main------ */

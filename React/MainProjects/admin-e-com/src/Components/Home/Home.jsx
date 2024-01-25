@@ -8,6 +8,7 @@ const Home = () => {
         kmkle,lk mwnbkjswhkjw
         kjendkje
       </p>
+      <input type="text" placeholder='home'/>
     </div>
   )
 }

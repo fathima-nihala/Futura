@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.home{
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.left{
+    width: 80%;
+    display: block;
+
+}
+.title{
+    background-color: yellow;
+    padding-top: 0px;
+}
+
+.header{
+    display: block;
+    border: 2px solid black;
+    padding: 20px;
+}
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+.header-top-span{
+    width: 70px;
+    border: 2px solid black;
+    margin-right: 60px;
+}
+
+.status-span{
+    margin-right: 90px;
+}
+.status-span select{
+    border: none;
+}
+.header-bottum{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 20px;
+
+
+}
+.ac-name{
+    width: 390px;
+    border: 2px solid black;
+    margin-right: 60px;
+
+}
+.ac-amt{
+    width: 70px;
+    border: 2px solid black;
+    margin-right: 90px;
+}
+.dtls{
+    width: 80%;
+    display: block;
+}
+.Detail-title{
+    background-color: rgba(247, 210, 136, 0.897);
+}
+/* .thead{
+    background: #554f6d;
+
+}
+.Tr{
+    background: #2f0eb6;
+}*/
+.Th{
+    border: none;
+    background: #554f6d;
+
+} 
+/* .datails-table{
+    background: #554f6d;
+
+} */
+.right-btns{
+    background-color: rgba(247, 210, 136, 0.897);
+    width: 70px;
+}
+.right-btns h3{
+    cursor: pointer;
+}

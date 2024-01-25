@@ -1,0 +1,65 @@
+.banner{
+    display: flex;
+    justify-content: center;
+    padding: 60px;
+    background:linear-gradient(to right,#d9d9d9 ,  #f1ddce);
+    height: 290px;
+    height: 480px;
+    
+}
+.ban-lft{
+    margin-right: 110px;
+}
+.ban-h{
+    margin-top: 70px;
+    font-size: 35px;
+    font-weight: 600;
+    font-family: cursive;
+
+}
+.ban-h-c{
+    color:#562400;
+}
+.ban-p{
+    margin-top: 40px;
+    font-size: 22px;
+    font-family: cursive;
+
+}
+.ban-btn{
+    height: 40px;
+    width: 99px;
+    border-radius: 5px;
+    border: none;
+    background-color: #562400;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    font-family: cursive;
+    margin-top: 40px;
+}
+.ban-btn:hover{
+   background-color: rgb(167, 167, 167);
+}
+
+
+.ban-right::before{
+    box-shadow: 0px 0px 30px #562400;
+}
+
+
+.ban-right img{
+    margin-top: 50px;
+    margin-left: 60px;
+   height: 370px;
+   width: 600px;
+   border: 4px solid  #bea592;
+   box-shadow: 0px 0px 30px #562400;
+   background: linear-gradient(to right,#d9d9d9 ,  #f1ddce);
+
+}
+
+.ban-right-b{
+    border: 1px solid salmon;
+}
+

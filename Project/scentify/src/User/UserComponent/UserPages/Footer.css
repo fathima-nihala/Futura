@@ -1,0 +1,48 @@
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fo-aside{
+    display: block;
+}
+.footer-head{
+    margin-right: 200px;
+}
+.fo-hd-1{
+    font-size: 29px;
+    color: white;
+    background-color: #562400;
+    border-radius: 5px;
+    font-weight: 600;
+    font-family: cursive;
+}
+.fo-hd-2{
+    font-size: 26px;
+    color: #562400;
+    border-radius: 2px; 
+    font-family: cursive;
+}
+.footer-head p{
+    color: rgb(48, 47, 47);
+    font-family: cursive;
+    font-size: 17px;
+}
+
+.fo-main{
+    display: flex;
+}
+.fo-cntnt{
+    margin-right: 90px;
+}
+.fo-cntnt h5{
+    color: gray;
+    font-size: 17px;
+}
+.fo-cntnt p{
+    color: rgb(48, 47, 47);
+    font-size: 14px;
+}
+.fo-cntnt p:hover{
+    border-bottom: 1px solid #0c0c0c;
+}

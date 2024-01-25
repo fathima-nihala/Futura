@@ -31,6 +31,18 @@ function App() {
         }
       ]
     },
+    // {
+    //   path:'/',
+    //   element:<Main/>
+    // },
+    // {
+    //   path:'/home',
+    //   element:<Home/>
+    // },
+    {
+      path:'/cmore',
+      element:<SeeMore/>
+    },
     {
       path:'/log',
       element:<Login/>
@@ -39,17 +51,13 @@ function App() {
       path:'register',
       element:<Register/>
     },
-    {
-      path:'/',
-      element:<Main/>,
-     
-    }
+    
 
     
   ])
   return (
     <div className="App">
-      <RouterProvider router={router}></RouterProvider>
+       <RouterProvider router={router}></RouterProvider>
     </div>
   );
 }

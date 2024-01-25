@@ -1,5 +1,5 @@
 import { configureStore,combineReducers } from "@reduxjs/toolkit";
-import usereducer from './userRedux'
+import usered from './userRedux'
 import {
     persistStore,
     persistReducer,
@@ -18,7 +18,7 @@ import {
     storage,
   }
 
-  const rootreducer=combineReducers({Login:usereducer})
+  const rootreducer=combineReducers({Login:usered})
 
   const persistedReducer = persistReducer(persistConfig, rootreducer)
   export const store = configureStore({

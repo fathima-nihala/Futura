@@ -2,12 +2,16 @@ import React from 'react'
 import Dashboard from '../Dashboard/Dashboard'
 import Contents from '../Contents/Contents'
 import './Main.css'
-import { Outlet } from 'react-router-dom'
+import Navbar from '../Content-items/Navbar'
+// import { Outlet } from 'react-router-dom'
 const Main = () => {
   return (
     <div className='main'>
-       <Dashboard/>   
-       <Contents/>
+      <Navbar/>
+      <div className='main-body'>
+       <Dashboard className='main-left'/>   
+       <Contents className='main-right'/>
+       </div>
     </div>
   )
 }

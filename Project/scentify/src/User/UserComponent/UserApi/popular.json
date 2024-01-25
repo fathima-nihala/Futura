@@ -1,0 +1,66 @@
+[
+    {
+    "id":"5",
+    "title":"ELIZABETH ARDEN",
+    "description":"ELIZABETH ARDEN RED DOOR EAU DE TOILETTE WOMEN'S PERFUME",
+    "image":"./UserImages/pop1-removebg-preview.png",
+    "price":2999
+   
+},
+{
+    "id":"6",
+    "title":"CALVIN KLEIN",
+    "description":"CALVIN KLEIN OBSESSION NIGHT EAU DE PARFUM",
+    "image":"./UserImages/pop2-removebg-preview.png",
+    "price":3499
+   
+},
+{
+    "id":"7",
+    "title":"HUGO BOSS",
+    "description":"HUGO BOSS ORANGE EAU DE TOILETTE SPRAY ",
+    "image":"./UserImages/pop5-removebg-preview.png",
+    "price":4788
+   
+},
+{
+    "id":"8",
+    "title":"DKNY BE DELICIOUS",
+    "description":"DKNY BE DELICIOUS EAU DE PARFUM SPRAY",
+    "image":"./UserImages/pop4-removebg-preview.png",
+    "price":5800
+   
+},
+{
+    "id":"9",
+    "title":"REVLON CHARLIE",
+    "description":"REVLON CHARLIE BLUE EAU DE TOILETTE",
+    "image":"./UserImages/pop3-removebg-preview.png",
+    "price":3999
+   
+},
+{
+    "id":"10",
+    "title":"BRITNEY SPEARS",
+    "description":"BRITNEY SPEARS MIDNIGHT FANTASY EAU DE PARFUM",
+    "image":"./UserImages/pop6-removebg-preview.png",
+    "price":7900
+   
+},
+
+{
+    "id":"11",
+    "title":"BOUCHERON PLACE",
+    "description":"BOUCHERON PLACE VENDOME EAU DE PARFUM",
+    "image":"./UserImages/pop8-removebg-preview.png",
+    "price":4599
+   
+},
+{
+    "id": "12",
+    "title": "ROCHAS MADAME",
+    "description": "ROCHAS MADAME ROCHAS EAU DE TOILETTE",
+    "image": "../UserImages/pop7-removebg-preview.png",
+    "price": 2999
+  }
+]

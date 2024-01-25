@@ -1,6 +1,5 @@
-.addproduct{
-    margin-right: 100px;
-    margin-top: 50px;
+ .addproduct{
+    margin-top: 70px;
 }
 
 .addproduct-head{
@@ -44,4 +43,8 @@
     font-size: 20px;
     color: white;
     cursor: pointer;
+} 
+.adprod-btn:hover{
+   background-color: rgb(167, 167, 167);
 }
+
