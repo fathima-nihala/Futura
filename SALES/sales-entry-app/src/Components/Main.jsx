@@ -113,8 +113,9 @@ const Main = () => {
                                 <th className="Th">Qty</th>
                                 <th className="Th">Rate</th>
                                 <th className="Th">Amount</th>
-                                <th className="Th" value={amount}>Total</th>
+                                <th className="Th">Total</th>
                             </tr>
+                            {/* <input type="text" /> */}
                         </thead>
                                 <tbody>
                                     {rows.map((row, index) => (
@@ -131,8 +132,9 @@ const Main = () => {
                                                             </tbody>
 
                                </table>
-                    <div style={{ textAlign: "right", marginRight: "10em" }}>
-                        Total :- &nbsp;
+                    <div style={{ textAlign: "right", marginRight: "1em" }} >
+                        Total :- 
+                        <input type="text"  value={amount}  />
                     </div>
 
                 </div>

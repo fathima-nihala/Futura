@@ -66,22 +66,15 @@ justify-content: center;
 .Detail-title{
     background-color: rgba(247, 210, 136, 0.897);
 }
-/* .thead{
-    background: #554f6d;
 
-}
-.Tr{
-    background: #2f0eb6;
-}*/
 .Th{
     border: none;
     background: #554f6d;
 
 } 
-/* .datails-table{
-    background: #554f6d;
-
-} */
+.total{
+    margin-left: 150px;
+}
 .right-btns{
     background-color: rgba(247, 210, 136, 0.897);
     width: 70px;
