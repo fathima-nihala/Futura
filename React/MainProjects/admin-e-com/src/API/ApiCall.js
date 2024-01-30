@@ -2,17 +2,20 @@ import axios from "axios";
 import { loginData } from "../Redux/userRedux";
 // import {userRequest} from
 
+
 //to post/add admin-user details
 export const SignupData = async (data) => {
 //    const newType ={...data, type:'user'}
-    console.log('your data', data);
+//     console.log('newtype',newType);
     try {
-        const res = await axios.post('http://localhost:7002/api/adminpost', data)
+        const res = await axios.post('http://localhost:7002/api/adminpost' ,data)
         console.log('check admin data', res.status);
     } catch (error) {
         console.log(error);
     }
 }
+
+
 
 //to get admin-user login details
 export const LoginDatass = async (data, dispatch) => {
@@ -26,6 +29,8 @@ export const LoginDatass = async (data, dispatch) => {
     }
 }
 
+
+
 //to add product
 export const products = async (pro) => {
     console.log("dattttaaaa", pro);
@@ -36,6 +41,8 @@ export const products = async (pro) => {
         console.log(err);
     }
 }
+
+
 
 //to get ecom-users user-details
 export const userss = async (id) => {
@@ -48,6 +55,8 @@ export const userss = async (id) => {
         console.log(error);
     }
 }
+
+
 
 export const DeleteUserIdData = async (id) => {
     console.log('user id', id);

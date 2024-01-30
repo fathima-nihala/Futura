@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load('current', {'packages':['corechart', 'controls']});
+    google.charts.setOnLoadCallback(drawDashboard);
+
+    function drawDashboard() {
+      var data = google.visualization.arrayToDataTable([
+        // Your data here
+        ['Year', 'Sales', 'Expenses'],
+        ['2018', 1000, 400],
+        ['2019', 1170, 460],
+        ['2020', 660, 1120],
+        ['2021', 1030, 540]
+      ]);
+
+      var dashboard = new google.visualization.Dashboard(document.getElementById('dashboard_div'));
+
+      var yearPicker = new google.visualization.ControlWrapper({
+        'controlType': 'CategoryFilter',
+        'containerId': 'filter_year',
+        'options': {
+          'filterColumnLabel': 'Year',
+          'ui': {
+            'labelStacking': 'vertical',
+            'allowTyping': false,
+            'allowMultiple': false
+          }
+        }
+      });
+
+      var topicsPicker = new google.visualization.ControlWrapper({
+        'controlType': 'CategoryFilter',
+        'containerId': 'filter_topics',
+        // Add options for topics filter
+      });
+
+      // Add similar ControlWrapper instances for other filters like sector, region, PEST, etc.
+
+      var lineChart = new google.visualization.ChartWrapper({
+        'chartType': 'LineChart',
+        'containerId': 'chart_div',
+        'options': {
+          'title': 'Company Performance',
+          'curveType': 'function',
+          'legend': { 'position': 'bottom' }
+        },
+        'view': {'columns': [0, 1, 2]}
+      });
+
+      dashboard.bind([yearPicker, topicsPicker, /* Other filters */], [lineChart]);
+      dashboard.draw(data);
+    }
+  </script>
+</head>
+<body>
+  <div id="dashboard_div">
+    <div id="filter_year"></div>
+    <div id="filter_topics"></div>
+    <!-- Add other filter divs here -->
+    <div id="chart_div"></div>
+  </div>
+</body>
+</html>

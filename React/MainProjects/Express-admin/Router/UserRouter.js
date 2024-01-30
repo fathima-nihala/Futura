@@ -15,7 +15,7 @@ const storage=multer.diskStorage({
 })
 const upload=multer({storage:storage})
 
-router.post('/adminpost', upload.single('image'), (req, res) => {
+router.post('/adminpost', upload.single('image'), async (req, res) => {
     console.log('@#@#-data', req.body);
     console.log('#$#-check', req.file); // Corrected line
     console.log('%%', req.file.originalname);
@@ -31,7 +31,7 @@ router.post('/adminpost', upload.single('image'), (req, res) => {
     console.log("newuser", newUser);
 
     try {
-        const savedUser = newUser.save();
+        const savedUser = await newUser.save();
         res.status(200).json(savedUser);
     } catch (error) {
         res.status(500).json(error);
