@@ -1,6 +1,7 @@
 const router=require('express').Router()
 const multer = require('multer')
 const productdetails=require('../Models/Productschema')
+const { route } = require('./UserRouter')
 
 //to upload photos "../"
 const storage = multer.diskStorage({
@@ -28,6 +29,7 @@ router.post('/addproduct',upload.single('image'),(req,res)=>{
                 description:req.body.description,
                 mrp:req.body.mrp,
                 price:req.body.price,
+                stock:req.body.stock,     
                 image:req.file.originalname,
     })
 
@@ -43,4 +45,40 @@ router.post('/addproduct',upload.single('image'),(req,res)=>{
     }
 })
 
+
+//getproduct
+router.get('/viewproduct',async(req,res)=>{
+    console.log('reqqqqqq',req.body);
+    try {
+        const products=await productdetails.find()
+        console.log(products);
+        res.status(200).json(products)
+    } catch (error) {
+        res.status(500).json(error)
+        
+    }
+})
+
+
+
+//to delete product
+router.delete('/removeproduct/:id',async(req,res)=>{
+    try {
+        const res=await productdetails.findByIdAndDelete(req.params.id)
+    } catch (error) {
+        res.status(500).json(error)
+    }
+})
+
+//to update product
+router.put('/updateproduct/:id',async(req,res)=>{
+    try {
+        const res = await productdetails.findByIdAndUpdate(req.params.id,{
+            $set:req.body
+        },{new:true})
+        res.status(200).json(res)
+    } catch (error) {
+        res.status(500).json(error)
+    }
+})
 module.exports=router

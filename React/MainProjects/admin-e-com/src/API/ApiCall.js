@@ -43,6 +43,18 @@ export const products = async (pro) => {
 }
 
 
+//to view productdetails
+export const productView = async (id) => {
+    console.log("product-data",id);
+    try {
+        const res = await axios.get('http://localhost:7002/api/viewproduct',id)
+        console.log('getproduct',res);
+        return res
+    } catch (error) {
+        console.log(error);
+    }
+}
+
 
 //to get ecom-users user-details
 export const userss = async (id) => {
@@ -57,7 +69,7 @@ export const userss = async (id) => {
 }
 
 
-
+//to delete user 
 export const DeleteUserIdData = async (id) => {
     console.log('user id', id);
     try {
@@ -68,4 +80,25 @@ export const DeleteUserIdData = async (id) => {
     }
 }
 
+//to delete product
+export const productDelete = async (id) =>{
+    console.log('product id',id);
+    try {
+        const res = await axios.delete(`http://localhost:7002/api/removeproduct/${id}`)
+        console.log('delet product',res);
+    } catch (err) {
+        console.log(err);
+    }
+}
 
+//to update product details
+export const updateProduct = async(id,datas)=>{
+    console.log('update id?',id);
+    try {
+        const res = await axios.put(`http://localhost:7002/api/updateproduct${id}`,datas)
+        console.log(res.data);
+        return res.data
+    } catch (error) {
+        console.log(error);
+    }
+}

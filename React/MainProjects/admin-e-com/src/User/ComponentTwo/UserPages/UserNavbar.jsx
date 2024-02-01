@@ -42,9 +42,10 @@ const UserNavbar = () => {
             <details>
               <summary className='sum'>Dress</summary>
               <ul className="usrp-2">
-                <li><a>Kids</a></li>
-                <li><a>Men</a></li>
-                <li><a>Women</a></li>
+                <li><Link to='/all' className='nav-link'>All</Link></li>
+                <li><Link to='/kids'  className='nav-link'>Kids</Link></li>
+                <li><Link to='/men' className='nav-link'>Men</Link></li>
+                <li><Link to='/women' className='nav-link'>Women</Link></li>
               </ul>
             </details>
           </li>

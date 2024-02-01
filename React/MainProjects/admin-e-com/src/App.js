@@ -13,6 +13,10 @@ import SeeMore from './User/ComponentTwo/UserPages/SeeMore';
 import Login from './Login/Login';
 import SignUp from './Login/SignUp';
 import { type } from '@testing-library/user-event/dist/type';
+import All from './User/ComponentTwo/UserMain/All';
+import Women from './User/ComponentTwo/UserMain/Women';
+import Men from './User/ComponentTwo/UserMain/Men';
+import Kids from './User/ComponentTwo/UserMain/Kids';
 
 function App() {
   // const data=useSelector((state)=>state.Login.LoginInfo[0])
@@ -43,44 +47,60 @@ function App() {
   
 
   const Router=createBrowserRouter([
-  //   {
-  //     path :'/',
-  //     element:<UserMain/>,
-  //     children:[
-  //       {
-  //         path:'/',
-  //         element:<UserHome/>
-  //       },
+    {
+      path :'/',
+      element:<UserMain/>,
+      children:[
+        {
+          path:'/',
+          element:<UserHome/>
+        },
+        {
+          path:'all',
+          element:<All/>
+        },
+        {
+          path:'/cmore',
+          element:<SeeMore/>
+       },
+       {
+        path:'/women',
+        element:<Women/>
+       },
+       {
+        path:'/men',
+        element:<Men/>
+       },
+       {
+        path:'/kids',
+        element:<Kids/>
+       }
       
-  //   ]
-  //  },
-  //  {
-  //     path:'/cmore',
-  //     element:<SeeMore/>
-  //  },
-  //   {
-  //     path:'/',
-  //     element: token ? <Main/> : <Login/>,
-  //     children:[
-  //       {
-  //         path:'/',
-  //         element:<Home/>
-  //       },
-  //       {
-  //         path:'/adproduct',
-  //         element:<AddProduct/>
-  //       },
-  //       {
-  //         path:'/users',
-  //         element:<Users/>
-  //       },
-  //       {
-  //         path:'/manage',
-  //         element:<ManageProducts/>
-  //       }
-        
-  //     ]
-  //   },
+    ]
+   },
+   
+    {
+      path:'/',
+      element: token ? <Main/> : <Login/>,
+      children:[
+        {
+          path:'/',
+          element:<Home/>
+        },
+        {
+          path:'/adproduct',
+          element:<AddProduct/>
+        },
+        {
+          path:'/users',
+          element:<Users/>
+        },
+        {
+          path:'/manage',
+          element:<ManageProducts/>
+        }   
+      ]
+    },
   //   {
   //     path:'/login',
   //     element:<Login/>
@@ -92,28 +112,28 @@ function App() {
 
   //
 
-  {
-    path: '/',
-    element: token && type === 'user' ? <UserMain /> : <Main />,
-    children: [
-      {
-        path: '/',
-        element: token && type === 'user' ? <UserHome /> : <Home />,
-      },
-      {
-        path: '/adproduct',
-        element: <AddProduct />,
-      },
-      {
-        path: '/users',
-        element: <Users />,
-      },
-      {
-        path: '/manage',
-        element: <ManageProducts />,
-      },
-    ],
-  },
+  // {
+  //   path: '/',
+  //   element: token && type === 'user' ? <UserMain /> : <Main />,
+  //   children: [
+  //     {
+  //       path: '/',
+  //       element: token && type === 'user' ? <UserHome /> : <Home />,
+  //     },
+  //     {
+  //       path: '/adproduct',
+  //       element: <AddProduct />,
+  //     },
+  //     {
+  //       path: '/users',
+  //       element: <Users />,
+  //     },
+  //     {
+  //       path: '/manage',
+  //       element: <ManageProducts />,
+  //     },
+  //   ],
+  // },
   {
     path: '/cmore',
     element: <SeeMore />,

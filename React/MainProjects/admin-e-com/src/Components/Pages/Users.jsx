@@ -17,19 +17,18 @@ const Users = () => {
       }catch(err){
           console.log('err',err);
       }
-      
     }
     dataget()
   },[])
  
   const DeleteData=async(id)=>{
-    console.log('adi',id);
+    console.log('id',id);
     try {
       DeleteUserIdData(id)
     } catch (error) {
       console.log(error);
     }
-    alert("Removed Successfully");
+    alert("Removed Successfully.");
   }
 
   return (

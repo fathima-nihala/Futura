@@ -62,11 +62,18 @@
     border-radius: 0.375rem; 
     width: 13rem; 
 }
-.usrp-2 li:hover{
+/* .usrp-2 li:hover{
+    color: rgb(230, 8, 156);
+    cursor: pointer;
+} */
+.nav-link{
+    text-decoration: none;
+    color: #333;
+}
+.nav-link:hover{
     color: rgb(230, 8, 156);
     cursor: pointer;
 }
-
 .usrnav-search{
     margin-top: 14px;
     background-color:whitesmoke;
@@ -126,7 +133,7 @@
     display: block;
 }
 
-.dropdown-content a {
+.dropdown-content Link{
     padding: 10px;
     text-decoration: none;
     display: block;

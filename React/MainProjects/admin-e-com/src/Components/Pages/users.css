@@ -27,7 +27,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    height: 60px;
+    height: 62px;
     border: 1px solid whitesmoke;
     color: rgb(87, 86, 86);
 
@@ -58,7 +58,7 @@
     width: 40px;
     border-radius: 50px;
 } */
-.tab-img{
+.tab-body-img img{
     height: 60px;
     width: 60px;
     border-radius: 50px;

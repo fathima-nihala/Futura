@@ -1,16 +1,94 @@
-.ee{
+.manage{
+    margin-top: 90px;
+    width: 980px;
+}
+.manage-head{
+    letter-spacing: 2px;
+    font-size: 29px;
+    font-style: inherit;
+}
+.manage-head-sub{
+    color:  rgb(230, 8, 156);
+}
+.manage-body-one{
     display: flex;
+    justify-content: space-around;
     align-items: center;
-    justify-content: center;
-    margin-top: 200px;
+    border: 1px solid whitesmoke;
 }
-.h{
-    display: block;
+.tab-hed{
+    font-size: 20px;
+    letter-spacing: 1px;
+    height: 50px;
+    /* margin-left: 50px; */
+
 }
-.e{
-    border: 1px solid black;
+/* .tab-hed-tit{
+    font-size: 20px;
+    letter-spacing: 1px;
+    height: 50px;
+    margin-left: 60px;
+} */
+.manage-body-two{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 75px;
+    border: 1px solid whitesmoke;
+    color: rgb(87, 86, 86);
 }
-.l{
-    border: 1px solid black;
-display: flex;
+.manage-body-two:nth-child(odd){
+    background-color: whitesmoke;
+}
+.tab-body-img{
+    height: 60px;
+    width: 60px;
+    border-radius: 50px;
+    object-fit: cover;
+    margin-top: 3px;
+}
+.tab-body{
+    font-size: 14px;
+    width: 50px;
+} 
+.tab-body-des{
+    width: 100px;
+    font-size: 14px;
+    margin-right: 30px;
+}
+.tab-hed-price{
+    font-size: 20px;
+    letter-spacing: 1px;
+    height: 50px;
+    /* margin-right: 5px; */
+    /* margin-left: 40px; */
+}
+.tab-body-update{
+    border: none;
+    background-color:  rgb(230, 8, 156);
+    color: white;
+    border-radius: 5px;
+    height: 20px;
+    cursor: pointer;
+}
+.tab-body-update:hover{
+   background-color: rgb(167, 167, 167);
+}
+/* .tab-body-btn{
+    margin-left: 40px;
+    border: none;
+    background: none;
+    font-size: 19px;
+    color: rgb(87, 86, 86);
+} */
+.tab-body-dlt{
+    /* margin-left: 40px; */
+    border: none;
+    background: none;
+    font-size: 19px;
+    color: rgb(87, 86, 86);
+    cursor: pointer;
+}
+.tab-body-dlt:hover{
+    color: red;
 }

@@ -10,14 +10,17 @@ const AddProduct = () => {
     const [mrp, setMrp] = useState('')
     const [price, setPrice] = useState('')
     const [image, setImage] = useState({})
+    const[stock,setStock] = useState('')
 
     let formdata = new FormData()
     formdata.append('image', image)
     formdata.append('category', category)
+    formdata.append('title',title)
     formdata.append('type', type)
     formdata.append('description', description)
     formdata.append('mrp', mrp)
     formdata.append('price', price)
+    formdata.append('stock',stock)
 
     const display = (e) => {
         e.preventDefault();
@@ -35,6 +38,9 @@ const AddProduct = () => {
                 </div>
                 <div className='addproduct-cntnt'>
                     <input type="text" placeholder='type' value={type} onChange={(e) => setType(e.target.value)} />
+                </div>
+                <div className='addproduct-cntnt'>
+                    <input type="text" placeholder='stock' value={stock} onChange={(e) => setStock(e.target.value)} />
                 </div>
                 <div className='addproduct-cntnt'>
                     <input type="text" placeholder='title' value={title} onChange={(e) => setTitle(e.target.value)} />
