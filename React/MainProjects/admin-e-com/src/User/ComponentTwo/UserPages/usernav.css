@@ -144,3 +144,27 @@
 .dropdown-content a:hover {
     background-color: #f9fafb; /* Change the hover background color as needed */
 }
+/* Media query for small screens */
+@media screen and (max-width: 768px) {
+    .usrnavbar {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+        height: 40px;
+    }
+
+    .usrnav-logo {
+        margin-bottom: 20px;
+    }
+    .usrnav-search{
+        visibility: hidden;
+    }
+    .usrnavbar-end{
+        visibility: hidden;
+    }
+    .usrnavbar-center{
+        visibility: hidden;
+    }
+}
+
+
