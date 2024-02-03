@@ -1,0 +1,575 @@
+body{
+    background-color: black;
+}
+.yukon3{
+    display: flex;
+    width: 100%;
+    background: black;
+    justify-content: center;
+    height: 49px;
+    padding: 0px 0px;
+}
+.yukon3-logo{
+    margin-top: 14px;
+    margin-right: 150px;
+    color: rgb(225, 175, 109);
+}
+.logo1{
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500px;
+}
+.logo1-sub1{
+    font-size: 20px;
+    text-decoration: underline;
+    margin-bottom: 2px;
+}
+.yukon3-center{
+    display: flex;
+    color: white;
+}
+.menu{
+    display: flex; 
+}
+.menu li{
+    display: inline;
+    margin: 0px 12px;
+    font-size: 20px;
+
+}
+.menu-menu{
+    color: rgb(225, 175, 109);
+}
+.yukon-end{
+    margin-top: 11px;
+    margin-left: 150px;
+}
+.yukon-end button{
+    border-radius: 25px;
+    height: 40px;
+    width: 130px;
+    background-color: black;
+    color: white;
+    border: 1px solid  rgb(225, 175, 109);
+}
+.yukon-end button:hover{
+    background-color:  rgb(225, 175, 109);
+    color: black;
+}
+/* navbar-end */
+
+
+.banner{
+    background-image: url("https://www.shutterstock.com/image-photo/restaurant-interior-dark-background-260nw-1341448688.jpg");
+    width: 100%; 
+    height:100vh;
+    object-fit: cover;
+    background-size: cover;
+    color:  rgb(225, 175, 109);
+
+
+}
+
+  .banner-p{
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    color:  rgb(220, 156, 72);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .head{
+    font-size: 70px;
+    letter-spacing: 3px;
+    color:  rgb(220, 156, 72);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+.head-sub{
+    font-size: 70px;
+    letter-spacing: 3px;
+    color:  rgb(220, 156, 72);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.banner-para{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.banner-ptn{
+  margin-left: 600px;
+  height: 30px;
+  width: 130px;
+  background: none;
+  color: white;
+  border: 1px solid  rgb(220, 156, 72);
+  border-radius: 25px;
+}
+.banner-ptn:hover{
+    background-color:  rgb(220, 156, 72);
+    color: black;
+}
+/* banner-ends */
+
+
+.flavours{
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    color:  rgb(220, 156, 72);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+.flavours-menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+.flav-menu-one{
+    display: block;
+}
+.flav-menu-one-img{
+    height: 280px;
+    width: 280px;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.burg{
+    color: white;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.view-menu{
+    color:  rgb(220, 156, 72);
+    text-transform: uppercase;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.falv-head{
+    color: white;
+    font-size: 30px;
+
+}
+.falv-para{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* flavors-end */
+.story{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+}
+.story-left{
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+
+.story-head{
+    color:  rgb(220, 156, 72);
+    text-transform: uppercase;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.story-main-head{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 3px;
+}
+.story-p{
+    color: white;
+}
+.stry-book{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.story-btn{
+  height: 40px;
+  width: 130px;
+  background: none;
+  color: white;
+  border: 1px solid  rgb(220, 156, 72);
+  border-radius: 25px;
+    margin-left: 60px;
+}
+.story-btn:hover{
+    background-color:  rgb(220, 156, 72);
+    color: black;
+}
+
+/* story-ends-here */
+.special{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 90px;
+}
+.special-right{
+    justify-content: flex-start;
+    margin-left: 60px;
+}
+.special-sub-hd{
+    color:  rgb(220, 156, 72);
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 3px;
+}
+.special-hd{
+    color: white;
+    font-size: 30px;
+    letter-spacing: 3px;
+}
+.special-p{
+    color: white;
+}
+.dol{
+    color: white;
+}
+.dol-sub{
+    color: rgb(165, 165, 165);
+    text-decoration: line-through;
+}
+.special-btn{
+    height: 40px;
+    width: 130px;
+    background: none;
+    color: white;
+    border: 1px solid  rgb(220, 156, 72);
+    border-radius: 25px;
+}
+.special-btn:hover{
+    background-color:  rgb(220, 156, 72);
+    color: black;
+}
+
+/* special dishes ends-here */
+.selection{
+    margin-top: 50px;
+}
+.selection-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.selection-menu{
+    display: flex;
+    align-self: center;
+    justify-content: space-between; 
+    border-bottom: 1px solid  rgb(220, 156, 72);
+    border-top: 1px solid  rgb(220, 156, 72);
+}
+.selection-menu-item{
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-left: 70px;
+}
+.selection-star{
+color:  rgb(220, 156, 72);
+margin-left: 20px;
+}
+.selection-menu-item-brgr{
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-left: 70px;
+    text-decoration: underline double  rgb(220, 156, 72);
+}
+.brgr-items-cntainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.brgr-left{
+    display: block;
+}
+.brgr-cntainer{
+    display: flex;
+}
+.brgr-img{
+    margin-top: 30px;
+}
+.brgr-img img{
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    border-radius:20px;
+}
+.brgr-dscrpn{
+    display: block;
+    color: white;
+}
+.br-undrln{
+    color:  rgb(220, 156, 72);
+}
+.brgr-center{
+   border: 1px solid  rgb(220, 156, 72) ; 
+    height: 400px;
+    margin-left: 10px;
+}
+.brgr-bottum{
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.brgr-btn{
+    height: 40px;
+    width: 130px;
+    background: none;
+    color: white;
+    border: 1px solid  rgb(220, 156, 72);
+    border-radius: 25px;
+      margin-left: 590px;
+}
+.brgr-btn:hover{
+    background-color:  rgb(220, 156, 72);
+    color: black;
+}
+/* special slections end  */
+.flav{
+    margin-top: 60px;
+}
+.strength{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.strength-cntnr{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-left: 14px;
+}
+.strength-one{
+    background-color: rgb(12, 12, 12);
+    color: white;
+    padding: 8px 5px;
+}
+.strnth-img{
+    margin-left: 60px;
+}
+.str-food{
+    margin-left: 50px;
+}
+.strength-two{
+    background-color: rgb(31, 29, 29);
+    color: white;
+    padding: 8px 5px;
+}
+/* strength ends */
+
+.chef{
+    margin-top: 60px;
+}
+.chef-cntnr{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.chef-des{
+    color: white;
+    margin-left: 14px;
+}
+.chef-des img{
+    height: 350px;
+    width: 280px;
+    object-fit: cover;
+}
+.master{
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    color:  rgb(220, 156, 72);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-top: 40px;
+}
+/* chef ends */
+
+.exprnc{
+    background-image: url("https://media.istockphoto.com/id/1058082232/photo/empty-grill-with-copy-space.jpg?s=612x612&w=0&k=20&c=XtkjWo46R2BfAYeU9PR0eCCnpkSFji_fRp6xMsfw4ug=");
+    width: 100%; 
+    height:100vh;
+    object-fit: cover;
+    background-size: cover;
+}
+.exprnc-p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.exprnc-p p{
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    color:  rgb(220, 156, 72);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-top: 100px;
+
+}
+.exprnc-h{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 3px;
+    font-size: 39px;
+}
+.div-trio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.tridiv{
+    border-radius: 50%;
+    border: 1px solid white;
+    height: 130px;
+    width: 130px;
+}
+.triangle{
+    width: 0;
+    height: 0;
+    margin-top: 20px;
+    margin-left: 50px;
+    border-bottom: 50px solid transparent;
+    border-top: 50px solid transparent;
+    border-left: 50px solid white; /* Set the color of the triangle */
+    border-radius: 8px;
+   
+  }
+  .chef-thought{
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    color:  rgb(220, 156, 72);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hr{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    color:  rgb(220, 156, 72);
+    border-bottom: 1px solid  rgb(220, 156, 72);
+    margin-left: 390px;
+  }
+
+  /* <!-- experience-ends-here --> */
+
+  .events{
+    margin-top: 20px;
+  }
+  .events-cntnts{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .events1{
+    height: 280px;
+    width: 250px;
+    color: white;
+    background-size: cover;
+    margin-right: 40px;
+    background-image: url("https://img.freepik.com/premium-photo/concept-alcohol-glass-beautiful-glass-wine-restaurant-tasting-aged-wine_548821-17670.jpg?size=626&ext=jpg&ga=GA1.1.141120536.1706946110&semt=ais");
+  }
+  .events{
+    margin-top: 170px;  
+}
+.eventbtn{
+    height: 40px;
+    width: 130px;
+    background: none;
+    color: white;
+    border: 1px solid  rgb(220, 156, 72);
+    border-radius: 25px;
+      margin-left: 590px;
+      margin-top: 30px;
+}
+.eventbtn:hover{
+    background-color:  rgb(220, 156, 72);
+    color: black;
+}
+/* <!-- events end here --> */
+.yukon-imgs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+.yu-img img{
+    height: 250px;
+    width: 220px;
+    object-fit: cover;
+}
+    /* <!-- images-end-here --> */
+
+
+.footer{
+    margin-top: 40px;
+}
+.footer-logo{
+    display: flex;
+    color:  rgb(220, 156, 72);
+    align-items: center;
+    justify-content: center;
+}
+.foot-logo{
+    margin-right: 770px;
+}
+.ico{
+    font-size: 20px;
+    color: black;
+    background-color:  rgb(220, 156, 72);
+    border-radius: 50%;
+    width: 20px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.foot-cntnts{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.foot-cntnts-1{
+    color: rgb(124, 124, 124);
+}
+.foot-item{
+    color:  rgb(220, 156, 72);
+    font-size: 12px;
+}

@@ -3,7 +3,9 @@ import './Login.css'
 import { Link } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { LoginDatass } from '../API/ApiCall'
-//
+import { HiOutlineMail } from "react-icons/hi";
+import { MdOutlineLockOpen } from "react-icons/md";
+
 // import { useNavigate } from 'react-router-dom'
 
 
@@ -44,19 +46,34 @@ const Login = () => {
     //     displayone();
     // }
     return (
-        <div>
-            <div className="container" onclick="onclick">
-                <div className="top"></div>
-                <div className="bottom"></div>
-                <div className="center">
-                    <h2>Please Sign In</h2>
-                    <input type="email" placeholder="email" value={email} onChange={(e) => setemail(e.target.value)} />
-                    <input type="password" placeholder="password" value={password} onChange={(e) => setpassword(e.target.value)} />
-                    {/* <h2>&nbsp;</h2> */}
-                    <p className='end-para'>don't have an account?<Link to='/signup' className='end-link'>Signup Now</Link></p>
-                    &nbsp;
-                    <button className='end' onClick={displayone }>Sign In</button>
+        <div className='login'>
+            <div className='log-main' onclick="onclick">
+                <div className="log-main-one">
+                    <div className='log-head'>
+                        <h4>Sign In</h4>
+                    </div>
+                    <div className="log-body">
+                        <div className="log-body-one">
+                            <div className='log-body-cntnt'>
+                                <HiOutlineMail className='log-icon' />
+                                <input type="email" placeholder="email" value={email} onChange={(e) => setemail(e.target.value)} />
+                            </div>
+                            <div className='log-body-cntnt'>
+                                <MdOutlineLockOpen className='log-icon' />
+                                <input type="password" placeholder="password" value={password} onChange={(e) => setpassword(e.target.value)} />
+                            </div>
+                            <div className='log-frgt'>
+                                <p>Forget Password?</p>
+                            </div>
 
+                            <div className='log-btn'>
+                                <button className='end' onClick={displayone}>Sign In</button>
+                            </div>
+                            <div className='log-para'>
+                                <p className='end-para'>don't have an account?<Link to='/signup' className='end-link'>Signup Now</Link></p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

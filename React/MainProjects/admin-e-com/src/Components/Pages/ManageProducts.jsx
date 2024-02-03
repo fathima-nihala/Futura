@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './manageproduct.css'
-import { productDelete, productView, updateProduct } from '../../API/ApiCall'
+import { fetchProductById, productDelete, productView, updateProduct } from '../../API/ApiCall'
 import { FaRegTrashCan } from "react-icons/fa6";
 import ProductUpdate from '../ProductUpdate';
 
@@ -46,10 +46,35 @@ const ManageProducts = () => {
     //   }
     // }
 
+    //chat-gpt 
+    // const handleUpdate = async (productId) => {
+    //   try {
+    //     const productToUpdate = product.find(item => item._id === productId);
+    //     // Call a function to handle the update with the productToUpdate data
+    //     updateProduct(productId, productToUpdate);
+    //   } catch (error) {
+    //     console.log(error);
+    //   }
+    // };
+
     //for modal
     const[order,setOrder] = useState(false);
-    const handleProducts = () => {
+
+
+
+    // updateeee
+    const handleProducts = (productId) => {
+      console.log('idddddddddddd',productId);
       setOrder(true);
+
+      try{
+        fetchProductById(productId)
+        updateProduct(productId)
+      }
+      catch(err){
+        console.log(err);
+      }
+
     };
     const hideHandler = () => {
       setOrder(false)

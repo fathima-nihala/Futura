@@ -31,7 +31,7 @@ export const LoginDatass = async (data, dispatch) => {
 
 
 
-//to add product
+//***to add product
 export const products = async (pro) => {
     console.log("dattttaaaa", pro);
     try {
@@ -43,7 +43,7 @@ export const products = async (pro) => {
 }
 
 
-//to view productdetails
+//****to view productdetails
 export const productView = async (id) => {
     console.log("product-data",id);
     try {
@@ -55,6 +55,16 @@ export const productView = async (id) => {
     }
 }
 
+// export const productViewTwo = async(id)=>{
+//     console.log("product-data-two",id);
+//     try {
+//         const res = await axios.get(`http://localhost:7002/api/viewproduct${id}`,id)
+//         console.log('getproduct',res);
+//         return res
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }
 
 //to get ecom-users user-details
 export const userss = async (id) => {
@@ -80,7 +90,7 @@ export const DeleteUserIdData = async (id) => {
     }
 }
 
-//to delete product
+//****to delete product
 export const productDelete = async (id) =>{
     console.log('product id',id);
     try {
@@ -91,14 +101,26 @@ export const productDelete = async (id) =>{
     }
 }
 
-//to update product details
-export const updateProduct = async(id,datas)=>{
+//****to update product details
+export const updateProduct = async(id)=>{
     console.log('update id?',id);
     try {
-        const res = await axios.put(`http://localhost:7002/api/updateproduct${id}`,datas)
-        console.log(res.data);
+        const res = await axios.put(`http://localhost:7002/api/viewproductTwo${id}`)
+        console.log('upp',res.data);
         return res.data
     } catch (error) {
         console.log(error);
     }
 }
+
+//*** to view product by id
+export const fetchProductById = async (id) => {
+    try {
+      const response = await axios.get(`http://localhost:7002/api/viewproductTwo/${id}`);
+      return response.data;
+    } catch (error) {
+      console.error('Error fetching product:', error);
+      throw error;
+    }
+  };
+  
