@@ -1,0 +1,53 @@
+.chef{
+    margin-top: 60px;
+}
+.chef-main-head{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 3px;
+    font-size: 40px;
+}
+.chef-cntnr{
+    display: flex;
+    margin-left: 120px;
+   
+}
+.chef-des{
+    color: white;
+    
+}
+.chef-des img{
+    height: 350px;
+    width: 280px;
+    object-fit: cover;
+}
+.master{
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    color:  rgb(220, 156, 72);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-top: 40px;
+}
+.yukon-imgs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 120px;
+}
+.yu-img img{
+    height: 250px;
+    width: 220px;
+    object-fit: cover;
+}
+@media (max-width:641px){
+    .chef-cntnr{
+        display: block;
+    }
+    .chef-des{
+        margin-top: 60px;
+    }
+}

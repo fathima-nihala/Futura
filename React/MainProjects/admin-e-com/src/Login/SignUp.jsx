@@ -4,6 +4,7 @@ import { SignupData } from '../API/ApiCall';
 import { CgGirl } from "react-icons/cg";
 import { MdOutlineLockOpen } from "react-icons/md";
 import { HiOutlineMail } from "react-icons/hi";
+import { CiCircleRemove } from "react-icons/ci";
 import './signup.css'
 
 
@@ -24,11 +25,12 @@ const SignUp = () => {
     // formData.append('type','user')
 
     console.log('@@@-data', formData);
-    await SignupData({ ...formData, type: 'user' });
+    await SignupData(formData);
   };
 
   return (
     <div className='register'>
+      <Link to='/'><CiCircleRemove className='goback' /></Link>
       <div className='reg-main'>
         <div className='reg-main-one'>
           <div className='reg-head'>

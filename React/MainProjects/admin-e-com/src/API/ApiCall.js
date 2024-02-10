@@ -1,14 +1,16 @@
 import axios from "axios";
 import { loginData } from "../Redux/userRedux";
+import { userRequest } from "../Components/RequestMethod";
 // import {userRequest} from
 
 
 //to post/add admin-user details
 export const SignupData = async (data) => {
-//    const newType ={...data, type:'user'}
-//     console.log('newtype',newType);
+    //    const newType ={...data, type:'user'}
+    //     console.log('newtype',newType);
+    console.log('data',data);
     try {
-        const res = await axios.post('http://localhost:7002/api/adminpost' ,data)
+        const res = await axios.post('http://localhost:7002/api/adminpost', data)
         console.log('check admin data', res.status);
     } catch (error) {
         console.log(error);
@@ -45,10 +47,10 @@ export const products = async (pro) => {
 
 //****to view productdetails
 export const productView = async (id) => {
-    console.log("product-data",id);
+    console.log("product-data", id);
     try {
-        const res = await axios.get('http://localhost:7002/api/viewproduct',id)
-        console.log('getproduct',res);
+        const res = await axios.get('http://localhost:7002/api/viewproduct', id)
+        console.log('getproduct', res);
         return res
     } catch (error) {
         console.log(error);
@@ -91,36 +93,79 @@ export const DeleteUserIdData = async (id) => {
 }
 
 //****to delete product
-export const productDelete = async (id) =>{
-    console.log('product id',id);
+export const productDelete = async (id) => {
+    console.log('product id', id);
     try {
         const res = await axios.delete(`http://localhost:7002/api/removeproduct/${id}`)
-        console.log('delet product',res);
+        console.log('delet product', res);
     } catch (err) {
         console.log(err);
     }
 }
 
 //****to update product details
-export const updateProduct = async(id)=>{
-    console.log('update id?',id);
+export const updateProduct = async (updateval) => {
+    console.log('update id?', updateval);
+    console.log(updateval);
     try {
-        const res = await axios.put(`http://localhost:7002/api/viewproductTwo${id}`)
-        console.log('upp',res.data);
+        const res = await axios.put(`http://localhost:7002/api/updateproduct/${updateval.id}`, {
+            category: updateval.category,
+            title: updateval.title,
+            item: updateval.item,
+            stock: updateval.stock,
+            description: updateval.description,
+            mrp: updateval.mrp,
+            price: updateval.price,
+            image: updateval.image,
+        })
+        console.log('upp', res.data);
         return res.data
     } catch (error) {
-        console.log(error);
+        console.log('oooo', error);
     }
 }
 
+// export const updateProduct = async (updateval) => {
+//     console.log('update id?', updateval);
+//     // console.log('update');
+//     try {
+//         const res = await axios.put(`http://localhost:7002/api/viewproductTwo/${updateval._id}`,{
+
+//         });
+//         console.log('Update response:', res.data);
+//         return res.data;
+//     } catch (error) {
+//         console.error('Error updating product:', error);
+//         throw error;
+//     }
+// };
+
 //*** to view product by id
 export const fetchProductById = async (id) => {
+    console.log('fetchhhh', id);
     try {
-      const response = await axios.get(`http://localhost:7002/api/viewproductTwo/${id}`);
-      return response.data;
+        const response = await axios.get(`http://localhost:7002/api/viewproductTwo/${id} `);
+        console.log('Fetch product response:', response.data);
+        return response.data;
     } catch (error) {
-      console.error('Error fetching product:', error);
-      throw error;
+        console.error('Error fetching product:', error);
+        throw error;
     }
-  };
-  
+};
+
+//view-page
+export const viewDetails=async(id)=>{
+    console.log('idddd00000',id);
+    try {
+        const ress=await axios.get(`http://localhost:7002/api/geItemss/${id}`);
+        console.log('detailsss', ress.data);
+        return ress;
+
+
+    } catch (err) {
+        console.log(err);
+    }
+};
+
+
+// export const viewItemDetailsaa  = async

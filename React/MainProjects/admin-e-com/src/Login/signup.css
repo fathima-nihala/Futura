@@ -11,7 +11,7 @@
 }
 .reg-main-one{
     background-color: white;
-   margin-top: 110px;
+   margin-top: 50px;
    border: 6px solid rgb(243, 236, 224);
    height: 400px;
    margin-right: 40px;
@@ -83,3 +83,12 @@
 .reg-body-img{
     margin-top: 10px;
 }
+.goback{
+    /* color: white; */
+    margin-top: 20px;
+    height: 60px;
+    width: 60px;
+    margin-left: 1200px;
+    color: black;
+    cursor: pointer;
+  }

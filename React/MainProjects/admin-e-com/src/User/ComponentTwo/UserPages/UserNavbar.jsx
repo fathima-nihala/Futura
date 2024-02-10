@@ -6,6 +6,7 @@ import { LiaShoppingBagSolid } from "react-icons/lia";
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom'
+import UserLogin from '../../../Login/UserLogin';
 
 const UserNavbar = () => {
 
@@ -27,6 +28,17 @@ const UserNavbar = () => {
       }
     }, [])
   
+         //to add modal
+         const [order, setOrder] = useState()
+
+         const ModalHandler = () => {
+             setOrder(true)
+         }
+     
+         const hideHandler = () => {
+             setOrder(false)
+         }
+
   return (
     <div>
         <div className={`usrnavbar ${isStcky ? 'sticky' : ""}`}>
@@ -64,11 +76,11 @@ const UserNavbar = () => {
             <a href="#">Settings</a>
             <a href="#">Logout</a>
         </div> */}
-        <button><Link to='/login'>login</Link></button>
+        <button onClick={ModalHandler}>login</button>
         </div>
       </div>
-      
     </div>
+    {order && <UserLogin orderHideHandler={hideHandler}/>}
     </div>
   )
 }

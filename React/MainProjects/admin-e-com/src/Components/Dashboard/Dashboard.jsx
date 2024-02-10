@@ -14,14 +14,14 @@ const Dashboard = () => {
             <div className='dashboard-main'>
                 <div className='dashboard-cntnts'>
                     <div className='dashboard-title'><span className='dashboard-title-one'>O</span><span className='dashboard-title-two'>Let</span></div>
-                   
-              
+
+
                     <div className='dashboard-link'>
                         <p className='link-p'><IoIosHome />
-                            <Link to='/' className='dash-link' >Home</Link></p>
+                            <Link to='/' className='dash-link' >Dashboard</Link></p>
                     </div>
 
-                  
+
 
                     <div className='dashboard-link'>
                         <p className='link-p'><PiUsersThreeFill />

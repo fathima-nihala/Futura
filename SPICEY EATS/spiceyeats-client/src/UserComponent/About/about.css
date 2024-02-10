@@ -1,0 +1,68 @@
+.about{
+    margin-top: 40px;
+}
+/* .about-h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 30px;
+    position: relative;
+    overflow: hidden;
+} */
+.about-para{
+    
+    width:90%; 
+     height: 600px;
+     margin-top: 60px;
+     margin-left: 100px;
+}
+.about-p{
+    color: white;
+    
+    font-size: 23px;
+}
+
+@keyframes underline-top {
+    0% {
+        width: 0;
+        left: 50%;
+    }
+    50% {
+        width: 100%;
+        left: 0;
+    }
+    100% {
+        width: 0;
+        left: 0;
+    }
+}
+/* Apply styles */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.underline-top {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    color: white;
+}
+.underline-top::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color:  rgb(220, 156, 72);
+    animation: underline-top 0.5s ease-in-out;
+    transition: width 0.5s ease-in-out;
+}
+/* Hover effect */
+.underline-top:hover::before {
+    width: 100%;
+    left: 0;
+}

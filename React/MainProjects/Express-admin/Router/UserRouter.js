@@ -72,26 +72,26 @@ try{
 
 
 //to get user details in admin user-page
-router.get('/Ecomgetmethod',async (req,res)=>{
-    try{
-        const datas=await User.find()
-        console.log(datas);
-        res.status(200).json(datas)
-    }catch(err){
-        res.status(500).json(err)
-    }
-})
+// router.get('/Ecomgetmethod',async (req,res)=>{
+//     try{
+//         const datas=await User.find()
+//         console.log(datas);
+//         res.status(200).json(datas)
+//     }catch(err){
+//         res.status(500).json(err)
+//     }
+// })
 
 
 //to delete/remove user from admin user-page
-router.delete('/Ecomdelete/:id',async(req,res)=>{
-    // console.log('kfl',req.body);
-    try {
-       const res=await User.findByIdAndDelete(req.params.id)
-    //    console.log('res',res.body);
-    } catch (error) {
-        res.status(500).json(err)
-    }
-})
+// router.delete('/Ecomdelete/:id',async(req,res)=>{
+//     // console.log('kfl',req.body);
+//     try {
+//        const res=await User.findByIdAndDelete(req.params.id)
+//     //    console.log('res',res.body);
+//     } catch (error) {
+//         res.status(500).json(err)
+//     }
+// })
 
 module.exports=router

@@ -5,6 +5,8 @@ import { useDispatch } from 'react-redux'
 import { LoginDatass } from '../API/ApiCall'
 import { HiOutlineMail } from "react-icons/hi";
 import { MdOutlineLockOpen } from "react-icons/md";
+import { CiCircleRemove } from "react-icons/ci";
+
 
 // import { useNavigate } from 'react-router-dom'
 
@@ -47,6 +49,7 @@ const Login = () => {
     // }
     return (
         <div className='login'>
+            <Link to='/'><CiCircleRemove className='goback' /></Link>
             <div className='log-main' onclick="onclick">
                 <div className="log-main-one">
                     <div className='log-head'>

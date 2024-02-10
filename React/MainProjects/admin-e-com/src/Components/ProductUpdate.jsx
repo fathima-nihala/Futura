@@ -1,238 +1,168 @@
 import React, { useEffect, useState } from 'react'
+import { CiCircleRemove } from "react-icons/ci";
 import Modal from './Modal/Modal'
-import { fetchProductById, productView, updateProduct } from '../API/ApiCall';
+import { fetchProductById, updateProduct } from '../API/ApiCall';
+import { Link, useParams } from 'react-router-dom';
+import '../../src/Components/Pages/manageproduct.css'
 
-const ProductUpdate = (props, { productId },) => {
+const ProductUpdate = (props) => {
 
-  // const [category, setCategory] = useState('')
+  // var category1=
+
+  // console.log('catejlfd',category1);
+
+  // const { id } = useParams();
+  const [product, setProduct] = useState({});
+  const [loading, setLoading] = useState(false);
+
+  const [category, setCategory] = useState(props.category || 'category')
   // const [type, setType] = useState('')
-  // const [title, setTitle] = useState('')
-  // const [description, setDescription] = useState('')
-  // const [mrp, setMrp] = useState('')
-  // const [price, setPrice] = useState('')
-  // const[stock,setStock] = useState('')
+  const [title, setTitle] = useState(props.title, 'title')
+  const [description, setDescription] = useState(props.description, 'description')
+  const [mrp, setMrp] = useState(props.mrp, 'mrp')
+  const [price, setPrice] = useState(props.price, 'price')
+  const [stock, setStock] = useState(props.stock, 'stock')
+  const [image, setImages] = useState({});
+  const [id] = useState(props.id)
 
-  // const [formData, setFormData] = useState({
-  //   title: '',
-  //   description: '',
-  //   type: '',
-  //   price: '',
-  //   mrp: '',
-  //   stock: ''
-  //   // Add more fields as needed
-  // });
+  console.log();
 
-  // const handleChange = (e) => {
-  //   setFormData({ ...formData, [e.target.name]: e.target.value });
-  //   // console.log('form',setFormData);
 
-  // };
+
+  // useEffect(() => {
+
+  //   const fetchData = async () => {
+  //     try {
+  //       const getDataHandle = await fetchProductById(id);
+  //       console.log('getDataHandle..', getDataHandle);
+
+  //       setCategory(getDataHandle.category)
+  //       setType(getDataHandle.type)
+  //       setDescription(getDataHandle.description)
+  //       setMrp(getDataHandle.mrp)
+  //       setPrice(getDataHandle.price)
+  //       setStock(getDataHandle.stock)
+  //       setImages(getDataHandle.image)
+  //       setTitle(getDataHandle.title)
+
+  //     } catch (error) {
+  //       console.log('err', error);
+  //     }
+  //   };
+  //   fetchData();
+
+  // }, [id]);
+
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     setLoading(true);
+  //     try {
+  //       const data = await fetchProductById(id);
+  //       console.log('datataaaaaaaaaaaaa', data);
+  //       setCategory(data.category)
+  //       // setProduct(data);
+  //     } catch (error) {
+  //       console.error('Error fetching product:', error);
+  //     }
+  //     setLoading(false);
+  //   };
+  //   fetchData();
+  // }, [id]);
+
+  //to update/edit product
+  const handleUpdate = async () => {
+    try {
+      // console.log('product id update',updateProduct);
+      updateProduct()
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+
+  // useEffect(()=>{
+  //   const fetchData =async()=>{
+  //         try {
+  //           const getDataHandle=await fetchProductById(id);
+  //           console.log('getDataHandle',getDataHandle);
+  //           console.log('kittuvoda',getDataHandle);
+  //           setvalue(getDataHandle)
+  //         }
+  //         catch(err){
+  //           console.log(err);
+  //         }
+  //       }
+  //       fetchData()
+  // },[])
+
+
+  // to update
+  const productUpdate = async (e) => {
+    e.preventDefault()
+
+    const updatevalue = await updateProduct({ id, category, title, description, price, image, stock, mrp })
+    console.log('updatevalue', updatevalue);
+
+  }
+
 
   // const handleSubmit = async (e) => {
   //   e.preventDefault();
   //   try {
-  //     // Call the updateProduct function with the updatedProduct data and productId
-  //     await updateProduct(productId, updateProduct);
+  //     await updateProduct(product);
+  //     alert('Product updated successfully!');
   //   } catch (error) {
   //     console.error('Error updating product:', error);
+  //     alert('Failed to update product. Please try again.');
   //   }
   // };
-
-  const [products, setProducts] = useState({});
-
-  useEffect(() => {
-    const getProducts = async () => {
-      try {
-        const res = await fetchProductById(productId); // Assuming fetchProductById returns all products
-        setProducts(res.data);
-        console.log("Products data:", res.data);
-      } catch (error) {
-        console.error('Error fetching product data:', error);
-      }
-    };
-
-    getProducts();
-  }, []);
-
-
-
-  // useEffect(() => {
-  //   const productId = 'your-product-id'; // Set the product ID you want to fetch
-  //   handleget(productId);
-  // }, []);
-
-
-
-
-  // const[product,setProduct]=useState([])
-
-
-  //   const handleget = async (id) => {
-  //     console.log("handeget",id);
-  //     try{
-  //         const handegetdata= await fetchProductById(id)
-  //         setProduct (handegetdata);
-  //         console.log('handelgetdata',handegetdata);
-  //     }catch(err){
-  //         console.log(err);
-  //     }
-
-
-  // }
-
-  // useEffect(()=>{
-  //   const getproduct=async(id)=>{
-  //     console.log('getproduct',id);
-  //     try {
-  //       const res = await fetchProductById(); 
-  //       setProduct(res.data);
-  //       console.log("dataaaa",res);
-  //     } catch (error) {
-  //       console.error('Error fetching product data:', error);
-  //     }
-  //   }
-  //   getproduct()
-  // },[])
-  // !!!!!
-  // const [product, setProduct] = useState({});
-
-
-  // useEffect(() => {
-  //   const getProduct = async () => {
-  //     try {
-  //       const fetchedProduct = await fetchProductById(productId);
-  //       setProduct(fetchedProduct);
-  //     } catch (error) {
-  //       console.error('Error fetching product:', error);
-  //     }
-  //   };
-
-  //   getProduct();
-  // }, [productId]);
-
-  // const [profileId, setProfileId] = useState('');
-  // const [data, setData] = useState({});    //object aayitaann koduthadh.ennale e.vechit access  cheyyan pattu.
-
-  // const[product,setProduct]=useState([])
-
-  // useEffect(() => {
-  //   const getProduct = async () => {
-  //     try {
-  //       const fetchedProduct = await fetchProductById(productId);
-  //       setProduct(fetchedProduct);
-  //     } catch (error) {
-  //       console.error('Error fetching product:', error);
-  //     }
-  //   };
-
-  //   getProduct();
-  // }, [productId]);
-
-  // useEffect(()=>{
-  //   const getproduct=async(id)=>{
-  //     console.log('getproduct',id);
-  //     try {
-  //       const res = await productView(); 
-  //       setProduct(res.data);
-  //       console.log("dataaaa",res);
-  //     } catch (error) {
-  //       console.error('Error fetching product data:', error);
-  //     }
-  //   }
-  //   getproduct()
-  // },[])
-
-  // const handleInputChange = (event) => {
-  //     setProfileId(event.target.value);
-  // }
-
-  //to update
-  // const productUpdate=async(id)=>{
-  //     console.log('**id',id);
-  //     try {
-  //     const a = await productView(formData)
-  //        console.log('Result:', a);
-  //        formData(a)
-  //     } catch (error) {
-  //         console.log('produt err',error);
-  //     }
-  // }
-
-  //to update
-  // const productUpdate=async(e)=>{
-  //   e.preventDefault();
-  //   updateProduct(productId,updateProduct)
-  // }
-
-  // useEffect(()=>{
-  //     setType(data.type)
-  //     setPrice(data.price)
-  // },[data])
-
-
 
   return (
     <div>
       <Modal hideHandler={props.orderHideHandler}>
-        {/* <div onClick={handleInputChange}> */}
-        <h2>Update</h2>
-        <div>
-      <h1>{products.title}</h1>
-      <ul>
-        {/* {products.map(product => (
-          <li key={product.id}>
-            <h3>{product.name}</h3>
-            <p>{product.description}</p>
-            <p>Price: {product.price}</p>
-          </li>
-        ))} */}
-
-       {/* {products.map((product)=>(
-          <div>
-             <li key={product.id}>
-            <h3>{product.name}</h3>
-            <p>{product.description}</p>
-            <p>Price: {product.price}</p>
-            <div>{product.title}</div>
-          </li>
-          </div>
-        ))} */}
-      </ul>
-    </div> 
-<p>jjoi</p>
-
-
-        {/* <form onSubmit={handleget}>
+        {/* <Link to='/manage' className='previous'><CiCircleRemove className='prev-icon' /></Link> */}
+        <h2 className='update-hd'>Update</h2>
+        <form encType='multipart/form-data' onSubmit={productUpdate}>
           <div className="form-group">
-            <label>Title:</label>
-            <input type="text" name="title" value={updateProduct.title} onChange={handleChange} />
+            <label className='up-label'>Catagory:</label>
+            <input type="text" value={category} name="category" onChange={(e) => setCategory(e.target.value)} />
           </div>
           <div className="form-group">
-            <label>Description:</label>
-            <textarea name="description" value={updateProduct.description} onChange={handleChange} />
+            <label className='up-label'>Title:</label>
+            <input type="text" name="title" value={title} onChange={(e) => setTitle(e.target.value)} />
           </div>
           <div className="form-group">
+            <label className='up-label'>Description:</label>
+            <textarea name="description" value={description} onChange={(e) => setDescription(e.target.value)} />
+          </div>
+          {/* <div className="form-group">
             <label>Type:</label>
-            <input type="text" name="type" value={updateProduct.type} onChange={handleChange} />
+            <textarea name="type" placeholder={props.type}  /> */}
+          {/* <label>Type:</label> */}
+          {/* <input type="text" name="type" value={props.type} onChange={(e) => setType(e.target.value)} /> */}
+          {/* </div> */}
+          <div className="form-group">
+            <label className='up-label'>Price:</label>
+            <input type="number" name="price" value={price} onChange={(e) => setPrice(e.target.value)} />
           </div>
           <div className="form-group">
-            <label>Price:</label>
-            <input type="number" name="price" value={updateProduct.price} onChange={handleChange} />
+            <label className='up-label'>MRP:</label>
+            <input type="number" name="mrp" value={mrp} onChange={(e) => setMrp(e.target.value)} className='up-inp' />
           </div>
           <div className="form-group">
-            <label>MRP:</label>
-            <input type="number" name="mrp" value={updateProduct.mrp} onChange={handleChange} />
+            <label className='up-label'>Stock:</label>
+            <input type="number" name="stock" value={stock} onChange={(e) => setStock(e.target.value)} className='up-inp' />
           </div>
           <div className="form-group">
-            <label>Stock:</label>
-            <input type="number" name="stock" value={updateProduct.stock} onChange={handleChange} />
+            {/* <label>Image:</label> */}
+            <input type="file" filename='image' onChange={(e) => setImages(e.target.files[0])} />
           </div>
-          <button type="submit">Update</button>
-        </form> */}
+          <button type="submit" className='up-btn'>Update</button>
+        </form>
 
 
-       
-       
+
+
       </Modal>
     </div>
   )
