@@ -31,7 +31,7 @@ const Women = () => {
         <div className='women'>
             <div className='women-cntnt'>
                 {womensDresses.map((data) => (
-                <Link to={`/view/${data._id}`} >  <div>
+                <Link to={`/view/${data._id}`} className='ki-link'><div>
                     <Wrap
                         key={data.id}
                         image={`${process.env.PUBLIC_URL}/Images/${data.image}`}

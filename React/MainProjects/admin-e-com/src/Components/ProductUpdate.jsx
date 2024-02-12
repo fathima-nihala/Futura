@@ -25,97 +25,41 @@ const ProductUpdate = (props) => {
   const [image, setImages] = useState({});
   const [id] = useState(props.id)
 
-  console.log();
 
 
 
-  // useEffect(() => {
-
-  //   const fetchData = async () => {
-  //     try {
-  //       const getDataHandle = await fetchProductById(id);
-  //       console.log('getDataHandle..', getDataHandle);
-
-  //       setCategory(getDataHandle.category)
-  //       setType(getDataHandle.type)
-  //       setDescription(getDataHandle.description)
-  //       setMrp(getDataHandle.mrp)
-  //       setPrice(getDataHandle.price)
-  //       setStock(getDataHandle.stock)
-  //       setImages(getDataHandle.image)
-  //       setTitle(getDataHandle.title)
-
-  //     } catch (error) {
-  //       console.log('err', error);
-  //     }
-  //   };
-  //   fetchData();
-
-  // }, [id]);
-
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     setLoading(true);
-  //     try {
-  //       const data = await fetchProductById(id);
-  //       console.log('datataaaaaaaaaaaaa', data);
-  //       setCategory(data.category)
-  //       // setProduct(data);
-  //     } catch (error) {
-  //       console.error('Error fetching product:', error);
-  //     }
-  //     setLoading(false);
-  //   };
-  //   fetchData();
-  // }, [id]);
-
+   
   //to update/edit product
-  const handleUpdate = async () => {
-    try {
-      // console.log('product id update',updateProduct);
-      updateProduct()
-    } catch (error) {
-      console.log(error);
-    }
-  }
 
 
-  // useEffect(()=>{
-  //   const fetchData =async()=>{
-  //         try {
-  //           const getDataHandle=await fetchProductById(id);
-  //           console.log('getDataHandle',getDataHandle);
-  //           console.log('kittuvoda',getDataHandle);
-  //           setvalue(getDataHandle)
-  //         }
-  //         catch(err){
-  //           console.log(err);
-  //         }
-  //       }
-  //       fetchData()
-  // },[])
+    let formdata = new FormData();
+    formdata.append('title', title);
+    formdata.append('description', description);
+    formdata.append('mrp', mrp);
+    formdata.append('price', price);
+    formdata.append('stock', stock);
+    formdata.append('image', image);
+
+    console.log('form-manage', formdata);
+
+ 
+
+
+
+
+
 
 
   // to update
   const productUpdate = async (e) => {
     e.preventDefault()
-
-    const updatevalue = await updateProduct({ id, category, title, description, price, image, stock, mrp })
-    console.log('updatevalue', updatevalue);
+// console.log('before API call', id, category, title, description, price, image, stock, mrp );
+    const updatevalue = await updateProduct(formdata);
+    // console.log('updatevalue', updatevalue);
 
   }
 
 
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   try {
-  //     await updateProduct(product);
-  //     alert('Product updated successfully!');
-  //   } catch (error) {
-  //     console.error('Error updating product:', error);
-  //     alert('Failed to update product. Please try again.');
-  //   }
-  // };
 
   return (
     <div>
@@ -125,7 +69,7 @@ const ProductUpdate = (props) => {
         <form encType='multipart/form-data' onSubmit={productUpdate}>
           <div className="form-group">
             <label className='up-label'>Catagory:</label>
-            <input type="text" value={category} name="category" onChange={(e) => setCategory(e.target.value)} />
+            <input type="text" value={category} onChange={(e) => setCategory(e.target.value)} />
           </div>
           <div className="form-group">
             <label className='up-label'>Title:</label>

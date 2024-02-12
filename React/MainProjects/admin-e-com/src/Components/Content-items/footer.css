@@ -4,6 +4,8 @@
     align-items: center;
     margin-top: 80px;
     margin-right: 150px;
+    position: inherit;
+    /* z-index: 1; */
 }
 .fo-aside{
     display: block;

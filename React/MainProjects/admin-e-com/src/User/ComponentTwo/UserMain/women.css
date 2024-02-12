@@ -3,3 +3,7 @@
     display: grid;
     grid-template-columns: auto auto auto auto;
 }
+.wo-link{
+    text-decoration: none;
+    color: black;
+}

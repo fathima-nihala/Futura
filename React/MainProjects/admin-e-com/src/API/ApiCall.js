@@ -8,7 +8,7 @@ import { userRequest } from "../Components/RequestMethod";
 export const SignupData = async (data) => {
     //    const newType ={...data, type:'user'}
     //     console.log('newtype',newType);
-    console.log('data',data);
+    console.log('data', data);
     try {
         const res = await axios.post('http://localhost:7002/api/adminpost', data)
         console.log('check admin data', res.status);
@@ -106,39 +106,23 @@ export const productDelete = async (id) => {
 //****to update product details
 export const updateProduct = async (updateval) => {
     console.log('update id?', updateval);
-    console.log(updateval);
     try {
-        const res = await axios.put(`http://localhost:7002/api/updateproduct/${updateval.id}`, {
-            category: updateval.category,
-            title: updateval.title,
-            item: updateval.item,
-            stock: updateval.stock,
-            description: updateval.description,
-            mrp: updateval.mrp,
-            price: updateval.price,
-            image: updateval.image,
-        })
-        console.log('upp', res.data);
-        return res.data
+        const res = await axios.put(`http://localhost:7002/api/updateproduct/${updateval.id}`,updateval)
+        //     category: updateval.category,
+        //     title: updateval.title,
+        //     item: updateval.item,
+        //     stock: updateval.stock,
+        //     description: updateval.description,
+        //     mrp: updateval.mrp,
+        //     price: updateval.price,
+        //     image: updateval.image.name,
+        // })
+        console.log('upp', res);
+        return res
     } catch (error) {
         console.log('oooo', error);
     }
 }
-
-// export const updateProduct = async (updateval) => {
-//     console.log('update id?', updateval);
-//     // console.log('update');
-//     try {
-//         const res = await axios.put(`http://localhost:7002/api/viewproductTwo/${updateval._id}`,{
-
-//         });
-//         console.log('Update response:', res.data);
-//         return res.data;
-//     } catch (error) {
-//         console.error('Error updating product:', error);
-//         throw error;
-//     }
-// };
 
 //*** to view product by id
 export const fetchProductById = async (id) => {
@@ -154,10 +138,10 @@ export const fetchProductById = async (id) => {
 };
 
 //view-page
-export const viewDetails=async(id)=>{
-    console.log('idddd00000',id);
+export const viewDetails = async (id) => {
+    console.log('idddd00000', id);
     try {
-        const ress=await axios.get(`http://localhost:7002/api/geItemss/${id}`);
+        const ress = await axios.get(`http://localhost:7002/api/geItemss/${id}`);
         console.log('detailsss', ress.data);
         return ress;
 
@@ -168,4 +152,52 @@ export const viewDetails=async(id)=>{
 };
 
 
-// export const viewItemDetailsaa  = async
+//CART PAGE STARTS HERE
+//to post cart
+export const CartAddTo = async (data) => {
+    console.log('cartapidata', data);
+    try {
+        const res = await axios.post('http://localhost:7002/api/postcart', data)
+        console.log('jjj', res.data);
+        return res.data
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+//to get cart
+export const CartGetTo = async (data) => {
+    console.log('cartget', data);
+    try {
+        const res = await axios.get('http://localhost:7002/api/getcart')
+        console.log('ggg', res.data);
+        return res.data
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+//to delete cart
+export const CartDeleteTo = async (id) => {
+    console.log('delete', id);
+    try {
+        const res = await axios.delete(`http://localhost:7002/api/deletecart/${id}`)
+        console.log('delete cart', res);
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+//for quantity
+export const QuantityUpdate = async (data) => {
+    console.log("data and id", data);
+    const quantity = data.quantityState
+    console.log(quantity);
+    try {
+        const res = await axios.put(`http://localhost:7002/api/updatequantity/${data._id}`, { quantity })
+        return res;
+    }
+    catch (error) {
+        console.log(error);
+    }
+}  

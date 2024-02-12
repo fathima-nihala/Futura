@@ -3,6 +3,7 @@ const multer = require('multer')
 const productdetails = require('../Models/Productschema')
 const { route } = require('./UserRouter')
 
+
 //to upload photos "../"
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -86,11 +87,13 @@ router.delete('/removeproduct/:id', async (req, res) => {
 })
 
 //to update product
-router.put(`/updateproduct/:id`, async (req, res) => {
-    // console.log('req', req);
-    // console.log('***', req.body);
+router.put(`/updateproduct/:id`, upload.single('image'), async (req, res) => {
+    console.log('req', req);
+    console.log('***', req.body);
     console.log('req!!', req.params.id);
     console.log("data", req.body);
+    console.log("file", req.file);
+    console.log("files", req.files);
     try {
         console.log("hello", req.body);
         const DBdata = await productdetails.findByIdAndUpdate(req.params.id, {
@@ -102,7 +105,7 @@ router.put(`/updateproduct/:id`, async (req, res) => {
                 mrp: req.body.mrp,
                 stock: req.body.stock,
                 price: req.body.price,
-                image: req.file.originalname,
+                image: req.body.image,
             }
         })
         console.log("haiii", DBdata);
@@ -128,7 +131,7 @@ router.put(`/updateproduct/:id`, async (req, res) => {
 
 router.get('/geItemss/:id', async (req, res) => {
     console.log('req', req.body);
-    console.log('iddddddd',req.params.id);
+    console.log('iddddddd', req.params.id);
     try {
         const getitemssss = await productdetails.findById(req.params.id)
         console.log('dataaatatta', getitemssss);
@@ -137,4 +140,13 @@ router.get('/geItemss/:id', async (req, res) => {
         console.log(err);
     }
 })
+
+
+//CART PART STARTS HERE
+
+
+
+
+
+
 module.exports = router

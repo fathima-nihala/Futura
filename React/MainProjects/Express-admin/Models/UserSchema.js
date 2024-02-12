@@ -6,6 +6,6 @@
         password:{type:String},
         type:{type:String},
         image:{type:String},
-        isAdmin:{default:true}
+        // isAdmin:{default:true}
     },{timestamps:true})
     module.exports=new mongoose.model("User",UserSchema)

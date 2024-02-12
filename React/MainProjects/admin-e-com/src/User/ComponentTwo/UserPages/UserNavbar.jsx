@@ -69,7 +69,7 @@ const UserNavbar = () => {
         <IoSearchOutline />
       </div>
       <div className="usrnavbar-end">
-        <div className='usrnav-end-two'><LiaShoppingBagSolid className='usernav-ico' /></div>
+        <div className='usrnav-end-two'><Link to='/addtocart' className='nav-addto'><LiaShoppingBagSolid className='usernav-ico' /></Link></div>
         <div className='usrnav-end-one'><BsPerson className='usernav-ico' />
         {/* <div class="dropdown-content">
             <a href="#">Profile</a>

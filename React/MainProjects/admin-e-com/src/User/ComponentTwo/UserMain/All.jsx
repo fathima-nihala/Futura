@@ -4,6 +4,8 @@ import { fetchProductById, productView, viewDetails } from '../../../API/ApiCall
 import './all.css'
 import Wrap from '../All Wrap/Wrap'
 import { useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+
 
 const All = () => {
 
@@ -38,15 +40,17 @@ const All = () => {
       <h2> Explore Our Stunning Dress Collection!</h2>
       <div className='all-cntnt'>
         {product.map((data) => (
-          <Wrap
-            key={data._id}
-            // id={data._id}
-            image={`${process.env.PUBLIC_URL}/Images/${data.image}`}
-            title={data.title}
-            description={data.description}
-            mrp={data.mrp}
-            price={data.price}
-          />
+          <Link to={`/view/${data._id}`} className='me-link'><div>
+            <Wrap
+              key={data._id}
+              // id={data._id}
+              image={`${process.env.PUBLIC_URL}/Images/${data.image}`}
+              title={data.title}
+              description={data.description}
+              mrp={data.mrp}
+              price={data.price}
+            />
+          </div></Link>
         ))}
       </div>
       {/* </div> */}

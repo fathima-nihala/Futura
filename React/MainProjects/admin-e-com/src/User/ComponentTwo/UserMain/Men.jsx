@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './men.css'
 import { productView } from '../../../API/ApiCall';
 import Wrap from '../All Wrap/Wrap';
+import { Link } from 'react-router-dom';
 
 const Men = () => {
 
@@ -28,6 +29,7 @@ const Men = () => {
     <div className='men'>
       <div className='men-cntnt'>
         {mensDresses.map((data)=>(
+          <Link to={`/view/${data._id}`} className='me-link'><div>
             <Wrap
             key={data.id}
             image={`${process.env.PUBLIC_URL}/Images/${data.image}`}
@@ -36,6 +38,7 @@ const Men = () => {
             mrp={data.mrp}
             price={data.price}
             />
+           </div></Link>
         ))}
       </div>
     </div>

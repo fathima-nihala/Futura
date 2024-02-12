@@ -13,3 +13,7 @@
     display: grid;
     grid-template-columns: auto auto auto auto;
 }
+.all-link{
+    text-decoration: none;
+    color: black;
+}

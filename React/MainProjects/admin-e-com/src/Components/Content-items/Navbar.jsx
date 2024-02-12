@@ -48,7 +48,7 @@ const Navbar = () => {
     <div className={`navbar ${isSticky ? 'scroll' : ''}`}>
       <div className='nav-nav'>
         <div className='nav-left'>
-        <IoSearchOutline style={{ marginTop: '5', marginLeft: '10' }} />
+        <IoSearchOutline style={{ marginTop: '5', marginLeft: '10' }}  />
         <input type="text" placeholder='Search here..' className='nav-inp' />
         </div>
         <div className='nav-center'>

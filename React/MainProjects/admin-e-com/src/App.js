@@ -43,6 +43,7 @@ import Kids from './User/ComponentTwo/UserMain/Kids';
 import View from './User/ComponentTwo/View';
 import UserLogin from './Login/UserLogin';
 import UserSignUp from './Login/UserSignUp';
+import Cart from './User/ComponentTwo/CartPage/Cart';
 
 function App() {
   // const data=useSelector((state)=>state.Login.LoginInfo[0])
@@ -75,11 +76,11 @@ function App() {
   const Router = createBrowserRouter([
     {
       path: '/',
-      element: token ? <UserMain /> : <UserLogin />,
+      element: <UserMain />,
       children: [
         {
           path: '/', // This represents the homepage route
-          element: token ? <UserHome /> : <Navigate to="/" replace />, // Redirect to homepage if no token
+          element: <UserHome />, // Redirect to homepage if no token
         },
         {
           path: 'all',
@@ -100,12 +101,16 @@ function App() {
         {
           path: '/kids',
           element: <Kids />
+        },
+        {
+          path: '/view/:id',
+          element: <View />
+        },
+        {
+          path:'/addtocart',
+          element:<Cart/>
         }
       ]
-    },
-    {
-      path: '/view/:id',
-      element: <View />
     },
 
     {

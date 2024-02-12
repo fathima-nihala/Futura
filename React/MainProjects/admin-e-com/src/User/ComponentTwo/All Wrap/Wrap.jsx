@@ -29,10 +29,10 @@ const Wrap = (props) => {
       <p className='wrap-d'>{props.description}</p>
       <div className='wrap-prices'>
         <div className='new-wrap'>
-          <span className='ru'>₹</span>{props.mrp}
+          <span className='ru'>₹</span>{props.price}
         </div>
         <div className='old-wrap'>
-          ₹{props.price}
+          ₹{props.mrp}
         </div>
       </div>
     </div>

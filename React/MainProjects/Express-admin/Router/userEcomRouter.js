@@ -4,6 +4,7 @@ const Jwt=require('jsonwebtoken')
 const crypto=require('crypto-js')
 const multer = require('multer')
 const {verifyToken,verifyTokenAndauthorization} = require('../verifyTokn')
+const cartData = require('../Models/CartSchema')
 
 
 //to upload photos "../"
@@ -91,6 +92,8 @@ router.delete('/Ecomdelete/:id',async(req,res)=>{
         res.status(500).json(err)
     }
 })
+
+
 
 
 module.exports=router
