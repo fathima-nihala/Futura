@@ -87,16 +87,15 @@ router.delete('/removeproduct/:id', async (req, res) => {
 })
 
 //to update product
-router.put(`/updateproduct/:id`, upload.single('image'), async (req, res) => {
-    console.log('req', req);
-    console.log('***', req.body);
+router.put(`/updateproduct/:id`, upload.single('image'),async (req, res) => {
+    console.log('**********************', req.body);
     console.log('req!!', req.params.id);
     console.log("data", req.body);
     console.log("file", req.file);
     console.log("files", req.files);
     try {
         console.log("hello", req.body);
-        const DBdata = await productdetails.findByIdAndUpdate(req.params.id, {
+        const DBdata =await productdetails.findByIdAndUpdate(req.params.id, {
             $set: {
                 category: req.body.category,
                 type: req.body.type,

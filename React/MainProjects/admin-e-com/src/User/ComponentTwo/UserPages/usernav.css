@@ -79,7 +79,7 @@
     background-color:whitesmoke;
     height: 26px;
     width: 230px;
-    
+    border-radius: 5px;    
 }
 .usrnav-search input{
     width: 200px;
@@ -89,7 +89,7 @@
 }
 .usrnavbar-end{
     display: flex;
-    margin-top: 15px;
+    /* margin-top: 15px; */
     justify-content: space-between;
 }
 
@@ -97,7 +97,7 @@
     margin-right: 30px;
 }
 .usrnav-end-two{
-    margin-right: 30px;
+    margin-right: 60px;
 
 }
 .usrusernav-ico:hover{
@@ -106,13 +106,24 @@
 }
 
 .usernav-ico{
-    height: 20px;
+    height: 25px;
     width: 40px;
+    margin-top: 15px;
 }
+.usernav-ico2{
+    border: 1px solid rgb(233, 181, 215);
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    margin-top:6px;
+    object-fit: contain;
 
+}
 /* dropdown */
 .usrnav-end-one {
     position: relative;
+    /* margin-bottom: 70px; */
+
 }
 
 .dropdown-content {
@@ -169,4 +180,18 @@
 
 .nav-addto{
     color: black;
+}
+.usernav-btn{
+    margin-right: 30px;
+    height: 26px;
+    width: 100px;
+    border: none;
+    color: white;
+    background-color: rgb(230, 8, 156);
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.usernav-btn:hover{
+    background-color: rgb(167, 167, 167);
 }

@@ -18,9 +18,9 @@
     object-fit: cover;
 }
 .productdisplay-main-img{
-    /* width: 355px; */
+    width: 350px;
     /* height: 500px; */
-    /* object-fit: cover; */
+    object-fit: cover;
 }
 .productdisplay-right{
     margin: 0px 70px;
@@ -90,7 +90,7 @@
     cursor: pointer;
 }
 .view-btn1:hover{
-    background: rgb(228, 225, 225);
+    background-color: rgb(167, 167, 167);
 }
 .view-btn2{
     height: 40px;
@@ -104,7 +104,7 @@
     width: 110px;
 }
 .view-btn2:hover{
-    background: rgb(228, 225, 225);
+    background-color: rgb(167, 167, 167);
 }
 .productdisplay-right-catagory{
     margin-bottom: 2px;

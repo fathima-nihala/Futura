@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './Login.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { LoginDatass } from '../API/ApiCall'
 import { HiOutlineMail } from "react-icons/hi";
@@ -22,6 +22,7 @@ const UserLogin = (props) => {
             console.log("error in pass", error);
         }
         alert("Login Successfull");
+
     }
 
 
@@ -46,7 +47,7 @@ const UserLogin = (props) => {
                         </div>
 
                         <div className='log-btn'>
-                            <button className='end' onclick={displayone}>Sign In</button>
+                            <button className='end' onClick={displayone}>Sign In</button>
                         </div>
                         <div className='log-para'>
                             <p className='end-para'>don't have an account?<Link to='/usereg' className='end-link'>Signup Now</Link></p>

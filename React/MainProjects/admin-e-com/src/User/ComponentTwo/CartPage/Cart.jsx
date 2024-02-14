@@ -43,16 +43,8 @@ const Cart = () => {
 
     return (
         <div className='cartitems'>
-            <div className="cartitems-formate-main">
-                <p>Product</p>
-                <p>Title</p>
-                <p>Price</p>
-                <p>Quantity</p>
-                <p>Total</p>
-                <p>Remove</p>
-            </div>
-            <hr />
 
+<div>
 
             {Object.values(groupedItems).map((data) => (
                 <div key={data.id}>
@@ -65,6 +57,12 @@ const Cart = () => {
                     </div>
                 </div>
             ))}
+            </div>
+            <div className='tottal__amount_container'>
+<p>sum tottal</p>
+<p>discount</p>
+<h3>Total Amount</h3>
+            </div>
         </div>
     )
 }

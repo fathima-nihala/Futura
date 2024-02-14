@@ -1,39 +1,41 @@
-const Jwt=require("jsonwebtoken")
+const jwt =require("jsonwebtoken");
 
-const verifyToken=(req,res,next)=>{
-    console.log(">>>>>>>>",req);
-    console.log("req.headers.token",req.headers.token);
-    let authHeader=req.headers.token;
+const verifyTokenn = (req,res,next) =>{
+ console.log('reqqqqqq',req);
+ console.log('req.headers.token',req.headers);
+ console.log("***",req.headers.token);
+    var authheader = req.headers.token;
+    console.log("autheader",authheader);
+    if(authheader){
+        const token =authheader.split(" ")[1];
+        console.log("separate token",token);
 
-    if(authHeader){
-        const token=authHeader.split(" ")[1];
-        console.log("seperate token",token);
-
-        Jwt.verify(token,process.env.Jwt_sec,(err,user)=>{
-            if (err) {
-                console.log('+++',err);
-                return res.status(403).json("Token is not valid")
+        jwt.verify (token,process.env.jwt_sec,(err,user)=>{
+            if(err){
+                console.log("errorr",err);
+                return res.status(403).json("Token is not valid");
             }
             req.user=user;
-            console.log("user????????",user);
+            console.log("user*",user);
             next();
         });
     }else{
-        return res.status(401).json({error:"Token not found"});
+        return res.status(401).json({ error: "Token not found" })
     }
-};
+}
 
-const verifyTokenAndauthorization=(req,res,next)=>{
-    verifyToken(req,res,(data)=>{
-        console.log(data);
+const verifyTokenAndAuthorization =(req,res,next)=>{
+    verifyTokenn(req,res,(data)=>{
+        console.log(data); 
         console.log('req.user.id',req.user.id);
-        console.log("req.params.id",req.params.id);
-        if (req.user.id===req.params.id) {
-            next();
-        }
-        else{
-            res.status(403).json("you are not allowed")
+        console.log("req.param.id",req.params.id);
+        if(req.user.id === req.params.id){
+            next()
+        }else{
+            return res.status(403).json('you are not allowed')
         }
     })
 }
-module.exports={verifyToken,verifyTokenAndauthorization}
+
+
+module.exports = {verifyTokenn,verifyTokenAndAuthorization}

@@ -70,6 +70,7 @@ router.post('/ecomlogin',async(req,res)=>{
 })
 
 
+
 // //to get user details in admin user-page
 router.get('/Ecomgetmethod',async (req,res)=>{
     try{

@@ -44,6 +44,7 @@ import View from './User/ComponentTwo/View';
 import UserLogin from './Login/UserLogin';
 import UserSignUp from './Login/UserSignUp';
 import Cart from './User/ComponentTwo/CartPage/Cart';
+import { UpdateAdminProf } from './Components/Content-items/UpdateAdminProf';
 
 function App() {
   // const data=useSelector((state)=>state.Login.LoginInfo[0])
@@ -109,8 +110,12 @@ function App() {
         {
           path:'/addtocart',
           element:<Cart/>
-        }
+        },
       ]
+    },
+    {
+      path:'/adminupdate',
+      element:<UpdateAdminProf/>
     },
 
     {

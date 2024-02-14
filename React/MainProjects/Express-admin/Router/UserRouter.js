@@ -1,20 +1,21 @@
-const router=require('express').Router()
-const User=require('../Models/UserSchema')
-const Jwt=require('jsonwebtoken')
-const Crypto=require('crypto-js')
-const {verifyToken,verifyTokenAndauthorization} = require('../verifyTokn')
-const multer=require('multer')
+const router = require('express').Router()
+const User = require('../Models/UserSchema')
+const Jwt = require('jsonwebtoken')
+const Crypto = require('crypto-js')
+const { verifyTokenn, verifyTokenAndAuthorization } = require('../verifyTokn')
+const multer = require('multer')
 
-const storage=multer.diskStorage({
-    destination:function(req,file,cb){
-        cb(null,'../admin-e-com/public/Profile');
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, '../admin-e-com/public/Profile');
     },
-    filename:function(req,file,cb){
-        cb(null,file.originalname)
+    filename: function (req, file, cb) {
+        cb(null, file.originalname)
     }
 })
-const upload=multer({storage:storage})
+const upload = multer({ storage: storage })
 
+//admin post
 router.post('/adminpost', upload.single('image'), async (req, res) => {
     console.log('@#@#-data', req.body);
     console.log('#$#-check', req.file); // Corrected line
@@ -23,8 +24,8 @@ router.post('/adminpost', upload.single('image'), async (req, res) => {
     const newUser = new User({
         email: req.body.email,
         firstname: req.body.firstname,
-        type:req.body.type,
-        image:req.file.originalname,
+        type: req.body.type,
+        image: req.file.originalname,
         password: Crypto.AES.encrypt(req.body.password, process.env.Crypto_js).toString()
     });
 
@@ -38,36 +39,84 @@ router.post('/adminpost', upload.single('image'), async (req, res) => {
     }
 });
 
+//admin login
+router.post('/adminlogin', async (req, res) => {
+    console.log('admin login', req.body);
 
-router.post('/adminlogin',async (req,res)=>{
-    console.log('admin login',req.body);
+    try {
+        const DBdata = await User.findOne({ email: req.body.email })
+        !DBdata && res.status(401).json({ response: 'please check your Email' })
 
-try{
-    const DBdata=await User.findOne({email:req.body.email})
-    !DBdata && res.status(401).json({response:'please check your Email'})
+        console.log('Backend Data', DBdata);
 
-    console.log('Backend Data',DBdata);
+        const hashedPassword = Crypto.AES.decrypt(DBdata.password, process.env.Crypto_js)
+        console.log('hashed password is', hashedPassword);
 
-    const hashedPassword=Crypto.AES.decrypt(DBdata.password,process.env.Crypto_js)
-    console.log('hashed password is',hashedPassword);
-    
-    const originalPassword=hashedPassword.toString(Crypto.enc.Utf8)
-    console.log('Original password is',originalPassword);
-    originalPassword !=req.body.password && res.status(401).json({response:"password and email doesnt match"})
+        const originalPassword = hashedPassword.toString(Crypto.enc.Utf8)
+        console.log('Original password is', originalPassword);
+        originalPassword != req.body.password && res.status(401).json({ response: "password and email doesnt match" })
 
-    const accessToken = Jwt.sign({
-        id:DBdata._id 
-    },process.env.Jwt_sec,
-    {expiresIn:'5d'})
+        const accessToken = Jwt.sign({
+            id: DBdata._id
+        }, process.env.Jwt_sec,
+            { expiresIn: '5d' })
 
-    console.log("****",accessToken);
-    const {password,...others}=DBdata._doc 
-    // var Id=DBdata._id 
-    res.status(200).json({...others,accessToken})
-}catch(err){
-    res.status(400)
-}
+        console.log("****", accessToken);
+        const { password, ...others } = DBdata._doc
+        // var Id=DBdata._id 
+        res.status(200).json({ ...others, accessToken })
+    } catch (err) {
+        res.status(400)
+    }
 })
+
+
+//admin get data
+// router.get('/adminget/:id', async (req, res) => {
+//     console.log('get@@@', req.body);
+//     // console.log("********",req);
+//     console.log('getid!!!', req.params.id);
+//     try {
+//         const GetProfile = await User.findById(req.params.id)
+//         console.log('get-profile', GetProfile);
+//         res.status(200).json(GetProfile)
+//     } catch (error) {
+//         console.log(error);
+//     }
+// })
+
+router.get ('/getadmindetails/:id',verifyTokenn,verifyTokenAndAuthorization,async(req,res) => {
+    console.log('req in getadmin',req.body);
+    try{
+        const getres = await User.findById(req.params.id)
+        console.log("ressvalue",getres);
+        res.status(200).json(getres)
+    }catch(err){
+        res.status(500).json(err)
+    }
+})
+
+
+//admin update
+router.put('/adminupdate/:id', async (req, res) => {
+    try {
+        console.log('%%%%', req.params.id);
+        console.log('(())', req.body);
+        console.log("file", req.file);
+        console.log("files", req.files);
+
+        // Assuming you're using Mongoose
+        const updatedProfile = await User.findByIdAndUpdate(req.params.id, {
+            $set: req.body
+        }, { new: true });
+
+        res.status(200).json(updatedProfile);
+    } catch (err) {
+        console.error('Error updating profile:', err);
+        res.status(400).json({ message: err.message });
+    }
+});
+
 
 
 
@@ -94,4 +143,4 @@ try{
 //     }
 // })
 
-module.exports=router
+module.exports = router

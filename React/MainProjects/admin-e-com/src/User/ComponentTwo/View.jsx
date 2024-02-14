@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { CartAddTo, fetchProductById, productView, viewDetails } from '../../API/ApiCall'
-import { useParams } from 'react-router-dom'
+import { CartAddTo, CartGetTo, fetchProductById, productView, viewDetails } from '../../API/ApiCall'
+import { Link, useParams } from 'react-router-dom'
 import axios from 'axios'
 import { IoMdStar } from "react-icons/io";
 import { IoStarHalf } from "react-icons/io5";
@@ -9,8 +9,9 @@ import '../ComponentTwo/view.css'
 const View = () => {
   // console.log(props, 'ertyu');
   const [data, setData] = useState([])
+  const [cartState, setCartState] = useState(false)
 
-
+  console.log(data);
   const dataId = useParams()
   console.log("------------------", dataId);
 
@@ -21,24 +22,31 @@ const View = () => {
         const data = await axios.get(`http://localhost:7002/api/geItemss/${dataId.id}`)
         console.log("final data", data);
         setData(data.data)
+        const res = await CartGetTo()
+        console.log(res);
+        const productName = res.map((li) => li.title)
+        console.log(productName);
+        // const title = data.map((li)=>li.title)
+        // console.log(title);
+        const title = data.data.title
+        console.log(title);
+        const existingCartItem = productName.find((item) => item === data.data.title)
+        console.log(existingCartItem);
+        existingCartItem ? setCartState(true) : setCartState(false)
       } catch (err) {
 
       }
+
     }
     display()
+
   }, [])
 
-  // console.log('bbb',data.quantity);
-  // const datas = {
-  //   quantity:1,
-  //     itemName:data.title,
-  //     itemPrice:data.price,
-  //     itemImage:data.image,
-  //   //  itemDes:props.des
-  // }
+
 
   const cartHandler = async (e) => {
     e.preventDefault()
+    setCartState(true)
     return await CartAddTo(data)
   }
   console.log('lll', CartAddTo);
@@ -69,7 +77,15 @@ const View = () => {
           </div>
           <div className="productdisplay-right-description">{data.description}</div>
           <div className='display-right-btn'>
-            <button className='view-btn1' onClick={cartHandler}>Add To Cart</button>
+            {!cartState &&
+              <button className='view-btn1' onClick={cartHandler}>Add To Cart</button>
+            }
+            {cartState &&
+              <Link to={"/addtocart"}>
+                <button className='view-btn1'>Go to cart</button>
+              </Link>
+            }
+
             <button className='view-btn2'>Buy Now</button>
           </div>
           <p><span>Category: {data.category}</span></p>

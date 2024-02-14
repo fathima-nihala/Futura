@@ -11,7 +11,7 @@ app.use(function(req,res,next){
     console.log("all time first check");
     next()
 })
-
+ 
 const UseRoute=require('./Router/UserRouter')
 const productRout=require('./Router/ProductRouter')
 const EcomRoute=require('./Router/userEcomRouter')
@@ -19,9 +19,11 @@ const Cart=require('./Router/CartRouter')
 
 mongoose.connect(process.env.project_key).then(()=>{
     console.log('dataBase Connected');
+}).catch((err)=>{
+    console.log(err.message);
 })
 
-app.use(express.json())
+app.use(express.json())  
 app.use('/api',UseRoute)
 app.use('/api',productRout)
 app.use('/api',EcomRoute)

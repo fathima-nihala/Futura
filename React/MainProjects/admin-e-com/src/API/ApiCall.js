@@ -3,7 +3,7 @@ import { loginData } from "../Redux/userRedux";
 import { userRequest } from "../Components/RequestMethod";
 // import {userRequest} from
 
-
+//-------------------------ADMIN------------------------------
 //to post/add admin-user details
 export const SignupData = async (data) => {
     //    const newType ={...data, type:'user'}
@@ -26,13 +26,69 @@ export const LoginDatass = async (data, dispatch) => {
         const res = await axios.post('http://localhost:7002/api/adminlogin', data)
         console.log(res);
         dispatch(loginData(res.data))
+        console.log("*************", loginData);
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+//to get admin profile
+export const GetAdminData = async (id) => {
+    console.log('prof idddd', id);
+    try {
+        const res = await axios.get(`http://localhost:7002/api/adminget/${id}`)
+        console.log('dataa getuser', res.data);
+        return res
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+//to update admin page
+export const UpdateAdminDatas = async (data, id) => {
+    try {
+        const response = await axios.put(`http://localhost:7002/api/adminupdate/${id}`, data, {
+            headers: {
+                firstname: id.firstname,
+                email: id.email,
+                image: id.image,
+            }
+        });
+        console.log('updateAdmin', response.data);
+        return response.data;
+    } catch (error) {
+        console.log('Error updating admin:', error);
+        throw error; // Rethrow the error to be handled by the calling function
+    }
+}
+
+
+
+//------------------------------USER---------------------------
+//to get ecom-users user-details
+export const userss = async (id) => {
+    console.log("data", id)
+    try {
+        const res = await axios.get(`http://localhost:7002/api/Ecomgetmethod`, id)
+        console.log("yo ansr", res.data);
+        return res
     } catch (error) {
         console.log(error);
     }
 }
 
 
-
+//to delete user 
+export const DeleteUserIdData = async (id) => {
+    console.log('user id', id);
+    try {
+        const res = await axios.delete(`http://localhost:7002/api/Ecomdelete/${id}`)
+        console.log('delete', res);
+    } catch (error) {
+        console.log(error);
+    }
+}
+//---------------------------------------PRODUCT----------------------------
 //***to add product
 export const products = async (pro) => {
     console.log("dattttaaaa", pro);
@@ -68,29 +124,6 @@ export const productView = async (id) => {
 //     }
 // }
 
-//to get ecom-users user-details
-export const userss = async (id) => {
-    console.log("data", id)
-    try {
-        const res = await axios.get(`http://localhost:7002/api/Ecomgetmethod`, id)
-        console.log("yo ansr", res.data);
-        return res
-    } catch (error) {
-        console.log(error);
-    }
-}
-
-
-//to delete user 
-export const DeleteUserIdData = async (id) => {
-    console.log('user id', id);
-    try {
-        const res = await axios.delete(`http://localhost:7002/api/Ecomdelete/${id}`)
-        console.log('delete', res);
-    } catch (error) {
-        console.log(error);
-    }
-}
 
 //****to delete product
 export const productDelete = async (id) => {
@@ -107,7 +140,7 @@ export const productDelete = async (id) => {
 export const updateProduct = async (updateval) => {
     console.log('update id?', updateval);
     try {
-        const res = await axios.put(`http://localhost:7002/api/updateproduct/${updateval.id}`,updateval)
+        const res = await axios.put(`http://localhost:7002/api/updateproduct/${updateval.id}`, updateval)
         //     category: updateval.category,
         //     title: updateval.title,
         //     item: updateval.item,
@@ -152,7 +185,7 @@ export const viewDetails = async (id) => {
 };
 
 
-//CART PAGE STARTS HERE
+//----------------------CART PAGE STARTS HERE-------------------------
 //to post cart
 export const CartAddTo = async (data) => {
     console.log('cartapidata', data);
