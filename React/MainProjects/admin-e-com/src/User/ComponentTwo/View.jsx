@@ -47,7 +47,7 @@ const View = () => {
   const cartHandler = async (e) => {
     e.preventDefault()
     setCartState(true)
-    return await CartAddTo(data)
+    return await CartAddTo({...data,itemQuantity:1})
   }
   console.log('lll', CartAddTo);
 

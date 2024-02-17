@@ -224,10 +224,10 @@ export const CartDeleteTo = async (id) => {
 //for quantity
 export const QuantityUpdate = async (data) => {
     console.log("data and id", data);
-    const quantity = data.quantityState
-    console.log(quantity);
+    const Quantity = data.quantityState
+    console.log(Quantity);
     try {
-        const res = await axios.put(`http://localhost:7002/api/updatequantity/${data._id}`, { quantity })
+        const res = await axios.put(`http://localhost:7002/api/updatequantity/${data.id}`, { Quantity })
         return res;
     }
     catch (error) {

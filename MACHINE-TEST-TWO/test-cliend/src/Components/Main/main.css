@@ -1,0 +1,10 @@
+.main{
+    display: flex;
+}
+.main-dash{
+    width: 230px;
+}
+.main-cntnt{
+    width: 400px;
+    margin-left: 10px;
+}

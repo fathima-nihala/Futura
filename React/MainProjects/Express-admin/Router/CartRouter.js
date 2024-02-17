@@ -42,20 +42,20 @@ router.delete('/deletecart/:id', async (req, res) => {
     }
 })
 
-//for quantity
-//  router.put('/updatequantity/:id',async(req,res)=>{
-//     console.log('quantity',req.params.id);
-//     try {
-//         const quantityData = await cartData.findByIdAndUpdate(
-//             req.params.id,
-//             {
-//                 $set:{itemQuantity:req.body.Quantity},
-//             },
-//             {new:true}
-//         );
-//         return res.status(200).json(quantityData)
-//     } catch (error) {
-//         res.status(500).json(error)
-//     }
-//  })
+// for quantity
+ router.put('/updatequantity/:id',async(req,res)=>{
+    console.log('quantity',req.params.id);
+    try {
+        const quantityData = await cartData.findByIdAndUpdate(
+            req.params.id,
+            {
+                $set:{itemQuantity:req.body.Quantity},
+            },
+            {new:true}
+        );
+        return res.status(200).json(quantityData)
+    } catch (error) {
+        res.status(500).json(error)
+    }
+ })
 module.exports = router

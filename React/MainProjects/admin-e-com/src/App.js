@@ -84,7 +84,7 @@ function App() {
           element: <UserHome />, // Redirect to homepage if no token
         },
         {
-          path: 'all',
+          path: '/all',
           element: <All />
         },
         {

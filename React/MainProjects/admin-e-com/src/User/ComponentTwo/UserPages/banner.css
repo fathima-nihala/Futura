@@ -29,6 +29,10 @@
 .ban-btn:hover{
    background-color: rgb(167, 167, 167);
 }
+.ban-btn-link{
+    text-decoration: none;
+    color: white;
+}
 
 .ban-right img{
     margin-left: 90px;
