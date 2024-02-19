@@ -17,6 +17,7 @@ const productRout = require('./Router/ProductRouter')
 const EcomRoute = require('./Router/userEcomRouter')
 const Cart = require('./Router/CartRouter')
 const OrderUser = require('./Router/OrderUserRouter')
+const BuyRoute = require('./Router/BuyRouter')
 
 mongoose.connect(process.env.project_key).then(() => {
     console.log('dataBase Connected');
@@ -30,6 +31,7 @@ app.use('/api', productRout)
 app.use('/api', EcomRoute)
 app.use('/api', Cart)
 app.use('/order', OrderUser)
+app.use('/buy',BuyRoute)
 // app.use('/api',EcomRoute)
 
 app.listen(7002, () => {

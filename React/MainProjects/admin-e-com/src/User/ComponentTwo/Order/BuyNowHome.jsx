@@ -22,20 +22,27 @@ const BuyNowHome = () => {
     const values = useSelector((state) => state.userLogin.userLoginInfo[0]);
     console.log('values', values);
     const loginId = values._id
+    console.log(loginId);
 
     useEffect(() => {
         const showHandler = async () => {
-            const res = await getUserOrder(loginId)
-            console.log(res)
-            if (res && res.data && res.data.length > 0) {
-                setContinueState(false)
-                setDatas([res[0]])
-            } else {
-                setContinueState(true)
+            try {
+                const res = await getUserOrder(loginId);
+                console.log("***", res);
+                if (res && res.data && res.data.length > 0) {
+                    setContinueState(false);
+                    setDatas([res.data[0]]);
+                } else {
+                    setContinueState(true);
+                }
+            } catch (error) {
+                console.error("Error fetching user order:", error);
+                // Handle the error here, e.g., set an error state
             }
-        }
-        showHandler()
-    }, [])
+        };
+        showHandler();
+    }, []);
+
 
     const handleGet = async () => {
         try {
@@ -78,13 +85,13 @@ const BuyNowHome = () => {
                         </div>
                     }
                     <div>
-                        {!continueState && datas.map((li) => (
+                        {!continueState && datas.map((va) => (
                             <>
                                 <div>
-                                    <p>{li.address}</p>
-                                    <p>{li.pincode}</p>
-                                    <p>{li.city}</p>
-                                    <p>{li.phone}</p>
+                                    <p>{va.address}</p>
+                                    <p>{va.pincode}</p>
+                                    <p>{va.city}</p>
+                                    <p>{va.phone}</p>
 
                                 </div>
                             </>
@@ -92,14 +99,13 @@ const BuyNowHome = () => {
                     </div>
                 </div>
                 {continueState &&
-                    // <div><Link to={`/buynowdata`}><button onClick={(e) => display(e,id)}>continue</button></Link>
-                    // </div>
-                    <Link to={`/buynowdata/${Ids}`}><button>continue</button></Link>
+
+                    <Link to={`/buynowdata/${Ids}`}><button onClick={(e) => display(id)}>continue</button></Link>
                 }
                 <button onClick={() => handleGet(id)}>change</button>
                 {!continueState &&
                     <div>
-                        <Link to={`/buynowdata/${Ids}`}><button>continue</button></Link>
+                        <Link to={`/buynowdata/${Ids}`} ><button>continue</button></Link>
                     </div>
                 }
             </div>

@@ -240,7 +240,7 @@ export const QuantityUpdate = async (data) => {
     }
 }
 
-// -----------------------Buy Now -------------------------
+// -----------------------Buy Now User Dataas -------------------------
 
 //post user data(orderd)
 export const postUserOrder = async (val) => {
@@ -259,11 +259,14 @@ export const getUserOrder = async (val) => {
     console.log('id-user-oreder', val);
     try {
         const res = await axios.get(`http://localhost:7002/order/getOrderUserData/${val}`)
-        console.log('######res', res.data);
+        console.log('######res', res);
         return res
     } catch (error) {
         console.log(error);
     }
 }
 
+//to update user data(ordered)
 
+
+//--------------------------Buynow Post Dataas------------------

@@ -121,7 +121,7 @@ function App() {
           element: <Cart />
         },
         {
-          path: '/buynowhome',
+          path: '/buynowhome/:id',
           element: <BuyNowHome />
         },
         {

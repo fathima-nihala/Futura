@@ -107,7 +107,7 @@ const View = () => {
                 <button className='view-btn1'>Go to cart</button>
               </Link>
             }
-            <Link to='/buynowhome'><button className='view-btn2'>Buy Now</button></Link>
+            <Link to={`/buynowhome/${data._id}`}><button className='view-btn2'>Buy Now</button></Link>
           </div>
           <p><span>Category: {data.category}</span></p>
           <p><span>Stock:</span>{data.stock}</p>

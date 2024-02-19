@@ -9,4 +9,4 @@ const OrderUserSchema = new mongoose.Schema({
 
 }, { timestamps: true })
 
-module.exports = new mongoose.model('orderuserdatas', OrderUserSchema)
+module.exports = new mongoose.model('orderUserdatas', OrderUserSchema)

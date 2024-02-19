@@ -1,11 +1,11 @@
 const router = require('express').Router()
-const orderuserdatas = require('../Models/OrderUserSchema')
+const orderUserdatas = require('../Models/OrderUserSchema')
 
 //post order user data
 router.post('/postOrderUserData', async (req, res) => {
     console.log('order-user-data', req.body);
     try {
-        const User = await orderuserdatas({
+        const User = await orderUserdatas({
             address: req.body.address,
             pincode: req.body.pincode,
             city: req.body.city,
@@ -26,11 +26,25 @@ router.post('/postOrderUserData', async (req, res) => {
 router.get('/getOrderUserData/:id', async (req, res) => {
     console.log('getuserid', req.params.id);
     try {
-        const orderedUser = await orderuserdatas.find({ profileid: req.params.id })
+        const orderedUser = await orderUserdatas.find({ profileid: req.params.id })
         console.log('orderedUser', orderedUser);
-        res.status(200).json(getuserorder)
+        res.status(200).json(orderedUser)
     } catch (error) {
         res.status(400).json(error)
     }
 })
+
+//to update/change user data (ordered)
+router.put('/updateOrderUerData/:id',async(req,res)=>{
+    console.log('5678',req.params.id);
+    try {
+        console.log('ioioio', req.params.id);
+        console.log('yoyoyo', req.body);
+        
+    } catch (error) {
+        
+    }
+});
+
+
 module.exports = router
