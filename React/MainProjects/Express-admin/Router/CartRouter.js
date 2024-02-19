@@ -9,7 +9,9 @@ router.post('/postcart', async (req, res) => {
             title: req.body.title,
             price: req.body.price,
             itemQuantity: req.body.itemQuantity,
-            image: req.body.image
+            image: req.body.image,
+            mrp:req.body.mrp
+
         })
 
         const SaveCart = await newCart.save()

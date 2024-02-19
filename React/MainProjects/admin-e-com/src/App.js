@@ -45,6 +45,10 @@ import UserLogin from './Login/UserLogin';
 import UserSignUp from './Login/UserSignUp';
 import Cart from './User/ComponentTwo/CartPage/Cart';
 import { UpdateAdminProf } from './Components/Content-items/UpdateAdminProf';
+import BuyNowHome from './User/ComponentTwo/Order/BuyNowHome';
+import { selectAdmin } from './Redux/userRedux';
+import { selectUser } from './Redux/UseModRedux';
+import BuyNowDatas from './User/ComponentTwo/Order/BuyNowDatas';
 
 function App() {
   // const data=useSelector((state)=>state.Login.LoginInfo[0])
@@ -72,13 +76,18 @@ function App() {
   }
 
 
-
+  // const details = useSelector(selectAdmin);
+  // const usersetails = useSelector(selectUser);
 
   const Router = createBrowserRouter([
     {
       path: '/',
+      //   element:  < UserMain /> 
+      // },
+      // {
+      //   path: '/',
       element: <UserMain />,
-      children: [
+      children: [ 
         {
           path: '/', // This represents the homepage route
           element: <UserHome />, // Redirect to homepage if no token
@@ -108,14 +117,22 @@ function App() {
           element: <View />
         },
         {
-          path:'/addtocart',
-          element:<Cart/>
+          path: '/addtocart',
+          element: <Cart />
         },
+        {
+          path: '/buynowhome',
+          element: <BuyNowHome />
+        },
+        {
+          path:'/buynowdata/:id',
+          element:<BuyNowDatas/>
+        }
       ]
     },
     {
-      path:'/adminupdate',
-      element:<UpdateAdminProf/>
+      path: '/adminupdate',
+      element: <UpdateAdminProf />
     },
 
     {

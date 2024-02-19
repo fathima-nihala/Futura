@@ -36,7 +36,7 @@ export const LoginDatass = async (data, dispatch) => {
 export const GetAdminData = async (id) => {
     console.log('prof idddd', id);
     try {
-        const res = await axios.get(`http://localhost:7002/api/adminget/${id}`)
+        const res = await axios.get(`http://localhost:7002/api/getadmindetails/${id}`)
         console.log('dataa getuser', res.data);
         return res
     } catch (error) {
@@ -45,15 +45,18 @@ export const GetAdminData = async (id) => {
 }
 
 //to update admin page
-export const UpdateAdminDatas = async (data, id) => {
+export const UpdateAdminDatas = async (data) => {
+    console.log("datttaa",data);
+    const datas=data.data
+    const id =data.id
     try {
-        const response = await axios.put(`http://localhost:7002/api/adminupdate/${id}`, data, {
-            headers: {
-                firstname: id.firstname,
-                email: id.email,
-                image: id.image,
-            }
-        });
+        const response = await axios.put(`http://localhost:7002/api/adminupdate/${id}`, datas
+            // headers: {
+            //     firstname: id.firstname,
+            //     email: id.email,
+            //     image: id.image,
+            // }
+        );
         console.log('updateAdmin', response.data);
         return response.data;
     } catch (error) {
@@ -88,6 +91,8 @@ export const DeleteUserIdData = async (id) => {
         console.log(error);
     }
 }
+
+
 //---------------------------------------PRODUCT----------------------------
 //***to add product
 export const products = async (pro) => {
@@ -140,7 +145,7 @@ export const productDelete = async (id) => {
 export const updateProduct = async (updateval) => {
     console.log('update id?', updateval);
     try {
-        const res = await axios.put(`http://localhost:7002/api/updateproduct/${updateval.id}`, updateval)
+        const res = await axios.put(`http://localhost:7002/api/updateproduct?id=${updateval.id}`, updateval.formdata)
         //     category: updateval.category,
         //     title: updateval.title,
         //     item: updateval.item,
@@ -233,4 +238,32 @@ export const QuantityUpdate = async (data) => {
     catch (error) {
         console.log(error);
     }
-}  
+}
+
+// -----------------------Buy Now -------------------------
+
+//post user data(orderd)
+export const postUserOrder = async (val) => {
+    console.log('id-post-order', val);
+    try {
+        const res = await axios.post('http://localhost:7002/order/postOrderUserData', val)
+        console.log('id-user-post', res.data);
+        return { orderData: res.data }
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+//get user data(ordered)
+export const getUserOrder = async (val) => {
+    console.log('id-user-oreder', val);
+    try {
+        const res = await axios.get(`http://localhost:7002/order/getOrderUserData/${val}`)
+        console.log('######res', res.data);
+        return res
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+

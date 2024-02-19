@@ -7,46 +7,22 @@ import { Link } from 'react-router-dom';
 
 const Profile = (props) => {
   const item = useSelector((state) => state.Login.LoginInfo[0]);
-  console.log('item', item);
+  console.log(item._id);
 
-  // const handleUpdateAdmin = async (datas) => {
-  //   console.log('upadmin',datas);
-  //   UpdateAdminDatas(datas);
-  // }
-
-  //item.email || 'email'
-
-
-  const [firstname, setfirstname] = useState(item.firstname || 'firstname');
-  const [email, setemail] = useState(item.email || 'email');
+  const [firstname, setfirstname] = useState('');
+  const [email, setemail] = useState('');
   const [image, setImage] = useState({})
 
-
-  // let formdata = new FormData();
-  // formdata.append('firstname', firstname);
-  // formdata.append('email', email);
-  // formdata.append('image', image);
-
-  // console.log('Updete-admin-formdata', formdata);
-
-  if (item) {
-    var updId = item && item._id
-    console.log('iddD', updId);
-  }
-
   useEffect(() => {
-    async function AdminProfileDisplay() {
-      if (item && item.firstname && item.email) {
-        const dataGet = await GetAdminData(updId);
-        if (dataGet && dataGet.firstname && dataGet.email) {
-          setfirstname(dataGet.firstname);
-          setemail(dataGet.email);
-          setImage(dataGet.image || {});
-        }
-      }
+    const showHandler = async () => {
+      const res = await GetAdminData(item._id)
+      console.log(res.data);
+      setfirstname(res.data.firstname)
+      setemail(res.data.email)
+      setImage(res.data.image)
     }
-    AdminProfileDisplay();
-  }, [item]);
+    showHandler()
+  }, [])
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -54,10 +30,14 @@ const Profile = (props) => {
     formData.append('firstname', firstname);
     formData.append('email', email);
     formData.append('image', image);
-    if (item && item._id && item.firstname && item.email) {
-      const updatooi = await UpdateAdminDatas(formData, item._id);
-      console.log('updatooi', updatooi);
-    }
+    console.log(formData);
+
+    const data = { firstname, email }
+    const id = item._id
+    const updatooi = await UpdateAdminDatas({ data, id });
+    console.log('updatooi', updatooi);
+
+
   }
 
   const [isEditing, setIsEditing] = useState(false);
@@ -67,26 +47,23 @@ const Profile = (props) => {
   };
 
 
+
+
   return (
     <div>
       <Modal hideHandler={props.orderHideHandler}>
-        {/* <div className='ad-im'>
-          {item && <img src={`./Profile/${item.image}`} height={100} width={100} alt="Profile" />}
-          <h3 className='pro-name'>{item.firstname}</h3>
-          <h5 className='pro-mail'>{item.email}</h5>
-          <button className='prof-btn'><Link to='/adminupdate' className='upadmin-link'>update</Link></button>
-        </div> */}
-
         <div>
           {isEditing ? (
             <div>
-              <form encType='multipart/form-data' onSubmit={handleSubmit}>
-                <div>
-                  <input type="text" value={firstname} onChange={(e) => setfirstname(e.target.value)} />
+              <form encType='multipart/form-data' onSubmit={(e) => handleSubmit(e)}>
+                <h3 className='prof-updt-p'> Update Profile</h3>
+                <div className='prof-inp'>
+                  <input type="text" value={firstname} placeholder='Name' onChange={(e) => setfirstname(e.target.value)} />
                 </div>
-                <div>
-                  <input type="email" value={email} placeholder='email' onChange={(e) => setemail(e.target.value)} />                </div>
-                <div>
+                <div className='prof-inp'>
+                  <input type="email" value={email} placeholder='email' onChange={(e) => setemail(e.target.value)} />
+                </div>
+                <div className='prof-img'>
                   <input type="file" name="image" accept="image/*" onChange={(e) => setImage(e.target.files[0])} />
                 </div>
                 <div>
@@ -96,10 +73,9 @@ const Profile = (props) => {
             </div>
           ) : (
             <div className='ad-im'>
-              {item && <img src={`./Profile/${item.image}`} height={100} width={100} alt="Profile" />}
-              {item && item.firstname && <h3 className='pro-name'>{item.firstname}</h3>}
-              {item && item.email && <h5 className='pro-mail'>{item.email}</h5>}
-              {/* {item.email && <h5 className='pro-mail'>{email}</h5>} */}
+              <img src={`./Profile/${image}`} height={100} width={100} alt="Profile" />
+              <h3 className='pro-name'>{firstname}</h3>
+              <h5 className='pro-mail'>{email}</h5>
             </div>
           )}
           {!isEditing && (

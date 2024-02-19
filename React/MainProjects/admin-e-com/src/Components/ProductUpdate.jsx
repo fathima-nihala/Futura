@@ -45,17 +45,17 @@ const ProductUpdate = (props) => {
  
 
 
-
+console.log();
 
 
 
 
   // to update
-  const productUpdate = async (e) => {
+  const productUpdateto = async (e) => {
     e.preventDefault()
 // console.log('before API call', id, category, title, description, price, image, stock, mrp );
-    const updatevalue = await updateProduct(formdata);
-    // console.log('updatevalue', updatevalue);
+    const updatevalue = await updateProduct({formdata,id});
+    console.log('updatevalue', updatevalue);
 
   }
 
@@ -66,7 +66,7 @@ const ProductUpdate = (props) => {
       <Modal hideHandler={props.orderHideHandler}>
         {/* <Link to='/manage' className='previous'><CiCircleRemove className='prev-icon' /></Link> */}
         <h2 className='update-hd'>Update</h2>
-        <form encType='multipart/form-data' onSubmit={productUpdate}>
+        <form encType='multipart/form-data' onSubmit={productUpdateto}>
           <div className="form-group">
             <label className='up-label'>Catagory:</label>
             <input type="text" value={category} onChange={(e) => setCategory(e.target.value)} />

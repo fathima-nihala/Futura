@@ -70,28 +70,14 @@ router.post('/adminlogin', async (req, res) => {
     }
 })
 
-
-//admin get data
-// router.get('/adminget/:id', async (req, res) => {
-//     console.log('get@@@', req.body);
-//     // console.log("********",req);
-//     console.log('getid!!!', req.params.id);
-//     try {
-//         const GetProfile = await User.findById(req.params.id)
-//         console.log('get-profile', GetProfile);
-//         res.status(200).json(GetProfile)
-//     } catch (error) {
-//         console.log(error);
-//     }
-// })
-
-router.get ('/getadmindetails/:id',verifyTokenn,verifyTokenAndAuthorization,async(req,res) => {
-    console.log('req in getadmin',req.body);
-    try{
+//admin get
+router.get('/getadmindetails/:id', async (req, res) => {
+    console.log('req in getadmin', req.params.id);
+    try {
         const getres = await User.findById(req.params.id)
-        console.log("ressvalue",getres);
+        console.log("ressvalue", getres);
         res.status(200).json(getres)
-    }catch(err){
+    } catch (err) {
         res.status(500).json(err)
     }
 })
@@ -107,7 +93,7 @@ router.put('/adminupdate/:id', async (req, res) => {
 
         // Assuming you're using Mongoose
         const updatedProfile = await User.findByIdAndUpdate(req.params.id, {
-            $set: req.body
+            $set: { firstname: req.body.firstname, email: req.body.email, image: req.body.image }
         }, { new: true });
 
         res.status(200).json(updatedProfile);

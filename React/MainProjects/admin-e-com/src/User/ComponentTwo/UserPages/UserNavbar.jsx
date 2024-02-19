@@ -9,10 +9,13 @@ import { Link } from 'react-router-dom'
 import UserLogin from '../../../Login/UserLogin';
 import { useSelector } from 'react-redux';
 import UserProfile from './UserProfile';
+import { productView } from '../../../API/ApiCall';
+// import CartItem from '../CartPage/CartItem';
 
 const UserNavbar = () => {
-  const itemaaa = useSelector((state) => state.Login.LoginInfo[0]);
+  const itemaaa = useSelector((state) => state.userLogin.userLoginInfo[0]);
 
+  //for scrolling & sticky navbar
   const [isStcky, setSticky] = useState(false);
 
   useEffect(() => {
@@ -50,6 +53,47 @@ const UserNavbar = () => {
     setProfOrder(true);
   };
 
+
+  //search
+  const [searchQuery, setSearchQuery] = useState('');
+  const [filteredData, setFilteredData] = useState([]);
+
+  useEffect(() => {
+    const getproduct = async (id) => {
+      console.log('getproduct', id);
+      try {
+        const res = await productView(id);
+        setSearchQuery(res.data);
+        console.log("kids", res.data);
+      } catch (error) {
+        console.error('Error fetching product data:', error);
+      }
+    }
+    getproduct()
+  }, [])
+
+  const handleSearch = (event) => {
+    const query = event.target.value;
+    setSearchQuery(query);
+    const filteredResults = filteredData.filter(item =>
+      item.name.toLowerCase().includes(query.toLowerCase())
+    );
+    setFilteredData(filteredResults);
+  };
+
+
+  //
+
+  const getTotalCartItems = (CartItem) => {
+    let totalItems = 0;
+    for (const item in CartItem) {
+      if (CartItem[item] > 0) {
+        totalItems += CartItem[item]
+      }
+    }
+    return totalItems
+  }
+
   return (
     <div>
       <div className={`usrnavbar ${isStcky ? 'sticky' : ""}`}>
@@ -62,30 +106,25 @@ const UserNavbar = () => {
             <li><a><Link to='/' style={{ color: ' rgb(230, 8, 156)', textDecoration: 'none' }}>Home</Link></a></li>
             <li><Link to='/all' className='nav-link'>All</Link></li>
             <li><Link to='/women' className='nav-link'>Women</Link></li>
-
-
-            {/* <li>
-              <details>
-                <summary className='sum'>Dress</summary>
-                <ul className="usrp-2">
-                  <li><Link to='/all' className='nav-link'>All</Link></li>
-                  <li><Link to='/kids' className='nav-link'>Kids</Link></li>
-                  <li><Link to='/men' className='nav-link'>Men</Link></li>
-                  <li><Link to='/women' className='nav-link'>Women</Link></li>
-                </ul>
-              </details>
-            </li> */}
             <li><Link to='/kids' className='nav-link'>Kids</Link></li>
             <li><Link to='/men' className='nav-link'>Men</Link></li>
 
           </ul>
         </div>
         <div className='usrnav-search'>
-          <input type="text" placeholder="Search.." name="search" />
+          <input type="text" placeholder="Search.." name="search" value={searchQuery} onChange={handleSearch} />
           <IoSearchOutline />
+          <ul>
+            {filteredData.map(item => (
+              <li key={item.id}><Link to={`/product/${item.id}`}>{item.category}</Link>
+              </li>
+            ))}
+          </ul>
         </div>
         <div className="usrnavbar-end">
-          <div className='usrnav-end-two'><Link to='/addtocart' className='nav-addto'><LiaShoppingBagSolid className='usernav-ico' /></Link></div>
+          <div className='usrnav-end-two'><Link to='/addtocart' className='nav-addto'><LiaShoppingBagSolid className='usernav-ico' /></Link>
+            <div className='nav-cart-count'>{getTotalCartItems()}</div>
+          </div>
 
           {/* <div class="dropdown-content">
             <a href="#">Profile</a>

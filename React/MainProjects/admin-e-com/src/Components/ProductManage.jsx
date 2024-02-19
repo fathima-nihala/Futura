@@ -52,7 +52,7 @@ const ProductManage = (props) => {
             <div className='tab-body'>{props.price}</div>
             <div className='tab-body'>{props.mrp}</div>
             <div className='tab-body'><button className='tab-body-update' onClick={() => handleProducts(props.id)}>Update</button></div>
-            <div className='tab-body-btn'><button className='tab-body-dlt'><FaRegTrashCan onClick={() => DeleteProduct(props._id)} /></button></div>
+            <div className='tab-body-btn'><button className='tab-body-dlt'><FaRegTrashCan onClick={() => DeleteProduct(props.id)} /></button></div>
             {order && <ProductUpdate id={props.id} title={props.title} price={props.price} description={props.description} type={props.type} mrp={props.mrp} stock={props.stock} category={props.category} image={props.image} orderHideHandler={hideHandler} />}
         </div>
     )

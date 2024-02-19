@@ -1,5 +1,6 @@
 import { configureStore, combineReducers } from "@reduxjs/toolkit";
 import usered from './userRedux'
+import useredtwo from './UseModRedux'
 import {
   persistStore,
   persistReducer,
@@ -16,9 +17,10 @@ const persistConfig = {
   key: 'loginAdminData',
   version: 1,
   storage,
+  // whitelist: ['userLogin'], //Only persist user data
 }
 
-const rootreducer = combineReducers({ Login: usered })
+const rootreducer = combineReducers({ Login: usered, userLogin: useredtwo })
 
 const persistedReducer = persistReducer(persistConfig, rootreducer)
 export const store = configureStore({

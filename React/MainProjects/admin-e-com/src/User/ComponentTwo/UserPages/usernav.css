@@ -195,3 +195,17 @@
 .usernav-btn:hover{
     background-color: rgb(167, 167, 167);
 }
+.nav-cart-count{
+    width: 17px;
+    height: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -24px;
+    margin-left: 20px;
+    border-radius: 11px;
+    font-size: 14px;
+    background: red;
+    color: white;
+
+}

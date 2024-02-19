@@ -42,3 +42,20 @@
 .fo-cntnt p:hover{
     border-bottom: 1px solid #0c0c0c;
 }
+.top-go{
+    border-radius: 50%;
+    background-color: rgb(230, 8, 156) ;
+    color: white;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    /* margin-left: 100px; */
+}
+.arrow-up{
+    margin-left: 5px;
+    width: 30px;
+    height: 40px;
+}
+.top-go:hover{
+    background-color: rgb(167, 167, 167);
+}

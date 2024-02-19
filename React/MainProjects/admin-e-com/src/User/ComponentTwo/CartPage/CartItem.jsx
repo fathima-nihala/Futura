@@ -43,24 +43,7 @@ const CartItem = (props) => {
         setQuantity(res.data.itemQuantity)
     }
 
-    // const [items, setItems] = useState([]);
-    // const [totalPrice, setTotalPrice] = useState(props.price * quantity);
 
-
-    // useEffect(() => {
-    //     setTotalPrice(props.price * quantity);
-    // }, [props.price, quantity]);
-
-
-    // const [items, setItems] = useState([]);
-    // const [totalAmount, setTotalAmount] = useState(0);
-
-    // const calculateTotalAmount = (cartItems) => {
-    //     const total = cartItems.reduce((acc, item) => {
-    //         return CartGetTo * props.price * quantity;
-    //     }, 0);
-    //     setTotalAmount(total);
-    // };
 
     return (
         <div>
@@ -74,10 +57,7 @@ const CartItem = (props) => {
                     <button onClick={decreaseQuantityHandler} className='add-btn'>-</button>
                     <p>₹{props.price * quantity}</p>
                     <button onClick={deleteCartHandler} className='rmv-btn'>Remove</button>
-                    {/* <h3>Total Amount: ₹{calculateTotalAmount}</h3> */}
-
                 </div>
-
             </div>
         </div>
     )

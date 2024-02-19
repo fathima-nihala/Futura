@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './Login.css'
 import { Link, useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
-import { LoginDatass } from '../API/ApiCall'
+// import { LoginDatass } from '../API/ApiCall'
 import { HiOutlineMail } from "react-icons/hi";
 import { MdOutlineLockOpen } from "react-icons/md";
 import { EcomLogin } from '../User/ComponentTwo/API/ApiCall'

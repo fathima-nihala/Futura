@@ -26,8 +26,6 @@ const View = () => {
         console.log(res);
         const productName = res.map((li) => li.title)
         console.log(productName);
-        // const title = data.map((li)=>li.title)
-        // console.log(title);
         const title = data.data.title
         console.log(title);
         const existingCartItem = productName.find((item) => item === data.data.title)
@@ -45,11 +43,35 @@ const View = () => {
 
 
   const cartHandler = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
     setCartState(true)
-    return await CartAddTo({...data,itemQuantity:1})
+    return await CartAddTo({ ...data, itemQuantity: 1 })
   }
   console.log('lll', CartAddTo);
+
+  //cart icon div
+  // const getDefaultCart = () => {
+  //   let cart = {};
+  //   for (let index = 0; index < data.length + 1; index++) {
+  //     cart[index] = 0;
+  //   }
+  //   return cart;
+  // };
+
+
+  // const [cartItems1, setCartItems] = useState(getDefaultCart());
+
+
+  // const addToCart = (itemId) => {
+  //   setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
+  // };
+
+  // const handleClick = () => {
+  //   // Function 1
+  //   cartHandler();
+  //   // Function 2
+  //   addToCart();
+  // };
 
   return (
     <div className='productdisplay'>
@@ -85,8 +107,7 @@ const View = () => {
                 <button className='view-btn1'>Go to cart</button>
               </Link>
             }
-
-            <button className='view-btn2'>Buy Now</button>
+            <Link to='/buynowhome'><button className='view-btn2'>Buy Now</button></Link>
           </div>
           <p><span>Category: {data.category}</span></p>
           <p><span>Stock:</span>{data.stock}</p>
