@@ -54,8 +54,9 @@ export const DeleteUserIdData = async (id) => {
 //update user data
 export const updateUserDatas = async (data) => {
     console.log("datttaa", data);
-    const datas = data.data
+    const datas = data
     const id = data.id
+    console.log("***", datas);
     try {
         const res = await axios.put(`http://localhost:7002/api/EcomUserUpadateProf/${id}`, datas);
         console.log('updateAdmin', res.data);
@@ -66,3 +67,19 @@ export const updateUserDatas = async (data) => {
         throw error;
     }
 }
+
+
+// export const updateUserDatas = async (value) => {
+//     console.log("valueeeee", value);
+//     try {
+//         const res = await axios.put(`http://localhost:7002/api/EcomUserUpadateProf/${value._id}`, {
+//             name: value.name,
+//             email: value.email,
+//             image: value.image
+//         })
+//         console.log("************", res);
+//         return res
+//     } catch (err) {
+//         console.log(err);
+//     }
+// }

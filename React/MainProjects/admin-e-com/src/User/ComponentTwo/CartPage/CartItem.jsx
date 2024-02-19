@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { CartDeleteTo, CartGetTo, QuantityUpdate } from '../../../API/ApiCall';
+import { MdClose } from "react-icons/md";
+
 
 const CartItem = (props) => {
 
@@ -18,6 +20,7 @@ const CartItem = (props) => {
         } catch (error) {
             console.log(error);
         }
+        alert("item removed successfully")
     }
 
     //add quantity
@@ -56,7 +59,8 @@ const CartItem = (props) => {
                     <button className="cartitems-quantity">{quantity}</button>
                     <button onClick={decreaseQuantityHandler} className='add-btn'>-</button>
                     <p>₹{props.price * quantity}</p>
-                    <button onClick={deleteCartHandler} className='rmv-btn'>Remove</button>
+                    <button className='cart-buy'>Buy Now</button>
+                    <p onClick={deleteCartHandler} className='rmv-btn'><MdClose /></p>
                 </div>
             </div>
         </div>

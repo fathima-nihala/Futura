@@ -55,7 +55,7 @@ const SignUp = () => {
                   <input type="file" name="image" accept="image/*" onChange={(e) => setImage(e.target.files[0])} />
                 </div>
                 <div className='reg-btn'>
-                  <button >Create Account</button>
+                  <button>Create Account</button>
                 </div>
                 <div className='reg-para'>
                   <p className='end-para'>already have an account?<Link to='/login' className='end-link'>Signin Now</Link></p>

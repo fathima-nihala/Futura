@@ -107,17 +107,17 @@ router.get('/EcomUserGet/:id', async (req, res) => {
 
 //ecom user update(profile)
 router.put('/EcomUserUpadateProf/:id', async (req, res) => {
-    console.log('ghjnm', req);
+    // console.log('ghjnm', req);
     try {
         console.log('....#', req.params.id);
-        console.log('^^^', req.body);
+        console.log('^^^',req.body);
         const updateUseProf = await Ecom.findByIdAndUpdate(req.params.id, {
             $set: { firstname: req.body.firstname, email: req.body.email, image: req.body.image }
         }, { new: true })
         res.status(200).json(updateUseProf);
     } catch (error) {
-        console.error('Error updating profile:', err);
-        res.status(400).json({ message: err.message });
+        console.error('Error updating profile:', error);
+        res.status(400).json({ message: error.message });
     }
 })
 

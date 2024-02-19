@@ -10,7 +10,7 @@ import { removeUserData } from '../../../Redux/UseModRedux';
 const UserProfile = (props) => {
 
     const itemuser = useSelector((state) => state.userLogin.userLoginInfo[0]);
-    console.log(itemuser._id);
+    console.log(itemuser && itemuser._id);
 
     const [firstname, setfirstname] = useState('');
     const [email, setemail] = useState('');
@@ -29,7 +29,7 @@ const UserProfile = (props) => {
             }
         };
         DataHandler();
-    }, [itemuser._id]);
+    }, [itemuser]);
 
     //for logout
     const dispatch = useDispatch();
@@ -47,14 +47,16 @@ const UserProfile = (props) => {
         formData.append('image', image);
         console.log(formData);
 
-        try {
-            const datas = { firstname, email, image };
-            const id = itemuser._id;
-            const userUpdatooi = await updateUserDatas({ datas, id });
-            console.log('user update', userUpdatooi);
-        } catch (error) {
-            console.error("Error updating user data:", error.message);
-        }
+        // try {
+        const datas = { firstname, email };
+        const id = itemuser._id;
+        const userUpdatooi = await updateUserDatas({ firstname, email, id });
+        console.log('user update', userUpdatooi);
+        console.log("********", datas);
+        alert('Successfully Updated')
+        // } catch (error) {
+        // console.error("Error updating user data:", error.message);
+        // }
 
 
     }
