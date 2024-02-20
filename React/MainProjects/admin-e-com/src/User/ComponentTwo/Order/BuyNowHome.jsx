@@ -53,8 +53,8 @@ const BuyNowHome = () => {
         }
     }
 
-    const display = async (e) => {
-        e.preventDefault()
+    const display = async () => {
+        // e.preventDefault()
         try {
             const dataPost = await postUserOrder({ address, pincode, city, phone, loginId })
             console.log('dataPost', dataPost);
@@ -65,21 +65,21 @@ const BuyNowHome = () => {
 
     return (
         <div className='buynowhome'>
-            <h3>Your Address</h3>
-            <div>
-                <div>
+            <div className='buynowupdate-container-sub'>
+                <h3 className='change-dtls'>Your Address</h3>
+                <div className='change-dtls-cntnr'>
                     {continueState &&
                         <div>
-                            <div>
+                            <div className='change-inp'>
                                 <input type="text" value={address} placeholder='Address' onChange={(e) => setAddress(e.target.value)} />
                             </div>
-                            <div>
+                            <div className='change-inp'>
                                 <input type="text" value={pincode} placeholder='Pincode' onChange={(e) => setPincode(e.target.value)} />
                             </div>
-                            <div>
+                            <div className='change-inp'>
                                 <input type="text" value={city} placeholder='City' onChange={(e) => setCity(e.target.value)} />
                             </div>
-                            <div>
+                            <div className='change-inp'>
                                 <input type="text" value={phone} placeholder='Phone' onChange={(e) => setPhone(e.target.value)} />
                             </div>
                         </div>
@@ -88,10 +88,10 @@ const BuyNowHome = () => {
                         {!continueState && datas.map((va) => (
                             <>
                                 <div>
-                                    <p>{va.address}</p>
-                                    <p>{va.pincode}</p>
-                                    <p>{va.city}</p>
-                                    <p>{va.phone}</p>
+                                    <p className='buynow-p'>{va.address}</p>
+                                    <p className='buynow-p'>{va.pincode}</p>
+                                    <p className='buynow-p'>{va.city}</p>
+                                    <p className='buynow-p'>{va.phone}</p>
 
                                 </div>
                             </>
@@ -100,14 +100,16 @@ const BuyNowHome = () => {
                 </div>
                 {continueState &&
 
-                    <Link to={`/buynowdata/${Ids}`}><button onClick={(e) => display(id)}>continue</button></Link>
+                    <Link to={`/buynowdata/${Ids}`}><button onClick={() => display(id)} className='change-continue'>continue</button></Link>
                 }
-                <button onClick={() => handleGet(id)}>change</button>
-                {!continueState &&
-                    <div>
-                        <Link to={`/buynowdata/${Ids}`} ><button>continue</button></Link>
-                    </div>
-                }
+                <div className='uynowhome-btns'>
+                    <Link to='/buyupdate'><button onClick={() => handleGet(id)} className='buynowhome-btn2'>change</button></Link>
+                    {!continueState &&
+                        <div>
+                            <Link to={`/buynowdata/${Ids}`} ><button className='buynowhome-btn'>continue</button></Link>
+                        </div>
+                    }
+                </div>
             </div>
         </div>
     )

@@ -49,6 +49,7 @@ import BuyNowHome from './User/ComponentTwo/Order/BuyNowHome';
 import { selectAdmin } from './Redux/userRedux';
 import { selectUser } from './Redux/UseModRedux';
 import BuyNowDatas from './User/ComponentTwo/Order/BuyNowDatas';
+import BuyNowUpdate from './User/ComponentTwo/Order/BuyNowUpdate';
 
 function App() {
   // const data=useSelector((state)=>state.Login.LoginInfo[0])
@@ -127,6 +128,10 @@ function App() {
         {
           path:'/buynowdata/:id',
           element:<BuyNowDatas/>
+        },
+        {
+          path:"/buyupdate",
+          element:<BuyNowUpdate/>
         }
       ]
     },

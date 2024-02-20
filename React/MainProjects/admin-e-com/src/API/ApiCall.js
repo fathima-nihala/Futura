@@ -46,9 +46,9 @@ export const GetAdminData = async (id) => {
 
 //to update admin page
 export const UpdateAdminDatas = async (data) => {
-    console.log("datttaa",data);
-    const datas=data.data
-    const id =data.id
+    console.log("datttaa", data);
+    const datas = data.data
+    const id = data.id
     try {
         const response = await axios.put(`http://localhost:7002/api/adminupdate/${id}`, datas
             // headers: {
@@ -267,6 +267,60 @@ export const getUserOrder = async (val) => {
 }
 
 //to update user data(ordered)
+export const updateUserOrder = async (val) => {
+    console.log('vallll', val);
+    try {
+        const res = await axios.put(`http://localhost:7002/order/updateOrderUerData/${val._id}`, val
+            // {
+            //     address: val.address,
+            //     pincode: val.pincode,
+            //     city: val.city,
+            //     phone: val.phone
+            // }
+        )
+        console.log('upppppp', res);
+        return res.data;
+    } catch (error) {
+        console.log(error);
+    }
+}
 
 
 //--------------------------Buynow Post Dataas------------------
+//buynow data post 
+export const postBuyOrder = async (val) => {
+    console.log('vaalll', val);
+    try {
+        const res = await axios.post('http://localhost:7002/buy/buypost', val)
+        console.log('postbuyyy', res.data);
+        return res.data
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+//buynow data get
+export const getBuyOrder = async(data) => {
+    console.log('iiiiiiid',data);
+    try {
+        const res = await axios.get(`http://localhost:7002/buy/buyget/${data._id}`)
+        console.log('@res', res);
+        return res.data
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+export const getOrderDetails = async(id) =>{
+    console.log(id);
+
+    try{
+        const resp = await axios.get(`http://localhost:7002/buy/buyget/${id}`)
+        console.log(resp);
+    }catch(err)
+    {
+        console.log(err);
+  
+    }
+}
+

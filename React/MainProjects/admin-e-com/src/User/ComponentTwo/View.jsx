@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { CartAddTo, CartGetTo, fetchProductById, productView, viewDetails } from '../../API/ApiCall'
+import { CartAddTo, CartGetTo, fetchProductById, postBuyOrder, productView, viewDetails } from '../../API/ApiCall'
 import { Link, useParams } from 'react-router-dom'
 import axios from 'axios'
 import { IoMdStar } from "react-icons/io";
@@ -49,6 +49,10 @@ const View = () => {
   }
   console.log('lll', CartAddTo);
 
+  //buynow post
+  const postBuyHandler = async () => {
+    return await postBuyOrder(data)
+  }
   //cart icon div
   // const getDefaultCart = () => {
   //   let cart = {};
@@ -107,7 +111,7 @@ const View = () => {
                 <button className='view-btn1'>Go to cart</button>
               </Link>
             }
-            <Link to={`/buynowhome/${data._id}`}><button className='view-btn2'>Buy Now</button></Link>
+            <Link to={`/buynowhome/${data._id}`}><button className='view-btn2' onClick={postBuyHandler}>Buy Now</button></Link>
           </div>
           <p><span>Category: {data.category}</span></p>
           <p><span>Stock:</span>{data.stock}</p>

@@ -55,44 +55,44 @@ const UserNavbar = () => {
 
 
   //search
-  const [searchQuery, setSearchQuery] = useState('');
-  const [filteredData, setFilteredData] = useState([]);
+  // const [searchQuery, setSearchQuery] = useState('');
+  // const [filteredData, setFilteredData] = useState([]);
 
-  useEffect(() => {
-    const getproduct = async (id) => {
-      console.log('getproduct', id);
-      try {
-        const res = await productView(id);
-        setSearchQuery(res.data);
-        console.log("kids", res.data);
-      } catch (error) {
-        console.error('Error fetching product data:', error);
-      }
-    }
-    getproduct()
-  }, [])
+  // useEffect(() => {
+  //   const getproduct = async (id) => {
+  //     console.log('getproduct', id);
+  //     try {
+  //       const res = await productView(id);
+  //       setSearchQuery(res.data);
+  //       console.log("kids", res.data);
+  //     } catch (error) {
+  //       console.error('Error fetching product data:', error);
+  //     }
+  //   }
+  //   getproduct()
+  // }, [])
 
-  const handleSearch = (event) => {
-    const query = event.target.value;
-    setSearchQuery(query);
-    const filteredResults = filteredData.filter(item =>
-      item.name.toLowerCase().includes(query.toLowerCase())
-    );
-    setFilteredData(filteredResults);
-  };
+  // const handleSearch = (event) => {
+  //   const query = event.target.value;
+  //   setSearchQuery(query);
+  //   const filteredResults = filteredData.filter(item =>
+  //     item.name.toLowerCase().includes(query.toLowerCase())
+  //   );
+  //   setFilteredData(filteredResults);
+  // };
 
 
   //
 
-  const getTotalCartItems = (CartItem) => {
-    let totalItems = 0;
-    for (const item in CartItem) {
-      if (CartItem[item] > 0) {
-        totalItems += CartItem[item]
-      }
-    }
-    return totalItems
-  }
+  // const getTotalCartItems = (CartItem) => {
+  //   let totalItems = 0;
+  //   for (const item in CartItem) {
+  //     if (CartItem[item] > 0) {
+  //       totalItems += CartItem[item]
+  //     }
+  //   }
+  //   return totalItems
+  // }
 
   return (
     <div>
@@ -112,18 +112,18 @@ const UserNavbar = () => {
           </ul>
         </div>
         <div className='usrnav-search'>
-          <input type="text" placeholder="Search.." name="search" value={searchQuery} onChange={handleSearch} />
+          <input type="text" placeholder="Search.." name="search" />
           <IoSearchOutline />
-          <ul>
+          {/* <ul>
             {filteredData.map(item => (
               <li key={item.id}><Link to={`/product/${item.id}`}>{item.category}</Link>
               </li>
-            ))}
-          </ul>
+            ))} */}
+          {/* </ul> */}
         </div>
         <div className="usrnavbar-end">
           <div className='usrnav-end-two'><Link to='/addtocart' className='nav-addto'><LiaShoppingBagSolid className='usernav-ico' /></Link>
-            <div className='nav-cart-count'>{getTotalCartItems()}</div>
+            {/* <div className='nav-cart-count'>{getTotalCartItems()}</div> */}
           </div>
 
           {/* <div class="dropdown-content">
@@ -135,7 +135,7 @@ const UserNavbar = () => {
           {itemaaa ? <div className='usrnav-end-one'><img src={`./Profile/${itemaaa.image}`} onClick={ProfhandleOrderItem} className='usernav-ico2' /></div> : <button onClick={ModalHandler} className='usernav-btn'>login</button>}
 
           {/* <button onClick={ModalHandler}>login</button> */}
-
+          {/* value={searchQuery} onChange={handleSearch} */}
         </div>
       </div>
       {order && <UserLogin orderHideHandler={hideHandler} />}

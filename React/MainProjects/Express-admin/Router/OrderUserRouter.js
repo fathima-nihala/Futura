@@ -25,6 +25,7 @@ router.post('/postOrderUserData', async (req, res) => {
 //get user order data
 router.get('/getOrderUserData/:id', async (req, res) => {
     console.log('getuserid', req.params.id);
+    console.log('7777777777',req.body);
     try {
         const orderedUser = await orderUserdatas.find({ profileid: req.params.id })
         console.log('orderedUser', orderedUser);
@@ -35,14 +36,17 @@ router.get('/getOrderUserData/:id', async (req, res) => {
 })
 
 //to update/change user data (ordered)
-router.put('/updateOrderUerData/:id',async(req,res)=>{
-    console.log('5678',req.params.id);
+router.put('/updateOrderUerData/:id', async (req, res) => {
+    // console.log('5678',req.params.id);
     try {
         console.log('ioioio', req.params.id);
         console.log('yoyoyo', req.body);
-        
+        const updateOrdered = await orderUserdatas.findByIdAndUpdate(req.params.id, {
+            $set: { address: req.body.address, pincode: req.body.pincode, city: req.body.city, phone: req.body.phone }
+        },{new:true})
+console.log("****",updateOrdered);
     } catch (error) {
-        
+        res.status(400).json(error)
     }
 });
 
