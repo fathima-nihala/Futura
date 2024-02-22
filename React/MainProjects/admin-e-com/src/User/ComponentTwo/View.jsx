@@ -5,11 +5,15 @@ import axios from 'axios'
 import { IoMdStar } from "react-icons/io";
 import { IoStarHalf } from "react-icons/io5";
 import '../ComponentTwo/view.css'
+import { useSelector } from 'react-redux';
 
 const View = () => {
   // console.log(props, 'ertyu');
   const [data, setData] = useState([])
   const [cartState, setCartState] = useState(false)
+  const values = useSelector((state) => state.userLogin.userLoginInfo[0]);
+    const loginId = values._id
+    console.log(loginId);
 
   console.log(data);
   const dataId = useParams()
@@ -45,7 +49,7 @@ const View = () => {
   const cartHandler = async (e) => {
     e.preventDefault();
     setCartState(true)
-    return await CartAddTo({ ...data, itemQuantity: 1 })
+    return await CartAddTo({ ...data, itemQuantity: 1,orderId:loginId })
   }
   console.log('lll', CartAddTo);
 

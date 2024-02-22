@@ -67,3 +67,28 @@
     margin-top: 3px;
     margin-left: 10px;
 }
+
+
+@media only screen and (max-width: 1115px) {
+    .users {
+        width: 700px;
+        margin-left: 110px; /* Adjust width for smaller screens */
+    }  
+}
+@media only screen and (max-width: 1074px) {
+    .users {
+        width: 600px;
+        margin-left: 260px; /* Adjust width for smaller screens */
+    }  
+}
+@media only screen and (max-width: 842px) {
+    .users {
+        width: 500px;
+        margin-left: 320px; /* Adjust width for smaller screens */
+    }  
+}
+
+@media only screen and (max-width: 720px) {
+    .users {
+        visibility: hidden;    }  
+}

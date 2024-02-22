@@ -58,18 +58,8 @@ const ManageProducts = () => {
         </div>
 
         {product.map((data) => (
-          // <div key={data.id} className='manage-body-two'>
-          //   <div className='tab-body-img'>{data && <img src={`${process.env.PUBLIC_URL}/Images/${data.image}`}/>}</div>
-          //   <div className='tab-body'>{data.stock}</div>
-          //   <div className='tab-body'>{data.title}</div>
-          //   <div className='tab-body-des'>{data.description}</div>
-          //   <div className='tab-body'>{data.price}</div>
-          //   <div className='tab-body'>{data.mrp}</div>
-          //   <div className='tab-body'><button className='tab-body-update' onClick={() => handleProducts(data._id)} >Update</button></div>
-          //   <div className='tab-body-btn'><button className='tab-body-dlt'><FaRegTrashCan onClick={()=>DeleteProduct(data._id)}/></button></div>
-          // </div>
           <ProductManage id={data._id} image={data.image} stock={data.stock} category={data.category} title={data.title} description={data.description} price={data.price} mrp={data.mrp} />
-        ))}
+        )).reverse()}
       </div>
       {order && <ProductUpdate orderHideHandler={hideHandler} />}
     </div>

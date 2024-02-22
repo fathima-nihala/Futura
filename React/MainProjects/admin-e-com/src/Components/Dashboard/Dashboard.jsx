@@ -18,7 +18,7 @@ const Dashboard = () => {
 
                     <div className='dashboard-link'>
                         <p className='link-p'><IoIosHome />
-                            <Link to='/' className='dash-link' >Dashboard</Link></p>
+                            <Link to='/nn' className='dash-link' >Dashboard</Link></p>
                     </div>
 
 
@@ -37,7 +37,7 @@ const Dashboard = () => {
                     </div>
                     <div className='dashboard-link'>
                         <p className='link-p'><BiDollar />
-                            <Link className='dash-link'>Orders</Link></p>
+                            <Link className='dash-link' to='/order'>Orders</Link></p>
                     </div>
                 </div>
             </div>

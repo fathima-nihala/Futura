@@ -105,7 +105,7 @@ router.put(`/updateproduct`, upload.single('image'), async (req, res) => {
                 mrp: req.body.mrp,
                 stock: req.body.stock,
                 price: req.body.price,
-                image: req.body.image,
+                image: req.file.originalname,
             }
         })
         console.log("haiii", DBdata);
@@ -129,6 +129,7 @@ router.put(`/updateproduct`, upload.single('image'), async (req, res) => {
 // });
 
 
+//to get based on id for usermod
 router.get('/geItemss/:id', async (req, res) => {
     console.log('req', req.body);
     console.log('iddddddd', req.params.id);

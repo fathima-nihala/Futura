@@ -38,9 +38,9 @@ router.get('/buyget/:id', async (req, res) => {
 
 router.get('/buydataget/:id', async (req, res) => {
     console.log(req.params.id);
-    console.log(req.body);
+    console.log("+*+*+*+*", req.body);
     try {
-        const BuyGet = await buydata.findone(req.params.id)
+        const BuyGet = await buydata.findById(req.params.id)
         console.log('buygetdataaaa', BuyGet);
         res.status(200).json(BuyGet)
 

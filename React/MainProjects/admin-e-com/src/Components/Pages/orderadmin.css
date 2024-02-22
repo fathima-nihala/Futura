@@ -1,0 +1,18 @@
+.order-main{
+    padding-top: 70px;
+}
+.order-admin{
+    display: flex;
+    background-color: whitesmoke;
+    /* padding-top: 80px; */
+}
+.order-admin-right-block{
+    display: flex;
+}
+.order-span {
+    font-size: 17px;
+    color: rgb(147, 144, 144);
+}
+.order-admin-right-block P{
+    margin-left: 10px;
+}

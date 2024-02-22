@@ -50,6 +50,7 @@ import { selectAdmin } from './Redux/userRedux';
 import { selectUser } from './Redux/UseModRedux';
 import BuyNowDatas from './User/ComponentTwo/Order/BuyNowDatas';
 import BuyNowUpdate from './User/ComponentTwo/Order/BuyNowUpdate';
+import Order from './Components/Pages/Order';
 
 function App() {
   // const data=useSelector((state)=>state.Login.LoginInfo[0])
@@ -81,6 +82,7 @@ function App() {
   // const usersetails = useSelector(selectUser);
 
   const Router = createBrowserRouter([
+    //user
     {
       path: '/',
       //   element:  < UserMain /> 
@@ -139,13 +141,13 @@ function App() {
       path: '/adminupdate',
       element: <UpdateAdminProf />
     },
-
+    //admin
     {
       path: '/',
       element: token ? <Main /> : <Login />,
       children: [
         {
-          path: '/',
+          path: '/nn',
           element: <Home />
         },
         {
@@ -159,6 +161,10 @@ function App() {
         {
           path: '/manage',
           element: <ManageProducts />
+        },
+        {
+          path:'/order',
+          element:<Order/>
         }
       ]
     },

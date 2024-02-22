@@ -5,7 +5,8 @@ const CartSchema = new mongoose.Schema({
     price:{type:String},
     itemQuantity:{type:String},
     image:{type:String},
-    mrp:{type:String}
+    mrp:{type:String},
+    orderId:{type:String}
 },{timestamps:true})
 
 module.exports=new mongoose.model("cartData",CartSchema)

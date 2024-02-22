@@ -59,3 +59,10 @@
 .top-go:hover{
     background-color: rgb(167, 167, 167);
 }
+@media screen and (min-width: 768px) {
+    .footer{
+        justify-content: center;
+        flex-direction: row;
+    }
+
+}

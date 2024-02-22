@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { CartDeleteTo, CartGetTo, QuantityUpdate } from '../../../API/ApiCall';
-import { MdClose } from "react-icons/md";
+// import { MdClose } from "react-icons/md";<MdClose />
+import { Link } from 'react-router-dom';
 
 
 const CartItem = (props) => {
@@ -46,8 +47,7 @@ const CartItem = (props) => {
         setQuantity(res.data.itemQuantity)
     }
 
-
-
+   
     return (
         <div>
             <div>
@@ -59,8 +59,8 @@ const CartItem = (props) => {
                     <button className="cartitems-quantity">{quantity}</button>
                     <button onClick={decreaseQuantityHandler} className='add-btn'>-</button>
                     <p>₹{props.price * quantity}</p>
-                    <button className='cart-buy'>Buy Now</button>
-                    <p onClick={deleteCartHandler} className='rmv-btn'><MdClose /></p>
+                    {/* <button className='cart-buy'><Link to={`/buynowhome/${CartGetTo._id}`} className='cart-buy-btn'>Buy Now</Link></button> */}
+                    <button onClick={deleteCartHandler} className='cart-buy'>Remove</button>
                 </div>
             </div>
         </div>

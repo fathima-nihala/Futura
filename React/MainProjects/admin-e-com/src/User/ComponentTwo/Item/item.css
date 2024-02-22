@@ -1,5 +1,6 @@
 .item{
     width: 290px;
+    display: grid;
 }
 .item p{
     margin: 6px 0px;
@@ -37,3 +38,4 @@
 .dol{
     color:   rgb(230, 8, 156);
 }
+

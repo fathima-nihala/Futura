@@ -55,7 +55,7 @@
 }
 .tab-body-update{
     border: none;
-    background-color:  rgb(230, 8, 156);
+    background-color:green;
     color: white;
     border-radius: 5px;
     height: 20px;
@@ -75,6 +75,37 @@
     color: red;
 }
 
+@media only screen and (max-width: 1115px) {
+    .manage{
+        width: 800px;
+        margin-left: 80px;
+    }
+}
+@media only screen and (max-width: 1095px) {
+    .manage{
+        width: 800px;
+        margin-left: 90px;
+    }
+}
+
+@media only screen and (max-width: 1079px) {
+    .manage{
+        width: 700px;
+        margin-left: 140px;
+    }
+}
+@media only screen and (max-width: 1028px) {
+    .manage{
+        width: 700px;
+        margin-left: 170px;
+    }
+}
+
+@media only screen and (max-width: 999px) {
+    .manage{
+        visibility: hidden;
+    }
+}
 
   /* update */
 
@@ -107,3 +138,5 @@
 .up-btn:hover{
    background-color: rgb(167, 167, 167);
 }
+
+

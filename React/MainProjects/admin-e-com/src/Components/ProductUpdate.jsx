@@ -65,6 +65,7 @@ console.log();
     <div>
       <Modal hideHandler={props.orderHideHandler}>
         {/* <Link to='/manage' className='previous'><CiCircleRemove className='prev-icon' /></Link> */}
+        <div className='mod-up'>
         <h2 className='update-hd'>Update</h2>
         <form encType='multipart/form-data' onSubmit={productUpdateto}>
           <div className="form-group">
@@ -79,12 +80,7 @@ console.log();
             <label className='up-label'>Description:</label>
             <textarea name="description" value={description} onChange={(e) => setDescription(e.target.value)} />
           </div>
-          {/* <div className="form-group">
-            <label>Type:</label>
-            <textarea name="type" placeholder={props.type}  /> */}
-          {/* <label>Type:</label> */}
-          {/* <input type="text" name="type" value={props.type} onChange={(e) => setType(e.target.value)} /> */}
-          {/* </div> */}
+       
           <div className="form-group">
             <label className='up-label'>Price:</label>
             <input type="number" name="price" value={price} onChange={(e) => setPrice(e.target.value)} />
@@ -98,13 +94,12 @@ console.log();
             <input type="number" name="stock" value={stock} onChange={(e) => setStock(e.target.value)} className='up-inp' />
           </div>
           <div className="form-group">
-            {/* <label>Image:</label> */}
             <input type="file" filename='image' onChange={(e) => setImages(e.target.files[0])} />
           </div>
           <button type="submit" className='up-btn'>Update</button>
         </form>
 
-
+        </div>
 
 
       </Modal>

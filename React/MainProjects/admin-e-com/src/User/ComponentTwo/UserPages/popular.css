@@ -16,3 +16,17 @@
 .exclusive{
     margin-top: 70px;
 }
+
+@media screen and (max-width: 768px) {
+    .pop-h {
+        font-size: 24px; /* Decrease font size for smaller screens */
+    }
+    
+    .popular{
+        display: block;
+        grid-template-columns: 1fr 1fr; /* Display two items per row for smaller screens */
+        gap: 20px; 
+        padding: 0 10px; 
+    }
+      
+}

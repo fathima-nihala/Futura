@@ -33,3 +33,36 @@
 .new-cntnt{
     display: flex;
 }
+
+@media screen and (max-width: 768px) {
+    .new-btn {
+        margin-left: 80px;
+        margin-right: 10px;
+        /* width: 100px; */
+    }
+    .new-cln{
+        width: 40%;
+    }
+
+    .new-cln h3 {
+        font-size: 14px;
+        margin-left: 40px;
+    }
+    .new-cntnt{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        margin-left: 0;
+    }
+    .new-link{
+        width: 80px;
+    }
+
+}
+@media screen and (max-width: 373px) {
+    .new-cntnt{
+        display: block;
+        margin-left: 60px;
+    }
+
+}

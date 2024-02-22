@@ -204,10 +204,10 @@ export const CartAddTo = async (data) => {
 }
 
 //to get cart
-export const CartGetTo = async (data) => {
-    console.log('cartget', data);
+export const CartGetTo = async (id) => {
+    console.log('cartget', id);
     try {
-        const res = await axios.get('http://localhost:7002/api/getcart')
+        const res = await axios.get(`http://localhost:7002/api/getcart/${id}`)
         console.log('ggg', res.data);
         return res.data
     } catch (error) {
@@ -300,8 +300,8 @@ export const postBuyOrder = async (val) => {
 }
 
 //buynow data get
-export const getBuyOrder = async(data) => {
-    console.log('iiiiiiid',data);
+export const getBuyOrder = async (data) => {
+    console.log('iiiiiiid', data);
     try {
         const res = await axios.get(`http://localhost:7002/buy/buyget/${data._id}`)
         console.log('@res', res);
@@ -311,16 +311,49 @@ export const getBuyOrder = async(data) => {
     }
 }
 
-export const getOrderDetails = async(id) =>{
-    console.log(id);
+export const getOrderDetails = async (id) => {
+    console.log("3333333", id);
 
-    try{
-        const resp = await axios.get(`http://localhost:7002/buy/buyget/${id}`)
-        console.log(resp);
-    }catch(err)
-    {
+    try {
+        const resp = await axios.get(`http://localhost:7002/buy/buydataget/${id}`)
+        console.log("11111111111", resp.data);
+        return resp
+    } catch (err) {
         console.log(err);
-  
+
     }
 }
+// ------------------------post order confirm----------------------------
+
+export const postOrderDatas = async (data) => {
+    console.log("@@@@", data);
+    const userData = data.userData
+    console.log("usererrrrrr", userData);
+    const orderId = data.orderId
+    const item = data.items
+    const datas = { userData, item }
+    try {
+
+        const res = await axios.post('http://localhost:7002/confirm/postOrderConfirm', { datas, orderId });
+        return res.data; // Return response data
+    } catch (error) {
+        console.log(error);
+        throw error; // Throw error to handle it in the caller function
+    }
+}
+
+export const getOrderDatas = async () => {
+    // console.log('###', data);
+    try {
+        const res = await axios.get('http://localhost:7002/confirm/getOrderConfirm')
+        console.log('ffff',res);
+        return res.data
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+
+
+
 

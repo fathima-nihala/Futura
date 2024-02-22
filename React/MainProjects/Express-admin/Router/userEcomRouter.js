@@ -106,13 +106,19 @@ router.get('/EcomUserGet/:id', async (req, res) => {
 });
 
 //ecom user update(profile)
-router.put('/EcomUserUpadateProf/:id', async (req, res) => {
+router.put('/EcomUserUpadateProf', upload.single('image'), async (req,res) => {
     // console.log('ghjnm', req);
     try {
-        console.log('....#', req.params.id);
-        console.log('^^^',req.body);
-        const updateUseProf = await Ecom.findByIdAndUpdate(req.params.id, {
-            $set: { firstname: req.body.firstname, email: req.body.email, image: req.body.image }
+        console.log('....#', req.query.id);
+        console.log('^^^', req.body);
+        console.log("file", req.file);
+        console.log("files", req.files);
+
+        const updateUseProf = await Ecom.findByIdAndUpdate(req.query.id, {
+            $set: { firstname: req.body.firstname,
+                 email: req.body.email,
+                  image:req.file.originalname
+                 }
         }, { new: true })
         res.status(200).json(updateUseProf);
     } catch (error) {

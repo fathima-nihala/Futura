@@ -5,7 +5,7 @@ import { BsPerson } from "react-icons/bs";
 import { LiaShoppingBagSolid } from "react-icons/lia";
 import { useState } from 'react';
 import { useEffect } from 'react';
-import { Link } from 'react-router-dom'
+import { Form, Link } from 'react-router-dom'
 import UserLogin from '../../../Login/UserLogin';
 import { useSelector } from 'react-redux';
 import UserProfile from './UserProfile';
@@ -55,8 +55,50 @@ const UserNavbar = () => {
 
 
   //search
+
+  const [search, setSearch] = useState('')
+  console.log(search);
   // const [searchQuery, setSearchQuery] = useState('');
-  // const [filteredData, setFilteredData] = useState([]);
+  // const [selectedFilter, setSelectedFilter] = useState('');
+  // const [isSearchBarFocused, setIsSearchBarFocused] = useState(false);
+
+
+  // const handleSelectChange = (e) => {
+  //   setSelectedFilter(e.target.value);
+  // };
+
+  // ###
+
+
+  // const [searchQuery, setSearchQuery] = useState('');
+  // const [selectedFilter, setSelectedFilter] = useState('');
+  // const [isSearchBarFocused, setIsSearchBarFocused] = useState(false);
+
+  // const filterOptions = ['', 'women', 'men', 'kids']; // Add more filter options as needed
+
+  // const handleSearchInputChange = (e) => {
+  //   setSearchQuery(e.target.value);
+  // };
+
+  // const handleSelectChange = (e) => {
+  //   setSelectedFilter(e.target.value);
+  // };
+
+  // const handleSearchBarFocus = () => {
+  //   setIsSearchBarFocused(true);
+  // };
+
+  // const handleSearchBarBlur = () => {
+  //   setIsSearchBarFocused(false);
+  // };
+
+  // const getPlaceholderText = () => {
+  //   if (!searchQuery && isSearchBarFocused) {
+  //     return `Search ${selectedFilter ? selectedFilter : '...'}`;
+  //   }
+  //   return '';
+  // };
+
 
   // useEffect(() => {
   //   const getproduct = async (id) => {
@@ -112,8 +154,57 @@ const UserNavbar = () => {
           </ul>
         </div>
         <div className='usrnav-search'>
-          <input type="text" placeholder="Search.." name="search" />
-          <IoSearchOutline />
+          <Form>
+            <div className='nav_inp'>
+              <input type='text' placeholder='Search Here' onChange={(e) => setSearch(e.target.value)} />
+              <IoSearchOutline />
+
+            </div>
+          </Form>
+          {/* <Link to='/all'>
+            <input type="text" placeholder="Search.." name="search" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
+            <IoSearchOutline />
+            <select
+              value={selectedFilter}
+              onChange={(e) => setSelectedFilter(e.target.value)}
+            >
+              <option value="">All</option>
+              <option value="women">Women</option>
+              <option value="men">Men</option>
+              <option value="kids">Kids</option>
+            </select>
+
+          </Link> */}
+          {/* #### */}
+
+          {/* <Link to='/all'>
+            <input
+              type="text"
+              placeholder={getPlaceholderText()}
+              name="search"
+              value={searchQuery}
+              onChange={handleSearchInputChange}
+              onFocus={handleSearchBarFocus}
+              onBlur={handleSearchBarBlur}
+            />
+            <IoSearchOutline />
+            {isSearchBarFocused && (
+              <div className="filter-options">
+                <select
+                  className='sel-nav'
+                  value={selectedFilter}
+                  onChange={handleSelectChange}
+                >
+                  <option value="">All</option>
+                  <option value="women">Women</option>
+                  <option value="men">Men</option>
+                  <option value="kids">Kids</option>
+                </select>
+              </div>
+            )}
+          </Link> */}
+
+
           {/* <ul>
             {filteredData.map(item => (
               <li key={item.id}><Link to={`/product/${item.id}`}>{item.category}</Link>

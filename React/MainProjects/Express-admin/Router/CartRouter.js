@@ -10,7 +10,8 @@ router.post('/postcart', async (req, res) => {
             price: req.body.price,
             itemQuantity: req.body.itemQuantity,
             image: req.body.image,
-            mrp:req.body.mrp
+            mrp:req.body.mrp,
+            orderId:req.body.orderId
 
         })
 
@@ -22,10 +23,12 @@ router.post('/postcart', async (req, res) => {
 })
 
 //to get cart
-router.get('/getcart', async (req, res) => {
+router.get('/getcart/:id', async (req, res) => {
+    console.log("haiii");
     console.log('cartget', req.body);
+    console.log("idd",req.params.id);
     try {
-        const CartGetData = await cartData.find()
+        const CartGetData = await cartData.find({orderId:req.params.id})
         console.log('getCartData', CartGetData);
         res.status(200).json(CartGetData)
     } catch (error) {

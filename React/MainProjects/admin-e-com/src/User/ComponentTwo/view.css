@@ -112,3 +112,37 @@
 .productdisplay-right-catagory span{
     font-weight: 600;
 }
+
+
+
+
+@media only screen and (max-width: 768px) {
+    .productdisplay {
+        flex-direction: column;
+    }
+    
+    .productdisplay-left,
+    .productdisplay-right {
+        width: 100%;
+        margin: 0;
+    }
+    
+    .productdisplay-right {
+        margin-top: 20px;
+    }
+    
+    .productdisplay-main-img {
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .productdisplay-img-list img {
+        height: 100px;
+        width: 100px;
+    }
+    
+    .productdisplay-right-prices {
+        font-size: 18px;
+    }
+}

@@ -52,14 +52,10 @@ export const DeleteUserIdData = async (id) => {
 }
 
 //update user data
-export const updateUserDatas = async (data) => {
-    console.log("datttaa", data);
-    const datas = data
-    const id = data.id
-    console.log("***", datas);
-    try {
-        const res = await axios.put(`http://localhost:7002/api/EcomUserUpadateProf/${id}`, datas);
-        console.log('updateAdmin', res.data);
+export const updateUserDatas = async (data,id) => {
+   try {
+        const res = await axios.put(`http://localhost:7002/api/EcomUserUpadateProf?id=${id}`,data);
+    console.log('updateAdmin', res.data);
         return res.data;
     }
     catch (error) {

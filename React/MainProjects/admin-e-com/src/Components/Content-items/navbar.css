@@ -63,3 +63,20 @@
     border-radius: 5px;
 
  }  
+
+ @media only screen and (max-width: 768px) {
+    .nav-nav {
+        margin-left: 0; /* Adjusted margin for smaller screens */
+    }
+
+    .nav-ico {
+        margin-left: 0; /* Adjusted margin for smaller screens */
+    }
+}
+@media only screen and (max-width: 591px) {
+   
+
+    .nav-left{
+       visibility: hidden;
+    }
+}

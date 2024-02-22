@@ -30,7 +30,7 @@ const Popular = () => {
       <h2 className='pop-h'>popular for women</h2>
       <div className='kids-cntnt'>
         {Popular.map((data) => (
-          <Link to={`/view/${data._id}`} className='proflink'><div>
+          <Link to={`/view/${data._id}`} className='proflink'><div className='nn'>
             <Item
               key={data._id}
               image={`${process.env.PUBLIC_URL}/Images/${data.image}`}
@@ -38,7 +38,7 @@ const Popular = () => {
               description={data.description}
               mrp={data.mrp}
               price={data.price}
-            />
+           />
           </div></Link>
 
         ))}

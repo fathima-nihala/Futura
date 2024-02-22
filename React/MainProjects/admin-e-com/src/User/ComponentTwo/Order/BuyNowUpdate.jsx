@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux';
 import { getUserOrder, updateUserOrder } from '../../../API/ApiCall';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './order.css'
 const BuyNowUpdate = () => {
 
@@ -37,12 +37,17 @@ const BuyNowUpdate = () => {
         displayDetails()
     }, [loginId])
 
+    // const navigate = useNavigate()
+
+    
+
     const updateUserHandle = async () => {
         try {
             const dataas = await updateUserOrder({ _id: productId, address, pincode, city, phone, loginId })
             console.log('..-..', dataas);
             console.log('pincode', pincode);
             alert('Successfully Updated!')
+
         } catch (error) {
             console.log(error);
         }

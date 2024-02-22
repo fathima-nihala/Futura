@@ -30,11 +30,12 @@ const Profile = (props) => {
     formData.append('firstname', firstname);
     formData.append('email', email);
     formData.append('image', image);
-    console.log(formData);
+    console.log('787878', formData);
+
 
     const data = { firstname, email }
     const id = item._id
-    const updatooi = await UpdateAdminDatas({ data, id });
+    const updatooi = await UpdateAdminDatas({ data, id });//{ data, id }
     console.log('updatooi', updatooi);
 
 

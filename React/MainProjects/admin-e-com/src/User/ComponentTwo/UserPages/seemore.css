@@ -9,3 +9,20 @@
     text-decoration: none;
     color: black;
 }
+
+
+@media screen and (max-width: 768px) {
+    .c-more {
+        grid-template-columns: 1fr 1fr; /* Adjust grid columns for smaller screens */
+        margin-left: 0; /* Remove left margin for better alignment */
+        padding: 20px; /* Add padding for better spacing */
+    }
+}
+
+@media screen and (max-width: 373px) {
+    .c-more{
+        display: block;
+        margin-left: 40px;
+    }
+
+}
