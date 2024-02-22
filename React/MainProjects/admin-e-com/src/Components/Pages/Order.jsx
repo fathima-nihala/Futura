@@ -8,9 +8,9 @@ const OrderList = (props) => {
   const item = products.map((li) => li.item)
   const user = products.map((li) => li.userData)
   return (
-    <div>
+    <div className='order-main'>
       {item.map((li) => (
-        <div className='order-main'>
+        <div className=''>
           <div className='order-admin'>
             <div className='order-admin-left'>
               <img src={`/Images/${li.image}`} alt="" className='cartmapimg' />
