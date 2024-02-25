@@ -84,24 +84,26 @@ router.get('/getadmindetails/:id', async (req, res) => {
 
 
 //admin update
-router.put('/adminupdate/:id', async (req, res) => {
+router.put('/adminupdate', upload.single('image'), async (req, res) => {
     try {
-        console.log('%%%%', req.params.id);
-        console.log('(())', req.body);
+        console.log('baby#', req.query.id);
+        console.log('i dont', req.body);
         console.log("file", req.file);
         console.log("files", req.files);
-
-        // Assuming you're using Mongoose
+        const name = req.body.firstname
+        const email = req.body.email
+        const images = req.file.originalname
+        console.log('*********************', images);
         const updatedProfile = await User.findByIdAndUpdate(req.params.id, {
-            $set: { firstname: req.body.firstname, email: req.body.email, image: req.body.image }
-        }, { new: true });
-
+            $set: { image: images, firstname: name, email: email, }
+        }, { new: true })
+        console.log('Updated admin profile:', updatedProfile);
         res.status(200).json(updatedProfile);
     } catch (err) {
-        console.error('Error updating profile:', err);
+        console.error('Error updating admin profile:', err);
         res.status(400).json({ message: err.message });
     }
-});
+})
 
 
 

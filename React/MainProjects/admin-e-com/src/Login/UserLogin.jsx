@@ -43,16 +43,16 @@ const UserLogin = (props) => {
                             <input type="password" placeholder="password" value={password} onChange={(e) => setpassword(e.target.value)} />
                         </div>
                         <div className='log-frgt'>
-                            <p>Forget Password?</p>
+                            <Link className='frgt' to='/forget'>Forget Password?</Link>
                         </div>
 
                         <div className='log-btn'>
                             <button className='end' onClick={displayone}>Sign In</button>
                         </div>
                         <div className='log-para'>
-                            <p className='end-para'>don't have an account?<Link to='/usereg' className='end-link'>Signup Now</Link></p>
+                            <p className='end-para'>don't have an account?<Link to='/usereg' className='frgt'>Signup Now</Link></p>
                         </div>
-                        <p className='end-para'>Are you a admin? <Link to='/login' className='end-link'>Login Now</Link></p>
+                        <p className='end-para'>Are you a admin? <Link to='/login' className='frgt'>Login Now</Link></p>
 
                     </div>
                 </div>

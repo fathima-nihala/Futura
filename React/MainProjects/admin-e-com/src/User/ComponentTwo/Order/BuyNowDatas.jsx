@@ -74,13 +74,14 @@ const BuyNowDatas = () => {
   const functionHandler = async () => {
     const handleOrderItem = () => {
       setMod(true);
-      // setTimeout(() => {
-      //   navigate('/');
-      // }, 2000);
+      setTimeout(() => {
+        navigate('/');
+      }, 2000);
     };
     handleOrderItem();
     console.log("nooooooooo",datas[0]);
     const userData= datas[0]
+    console.log("userdattatat",userData);
 const items = state === true ? item :cartItems
 const res = await postOrderDatas({ items, orderId: loginId,userData });
 console.log(res);

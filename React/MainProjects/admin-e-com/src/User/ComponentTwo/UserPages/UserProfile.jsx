@@ -29,7 +29,7 @@ const UserProfile = (props) => {
             }
         };
         DataHandler();
-    }, [itemuser]);
+    }, []);
 
     //for logout
     const dispatch = useDispatch();
@@ -45,17 +45,17 @@ const UserProfile = (props) => {
         formData.append('firstname', firstname);
         formData.append('email', email);
         formData.append('image', image);
-        console.log('uuuu',formData);
+        console.log('uuuu', formData);
 
         try {
-        const datas = { firstname, email, image };
-        const id = itemuser._id;
-        const userUpdatooi = await updateUserDatas(formData,id); // firstname, email, 
-        console.log('user update', userUpdatooi);
-        console.log("********", datas);
-        alert('Successfully Updated')
+            const datas = { firstname, email, image };
+            const id = itemuser._id;
+            const userUpdatooi = await updateUserDatas(formData, id); // firstname, email, 
+            console.log('user update', userUpdatooi);
+            console.log("********", datas);
+            alert('Successfully Updated')
         } catch (error) {
-        console.error("Error updating user data:", error.message);
+            console.error("Error updating user data:", error.message);
         }
 
 
@@ -85,7 +85,7 @@ const UserProfile = (props) => {
                                         <input type="email" value={email} placeholder='email' onChange={(e) => setemail(e.target.value)} />
                                     </div>
                                     <div className='prof-img'>
-                                        <input type="file" name="image"  onChange={(e) => setImage(e.target.files[0])} />
+                                        <input type="file" name="image" onChange={(e) => setImage(e.target.files[0])} />
                                     </div>
                                     <div>
                                         <button className='prof-btn'>Update</button>

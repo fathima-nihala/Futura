@@ -92,3 +92,38 @@
     color: black;
     cursor: pointer;
   }
+
+  /* ********************FORGET PSSWORD******** */
+  .reg-body-cntnt-forg{
+    padding: 6px;
+    margin-top: 10px;
+    height: 30px;
+    width: 250px;
+    border-radius: 5px;
+    border: 1px solid rgb(236, 234, 234);
+  }
+  .reg-body-cntnt-forg input{
+    border: none;
+    margin-left: 3px;
+    outline: none;
+  }
+  .reg-btn-forg{
+    border-radius: 5px;
+    margin-top: 10px;
+    height: 39px;
+    width: 260px;
+    border: 1px solid rgb(236, 234, 234);
+    background-color:  rgb(230, 8, 156);
+    cursor: pointer;
+  }
+  .reg-btn-forg button{
+    border: none;
+    background: none;
+    margin-left: 70px;
+    margin-top: 8px;
+    color: white;
+  } 
+  .reg-btn-forg:hover{
+  background-color: rgb(129, 127, 127);
+
+  }

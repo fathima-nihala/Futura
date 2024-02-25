@@ -1,28 +1,34 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import Modal from '../Modal/Modal';
-import './profile.css'
+import './profile.css';
 import { GetAdminData, UpdateAdminDatas } from '../../API/ApiCall';
-import { Link } from 'react-router-dom';
 
 const Profile = (props) => {
   const item = useSelector((state) => state.Login.LoginInfo[0]);
-  console.log(item._id);
 
   const [firstname, setfirstname] = useState('');
   const [email, setemail] = useState('');
-  const [image, setImage] = useState({})
+  const [image, setImage] = useState({});
 
   useEffect(() => {
     const showHandler = async () => {
-      const res = await GetAdminData(item._id)
-      console.log(res.data);
-      setfirstname(res.data.firstname)
-      setemail(res.data.email)
-      setImage(res.data.image)
+
+      console.log('Item ID:', item._id);
+        const res = await GetAdminData(item._id);
+        console.log('API Response:', res);
+
+          console.log('Data:', res);
+          setfirstname(res.firstname);
+          setemail(res.email);
+          setImage(res.image);
+      
+    };
+    if (item._id) {
+      showHandler();
     }
-    showHandler()
-  }, [])
+  }, [item._id]);
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -30,25 +36,21 @@ const Profile = (props) => {
     formData.append('firstname', firstname);
     formData.append('email', email);
     formData.append('image', image);
-    console.log('787878', formData);
-
-
-    const data = { firstname, email }
-    const id = item._id
-    const updatooi = await UpdateAdminDatas({ data, id });//{ data, id }
-    console.log('updatooi', updatooi);
-
-
-  }
-
+  
+    try {
+      const id = item._id;
+      const updatooi = await UpdateAdminDatas(formData, id); // Ensure UpdateAdminDatas accepts the ID as a separate parameter
+      console.log('Update response:', updatooi);
+    } catch (error) {
+      console.error('Error updating admin data:', error);
+    }
+  };
+  
   const [isEditing, setIsEditing] = useState(false);
 
   const handleUpdate = () => {
     setIsEditing(true);
   };
-
-
-
 
   return (
     <div>
@@ -85,7 +87,7 @@ const Profile = (props) => {
         </div>
       </Modal>
     </div>
-  )
-}
+  );
+};
 
-export default Profile
+export default Profile;

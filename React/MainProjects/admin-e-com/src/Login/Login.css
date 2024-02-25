@@ -210,3 +210,10 @@ body {
 .log-link{
   text-decoration: none;
 }
+.frgt{
+  text-decoration: none;
+  color: gray;
+}
+.frgt:hover{
+  color: blueviolet;
+}

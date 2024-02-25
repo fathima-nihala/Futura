@@ -3,6 +3,7 @@ const Ecom = require('../Models/userEcomSchema')
 const Jwt = require('jsonwebtoken')
 const crypto = require('crypto-js')
 const multer = require('multer')
+const  {signup} = require('../Controller/appController')
 const { verifyToken, verifyTokenAndauthorization } = require('../verifyTokn')
 const cartData = require('../Models/CartSchema')
 
@@ -113,11 +114,13 @@ router.put('/EcomUserUpadateProf', upload.single('image'), async (req,res) => {
         console.log('^^^', req.body);
         console.log("file", req.file);
         console.log("files", req.files);
-
+        const name=req.body.firstname
+        const email=req.body.email
+        const images= req.file.originalname 
+        console.log('*********************',images);
         const updateUseProf = await Ecom.findByIdAndUpdate(req.query.id, {
-            $set: { firstname: req.body.firstname,
-                 email: req.body.email,
-                  image:req.file.originalname
+            $set: {   image:images,firstname:name,email:email,
+                
                  }
         }, { new: true })
         res.status(200).json(updateUseProf);
@@ -126,6 +129,9 @@ router.put('/EcomUserUpadateProf', upload.single('image'), async (req,res) => {
         res.status(400).json({ message: error.message });
     }
 })
+
+//nodemailer
+router.post('/mailsend',signup)
 
 
 module.exports = router

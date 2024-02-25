@@ -1,4 +1,4 @@
-const router = require('express').Router()
+const router = require('express').Router()  
 const multer = require('multer')
 const productdetails = require('../Models/Productschema')
 const { route } = require('./UserRouter')
@@ -108,8 +108,8 @@ router.put(`/updateproduct`, upload.single('image'), async (req, res) => {
                 image: req.file.originalname,
             }
         })
-        console.log("haiii", DBdata);
-        res.status(200).json(DBdata)
+            console.log("haiii", DBdata);
+            res.status(200).json(DBdata)
     }
     catch (error) {
         res.status(500).json({ error: error.message });

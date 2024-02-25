@@ -6,11 +6,40 @@ const OrderList = (props) => {
   const products = [props.products]
   console.log(products);
   const item = products.map((li) => li.item)
+  console.log("haiiiiii", item);
+  const findArray = (arr) => {
+    let newElemnet
+    arr.forEach(element => {
+      if (Array.isArray(element)) {
+        newElemnet = element
+      }
+    })
+    return newElemnet
+  }
+  const arrayItem = findArray(item)
+  // console.log(item.length>1);
+  console.log("arayyyyyyy", arrayItem);
   const user = products.map((li) => li.userData)
   return (
     <div className='order-main'>
       {item.map((li) => (
         <div className=''>
+          <div>
+            {item[0] && item[0].length > 0 && arrayItem.map((li) => (
+              <>
+                <div className='order-admin-left'>
+                  <img src={`/Images/${li.image}`} alt="" className='cartmapimg' />
+                </div>
+
+                <div className='order-admin-right-block'>
+                  <p><span className='order-span'>TiTle:</span>{li.title}</p>
+                  <p><span className='order-span'>Price:</span>{li.price * li.itemQuantity}</p>
+                </div>
+                <div></div>
+              </>
+            ))}
+          </div>
+          {/* view image */}
           <div className='order-admin'>
             <div className='order-admin-left'>
               <img src={`/Images/${li.image}`} alt="" className='cartmapimg' />
@@ -47,6 +76,9 @@ const Order = () => {
       const res = await getOrderDatas()
       console.log(res);
       setItem(res)
+      const products = res.map((li) => li.products)
+      const items = products.map((li) => li.item);
+      console.log(items.map((li) => li.length > 0));
     }
     getDatasHandle()
   }, [])

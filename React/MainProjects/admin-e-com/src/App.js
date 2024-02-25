@@ -51,6 +51,8 @@ import { selectUser } from './Redux/UseModRedux';
 import BuyNowDatas from './User/ComponentTwo/Order/BuyNowDatas';
 import BuyNowUpdate from './User/ComponentTwo/Order/BuyNowUpdate';
 import Order from './Components/Pages/Order';
+import SearchResults from './User/ComponentTwo/UserPages/SearchResults';
+import ForgetPassword from './User/ComponentTwo/forgetpassword/ForgetPassword';
 
 function App() {
   // const data=useSelector((state)=>state.Login.LoginInfo[0])
@@ -90,7 +92,7 @@ function App() {
       // {
       //   path: '/',
       element: <UserMain />,
-      children: [ 
+      children: [
         {
           path: '/', // This represents the homepage route
           element: <UserHome />, // Redirect to homepage if no token
@@ -128,15 +130,25 @@ function App() {
           element: <BuyNowHome />
         },
         {
-          path:'/buynowdata/:id',
-          element:<BuyNowDatas/>
+          path: '/buynowdata/:id',
+          element: <BuyNowDatas />
         },
         {
-          path:"/buyupdate",
-          element:<BuyNowUpdate/>
-        }
+          path: "/buyupdate",
+          element: <BuyNowUpdate />
+        },
+        {
+          path: '/search',
+          element: <SearchResults />
+        },
+
       ]
     },
+    {
+      path: '/forget',
+      element: <ForgetPassword />
+    },
+
     {
       path: '/adminupdate',
       element: <UpdateAdminProf />
@@ -163,8 +175,8 @@ function App() {
           element: <ManageProducts />
         },
         {
-          path:'/order',
-          element:<Order/>
+          path: '/order',
+          element: <Order />
         }
       ]
     },
@@ -182,6 +194,7 @@ function App() {
     }
 
   ])
+
 
 
   return (

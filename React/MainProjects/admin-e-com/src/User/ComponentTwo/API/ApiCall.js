@@ -40,7 +40,7 @@ export const EcomGetLogin = async (id) => {
     }
 };
 
-//to get user login data
+//to delete user login data
 export const DeleteUserIdData = async (id) => {
     console.log('user id', id);
     try {
@@ -52,10 +52,10 @@ export const DeleteUserIdData = async (id) => {
 }
 
 //update user data
-export const updateUserDatas = async (data,id) => {
-   try {
-        const res = await axios.put(`http://localhost:7002/api/EcomUserUpadateProf?id=${id}`,data);
-    console.log('updateAdmin', res.data);
+export const updateUserDatas = async (data, id) => {
+    try {
+        const res = await axios.put(`http://localhost:7002/api/EcomUserUpadateProf?id=${id}`, data);
+        console.log('updateAdmin', res.data);
         return res.data;
     }
     catch (error) {
@@ -79,3 +79,17 @@ export const updateUserDatas = async (data,id) => {
 //         console.log(err);
 //     }
 // }
+
+
+//*************FORGET PASSWORS**********************//
+
+export const forgetPassword = async (email) => {
+    console.log(email);
+    try {
+        const forgetMail = await axios.post("http://localhost:7002/api/mailsend", email)
+        console.log('forgetmail', forgetMail.data);
+        return forgetMail.data
+    } catch (error) {
+        console.log(error);
+    }
+}

@@ -38,24 +38,26 @@ export const GetAdminData = async (id) => {
     try {
         const res = await axios.get(`http://localhost:7002/api/getadmindetails/${id}`)
         console.log('dataa getuser', res.data);
-        return res
+        return res.data
     } catch (error) {
         console.log(error);
+        throw error;
     }
 }
 
 //to update admin page
-export const UpdateAdminDatas = async (data) => {
+export const UpdateAdminDatas = async (data, id) => {
     console.log("datttaa", data);
-    const datas = data.data
-    const id = data.id
+    // const datas = data.data
+    // const id = data.id
+
     try {
-        const response = await axios.put(`http://localhost:7002/api/adminupdate/${id}`, datas
-            // headers: {
-            //     firstname: id.firstname,
-            //     email: id.email,
-            //     image: id.image,
-            // }
+        const response = await axios.put(`http://localhost:7002/api/adminupdate?id=${id}`, data
+            //    , {
+            //         firstname: id.firstname,
+            //         email: id.email,
+            //         image: id.image,
+            //     }
         );
         console.log('updateAdmin', response.data);
         return response.data;
@@ -346,7 +348,7 @@ export const getOrderDatas = async () => {
     // console.log('###', data);
     try {
         const res = await axios.get('http://localhost:7002/confirm/getOrderConfirm')
-        console.log('ffff',res);
+        console.log('ffff', res);
         return res.data
     } catch (error) {
         console.log(error);
