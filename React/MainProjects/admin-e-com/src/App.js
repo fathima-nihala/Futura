@@ -53,6 +53,8 @@ import BuyNowUpdate from './User/ComponentTwo/Order/BuyNowUpdate';
 import Order from './Components/Pages/Order';
 import SearchResults from './User/ComponentTwo/UserPages/SearchResults';
 import ForgetPassword from './User/ComponentTwo/forgetpassword/ForgetPassword';
+import OtpVerification from './User/ComponentTwo/forgetpassword/OtpVerification';
+import ChangePassword from './User/ComponentTwo/forgetpassword/ChangePassword';
 
 function App() {
   // const data=useSelector((state)=>state.Login.LoginInfo[0])
@@ -147,6 +149,14 @@ function App() {
     {
       path: '/forget',
       element: <ForgetPassword />
+    },
+    {
+      path:'/verify',
+      element:<OtpVerification/>
+    },
+    {
+      path:'/changepass',
+      element:<ChangePassword/>
     },
 
     {

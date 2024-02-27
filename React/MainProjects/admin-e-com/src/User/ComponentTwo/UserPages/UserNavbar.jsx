@@ -5,7 +5,7 @@ import { BsPerson } from "react-icons/bs";
 import { LiaShoppingBagSolid } from "react-icons/lia";
 import { useState } from 'react';
 import { useEffect } from 'react';
-import { Form, Link, redirect } from 'react-router-dom'
+import { Form, Link, redirect, useNavigate } from 'react-router-dom'
 import UserLogin from '../../../Login/UserLogin';
 import { useSelector } from 'react-redux';
 import UserProfile from './UserProfile';
@@ -60,6 +60,7 @@ const UserNavbar = () => {
   const [search, setSearch] = useState('')
   console.log(search);
   const [product, setProduct] = useState([])
+  const navigate=useNavigate()
 
   useEffect(() => {
     const getproduct = async () => {
@@ -82,10 +83,11 @@ const UserNavbar = () => {
         const title = item.title.toLowerCase(); // Ensure case-insensitive comparison
 
         return category.includes(search.toLowerCase()) || title.includes(search.toLowerCase());
-        return redirect('/search')
       });
       // Handle filtered results, you might want to update state to display these results in the UI
       console.log('Search Results:', result);
+      return navigate('/search')
+
     }
   };
 
@@ -137,7 +139,7 @@ const UserNavbar = () => {
       </div>
       {order && <UserLogin orderHideHandler={hideHandler} />}
       {proforder && <UserProfile ProforderHideHandler={hideHandler} />}
-      <SearchResults />
+      <SearchResults handleSearchresult={handleSearch} />
     </div>
   )
 }

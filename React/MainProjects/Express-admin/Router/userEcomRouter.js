@@ -3,7 +3,7 @@ const Ecom = require('../Models/userEcomSchema')
 const Jwt = require('jsonwebtoken')
 const crypto = require('crypto-js')
 const multer = require('multer')
-const  {signup} = require('../Controller/appController')
+const { signup } = require('../Controller/appController')
 const { verifyToken, verifyTokenAndauthorization } = require('../verifyTokn')
 const cartData = require('../Models/CartSchema')
 
@@ -107,21 +107,22 @@ router.get('/EcomUserGet/:id', async (req, res) => {
 });
 
 //ecom user update(profile)
-router.put('/EcomUserUpadateProf', upload.single('image'), async (req,res) => {
+router.put('/EcomUserUpadateProf', upload.single('image'), async (req, res) => {
     // console.log('ghjnm', req);
     try {
         console.log('....#', req.query.id);
         console.log('^^^', req.body);
         console.log("file", req.file);
         console.log("files", req.files);
-        const name=req.body.firstname
-        const email=req.body.email
-        const images= req.file.originalname 
-        console.log('*********************',images);
+        const name = req.body.firstname
+        const email = req.body.email
+        const images = req.file.originalname
+        console.log('*********************', images);
         const updateUseProf = await Ecom.findByIdAndUpdate(req.query.id, {
-            $set: {   image:images,firstname:name,email:email,
-                
-                 }
+            $set: {
+                image: images, firstname: name, email: email,
+
+            }
         }, { new: true })
         res.status(200).json(updateUseProf);
     } catch (error) {
@@ -130,8 +131,38 @@ router.put('/EcomUserUpadateProf', upload.single('image'), async (req,res) => {
     }
 })
 
-//nodemailer
-router.post('/mailsend',signup)
+//*******************************************nodemailer****************************
+router.post('/mailsend', signup)
+
+router.put('/changepas', async (req, res) => {
+    console.log(req.body.userId);
+    try {
+        const  Id  = req.body.userId;
+        const  password  = req.body.password
+        console.log('idd', Id);
+        console.log('password', password);
+
+        //find user by id
+        const user = await Ecom.findOne( {_id: Id })
+        console.log('user', user);
+
+        //if user not found return an error
+        if (!user) {
+            return res.status(404).json({ response: "User not found" })
+        }
+
+        //encrypt the password
+        const encryptedPassword = crypto.AES.encrypt(password, process.env.Crypto_js).toString();
+
+        //update password
+        user.password = encryptedPassword;
+        await user.save();
+
+        res.status(200).json({ response: 'Password changed successfully' });
+    } catch (error) {
+        res.status(400).json({ message: error.message });
+    }
+})
 
 
 module.exports = router
