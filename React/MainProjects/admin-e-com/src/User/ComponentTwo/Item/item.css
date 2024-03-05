@@ -1,6 +1,10 @@
+.item-item{
+    width: 100%;
+}
 .item{
     width: 290px;
     display: grid;
+    margin-left: 10px;
 }
 .item p{
     margin: 6px 0px;

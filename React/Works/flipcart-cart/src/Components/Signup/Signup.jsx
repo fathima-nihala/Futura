@@ -53,7 +53,7 @@ const Signup = () => {
               <label htmlFor="password">Password:</label>
               <div className='password-input-container'>
                 <input type={showPassword ? 'text' : 'password'} id='password' placeholder="Enter your Password" />
-                <span onClick={togglePasswordVisibility} style={{ backgroundColor: '#f1f1f1' }}>{showPassword ? <FaEyeSlash style={{ background: '#f1f1f1', color: 'black' }} /> : <FaEye style={{ background: '#f1f1f1', color: 'black' }} />}</span>
+                <span onClick={togglePasswordVisibility} style={{ backgroundColor: '#f1f1f1' }}>{showPassword ? <FaEye style={{ background: '#f1f1f1', color: 'black' }} /> : <FaEyeSlash style={{ background: '#f1f1f1', color: 'black' }} />}</span>
               </div>
             </div>
             <div className='button-data'>

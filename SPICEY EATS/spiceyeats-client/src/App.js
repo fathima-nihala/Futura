@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Main from './UserComponent/Main/Main';
@@ -11,6 +10,11 @@ import AdminLogin from './LoginPages/AdminLogin';
 import Register from './LoginPages/Register';
 import Login from './LoginPages/Login';
 import AdminRegister from './LoginPages/AdminRegister';
+import AdminMain from './AdminComponents/AdminMain/AdminMain';
+import Home from './AdminComponents/ContentItem/Home';
+import AddItem from './AdminComponents/ContentItem/AddItem';
+import ManageItem from './AdminComponents/ContentItem/ManageItem';
+import User from './AdminComponents/ContentItem/User';
 
 function App() {
 
@@ -56,6 +60,29 @@ function App() {
     {
       path:'/adminreg',
       element:<AdminRegister/>
+    },
+    //**********************************ADMIN---MODULE********************* */
+    {
+      path: '/',
+      element: <AdminMain />,
+      children: [
+        {
+          path:'/home',
+          element:<Home/>
+        },
+        {
+          path:'/additems',
+          element:<AddItem/>
+        },
+        {
+          path:'/manage',
+          element:<ManageItem/>
+        },
+        {
+          path:'user',
+          element:<User/>
+        }
+      ]
     }
 
   ])

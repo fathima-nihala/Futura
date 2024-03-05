@@ -15,6 +15,8 @@ import UsereducerHook from "./Hooks/UsereducerHook";
 import UseMemo from "./Hooks/UseMemo";
 import ReactMemo from "./Hooks/ReactMemo";
 import Callback from "./Hooks/Callback";
+import Test from "./Test/Test";
+import Blackmode from "./Blackmode/Blackmode";
 
 
 
@@ -60,6 +62,14 @@ function App() {
     {
       path:'call-back',
       element:<Callback/>
+    },
+    {
+      path:'test',
+      element:<Test/>
+    },
+    {
+      path:'/black',
+      element:<Blackmode/>
     }
    
     

@@ -95,13 +95,13 @@ export const forgetPassword = async (email) => {
 }
 
 //****************change password**************** */
-export const changePass = async(data)=>{
+export const changePass = async (data) => {
     console.log(data);
     try {
-        const change = await axios.put("http://localhost:7002/api/changepas",data);
-        console.log('change',change);
+        const change = await axios.put("http://localhost:7002/api/changepas", data);
+        console.log('change', change);
     } catch (error) {
         console.log(error);
     }
-    
+
 }

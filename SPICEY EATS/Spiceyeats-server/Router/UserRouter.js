@@ -1,6 +1,6 @@
 const router = require('express').Router()
 const Jwt = require('jsonwebtoken')
-const crypto=require('crypto-js')
+const crypto = require('crypto-js')
 const multer = require('multer')
 const User = require('../Modal/UserSchema')
 
@@ -23,7 +23,7 @@ router.post('/userpost', upload.single('image'), async (req, res) => {
     const newUser = new User({
         firstname: req.body.firstname,
         email: req.body.email,
-        password: Crypto.AES.encrypt(req.body.password, process.env.Crypto_js).toString(),
+        password: crypto.AES.encrypt(req.body.password, process.env.Crypto_js).toString(),
         image: req.file.originalname
     })
     console.log('newUser', newUser);
@@ -42,17 +42,16 @@ router.post('/userlogin', async (req, res) => {
     try {
         const DBdata = await User.find({ email: req.body.email })
         !DBdata && res.status(400).json({ Response: 'please check your email' })
-        console.log('DBdata', DBdata);
+        console.log('************8DBdata', DBdata);
 
-        // const hashedPassword = Crypto.AES.decrypt(DBdata.password, process.env.Crypto_js)
-        // console.log('hashedPassword', hashedPassword);
+        const hashedPassword = crypto.AES.decrypt(DBdata[0].password, process.env.Crypto_js)
+        console.log('hashedPassword is:', hashedPassword);
 
-        const hashedPassword=crypto.AES.decrypt(DBdata.password,process.env.Crypto_js)
-        console.log('hashed password',hashedPassword);
-
-        const originalPassword = hashedPassword.toString(Crypto.enc.Utf8)
-        console.log('originalPassword'.originalPassword);
-        originalPassword != req.body.password && res.status(401).json({ Response: "password & email doesn't match" })
+        const originalPassword = hashedPassword.toString(crypto.enc.Utf8)
+        console.log('originalPassword',originalPassword);
+        if (originalPassword !== req.body.password) {
+            return res.status(401).json({ Response: "Password and email don't match" });
+        }
 
         const accessToken = Jwt.sign({
             id: DBdata._id

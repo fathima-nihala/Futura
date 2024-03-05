@@ -1,7 +1,9 @@
 .cards{
     /* width: 200px; */
-    margin-left: 35px;
+    margin-left: 20px;
     gap: 36px;
+    width: 100%;
+
 }
 .cards img{
     width: 150px;

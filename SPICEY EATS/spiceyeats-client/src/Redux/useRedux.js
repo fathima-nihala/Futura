@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-const UerLogin = createSlice({
+const UerLoginred = createSlice({
     name: 'userdetails',
     initialState: {
         loginInfo: []
@@ -18,5 +18,5 @@ const UerLogin = createSlice({
 
 })
 
-export const { loginData, RemoveData } = UerLogin.actions
-export default UerLogin.reducer
+export const { loginData, RemoveData } = UerLoginred.actions
+export default UerLoginred.reducer

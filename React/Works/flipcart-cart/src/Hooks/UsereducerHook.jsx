@@ -3,6 +3,7 @@ import UseRedChild from './UseRedChild';
 
 const UsereducerHook = () => {
     const initialState=0
+    
     const reducer=(state,action)=>{
         console.log('state',state,'action',action);
         console.log(action);

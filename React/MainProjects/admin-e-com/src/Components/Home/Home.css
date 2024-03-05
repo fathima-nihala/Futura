@@ -2,7 +2,7 @@
      margin-top: 60px;
 }
 .main-dash{
-    width: 70%;
+    width: 100%;
     height: 650px;
     padding: 10px 15px;
 }
@@ -29,14 +29,14 @@
 } */
 .atag {
     text-decoration: none;
-    margin-left: 18px;
+    margin-left: 29px;
     margin-top: 20px;
     color: rgb(17, 17, 144);
 
     
 }
 .right-icon{
-    margin-left: 300px;
+    margin-left: 600px;
     border: 1px solid silver;
     height: 22px;
    padding: 6px 9px;

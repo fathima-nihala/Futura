@@ -27,41 +27,58 @@ const OrderList = (props) => {
           <div>
             {item[0] && item[0].length > 0 && arrayItem.map((li) => (
               <>
-                <div className='order-admin-left'>
-                  <img src={`/Images/${li.image}`} alt="" className='cartmapimg' />
+                <div className='order-admin'>
+                  <div className='order-admin-left'>
+                    <img src={`/Images/${li.image}`} alt="" className='cartmapimg' />
+                  </div>
+
+                  <div className='order-admin-right'>
+                    <div className='order-admin-right-block'>
+                      <p><span className='order-span'>TiTle:</span>{li.title}</p>
+                      <p><span className='order-span'>Price:</span>{li.price * li.itemQuantity}</p>
+                    </div>
+                  <div>
+                    {user.map((li) => (
+                      <div className='order-admin-right-block'>
+                        <p><span className='order-span'>Address:</span>{li.address}</p>
+                        <p><span className='order-span'>Pincode:</span>{li.pincode}</p>
+                        <p><span className='order-span'>City:</span>{li.city}</p>
+                        <p><span className='order-span'>Phone:</span>{li.phone}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
                 </div>
 
-                <div className='order-admin-right-block'>
-                  <p><span className='order-span'>TiTle:</span>{li.title}</p>
-                  <p><span className='order-span'>Price:</span>{li.price * li.itemQuantity}</p>
-                </div>
-                <div></div>
               </>
             ))}
           </div>
           {/* view image */}
-          <div className='order-admin'>
-            <div className='order-admin-left'>
-              <img src={`/Images/${li.image}`} alt="" className='cartmapimg' />
-            </div>
-            <div className='order-admin-right'>
-              <div className='order-admin-right-block'>
-                <p><span className='order-span'>TiTle:</span>{li.title}</p>
-                <p><span className='order-span'>Description:</span>{li.description}</p>
-                <p><span className='order-span'>Price:</span>{li.price}</p>
+          {item[0] && !item[0].length > 0 &&
+            <div className='order-admin'>
+
+              <div className='order-admin-left'>
+                <img src={`/Images/${li.image}`} alt="" className='cartmapimg' />
               </div>
-              <div>
-                {user.map((li) => (
-                  <div className='order-admin-right-block'>
-                    <p><span className='order-span'>Address:</span>{li.address}</p>
-                    <p><span className='order-span'>Pincode:</span>{li.pincode}</p>
-                    <p><span className='order-span'>City:</span>{li.city}</p>
-                    <p><span className='order-span'>Phone:</span>{li.phone}</p>
-                  </div>
-                ))}
+              <div className='order-admin-right'>
+                <div className='order-admin-right-block'>
+                  <p><span className='order-span'>TiTle:</span>{li.title}</p>
+                  <p><span className='order-span'>Description:</span>{li.description}</p>
+                  <p><span className='order-span'>Price:</span>{li.price}</p>
+                </div>
+                <div>
+                  {user.map((li) => (
+                    <div className='order-admin-right-block'>
+                      <p><span className='order-span'>Address:</span>{li.address}</p>
+                      <p><span className='order-span'>Pincode:</span>{li.pincode}</p>
+                      <p><span className='order-span'>City:</span>{li.city}</p>
+                      <p><span className='order-span'>Phone:</span>{li.phone}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
+          }
         </div>
       ))}
     </div>

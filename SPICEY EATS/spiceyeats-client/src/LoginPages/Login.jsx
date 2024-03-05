@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 import { HiOutlineMail } from "react-icons/hi";
 import { MdOutlineLockOpen } from "react-icons/md";
 import './login.css'
-import { userLogin } from '../API/ApiCall';
+import { UserLoginData } from '../API/ApiCall';
 import { useDispatch } from 'react-redux'
 
 
@@ -16,14 +16,16 @@ const Login = (props) => {
     const [email, setemail] = useState('')
 
     const dispatch = useDispatch()
-    const displayone = () => {
+
+    const displayone = async () => {
         console.log({ email, password });
         try {
-            userLogin({ email, password }, dispatch)
+            await UserLoginData({ email, password },dispatch);
         } catch (error) {
             console.log("error in pass", error);
         }
     }
+    
     return (
         <div>
             <Modal hideHandler={props.orderHideHandler}>

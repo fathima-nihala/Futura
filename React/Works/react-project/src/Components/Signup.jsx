@@ -29,8 +29,6 @@ const Signup = () => {
     }
     dispatch(signupData(formData));
     console.log('SignUp data submitted:', formData);
-
-  
   }
   return (
     <div>

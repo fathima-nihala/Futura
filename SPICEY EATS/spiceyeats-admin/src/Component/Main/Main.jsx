@@ -5,11 +5,11 @@ import './main.css'
 
 const Main = () => {
   return (
-    <div className='main'>
-        <div className='main-dash'>
+    <div className='adminmain'>
+        <div className='adminmain-dash'>
         <Dashboard/>
         </div>
-        <div className='main-cntnt'>
+        <div className='adminmain-cntnt'>
         <Contents/>
         </div>
     </div>

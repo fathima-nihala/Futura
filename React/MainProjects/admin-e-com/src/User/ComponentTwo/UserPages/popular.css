@@ -12,6 +12,11 @@
 .proflink{
     text-decoration: none;
     color: black;
+    width: 100%;
+}   
+.kids-cntnt{
+    width: 100%;
+
 }
 .exclusive{
     margin-top: 70px;

@@ -1,27 +1,4 @@
 import { Navigate, Route, Router, RouterProvider, Routes, createBrowserRouter } from 'react-router-dom';
-// import './App.css';
-// import Main from './Components/Main/Main';
-// import Home from './Components/Home/Home';
-
-// import { useSelector } from 'react-redux';
-// import AddProduct from './Components/Pages/AddProduct';
-// import Users from './Components/Pages/Users';
-// import ManageProducts from './Components/Pages/ManageProducts';
-// import UserMain from './User/ComponentTwo/UserMain/UserMain';
-// import UserHome from './User/ComponentTwo/UserMain/UserHome';
-// import SeeMore from './User/ComponentTwo/UserPages/SeeMore';
-// import Login from './Login/Login';
-// import SignUp from './Login/SignUp';
-// import { type } from '@testing-library/user-event/dist/type';
-// import All from './User/ComponentTwo/UserMain/All';
-// import Women from './User/ComponentTwo/UserMain/Women';
-// import Men from './User/ComponentTwo/UserMain/Men';
-// import Kids from './User/ComponentTwo/UserMain/Kids';
-// import View from './User/ComponentTwo/View';
-// import UserLogin from './Login/UserLogin';
-// import UserSignUp from './Login/UserSignUp';
-
-
 import React from 'react';
 // import {  Routes, Route, Navigate } from 'react-router-dom';
 import './App.css';
@@ -57,15 +34,6 @@ import OtpVerification from './User/ComponentTwo/forgetpassword/OtpVerification'
 import ChangePassword from './User/ComponentTwo/forgetpassword/ChangePassword';
 
 function App() {
-  // const data=useSelector((state)=>state.Login.LoginInfo[0])
-  // console.log("hey data",data);
-
-  // const item=useSelector((state)=>state.Login.LoginInfo[0])
-  // console.log('item',item);
-  // if (item) {
-  //   var token=item && item.accessToken
-  //   console.log("token?",token);
-  // }
 
   const item = useSelector((state) => state.Login.LoginInfo[0]);
   console.log('item', item);
@@ -82,8 +50,7 @@ function App() {
   }
 
 
-  // const details = useSelector(selectAdmin);
-  // const usersetails = useSelector(selectUser);
+  
 
   const Router = createBrowserRouter([
     //user

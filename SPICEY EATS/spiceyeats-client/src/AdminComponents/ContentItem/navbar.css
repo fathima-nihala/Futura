@@ -1,0 +1,75 @@
+.adminnavbar{
+    overflow: hidden; 
+   /* left: 0; */
+   z-index: 1;
+   display: flex;
+   /* width: 100%; */
+   width: 1120PX;
+   background:black;
+   justify-content: center;
+   height: 49px;
+   position: fixed;
+}
+.adminscroll{
+   position: fixed;
+   top: 0;
+   width: 100%;
+   box-shadow: 0px 10px 10px rgba(214, 103, 196, 0.1); 
+   transition: all 0.3s ease-in-out;
+}
+.adminnav-nav{
+   margin-left: 150px;
+   display: flex;
+   justify-content: space-evenly;
+}
+/* .nav-left{
+    margin-top: 7px; 
+   width: 400px; 
+   background-color:#f5f5f5;
+    height: 25px;    
+}
+.nav-inp{
+   width:340px;
+   border: none;
+   outline: none;
+   background-color:whitesmoke;
+
+}
+.nav-inp::placeholder{
+   padding: 0px 5px;
+} */
+.adminnav-ico:hover{
+   background-color: rgb(53, 53, 53);
+   border-radius: 5px;
+}
+.adminnav-center{
+   margin-right: 30px;
+}
+
+.adminnav-ico{
+   height: 28px;
+   width: 50px;
+   margin-top: 5px;
+   margin-left:400px;
+   color: white;
+}
+.adminnav-ico:hover{
+   color: rgb(220, 156, 72);
+}
+
+.adminnav-btn-p{
+   margin-top: 4px;
+   border-radius: 25px;
+   height: 30px;
+   width: 130px;
+   background-color: black;
+   color: white;
+   border: 1px solid rgb(220, 156, 72);
+   cursor: pointer;
+   /* margin-left: 190px; */
+}
+.adminnav-btn-p:hover{
+   background-color: rgb(220, 156, 72);
+   color: black;
+
+}  

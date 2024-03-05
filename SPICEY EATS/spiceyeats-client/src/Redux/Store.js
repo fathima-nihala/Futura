@@ -18,7 +18,7 @@ import {
     storage,
   }
 
-  const rootreducer=combineReducers({UerLogin:usered})
+  const rootreducer=combineReducers({UerLoginred:usered})
 
   const persistedReducer = persistReducer(persistConfig, rootreducer)
   export const store = configureStore({
