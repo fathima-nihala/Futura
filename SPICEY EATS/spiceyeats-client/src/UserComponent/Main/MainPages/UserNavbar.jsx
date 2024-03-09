@@ -1,9 +1,15 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import './usernavbar.css'
 import { Link } from 'react-router-dom'
 import Login from '../../../LoginPages/Login';
+import { AuthContext } from '../../../Context/AuthProvider';
+import Profile from './Profile';
 
 const UserNavbar = () => {
+
+    const { user } = useContext(AuthContext)
+    console.log(user);
+
     //to stick navbar
     const [isSticky, setSticky] = useState(false);
 
@@ -47,9 +53,11 @@ const UserNavbar = () => {
                     <li><Link to='/about' className='navmenu-link'>About</Link></li>
                 </ul>
             </div>
-            <div className="nav-end">
-                <button onClick={ModalHandler}>Login</button>
-            </div>
+            {user ? <Profile user={user} /> :
+                <div className="nav-end">
+                    <button onClick={ModalHandler}>Login</button>
+                </div>
+            }
             {order && <Login orderHideHandler={hideHandler} />}
         </div>
 

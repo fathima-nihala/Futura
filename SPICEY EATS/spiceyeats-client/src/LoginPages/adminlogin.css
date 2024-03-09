@@ -24,3 +24,16 @@
     margin-left: 1200px;
     cursor: pointer;
   }
+  .face-ico{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+  .facebook{
+    height: 40px;
+    width: 40px;
+  }
+  .facebook:hover{
+    color:rgb(220, 156, 72) ;
+  }

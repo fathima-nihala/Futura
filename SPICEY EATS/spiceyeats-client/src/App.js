@@ -15,6 +15,8 @@ import Home from './AdminComponents/ContentItem/Home';
 import AddItem from './AdminComponents/ContentItem/AddItem';
 import ManageItem from './AdminComponents/ContentItem/ManageItem';
 import User from './AdminComponents/ContentItem/User';
+import AuthProvider from './Context/AuthProvider';
+import UpdateProfile from './UserComponent/Main/MainPages/UpdateProfile';
 
 function App() {
 
@@ -30,6 +32,10 @@ function App() {
         {
           path: '/about',
           element: <About />
+        },
+        {
+          path:'/update-profile',
+          element:<UpdateProfile/>
         }
       ]
     },
@@ -58,8 +64,8 @@ function App() {
       element: <Register />
     },
     {
-      path:'/adminreg',
-      element:<AdminRegister/>
+      path: '/adminreg',
+      element: <AdminRegister />
     },
     //**********************************ADMIN---MODULE********************* */
     {
@@ -67,20 +73,20 @@ function App() {
       element: <AdminMain />,
       children: [
         {
-          path:'/home',
-          element:<Home/>
+          path: '/home',
+          element: <Home />
         },
         {
-          path:'/additems',
-          element:<AddItem/>
+          path: '/additems',
+          element: <AddItem />
         },
         {
-          path:'/manage',
-          element:<ManageItem/>
+          path: '/manage',
+          element: <ManageItem />
         },
         {
-          path:'user',
-          element:<User/>
+          path: 'user',
+          element: <User />
         }
       ]
     }
@@ -88,7 +94,9 @@ function App() {
   ])
   return (
     <div className="App">
+      <AuthProvider>
       <RouterProvider router={Router}></RouterProvider>
+      </AuthProvider>
     </div>
   );
 }

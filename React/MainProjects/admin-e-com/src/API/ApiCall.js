@@ -184,8 +184,6 @@ export const viewDetails = async (id) => {
         const ress = await axios.get(`http://localhost:7002/api/geItemss/${id}`);
         console.log('detailsss', ress.data);
         return ress;
-
-
     } catch (err) {
         console.log(err);
     }

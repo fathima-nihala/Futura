@@ -77,4 +77,19 @@
     margin-left: 20px;
     font-size: 14px;
   }
+  .ico-goo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: aqua;
+  }
+  .google{
+    height: 40px;
+    width: 40px;
+    color: black;
+  }
+  .google:hover{
+    color:rgb(220, 156, 72) ;
+
+  }
  
