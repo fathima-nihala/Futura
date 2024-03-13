@@ -1,6 +1,5 @@
 // import React, { useState } from 'react'
 // import { Link } from 'react-router-dom';
-// import { CgGirl } from "react-icons/cg";
 // import { MdOutlineLockOpen } from "react-icons/md";
 // import { HiOutlineMail } from "react-icons/hi";
 // import { CiCircleRemove } from "react-icons/ci";
@@ -88,6 +87,7 @@ const Register = () => {
     const onSubmit = (data) => {
         const email = data.email;
         const password = data.password;
+        const name = data.name;
         createUser(email, password)
             .then(() => {
                 alert('Account creation successful!');
@@ -110,6 +110,10 @@ const Register = () => {
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <div className="log-body">
                             <div className="log-body-one">
+                                <div className='log-body-cntnt'>
+                                    <CgGirl className='log-icon' />
+                                    <input type="text" placeholder='Name' {...register("name")} />
+                                </div>
                                 <div className='log-body-cntnt'>
                                     <HiOutlineMail className='log-icon' />
                                     <input type="email" placeholder="Email" {...register("email")} />

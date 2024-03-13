@@ -26,7 +26,7 @@ const Profile = ({ user }) => {
         <div>
             <div className="dropdown-container">
                 <div className="dropdown">
-                    <button tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar" onClick={toggleDropdown} onMouseEnter={toggleDropdown}>
+                    <button tabIndex={0} role="button" className="btn" onClick={toggleDropdown} onMouseEnter={toggleDropdown}>
                         <div className="avatar-container">
                             {/* User photo */}
                             {user.photoURL ? (

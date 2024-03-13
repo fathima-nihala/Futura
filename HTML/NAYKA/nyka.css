@@ -61,10 +61,12 @@ input[type=text]
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    padding: 5px;
 }
 .sub{
-   margin-left: 50px;
+   /* margin-left: 20px; */
+   /* padding: 13px; */
+  
+
 }
 .sub:hover{
     transform: scale(2,2);
@@ -75,7 +77,9 @@ input[type=text]
     background-color: white;
 }
 .off{
-    margin-left: 10px;
+    /* margin-left: 10px; */
+    width: 400px;
+    flex-wrap: wrap;
 }
 /* ------------------------------------------------------------------------------ */
 .fashion{
@@ -96,7 +100,7 @@ input[type=text]
     display: flex;
     flex-wrap: wrap;
     padding: 2px;
-    margin-left: 20px;
+    /* margin-left: 20px; */
 }
 .text1{
     font-size: 17px;
@@ -121,8 +125,8 @@ input[type=text]
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
-    padding: 2px;
-    margin-left: 20px;
+    /* padding: 2px; */
+    /* margin-left: 20px; */
     background-color: white;
     flex-direction: row;
 }
