@@ -5,6 +5,7 @@
     justify-content: center;
     height: 49px;
     padding: 0px 0px;
+    z-index: 10px;
 }
 .sticky{
     position: fixed;
