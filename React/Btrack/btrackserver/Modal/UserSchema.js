@@ -9,4 +9,4 @@ const RecipeUser = new mongoose.Schema({
     dietarylabels:{type:String},
 },{timestamps:true})
 
-module.exports=new mongoose.model('Btrack', RecipeUser)
+module.exports=new mongoose.model('Btrack', RecipeUser) 

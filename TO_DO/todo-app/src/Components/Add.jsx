@@ -27,7 +27,7 @@ const Add = () => {
         console.log('submitting form datas', { task });
         const dbdata = await PostData({ task });
         console.log('dbdataaaass', dbdata);
-        console.log(dbdata.data._id);
+        console.log(dbdata.data_id);
         alert('task added successfully');
     }
 
@@ -129,7 +129,7 @@ const Add = () => {
                     </div>
                     :
                     <div>
-
+                            
                     </div>
                 }
 
