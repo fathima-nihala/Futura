@@ -60,6 +60,34 @@ router.get('/viewproduct', async (req, res) => {
     }
 })
 
+
+//to implement search
+router.get('/viewSearchproduct', async (req, res) => {
+    console.log('reqqqqqq', req.body);
+    const query = req.nextUrl.searchParams.get('q');
+    console.log(query, 'query');
+    try {
+        let products; 
+        if (query) {
+            products = await productdetails.find({
+                $or:[
+                    {category:new RegExp(query,'i')},
+                    {title:new RegExp(query,'i')}
+                ]
+            })
+            console.log(products);
+            res.status(200).json(products)
+        } else {
+            products = await productdetails.find({})
+        }
+        
+    } catch (error) {
+        res.status(500).json(error)
+
+    }
+})
+
+
 //get product by id
 router.get('/viewproductTwo/:id', async (req, res) => {
     console.log('uuuu', req.params.id); // Check if the ID is correctly extracted from the URL

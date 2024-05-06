@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import './usernav.css'
 import { IoSearchOutline } from "react-icons/io5";
 import { BsPerson } from "react-icons/bs";
@@ -11,9 +11,15 @@ import { useSelector } from 'react-redux';
 import UserProfile from './UserProfile';
 import { productView } from '../../../API/ApiCall';
 import SearchResults from './SearchResults';
+import LogRocket from 'logrocket';
+
 // import CartItem from '../CartPage/CartItem';
 
 const UserNavbar = () => {
+  
+  LogRocket.init('goywxo/olet');
+
+
   const itemaaa = useSelector((state) => state.userLogin.userLoginInfo[0]);
 
   //for scrolling & sticky navbar
@@ -94,6 +100,10 @@ const UserNavbar = () => {
 
   console.log('sdfghj', product);
 
+
+
+  
+
   return (
     <div>
       <div className={`usrnavbar ${isStcky ? 'sticky' : ""}`}>
@@ -123,11 +133,12 @@ const UserNavbar = () => {
 
             </div>
           </Form>
+
+
           
         </div>
         <div className="usrnavbar-end">
           <div className='usrnav-end-two'><Link to='/addtocart' className='nav-addto'><LiaShoppingBagSolid className='usernav-ico' /></Link>
-            {/* <div className='nav-cart-count'>{getTotalCartItems()}</div> */}
           </div>
 
           {/* {itemaaa ? <div className='usrnav-end-one'><BsPerson className='usernav-ico' onClick={ProfhandleOrderItem} /></div> : <button onClick={ModalHandler} className='usernav-btn'>login</button>} */}

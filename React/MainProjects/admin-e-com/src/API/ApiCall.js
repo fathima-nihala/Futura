@@ -120,16 +120,10 @@ export const productView = async (id) => {
     }
 }
 
-// export const productViewTwo = async(id)=>{
-//     console.log("product-data-two",id);
-//     try {
-//         const res = await axios.get(`http://localhost:7002/api/viewproduct${id}`,id)
-//         console.log('getproduct',res);
-//         return res
-//     } catch (error) {
-//         console.log(error);
-//     }
-// }
+
+
+
+
 
 
 //****to delete product
