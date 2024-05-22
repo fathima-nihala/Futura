@@ -25,6 +25,7 @@ const OtpVerification = () => {
             alert('invalid otp')
         }
     }
+    
     return (
         <div>
             <div className='register'>
