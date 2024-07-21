@@ -1,0 +1,44 @@
+
+
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Carousel</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+<body>
+    <div class="containerone">
+        <div class="categoriesone">
+            <button class="category-btn" onclick="filterCourses('category1')">
+                <img src="icon1.png" alt="Category 1">
+                <p>Category 1</p>
+            </button>
+            <button class="category-btn" onclick="filterCourses('category2')">
+                <img src="icon2.png" alt="Category 2">
+                <p>Category 2</p>
+            </button>
+            <button class="category-btn" onclick="filterCourses('category3')">
+                <img src="icon3.png" alt="Category 3">
+                <p>Category 3</p>
+            </button>
+            <button class="category-btn" onclick="filterCourses('category4')">
+                <img src="icon4.png" alt="Category 4">
+                <p style="margin-top: 10px;">Category 4</p>
+            </button>
+        </div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper" id="carousel">
+cre            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="carosal.js"></script>
+</body>
+</html>

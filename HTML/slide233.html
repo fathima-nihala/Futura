@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .justify-center {
+            justify-content: center;
+        }
+
+        .items-center {
+            align-items: center;
+        }
+
+        .text-30px {
+            font-size: 30px;
+        }
+
+        .p-8 {
+            padding: 2rem;
+        }
+
+        .bg-yellow {
+            background-color: #FFDF9F;
+        }
+
+        .border {
+            border: 1px solid #ccc;
+        }
+
+        /* .rounded-3xl {
+            border-radius: 1.5rem;
+        } */
+
+        .slide-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 40px;
+        }
+
+        .slide-inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1.25rem;
+            margin: 0.75rem;
+            width: 380px;
+            height: 400px;
+            cursor: pointer;
+        }
+
+        .img-container {
+            height: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* . {
+            width: 8rem;
+            height: 8rem;
+            animation: 10s linear infinite;
+        } */
+
+        .head {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+
+        .para {
+            text-align: center;
+            font-size: 18px;
+        }
+
+      
+
+        /* Swiper styles */
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-wrapper {
+            display: flex;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .swiper-pagination {
+            position: absolute;
+            text-align: center;
+            transition: .3s opacity;
+            transform: translate3d(0, 0, 0);
+            z-index: 10;
+            left: 0;
+            right: 0;
+            bottom: -20px;
+            top: auto;
+        }
+
+        .swiper-pagination-bullets {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            bottom: -20px;
+        }
+
+        .swiper-pagination-bullet {
+            border-radius: 10px;
+            background-color: white;
+            border: 2px solid #fb5c06;
+            width: 34px;
+            height: 8px;
+            margin: 0 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .swiper-pagination-bullet-active {
+            background-color: #FF6410;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex justify-center items-center text-30px p-8">Slider</div>
+    <div class="swiper-container mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="slide-content">
+                    <div class="bg-yellow border rounded-3xl slide-inner">
+                        <div class="img-container">
+                            <img src="/images/profile.svg" alt="Car" class="">
+                        </div>
+                        <!-- <div class="text-content">
+                            <p class="head">Interaction Center:</p>
+                            <p class="para">Seamless customer interactions across multiple channels.</p>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="slide-content">
+                    <div class="bg-yellow border rounded-3xl slide-inner">
+                        <div class="img-container">
+                            <img src="/images/profile.svg" alt="Car" class="">
+                        </div>
+                        <div class="text-content">
+                            <p class="head">Interaction Center:</p>
+                            <p class="para">Seamless customer interactions across multiple channels.</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="slide-content">
+                    <div class="bg-yellow border rounded-3xl slide-inner">
+                        <div class="img-container">
+                            <img src="/images/profile.svg" alt="Car" class="">
+                        </div>
+                        <div class="text-content">
+                            <p class="head">Interaction Center:</p>
+                            <p class="para">Seamless customer interactions across multiple channels.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="slide-content">
+                    <div class="bg-yellow border rounded-3xl slide-inner">
+                        <div class="img-container">
+                            <img src="/images/profile.svg" alt="Car" class="">
+                        </div>
+                        <div class="text-content">
+                            <p class="head">Interaction Center:</p>
+                            <p class="para">Seamless customer interactions across multiple channels.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 3,
+            spaceBetween: 5,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+        });
+    </script>
+</body>
+
+</html>
+
+
+
+<!-- 
+
+
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <style>
+        /* Existing styles... */
+
+        .item_5 {
+            position: relative;
+            height: 400px;
+            background-color: #358281;
+            overflow-y: hidden;
+            box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.1);
+        }
+
+        .item_5 img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        .item__overlay {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+            position: absolute;
+            width: 100%;
+            top: 0;
+            color: white;
+            transition: transform 300ms;
+            background-color: rgba(0, 0, 0, 0.5);
+            transform: translate3d(0, 100%, 0);
+        }
+
+        .item__overlay h3 {
+            margin: 0;
+            font-size: medium;
+            color: white;
+            display: block;
+            padding: 1rem;
+            transform: translate3d(0, -100%, 0);
+            transition: transform 300ms;
+        }
+
+        .item__overlay .item__body {
+            flex-grow: 1;
+            padding: 1rem;
+            color: white;
+            opacity: 0.5;
+            transition: opacity 500ms 100ms;
+        }
+
+        .swiper-slide a {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .swiper-slide a:hover ~ .item__overlay,
+        .swiper-slide a:focus ~ .item__overlay {
+            transform: translate3d(0, 0, 0);
+        }
+
+        .swiper-slide a:hover ~ .item__overlay h3,
+        .swiper-slide a:focus ~ .item__overlay h3 {
+            transform: translate3d(0, 0, 0);
+        }
+
+        .swiper-slide a:hover ~ .item__overlay .item__body,
+        .swiper-slide a:focus ~ .item__overlay .item__body {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex justify-center items-center text-30px p-8">Slider</div>
+    <div class="swiper-container mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="item_5">
+                    <a href="course.html" aria-labelledby="person2"></a>
+                    <img src="/images/profile.svg" alt="Car">
+                    <div class="item__overlay">
+                        <h3 id="person1" aria-hidden="true">Interaction Center:</h3>
+                        <div class="item__body">
+                            <ul>
+                                <li>Seamless customer interactions across multiple channels.</li>
+                                <li>Advanced Cybersecurity Program</li>
+                                <li>Professional Certificate in Cybersecurity</li>
+                                <li>PG Program in Data Science</li>
+                                <li>Under Graduate</li>
+                            </ul>
+                            <a href="course.html" class="read-more">For More Courses →</a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <!-- Repeat the structure for other slides -->
+        </div>
+
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 3,
+            spaceBetween: 5,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+        });
+    </script>
+</body>
+
+</html>

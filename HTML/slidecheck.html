@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            perspective: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .square {
+            width: 200px;
+            height: 200px;
+            background: grey;
+            transform: rotateY(45deg);
+            animation: rotateAnimation 4s linear infinite;
+        }
+
+        @keyframes rotateAnimation {
+            from {
+                transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+            }
+
+            to {
+                transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <!-- <div class="square"></div> -->
+         <img src="https://media.istockphoto.com/id/487745279/photo/medical-ultrasound-diagnostic-machine.jpg?s=612x612&w=0&k=20&c=mkYARVaUPiplzA8__m1TppY7OUFnF0cuJi3OEH85FwA=" alt="" class="square">
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Container styling */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Row styling */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Product Item styling */
+.item {
+    position: relative;
+    margin-bottom: 30px;
+    padding: 0 15px;
+}
+
+/* Product Image styling */
+.product-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+}
+
+/* Main and Hover Images */
+.product-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.product-img .hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.product-image:hover .hover {
+    opacity: 1;
+}
+
+.product-image:hover .primary {
+    opacity: 0;
+}
+
+/* Button Set */
+.button-set ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.product-image:hover .button-set ul {
+    opacity: 1;
+}
+
+.button-set li {
+    margin: 0 5px;
+}
+
+.btn-icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    position: relative;
+}
+
+.btn-icon:hover {
+    background-color: #0056b3;
+}
+
+.tooltip-label {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 12px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+}
+
+.btn-icon:hover .tooltip-label {
+    display: block;
+}
+
+/* Product Details styling */
+.product-details {
+    text-align: center;
+    padding: 10px;
+}
+
+.product-name a {
+    font-size: 16px;
+    color: #333;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.product-name a:hover {
+    color: #007bff;
+}
+
+.product-price {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.product-review {
+    margin-bottom: 10px;
+}
+
+.product-review i {
+    color: #f39c12;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <!-- Product Item 1 -->
+            <div class="item col-lg-3 col-md-4 col-6">
+                <div class="product-image">
+                    <a href="product-layout1.html" class="product-img">
+                        <!-- Main Image -->
+                        <img class="primary blur-up lazyload" data-src="assets/images/products/digital-product4.jpg" src="assets/images/products/digital-product4.jpg" alt="product" title="">
+                        <!-- Hover Image -->
+                        <img class="hover blur-up lazyload" data-src="assets/images/products/digital-product4-1.jpg" src="assets/images/products/digital-product4-1.jpg" alt="product" title="">
+                    </a>
+                    <div class="button-set style2 d-none d-md-block">
+                        <ul>
+                            <li><a class="btn-icon btn cartIcon pro-addtocart-popup" href="#pro-addtocart-popup"><i class="icon an an-cart-l"></i> <span class="tooltip-label top">Add to Cart</span></a></li>
+                            <li><a class="btn-icon quick-view-popup quick-view" href="javascript:void(0)" data-toggle="modal" data-target="#content_quickview"><i class="icon an an-search-l"></i> <span class="tooltip-label top">Quick View</span></a></li>
+                            <li><a class="btn-icon wishlist add-to-wishlist" href="my-wishlist.html"><i class="icon an an-heart-l"></i> <span class="tooltip-label top">Add To Wishlist</span></a></li>
+                            <li><a class="btn-icon compare add-to-compare" href="compare-style2.html"><i class="icon an an-sync-ar"></i> <span class="tooltip-label top">Add to Compare</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="product-details text-start">
+                    <div class="product-name">
+                        <a href="product-layout1.html" class="fw-normal">Apple iPhone 13 Midnight</a>
+                    </div>
+                    <div class="product-price">
+                        <span class="price">$700.00</span>
+                    </div>
+                    <div class="product-review d-flex-center mb-0">
+                        <i class="an an-star"></i>
+                        <i class="an an-star-o"></i>
+                        <i class="an an-star-o"></i>
+                        <i class="an an-star-o"></i>
+                        <i class="an an-star-o"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat for other products -->
+        </div>
+    </div>
+    
+</body>
+</html>
