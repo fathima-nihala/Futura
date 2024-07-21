@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery Swiper</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+        .swiper-slide img {
+            width: 80%;
+            max-width: 600px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .swiper-button-prev, .swiper-button-next {
+            color: #000;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="/images/img6.jpg" alt="Hepatic Vessel with Color 3D">
+            </div>
+            <div class="swiper-slide">
+                <img src="/images/img6.jpg" alt="Thyroid Nodule with SR-Flow">
+            </div>
+            <div class="swiper-slide">
+                <img src="/images/img6.jpg" alt="Inferior Vena Cava with μ-Scan+">
+            </div>
+            <div class="swiper-slide">
+                <img src="/images/img6.jpg" alt="Hepatic Vessel with Color 3D">
+            </div>
+
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Navigation -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 3,
+            // loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
+        });
+    </script>
+</body>
+</html>
