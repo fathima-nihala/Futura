@@ -1,0 +1,47 @@
+
+@media only screen and (min-width: 1201px) and (max-width: 1366px){
+    .header-area .header-right-image {
+        position: absolute;
+        right: -8%;
+        bottom: 0px;
+    }
+    .header-area.style-03 .watch-1 {
+        right: -143px;
+        bottom: -60px;
+    }
+    .amazing-feature-area.with-shape {
+        margin-top: 270px;
+        padding-top: 155px;
+    }
+    .single-blog-item .content .title {
+        font-size: 22px;
+        line-height: 34px;
+    }
+    .header-area .header-right-image img {
+        width: 80%;
+    }
+    .header-area.style-two .header-right-image {
+        position: absolute;
+        right: 5%;
+        top: 120px;
+    }
+    .header-area.style-04 .header-right-image {
+        position: absolute;
+        right: 10%;
+        top: 100px;
+    }
+}
+.header-area .header-area-inner .title {
+    font-size: 65px;
+    line-height: 75px;
+}
+.header-area .header-area-inner .title {
+    font-size: 60px;
+    line-height: 70px;
+}
+.header-area.header-carousel .owl-item.active .single-header-silder-item .subwrap {
+    -webkit-animation: 1s .9s fadeInDown both;
+    animation: 1s .9s fadeInDown both; }
+  .header-area.header-carousel .owl-item.active .single-header-silder-item p {
+    -webkit-animation: 1s .9s fadeInDown both;
+    animation: 1s .9s fadeInDown both; }
